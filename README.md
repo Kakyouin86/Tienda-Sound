@@ -10,9 +10,9 @@ Páginas de Referencia del proyecto:
 
 https://www.mercadolibre.com.ar/
 https://laika.com.co/
-https://www.drummerdrumshop.com/
-https://www.olx.com.ar/
-https://www.ebay.com/
+https://www.drummerdrumshop.com/ 
+https://www.olx.com.ar/ 
+https://www.ebay.com/ 
 https://www.bigbox.com.ar/
 
 Integrantes del equipo de trabajo:
