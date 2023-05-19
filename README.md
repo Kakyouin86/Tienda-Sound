@@ -46,7 +46,6 @@ Filtros de búsqueda demasiado generales, falta de categorización en la búsque
 
 
 #### - Link del tablero de trabajo:
-##### Home
 ##### [Trello](https://trello.com/b/Tp5EzCRZ/tienda-sound-music-future "Trello")
 
 ------------
