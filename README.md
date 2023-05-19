@@ -53,6 +53,7 @@ Filtros de búsqueda demasiado generales, falta de categorización en la búsque
 #### - Mockups:
 ##### Home
 ![](https://github.com/Kakyouin86/Grupo1/blob/main/Sprint%2001/Entrega%20Final/Mockup%20-%20Home.jpg?raw=true)
+![](https://github.com/Kakyouin86/Grupo1/blob/main/Sprint%2001/Entrega%20Final/Mockup_todoslosdispositivos.jpg?raw=true)
 
 ##### Producto
 ![](https://github.com/Kakyouin86/Grupo1/blob/main/Sprint%2001/Entrega%20Final/Mockup%20-%20Producto.jpg?raw=true)
