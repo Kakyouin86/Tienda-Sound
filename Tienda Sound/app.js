@@ -6,6 +6,7 @@ const path = require("path");
 const app = express();
 
 app.use(express.static(path.resolve(__dirname, './public')));
+app.use('/nmb', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')))
 
 app.get('/', (req, res) =>
 {
