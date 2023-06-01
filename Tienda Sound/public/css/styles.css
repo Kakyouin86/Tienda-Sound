@@ -66,10 +66,33 @@ a {
     /* Aquí empieza el header */
     .navbar-collapse {
       background: #3333ff;
+      border-radius: 12px;
     }
 
-    .items-container div {
+    .nav-1 {
+        height: 45px;
+    }
+
+    .margin-nav {
+        margin: 0 10px;
+    }
+    
+    .logo {
+        width: 150px;
+        transition: .5s ease;
+    }
+
+    .items-container span {
         display: none !important;
+    }
+
+    .items-container i {
+        margin-right: 10px;
+        font-size: 0.8rem;
+        color:#3333ff !important;
+        background: #fff;
+        padding: 8px;
+        border-radius: 20px;
     }
 
     header form input,
