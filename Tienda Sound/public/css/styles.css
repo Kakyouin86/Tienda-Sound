@@ -1,3 +1,5 @@
+/* Aquí empieza el HEADER */
+
 header {
     background-color: #3333ff;
 }
@@ -34,7 +36,7 @@ nav .form {
 }
 
 .navbar ul li:not(:first-child){
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
 a {
@@ -43,8 +45,39 @@ a {
     text-decoration: none !important;
 }
 
+.items-container {
+    display: block;
+}
+
 .items-container span {
     border-right: 1px solid white;
-    margin-right: 20px;
-    padding-right: 20px;
+    margin-right: 15px;
+    padding-right: 15px;
 }
+
+.navbar-nav > li > .dropdown-menu {
+    background-color: #3333ff;  
+}
+
+/* Aquí termina el HEADER */
+
+
+@media only screen and (max-width: 992px) {
+    /* Aquí empieza el header */
+    .navbar-collapse {
+      background: #3333ff;
+    }
+
+    .items-container div {
+        display: none !important;
+    }
+
+    header form input,
+    header form i {
+        display: none !important;
+    }
+
+    /* Aquí termina el header */
+  }
+
+
