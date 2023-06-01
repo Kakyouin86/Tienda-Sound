@@ -1,3 +1,5 @@
+/* Aquí empieza el HEADER */
+
 header {
     background-color: #3333ff;
 }
@@ -57,8 +59,11 @@ a {
     background-color: #3333ff;  
 }
 
+/* Aquí termina el HEADER */
+
 
 @media only screen and (max-width: 992px) {
+    /* Aquí empieza el header */
     .navbar-collapse {
       background: #3333ff;
     }
@@ -71,4 +76,8 @@ a {
     header form i {
         display: none !important;
     }
+
+    /* Aquí termina el header */
   }
+
+
