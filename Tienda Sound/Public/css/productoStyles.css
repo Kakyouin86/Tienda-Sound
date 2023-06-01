@@ -1,0 +1,165 @@
+/* Aquí empieza el HEADER */
+
+header {
+    background-color: #3333ff;
+}
+
+header form {
+    position: relative;
+}
+
+header i.search {
+    position: absolute;
+    right: 0;
+    align-self: center;
+    padding: 10px;
+}
+
+.margin-nav {
+    margin: 0 85px;
+}
+
+.logo {
+    width: 200px;
+}
+nav .form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-1 {
+    height: 75px;
+}
+
+.nav-2 {
+    height: 45px;
+}
+
+.navbar ul li:not(:first-child){
+    margin-left: 15px;
+}
+
+a {
+    color: #ffffff !important;
+    font-size: 14px !important;
+    text-decoration: none !important;
+}
+
+.items-container {
+    display: block;
+}
+
+.items-container span {
+    border-right: 1px solid white;
+    margin-right: 15px;
+    padding-right: 15px;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    background-color: #3333ff;  
+}
+
+/* Aquí termina el HEADER */
+
+/* Aquí comienza el MAIN */
+
+.division-general {
+
+    display: flex;
+}
+
+.carousel-item {
+    border: solid 1px red;
+    height: 747px;
+
+}
+
+.carousel {
+
+    border: solid 1px red;
+    width: 580px;
+    height: 747px;
+}
+
+.carousel-inner {
+    border: solid 1px red;
+
+    height: 100%;
+}
+
+.slide {
+    background-color: gray;
+}
+
+.carousel-control-prev {
+    background-color: gray;
+    color: black;
+}
+
+.carousel-control-prev-icon {
+    color: black;
+    background-color: red ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 992px) {
+    /* Aquí empieza el header */
+    .navbar-collapse {
+      background: #3333ff;
+      border-radius: 12px;
+    }
+
+    .nav-1 {
+        height: 45px;
+    }
+
+    .margin-nav {
+        margin: 0 10px;
+    }
+    
+    .logo {
+        width: 150px;
+        transition: .5s ease;
+    }
+
+    .items-container span {
+        display: none !important;
+    }
+
+    .items-container i {
+        margin-right: 10px;
+        font-size: 0.8rem;
+        color:#3333ff !important;
+        background: #fff;
+        padding: 8px;
+        border-radius: 20px;
+    }
+
+    header form input,
+    header form i {
+        display: none !important;
+    }
+
+    /* Aquí termina el header */
+  }
+
+
