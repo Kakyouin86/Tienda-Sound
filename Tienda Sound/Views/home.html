@@ -1,88 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./nmb/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark margin-nav nav-1">
-        <div class="container-fluid ">
-          <img class="logo" src="img/logo_ts.svg" alt="">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
-            <form class="d-flex col-lg-6 input-group-sm" role="search">
-              <input class="form-control me-1" type="search" placeholder="Que estás buscando?" aria-label="Search">
-              <i class="search fa-solid fa-magnifying-glass"></i>
-            </form>
-          </div>
-        </div>
-      </nav>
 
-      <nav class="navbar navbar-expand-lg margin-nav nav-3 navbar-dark">
-        <div class="container-fluid">
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Categorías
-                </a>
-                <ul class="dropdown-menu  ">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Usados</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Nuevos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Vender</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Promociones</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">¿Cómo funciona?</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Ayuda</a>
-              </li>
-            </ul>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./nmb/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.typekit.net/gaj1ybf.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Tienda Sound</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark margin-nav nav-1">
+      <div class="container-fluid ">
+        <img class="logo" src="img/logo_ts.svg" alt="">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
+          <form class="d-flex col-lg-6 input-group-sm" role="search">
+            <input class="form-control me-1" type="search" placeholder="Que estás buscando?" aria-label="Search">
+            <i class="search fa-solid fa-magnifying-glass"></i>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg margin-nav nav-3 navbar-dark">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Categorías
+              </a>
+              <ul class="dropdown-menu  ">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Usados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Nuevos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Vender</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Promociones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">¿Cómo funciona?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ayuda</a>
+            </li>
+          </ul>
+        </div>
+        <div class="items-container d-flex align-items-center">
+          <div>
+            <a href="">
+              <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+              <span class="text-white">Mi perfil</span>
+            </a>
           </div>
-          <div class="items-container d-flex align-items-center">
-            <div>
-              <a href="">
-                <i class="fa-solid fa-user" style="color: #ffffff;"></i>
-                <span class="text-white">Mi perfil</span>
-              </a>
-            </div>
-            <div class>
-              <a href="">
-                <i class="fa-solid fa-heart" style="color: #ffffff;"></i>
-                <span class="text-white">Favoritos</span>
-              </a>
-            </div>
-            <div>
-              <a href="">
-                <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i> 
-              </a>
-            </div>
+          <div class>
+            <a href="">
+              <i class="fa-solid fa-heart" style="color: #ffffff;"></i>
+              <span class="text-white">Favoritos</span>
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+            </a>
           </div>
         </div>
-      </nav>
-    </header>
-    <script src="https://kit.fontawesome.com/2396c6fc63.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+      </div>
+    </nav>
+  </header>
+
+  <!--COMIENZA: SLIDER - AGUS -->
+  <section class="carousel-home">
+
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+
+      </div>
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <img src="img/carousel/slider1.jpg" class="d-block w-100" alt="...">
+          <div class="overlay-text">
+            <h2>Obtené el <br><span class="highlight-text">25% de descuento</span><br>en tu<strong> primera compra</strong></h2>
+            <button type="button" class="btn btn-fucsia">Registrate aquí</button>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/carousel/slider2.jpg" class="d-block w-100" alt="...">
+          <div class="overlay-text">
+            <h2>Todo para tu <strong>home studio</strong><br>al <span class="highlight-text">mejor precio</span></h2>
+            <button type="button" class="btn btn-fucsia">Ver más</button>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/carousel/slider3.jpg" class="d-block w-100" alt="...">
+          <div class="overlay-text">
+            <h2>Los primeros acordes<br> con tu <span class="highlight-text">primera guitarra</span></h2>
+            <button type="button" class="btn btn-fucsia">Encontrala aquí</button>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/carousel/slider4.jpg" class="d-block w-100" alt="...">
+          <div class="overlay-text">
+            <h2>Todos los accesorios<br>para tu <span class="highlight-text">batería</span></h2>
+            <button type="button" class="btn btn-fucsia">Ver todos</button>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/carousel/slider5.jpg" class="d-block w-100" alt="...">
+          <div class="overlay-text">
+            <p class="fucsia-text">Solo por hoy</p>
+            <h2><span class="highlight-text">30% off</span> en<br>accesorios</h2>
+            <button type="button" class="btn btn-fucsia">Ver más</button>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/carousel/slider6.jpg" class="d-block w-100" alt="...">
+          <div class="overlay-text">
+            <h2>Vientos, cuerdas,<br>micrófonos,<br>teclados...</h2>
+            <button type="button" class="btn btn-fucsia">Ver más</button>
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon custom-control" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+  </section>
+  <!--TERMINA: SLIDER - AGUS -->
+  
+  
+  <!--COMIENZA: CATEGORIAS - AGUS -->
+
+  <section class="categorias-home container text-center">
+    <h2>Categorías</h2>
+    <div class="row">
+      <article class="col categoria-producto-home">
+        <img src="img/categorias/icono_guitarra.svg" alt="">
+        <p>Guitarras<br>Bajos</p>
+      </article>
+      <article class="col categoria-producto-home">
+        <img src="img/categorias/icono_bateria.svg" alt="">
+        <p>Batería<br>Percusión</p>
+      </article>
+      <article class="col categoria-producto-home">
+        <img src="img/categorias/icono_teclados.svg" alt="">
+        <p>Teclados<br>Sintetizadores</p>
+      </article>
+      <article class="col categoria-producto-home">
+        <img src="img/categorias/icono_estudiograbacion.svg" alt="">
+        <p>Estudio de Grabación, Dj's</p>
+      </article>
+      <article class="col categoria-producto-home">
+        <img src="img/categorias/icono_vientos.svg" alt="">
+        <p>Vientos</p>
+      </article>
+      <article class="col categoria-producto-home">
+        <img src="img/categorias/icono_cuerdas.svg" alt="">
+        <p>Cuerdas</p>
+      </article>
+      <article class="col categoria-producto-home">
+        <img src="img/categorias/icono_mic.svg" alt="">
+        <p>Micrófonos y<br>Accesorios</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!--TERMINA: CATEGORIAS - AGUS -->
+
+
+
+
+  <main>
+
+  </main>
+
+
+  <script src="https://kit.fontawesome.com/2396c6fc63.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

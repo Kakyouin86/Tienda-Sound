@@ -22,6 +22,7 @@ header i.search {
 .logo {
     width: 200px;
 }
+
 nav .form {
     margin-left: auto;
     margin-right: auto;
@@ -35,7 +36,7 @@ nav .form {
     height: 45px;
 }
 
-.navbar ul li:not(:first-child){
+.navbar ul li:not(:first-child) {
     margin-left: 15px;
 }
 
@@ -55,18 +56,19 @@ a {
     padding-right: 15px;
 }
 
-.navbar-nav > li > .dropdown-menu {
-    background-color: #3333ff;  
+.navbar-nav>li>.dropdown-menu {
+    background-color: #3333ff;
 }
 
 /* Aquí termina el HEADER */
 
 
 @media only screen and (max-width: 992px) {
+
     /* Aquí empieza el header */
     .navbar-collapse {
-      background: #3333ff;
-      border-radius: 12px;
+        background: #3333ff;
+        border-radius: 12px;
     }
 
     .nav-1 {
@@ -76,7 +78,7 @@ a {
     .margin-nav {
         margin: 0 10px;
     }
-    
+
     .logo {
         width: 150px;
         transition: .5s ease;
@@ -89,7 +91,7 @@ a {
     .items-container i {
         margin-right: 10px;
         font-size: 0.8rem;
-        color:#3333ff !important;
+        color: #3333ff !important;
         background: #fff;
         padding: 8px;
         border-radius: 20px;
@@ -101,6 +103,93 @@ a {
     }
 
     /* Aquí termina el header */
-  }
+}
 
 
+
+/* Aca empieza el CARROUSEL*/
+
+.carousel-item {
+    position: relative;
+}
+
+.overlay-text {
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 10%;
+}
+
+.overlay-text h2 {
+    font-family: "hoss-round", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 3.5rem;
+    padding-bottom: 20px;
+    line-height: 3.5rem;
+}
+
+.overlay-text h2 .highlight-text{
+    font-weight: 900;
+    color: #ABEDFF;
+}
+
+
+.btn-fucsia{
+    background-color: #E93882;
+    color: white;
+    font-family: "hoss-round", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2rem;
+    padding: 8px 20px;
+    border-radius: 10px;
+}
+
+.fucsia-text{
+    color: #E93882;
+    font-family: "hoss-round", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.carousel-indicators button{
+    border-radius: 50%;
+    width: 10px !important;
+    height: 10px !important;
+    background-color: white !important;
+}
+
+.carousel-indicators button.active{
+    background-color: #E93882 !important;
+}
+
+/* Aca termina el CARROUSEL*/
+
+
+/* Aca empiezan las CATEGORIAS*/
+
+.categorias-home{
+    font-family: "hoss-round", sans-serif;
+    color: #0a0a0a;
+    margin-bottom: 140px;
+}
+
+.categorias-home h2{
+    font-weight: 400;
+    font-size: 2rem;
+    padding-bottom: 30px;
+    margin-top: 65px;
+}
+
+.categorias-home p{
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.1rem;
+    padding-top: 20px;
+}
+
+.categoria-producto-home img{
+    width: 100px;
+}
