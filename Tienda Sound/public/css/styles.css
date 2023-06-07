@@ -300,8 +300,11 @@ input::placeholder {
     background-color: #3333ff;
 }
 
-.form-check-input {}
-
+input:not(:placeholder-shown) {
+    /*Esto sobreescribe los colores de ambos placeholders en búsqueda de footer y header*/
+    color: white;
+    opacity: 1;
+}
 
 .footer-he-leido {
     font-weight: 200;
