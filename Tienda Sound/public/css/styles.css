@@ -102,15 +102,15 @@ header a {
     .items-container i {
         margin-right: 10px;
         font-size: 0.8rem;
-        color: #3333ff;
-        background: #fff;
+        color:  blue !important;
+        background: white;
         padding: 8px;
         border-radius: 20px;
     }
 
     header form input,
-    header form i {
-        display: none;
+    header form button {
+        display: none !important;
     }
 
     /* Aquí termina el header */
