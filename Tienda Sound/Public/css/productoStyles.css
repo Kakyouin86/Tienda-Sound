@@ -63,53 +63,173 @@ a {
 
 /* Aquí comienza el MAIN */
 
+main {
+    border: solid 1px blue;
+    font-family: hoss-round, sans-serif;
+}
+
 .division-general {
 
     display: flex;
+    border: solid 1px green;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    
 }
 
-.carousel-item {
-    border: solid 1px red;
-    height: 747px;
+.seccion-izquierda{
 
+    border: solid 1px gray;
+    width: 60vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
 }
 
-.carousel {
-
-    border: solid 1px red;
-    width: 580px;
-    height: 747px;
-}
 
 .carousel-inner {
+
     border: solid 1px red;
+    border-radius: 25px;
+    width: 700px;
+    height: 800px;
+    display: flex;
+}
+.carousel-inner img {
 
-    height: 100%;
+    border: solid 1px orange;
+    border-radius: 25px;
+    width: 400px !important;
+    height: 700px;
+    margin-left: 21%;
+}
+.carousel-indicators button {
+    border-radius: 50%;
+    width: 10px !important;
+    height: 10px !important;
+    background-color: #3333FF !important;
 }
 
-.slide {
-    background-color: gray;
+
+
+.carousel-indicators button.active {
+    background-color: #00c7ff !important;
 }
 
-.carousel-control-prev {
-    background-color: gray;
-    color: black;
+.carousel-control-next{
+    border: solid 1px salmon;
+    width: 6vw;
+    padding-left: 1vh;
 }
+.carousel-control-prev{
+    border: solid 1px salmon;
+    width: 6vw;
+    
+}
+
+.carousel-control-next-icon {
+    
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(15,2,161)' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}  
 
 .carousel-control-prev-icon {
-    color: black;
-    background-color: red ;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(15,2,161)' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+   }
+
+
+.descripcion-producto {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border: solid 1px black;
+    width: 40vw;
 }
 
+.descripcion-producto h2 {
+    margin: 5vh 0;
 
+}
 
+.seccion-derecha{
+    border: solid 1px gray;
+    width: 30vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.sec-der-titular{
+    border: solid 1px blue;
+    flex-wrap: nowrap;
+    display: flex;
+}
 
+.seccion-derecha .titular .sec-der-titular h3{
+    border: solid 1px greenyellow;
+    color:#3333FF;
+    font-weight:bold;
+    width: 10vw;
+    display: inline-block;
+    
+    
+}
 
+.sec-der-titular img{
+    width: 30px;
+    margin-left: 13vw;
+    
 
+    
+}
+.seccion-derecha .titular h2{
+    font-weight: 500;
+    font-size: 40px;
+}
 
+.seccion-derecha .titular p{
+    font-weight: 400;
+    font-size: 20px;
+}
+.compra{
+    margin-top: 5vh;
+}
+.compra h2{
+    font-weight: 500;
+    font-size: 55px;
+}
 
-
-
+.carousel-final-main{
+    margin-left: 5vw;
+}
+.formas-de-pago h5{
+    margin-top: 20vh;
+    font-size: 14px;
+    font-weight: 400;
+    
+}
+.formas-de-pago ul{
+    
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+   
+}
+.formas-de-pago ul li{
+    
+    margin-top: 1vh;
+    margin-left: -2vw;
+    margin-right: 5vw;
+    list-style: none;
+}
 
 
 
