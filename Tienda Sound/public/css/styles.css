@@ -102,7 +102,7 @@ header a {
     .items-container i {
         margin-right: 10px;
         font-size: 0.8rem;
-        color:  blue !important;
+        color: blue !important;
         background: white;
         padding: 8px;
         border-radius: 20px;
@@ -212,6 +212,7 @@ header a {
     display: flex;
     justify-content: center;
     gap: 60px;
+    padding-left: 30px;
 }
 
 .footer-logo {
@@ -315,12 +316,30 @@ input:not(:placeholder-shown) {
     opacity: 1;
 }
 
+.form-control {
+    width: 300px;
+    position: absolute;
+}
+
+.footer-submit {
+    margin-top: 1px;
+    width: 12%;
+    height: 11%;
+    position: relative;
+    margin-left: 250px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    border-color: #3333ff;
+}
+
 .footer-he-leido {
     font-weight: 200;
     font-size: 18px;
     color: #0a0a0a;
     font-style: italic;
     font-family: "hoss-round", sans-serif;
+    margin-top: 10px;
 }
 
 br {
