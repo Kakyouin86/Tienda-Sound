@@ -111,6 +111,13 @@ a {
 
 .carousel-item {
     position: relative;
+
+}
+
+.carousel-inner img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
 }
 
 .overlay-text {
@@ -124,29 +131,29 @@ a {
     font-family: "hoss-round", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 3.5rem;
+    font-size: 3.5vw;
     padding-bottom: 20px;
-    line-height: 3.5rem;
+    line-height: 3.5vw;
 }
 
-.overlay-text h2 .highlight-text{
+.overlay-text h2 .highlight-text {
     font-weight: 900;
     color: #ABEDFF;
 }
 
 
-.btn-fucsia{
+.btn-fucsia {
     background-color: #E93882;
     color: white;
     font-family: "hoss-round", sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 1.2rem;
+    font-size: 1.2vw;
     padding: 8px 20px;
     border-radius: 10px;
 }
 
-.fucsia-text{
+.fucsia-text {
     color: #E93882;
     font-family: "hoss-round", sans-serif;
     font-weight: 500;
@@ -154,14 +161,14 @@ a {
     text-transform: uppercase;
 }
 
-.carousel-indicators button{
+.carousel-indicators button {
     border-radius: 50%;
     width: 10px !important;
     height: 10px !important;
     background-color: white !important;
 }
 
-.carousel-indicators button.active{
+.carousel-indicators button.active {
     background-color: #E93882 !important;
 }
 
@@ -170,26 +177,27 @@ a {
 
 /* Aca empiezan las CATEGORIAS*/
 
-.categorias-home{
+.categorias-home {
     font-family: "hoss-round", sans-serif;
     color: #0a0a0a;
     margin-bottom: 140px;
 }
 
-.categorias-home h2{
+.categorias-home h2 {
     font-weight: 400;
     font-size: 2rem;
     padding-bottom: 30px;
     margin-top: 65px;
 }
 
-.categorias-home p{
+.categorias-home p {
     font-weight: 600;
     font-size: 1rem;
     line-height: 1.1rem;
     padding-top: 20px;
 }
 
-.categoria-producto-home img{
+.categoria-producto-home img {
     width: 100px;
 }
+
