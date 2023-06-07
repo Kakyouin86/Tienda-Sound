@@ -200,6 +200,9 @@ a {
     background-color: hsla(193, 100%, 50%, 0.30);
     max-height: 350px;
     height: 350px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
 }
 
 .footer-div {}
@@ -235,4 +238,20 @@ a {
 .footer-logo-youtube {
     width: 50px;
     margin-bottom: 5px;
+}
+
+.footer-list-1 {
+    padding-top: 60px;
+}
+
+.footer-list-2 {
+    padding-top: 60px;
+}
+
+.footer-list-3 {
+    padding-top: 60px;
+}
+
+.footer-list-14 {
+    padding-top: 60px;
 }
