@@ -22,6 +22,7 @@ header i.search {
 .logo {
     width: 200px;
 }
+
 nav .form {
     margin-left: auto;
     margin-right: auto;
@@ -35,7 +36,7 @@ nav .form {
     height: 45px;
 }
 
-.navbar ul li:not(:first-child){
+.navbar ul li:not(:first-child) {
     margin-left: 15px;
 }
 
@@ -55,8 +56,8 @@ a {
     padding-right: 15px;
 }
 
-.navbar-nav > li > .dropdown-menu {
-    background-color: #3333ff;  
+.navbar-nav>li>.dropdown-menu {
+    background-color: #3333ff;
 }
 
 /* Aquí termina el HEADER */
@@ -242,10 +243,11 @@ main {
 
 
 @media only screen and (max-width: 992px) {
+
     /* Aquí empieza el header */
     .navbar-collapse {
-      background: #3333ff;
-      border-radius: 12px;
+        background: #3333ff;
+        border-radius: 12px;
     }
 
     .nav-1 {
@@ -255,7 +257,7 @@ main {
     .margin-nav {
         margin: 0 10px;
     }
-    
+
     .logo {
         width: 150px;
         transition: .5s ease;
@@ -268,7 +270,7 @@ main {
     .items-container i {
         margin-right: 10px;
         font-size: 0.8rem;
-        color:#3333ff !important;
+        color: #3333ff !important;
         background: #fff;
         padding: 8px;
         border-radius: 20px;
@@ -280,6 +282,4 @@ main {
     }
 
     /* Aquí termina el header */
-  }
-
-
+}

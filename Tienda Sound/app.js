@@ -22,5 +22,5 @@ app.get('/producto', (req, res) =>
 
 app.listen(3000, () =>
 {
-    console.log("servidor corriendo")
+    console.log("Servidor corriendo en puerto 3000")
 });
