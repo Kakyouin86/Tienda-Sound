@@ -37,6 +37,7 @@ nav .form {
 }
 
 .navbar ul li:not(:first-child) {
+    /*esto significa: seleccioná todos los li menos el primero. Pero que esten dentro de un ul, y ese ul dentro de un tag con clase .navbar*/
     margin-left: 15px;
 }
 
@@ -57,6 +58,7 @@ header a {
 }
 
 .navbar-nav>li>.dropdown-menu {
+    /*esto significa: selecciona un elemento con clase .dropdown-menu, pero su parent directo que sea un li, y el parent directo del li que sea un tag con clase .navbar-nav*/
     background-color: #3333ff;
 }
 
@@ -276,6 +278,12 @@ header a {
     font-family: "hoss-round", sans-serif;
 }
 
+input::placeholder {
+    /*Esto sobreescribe los colores de ambos placeholders en búsqueda de footer y header*/
+    color: white !important;
+    opacity: 1;
+}
+
 .footer-items a {
     font-weight: 400;
     font-size: 18px;
@@ -293,6 +301,7 @@ header a {
 }
 
 .form-check-input {}
+
 
 .footer-he-leido {
     font-weight: 200;
