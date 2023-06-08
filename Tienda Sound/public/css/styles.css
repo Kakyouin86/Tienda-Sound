@@ -171,10 +171,10 @@ header a {
     background-color: #E93882 !important;
 }
 
-/* Aca termina el CARROUSEL*/
+/* Aca termina el CARROUSEL */
 
 
-/* Aca empiezan las CATEGORIAS*/
+/* Aca empiezan las CATEGORIAS */
 
 .categorias-home {
     color: #0a0a0a;
@@ -198,6 +198,137 @@ header a {
 .categoria-producto-home img {
     width: 100px;
 }
+
+/* Aca terminan las CATEGORIAS */
+
+
+/* Aca empiezan los BANNERS*/
+
+.banners_container {
+    margin: auto;
+    max-width: 1296px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+.banner1 {
+    width: 600px;
+    height: 255px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    color: white;
+    border-radius: 74px;
+    background-image: linear-gradient(180deg, #3333FF, #6666FF, #ABEDFF);
+    transition: 450ms;
+}
+
+.banner2 {
+    width: 600px;
+    height: 255px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    color: white;
+    border-radius: 74px;
+    background-image: linear-gradient(180deg, #3333FF, #6666FF, #ABEDFF);
+    transition: 450ms;
+}
+
+.banner1:hover {
+    background-image: linear-gradient(0deg, #3333FF, #6666FF, #ABEDFF);
+    scale: 103%
+}
+
+.banner2:hover {
+    background-image: linear-gradient(0deg, #3333FF, #6666FF, #ABEDFF);
+    scale: 103%
+}
+
+.b1, .b2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
+
+.tit {
+    font-size: 94px;
+    font-weight: 900;
+    color: #ABEDFF;
+    margin: 0px;
+}
+
+.linea1 {
+    font-size: 28px;
+    font-weight: 300;
+    margin: 0px;
+    margin-bottom: -25px;
+}
+
+.linea3 {
+    font-size: 23px;
+    font-weight: 300;
+    margin: 0px;
+    margin-top: -25px
+}
+
+.ray {
+    position: absolute;
+    width: 100px;
+    z-index: 1000000;
+    margin: 0px;
+    padding: 0px;
+    transform: translate(-270px, 45px);
+}
+
+.ray2 {
+    position: absolute;
+    display: none;
+    width: 100px;
+    z-index: 1000000;
+    margin: 0px;
+    padding: 0px;
+    transform: translate(-270px, 45px);
+}
+
+.banner1:hover .ray2 {
+    display: block;
+}
+
+.banner2:hover .ray2 {
+    display: block;
+}
+
+.plus {
+    position: absolute;
+    z-index: 1200000;
+    scale: 185%;
+    margin: 0px;
+    padding: 0px;
+    transform: translate(135px, 40px);
+}
+
+.banner1:hover .plus {
+    color: #ABEDFF;
+}
+
+.banner2:hover .plus {
+    color: #ABEDFF;
+}
+
+/* Aca terminan los BANNERS */
+
+/* Aca comienza COMO FUNCIONA */
+
+/* Aca termina COMO FUNCIONA */
 
 /* Aquí empieza el FOOTER */
 
