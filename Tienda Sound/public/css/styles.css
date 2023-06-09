@@ -1,5 +1,9 @@
 /* Aquí empieza el HEADER */
 
+* {
+    font-family: "hoss-round", sans-serif;
+}
+
 header {
     background-color: #3333ff;
 }
@@ -62,10 +66,6 @@ header a {
     background-color: #3333ff;
 }
 
-.d-flex {
-    padding-right: 80px;
-}
-
 .search {
     background-color: white;
     border-style: none;
@@ -102,15 +102,15 @@ header a {
     .items-container i {
         margin-right: 10px;
         font-size: 0.8rem;
-        color: #3333ff;
-        background: #fff;
+        color: blue !important;
+        background: white;
         padding: 8px;
         border-radius: 20px;
     }
 
     header form input,
-    header form i {
-        display: none;
+    header form button {
+        display: none !important;
     }
 
     /* Aquí termina el header */
@@ -130,7 +130,6 @@ header a {
 }
 
 .overlay-text h2 {
-    font-family: "hoss-round", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 3.5rem;
@@ -147,7 +146,6 @@ header a {
 .btn-fucsia {
     background-color: #E93882;
     color: white;
-    font-family: "hoss-round", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 1.2rem;
@@ -157,7 +155,6 @@ header a {
 
 .fucsia-text {
     color: #E93882;
-    font-family: "hoss-round", sans-serif;
     font-weight: 500;
     font-size: 2rem;
     text-transform: uppercase;
@@ -174,13 +171,12 @@ header a {
     background-color: #E93882 !important;
 }
 
-/* Aca termina el CARROUSEL*/
+/* Aca termina el CARROUSEL */
 
 
-/* Aca empiezan las CATEGORIAS*/
+/* Aca empiezan las CATEGORIAS */
 
 .categorias-home {
-    font-family: "hoss-round", sans-serif;
     color: #0a0a0a;
     margin-bottom: 140px;
 }
@@ -203,6 +199,138 @@ header a {
     width: 100px;
 }
 
+/* Aca terminan las CATEGORIAS */
+
+
+/* Aca empiezan los BANNERS*/
+
+.banners_container {
+    margin: auto;
+    max-width: 1296px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+.banner1 {
+    width: 600px;
+    height: 255px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    color: white;
+    border-radius: 74px;
+    background-image: linear-gradient(180deg, #3333FF, #6666FF, #ABEDFF);
+    transition: 450ms;
+}
+
+.banner2 {
+    width: 600px;
+    height: 255px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    color: white;
+    border-radius: 74px;
+    background-image: linear-gradient(180deg, #3333FF, #6666FF, #ABEDFF);
+    transition: 450ms;
+}
+
+.banner1:hover {
+    background-image: linear-gradient(0deg, #3333FF, #6666FF, #ABEDFF);
+    scale: 103%
+}
+
+.banner2:hover {
+    background-image: linear-gradient(0deg, #3333FF, #6666FF, #ABEDFF);
+    scale: 103%
+}
+
+.b1,
+.b2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+}
+
+.tit {
+    font-size: 94px;
+    font-weight: 900;
+    color: #ABEDFF;
+    margin: 0px;
+}
+
+.linea1 {
+    font-size: 28px;
+    font-weight: 300;
+    margin: 0px;
+    margin-bottom: -25px;
+}
+
+.linea3 {
+    font-size: 23px;
+    font-weight: 300;
+    margin: 0px;
+    margin-top: -25px
+}
+
+.ray {
+    position: absolute;
+    width: 100px;
+    z-index: 1000000;
+    margin: 0px;
+    padding: 0px;
+    transform: translate(-270px, 45px);
+}
+
+.ray2 {
+    position: absolute;
+    display: none;
+    width: 100px;
+    z-index: 1000000;
+    margin: 0px;
+    padding: 0px;
+    transform: translate(-270px, 45px);
+}
+
+.banner1:hover .ray2 {
+    display: block;
+}
+
+.banner2:hover .ray2 {
+    display: block;
+}
+
+.plus {
+    position: absolute;
+    z-index: 1200000;
+    scale: 185%;
+    margin: 0px;
+    padding: 0px;
+    transform: translate(135px, 40px);
+}
+
+.banner1:hover .plus {
+    color: #ABEDFF;
+}
+
+.banner2:hover .plus {
+    color: #ABEDFF;
+}
+
+/* Aca terminan los BANNERS */
+
+/* Aca comienza COMO FUNCIONA */
+
+/* Aca termina COMO FUNCIONA */
+
 /* Aquí empieza el FOOTER */
 
 .footer {
@@ -212,6 +340,7 @@ header a {
     display: flex;
     justify-content: center;
     gap: 60px;
+    padding-left: 30px;
 }
 
 .footer-logo {
@@ -225,7 +354,6 @@ header a {
     font-weight: 400;
     font-size: 23px;
     margin-left: 5px;
-    font-family: "hoss-round", sans-serif;
 }
 
 .footer-logo-facebook {
@@ -251,39 +379,33 @@ header a {
 .footer-list-1 {
     padding-top: 65px;
     list-style-type: none;
-    font-family: "hoss-round", sans-serif;
 }
 
 .footer-list-2 {
     padding-top: 65px;
     list-style-type: none;
-    font-family: "hoss-round", sans-serif;
 }
 
 .footer-list-3 {
     padding-top: 65px;
     list-style-type: none;
-    font-family: "hoss-round", sans-serif;
 }
 
 .footer-list-4 {
     padding-top: 65px;
     list-style-type: none;
-    font-family: "hoss-round", sans-serif;
 }
 
 .footer-rotulos {
     font-weight: 600;
     font-size: 23px;
     color: #3333ff;
-    font-family: "hoss-round", sans-serif;
 }
 
 .footer-items {
     font-weight: 400;
     font-size: 18px;
     color: #0a0a0a;
-    font-family: "hoss-round", sans-serif;
 }
 
 input::placeholder {
@@ -297,14 +419,12 @@ input::placeholder {
     font-size: 18px;
     text-decoration: none;
     color: #0a0a0a;
-    font-family: "hoss-round", sans-serif;
 }
 
-.form-control {
+.form-control-header {
     font-weight: 400;
     font-size: 18px;
     color: #0a0a0a;
-    font-family: "hoss-round", sans-serif;
     background-color: #3333ff;
     border-right: 0;
 }
@@ -315,12 +435,34 @@ input:not(:placeholder-shown) {
     opacity: 1;
 }
 
+.form-control-footer {
+    font-weight: 400;
+    font-size: 18px;
+    color: #0a0a0a;
+    background-color: #3333ff;
+    border-right: 0;
+    width: 300px;
+    position: absolute;
+}
+
+.footer-submit {
+    margin-top: 1px;
+    width: 12%;
+    height: 11%;
+    position: relative;
+    margin-left: 250px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    border-color: #3333ff;
+}
+
 .footer-he-leido {
     font-weight: 200;
     font-size: 18px;
     color: #0a0a0a;
     font-style: italic;
-    font-family: "hoss-round", sans-serif;
+    margin-top: 10px;
 }
 
 br {
