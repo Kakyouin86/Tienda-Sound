@@ -329,14 +329,96 @@ header a {
 
 /* Aca comienza COMO FUNCIONA */
 
+.comofunciona {
+    margin: auto;
+    max-width: 1296px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 140px;
+    margin-bottom: 140px;
+}
+
+.comofunciona h2 {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 65px;
+    text-align: center;
+}
+
+.paracomprar, .paravender {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.paracomprar {
+    margin-bottom: 50px;
+}
+
+.pc, 
+.pv {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 180px;
+}
+
+.icono_funciona_para {
+    width: 220px;
+    margin-top: 30px;
+    transition: 250ms;
+}
+
+.icono_funciona_para:hover {
+    translate: 25px
+}
+
+.icono_funciona {
+    width: 140px;
+}
+
+.icono_funciona:hover {
+    animation: jump-shaking 0.83s 1;
+}
+
+@keyframes jump-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateY(-13px) }
+    35% { transform: translateY(-13px) rotate(10deg) }
+    55% { transform: translateY(-13px) rotate(-10deg) }
+    65% { transform: translateY(-13px) rotate(10deg) }
+    75% { transform: translateY(-13px) rotate(-10deg) }
+    100% { transform: translateY(0) rotate(0) }
+}
+
+.numero {
+    font-size: 33px;
+    font-weight: 700;
+    color: #3333FF;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.descripcf{
+    font-size: 16px;
+    font-weight: 200;
+    color: #0a0a0a;
+    width: 174px;
+    line-height: 1.3rem;
+    text-align: center;
+}
+
 /* Aca termina COMO FUNCIONA */
 
 /* Aquí empieza el FOOTER */
 
 .footer {
     background-color: hsla(193, 100%, 50%, 0.30);
-    max-height: 350px;
-    height: 350px;
     display: flex;
     justify-content: center;
     gap: 60px;
@@ -446,11 +528,11 @@ input:not(:placeholder-shown) {
 }
 
 .footer-submit {
-    margin-top: 1px;
-    width: 12%;
-    height: 11%;
+    margin-top: 4px;
+    width: 13%;
+    height: 13%;
     position: relative;
-    margin-left: 250px;
+    margin-left: 262px;
     border-radius: 12px;
     background-color: rgba(0, 0, 0, 0);
     border-style: none;
@@ -459,10 +541,10 @@ input:not(:placeholder-shown) {
 
 .footer-he-leido {
     font-weight: 200;
-    font-size: 18px;
+    font-size: 14px;
     color: #0a0a0a;
     font-style: italic;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 br {
