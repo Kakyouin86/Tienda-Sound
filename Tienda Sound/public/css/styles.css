@@ -252,7 +252,8 @@ header a {
     scale: 103%
 }
 
-.b1, .b2 {
+.b1,
+.b2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -420,7 +421,7 @@ input::placeholder {
     color: #0a0a0a;
 }
 
-.form-control {
+.form-control-header {
     font-weight: 400;
     font-size: 18px;
     color: #0a0a0a;
@@ -434,7 +435,12 @@ input:not(:placeholder-shown) {
     opacity: 1;
 }
 
-.form-control {
+.form-control-footer {
+    font-weight: 400;
+    font-size: 18px;
+    color: #0a0a0a;
+    background-color: #3333ff;
+    border-right: 0;
     width: 300px;
     position: absolute;
 }
