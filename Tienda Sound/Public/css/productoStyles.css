@@ -98,17 +98,17 @@ main {
 
     
     border-radius: 25px;
-    width: 700px;
-    height: 800px;
+    width: 500px;
+    height: 600px;
     display: flex;
 }
 .carousel-inner img {
 
     
     border-radius: 25px;
-    width: 400px !important;
-    height: 700px;
-    margin-left: 21%;
+    width: 250px !important;
+    height: 500px;
+    margin-left: 25%;
 }
 .carousel-indicators button {
     border-radius: 50%;
@@ -149,12 +149,14 @@ main {
 .descripcion-producto {
     margin-top: 5vh;
     margin-bottom: 5vh;
-    
     width: 40vw;
+    font-size: 14px;
+    font-weight: 300;
 }
 
 .descripcion-producto h2 {
     margin: 5vh 0;
+    font-size: 24px;
 
 }
 
@@ -180,29 +182,32 @@ main {
     font-weight:bold;
     width: 10vw;
     display: inline-block;
+    font-size: 20px;
     
     
 }
 
 .sec-der-titular img{
-    width: 30px;
-    margin-left: 13vw;
-    
-
-    
+    width: 25px;
+    margin-left: 10vw;
+    position: relative;
+    bottom: 1vh;
 }
 .seccion-derecha .titular h2{
-    font-weight: 500;
-    font-size: 40px;
+    font-weight: 600;
+    font-size: 30px;
+    width: 24vw;
+    
 }
 
 .seccion-derecha .titular p{
     font-weight: 400;
-    font-size: 20px;
+    font-size: 16px;
+    width: 24vw;
 }
 
 .ranking {
-    width: 2vw;
+    width: 1.8vw;
     display: flex;
 }
 
@@ -210,7 +215,7 @@ main {
     margin-right: 0.5vw;
 }
 .compra{
-    margin-top: 5vh;
+    margin-top: 4vh;
 }.div-but-cant{
     display: flex;
     flex-direction: column;
@@ -220,28 +225,38 @@ main {
 .button-comprarAhora {
     background-color: #3333FF;
     color: white;
+    font-size: 14px;
     border-radius: 10px;
     border: solid 1px white;
     padding: 2% 4%;
     margin-bottom: 4vh;
+    margin-top: 2vh;
     
 }
 
 .button-cantidad input{
-    width: 8vw;
+    width: 6vw;
+}
+.button-cantidad{
+    width: 20vh;
 }
 .button-agregarCarrito{
     background-color: #ABEDFF;
     border: solid 1px white;
     border-radius: 0 0 10px 10px;
+    font-size: 12px;
     font-weight: 600;
     color: #3333FF;
     padding-top: 1vh;
     padding-bottom: 1vh;
+    width: 20vh;
 }
 .compra h2{
     font-weight: 500;
-    font-size: 55px;
+    font-size: 45px;
+}
+.compra h3{
+    font-size: 20px;
 }
 
 .llega-hoy h5, .llega-hoy h6{
@@ -252,11 +267,11 @@ main {
     
 }
 .llega-hoy img {
-    width: 3vw;
+    width: 2vw;
 }
 
 .llega-hoy h5{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: #3333FF;
 }
@@ -270,12 +285,14 @@ main {
     
     font-size: 12px;
     font-weight: 400;
+    margin-bottom: -3vh;
     
 }
 
 .form-pago-linea{
     width: 20vw;
     height: 7vh;
+    margin-bottom: -3vh;
     
 }
 .formas-de-pago ul{
