@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 21px;
+}
+
+.flecha{
+    color: #3333ff;
+    width: 80px;
+    height: 80px;
+    text-align: left;
+    justify-content: left;
+    margin-left: 110px;
+    
+}
+
+.arrow{
+    border-color: #3333ff;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 80px;
+}
+
+.volver{
+    font-weight: 400;
+    font-size: 21px;
+    color: #3333ff;
+    margin: -50px;
+    justify-content: center;
+    margin-left: 180px;
+}
+
+.titulo1{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: -5px;
+    font-size: 54px;
+    font-family: "hoss-round", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+    padding: 0 0 20px 0;
+}
+
+.titulo2{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    font-size: 54px;
+    color: black;
+    font-family: "hoss-round", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+    padding: 0 0 20px 0;
+}
+
+.container-titulo2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+.titulo2-1{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    font-size: 54px;
+    color: #3333ff;
+    font-family: "hoss-round", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+    padding: 0 0 20px 0;
+}
+
+.container-mail{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+input{
+    width: 486px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    border-color: black;
+    border: 1px;
+    margin: 30px;
+    flex-direction: row;
+}
+
+.dato-mail{
+    color: #3333ff;
+    border: 2px solid;
+    border-color: #3333ff;
+    font-size: 13px;
+}
+
+
+.pregunta{
+    font-weight: 400;
+    font-size: 21px;
+    color: #3333ff;
+    margin: 2px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 210px;
+}
+
+.inicio{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-inicial{
+    font-weight: 600;
+    font-size: 31px;
+    width: 486px;
+    height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #3333ff;
+    color: white;
+    border: 1px;
+    margin: 31px;
+    flex-direction: row;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: -1px;
+}
+
+.google{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 3px;
+}
+
+.button-google{
+    font-weight: 500;
+    font-size: 31px;
+    width: 486px;
+    height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    border-color: 10px solid #3333ff;
+    background-color: white;
+    color: #3333ff;
+    border: 2px solid;
+    margin: 30px;
+    flex-direction: row;
+    cursor: pointer;
+    text-align: center;
+}
+
+.goo{
+    color: #3333ff;
+    width: 50px;
+    height: 50px;
+    text-align: left;
+    justify-content: left;
+    margin-right: 110px;
+}
+
+.logo-google{
+    text-align: center;
+    margin-right: 150px;
+    color: #3333ff;
+}
+
+.facebook{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-facebook{
+    font-weight: 500;
+    font-size: 31px;
+    width: 486px;
+    height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #3333ff;
+    color: white;
+    border: 1px;
+    margin: 31px;
+    flex-direction: row;
+    cursor: pointer;
+    text-align: center;
+}
+
+.face{
+    color: white;
+    width: 50px;
+    height: 50px;
+    text-align: left;
+    justify-content: left;
+    margin-right: 120px;
+}
+
+.logo-face{
+    text-align: center;
+    margin-right: 150px;
+    color: white;
+}
