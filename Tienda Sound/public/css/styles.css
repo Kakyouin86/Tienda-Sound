@@ -92,11 +92,19 @@ header .nav-link {
     color: blue !important;
 }
 
+header form {
+    position: relative;
+}
+
 .search {
-    background-color: white;
+    background-color: #ABEDFF;
+    height: 100%;
+    width: 30px;
     border-style: none;
-    border-color: #3333ff;
-    border-radius: 1px;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 /* Aquí termina el HEADER */
@@ -499,10 +507,9 @@ header .nav-link {
     background-color: hsla(193, 100%, 50%, 0.30);
     display: flex;
     justify-content: center;
-    /*gap: 60px;*/
     /*padding-left: 30px;*/
     flex-wrap: wrap;
-}
+    }
 
 .footer-logo {
     margin-top: 65px;
@@ -588,7 +595,7 @@ header .nav-link {
     color: #0a0a0a;
 }
 
-input::placeholder {
+.footer input::placeholder {
     /*Esto sobreescribe los colores de ambos placeholders en búsqueda de footer y header*/
     color: white !important;
     opacity: 1;
@@ -601,15 +608,7 @@ input::placeholder {
     color: #0a0a0a;
 }
      
-.form-control-header {
-    font-weight: 400;
-    font-size: 18px;
-    color: #0a0a0a;
-    background-color: #3333ff;
-    border-right: 0;
-}
-
-input:not(:placeholder-shown) {
+footer input:not(:placeholder-shown) {
     /*Esto sobreescribe los colores de ambos placeholders en búsqueda de footer y header*/
     color: white;
     opacity: 1;
