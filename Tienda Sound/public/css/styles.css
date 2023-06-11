@@ -1,4 +1,11 @@
-/* Aquí empieza el HEADER */
+
+* {
+    font-family: "hoss-round", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
 
 header {
     background-color: #3333ff;
@@ -22,6 +29,7 @@ header i.search {
 .logo {
     width: 200px;
 }
+
 nav .form {
     margin-left: auto;
     margin-right: auto;
@@ -35,15 +43,17 @@ nav .form {
     height: 45px;
 }
 
-.navbar ul li:not(:first-child){
+.navbar ul .nav-item:not(:first-child) {
+    /*esto significa: seleccioná todos los li menos el primero. Pero que esten dentro de un ul, y ese ul dentro de un tag con clase .navbar*/
     margin-left: 15px;
 }
 
-a {
-    color: #ffffff !important;
-    font-size: 14px !important;
-    text-decoration: none !important;
+header .nav-link {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
 }
+
 
 .items-container {
     display: block;
@@ -53,20 +63,41 @@ a {
     border-right: 1px solid white;
     margin-right: 15px;
     padding-right: 15px;
+    font-size: 14px;
 }
 
-.navbar-nav > li > .dropdown-menu {
-    background-color: #3333ff;  
+.items-container span:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar-nav>div>.dropdown-menu {
+    /*esto significa: selecciona un elemento con clase .dropdown-menu, pero su parent directo que sea un li, y el parent directo del li que sea un tag con clase .navbar-nav*/
+    background-color: #3333ff;
+}
+
+.dropdown-item {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.navbar-nav .dropdown-menu a:hover {
+    color: blue !important;
+}
+
+.search {
+    background-color: white;
+    border-style: none;
+    border-color: #3333ff;
+    border-radius: 1px;
 }
 
 /* Aquí termina el HEADER */
-
-
 @media only screen and (max-width: 992px) {
+
     /* Aquí empieza el header */
     .navbar-collapse {
-      background: #3333ff;
-      border-radius: 12px;
+        background: #3333ff;
+        border-radius: 12px;
     }
 
     .nav-1 {
@@ -76,31 +107,29 @@ a {
     .margin-nav {
         margin: 0 10px;
     }
-    
+
     .logo {
         width: 150px;
         transition: .5s ease;
     }
 
     .items-container span {
-        display: none !important;
+        display: none;
     }
 
     .items-container i {
         margin-right: 10px;
         font-size: 0.8rem;
-        color:#3333ff !important;
-        background: #fff;
+        color: blue !important;
+        background: white;
         padding: 8px;
         border-radius: 20px;
     }
 
     header form input,
-    header form i {
+    header form button {
         display: none !important;
     }
 
     /* Aquí termina el header */
-  }
-
-
+}
