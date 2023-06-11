@@ -4,6 +4,10 @@
     font-family: "hoss-round", sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 header {
     background-color: #3333ff;
 }
@@ -118,6 +122,38 @@ header a {
 
 /* Aca empieza el CARROUSEL*/
 
+
+.carousel-slides {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-position: center;
+}
+
+.slide1 {
+    background-image: url(/img/carousel/slider1.jpg);
+}
+
+.slide2 {
+    background-image: url(/img/carousel/slider2.jpg);
+}
+
+.slide3 {
+    background-image: url(/img/carousel/slider3.jpg);
+}
+
+.slide4 {
+    background-image: url(/img/carousel/slider4.jpg);
+}
+
+.slide5 {
+    background-image: url(/img/carousel/slider5.jpg);
+}
+
+.slide6 {
+    background-image: url(/img/carousel/slider6.jpg);
+}
+
 .carousel-item {
     position: relative;
 }
@@ -170,6 +206,8 @@ header a {
 .carousel-indicators button.active {
     background-color: #E93882 !important;
 }
+
+
 
 /* Aca termina el CARROUSEL */
 
