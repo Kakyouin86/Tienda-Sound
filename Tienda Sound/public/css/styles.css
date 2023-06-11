@@ -266,6 +266,101 @@ header form {
 /* Aca terminan las CATEGORIAS */
 
 
+/* Aca empiezan los PRODUCTOS DESTACADOS*/
+
+.tituloDestacados{ 
+    
+    margin-bottom: 65px;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+
+.productoDestacado{
+
+    padding: 20px;
+    border: solid 2px #00c7ff;
+    border-radius: 20px; 
+    height: 95%;
+}
+
+.seccionImgDestacado{
+
+    position: relative;
+    z-index: 0;
+    height:350px;
+    width: 100%;
+
+    .imgProducto{height:100%; padding: 10px;}
+
+    .etiquetasDestacados{
+
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+
+        .iconoDestacado{
+       
+            right: 0px;
+            font-size: 30px;
+            position: inherit;
+            .siFav{ display: none; }
+        }
+    
+        .nuevosUsados{
+            
+            position: inherit;
+            width:25%;
+            left: -22px;
+            
+        }
+    }
+    
+
+    .iconoDestacado:active{
+
+        .siFav{ display: flex; }
+        .noFav{ display: none; }
+    }
+}
+
+
+.informacionProducto{
+    text-align: start;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.descripcionProductoDestacado{
+
+    font-size: 20px;
+}
+.nombreProductoDestacado, .precioProductoDestacado{
+
+    font-size:30px;
+    font-weight: 500;
+}
+
+.carousel-control-prev-destacados, .carousel-control-next-destacados  {
+   
+    color: #0a0a0a !important;
+    background: none;
+    opacity: inherit !important;
+    font-size: 30px;
+    width: 5% !important;
+}
+.carousel-control-prev-destacados  {
+    left: -120px;
+}
+.carousel-control-next-destacados{
+    right: -120px;
+}
+
+
+/* Aca terminan los PRODUCTOS DESACADOS */
+
+
 /* Aca empiezan los BANNERS*/
 
 .banners_container {
