@@ -347,7 +347,8 @@ header a {
     text-align: center;
 }
 
-.paracomprar, .paravender {
+.paracomprar,
+.paravender {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -358,7 +359,7 @@ header a {
     margin-bottom: 50px;
 }
 
-.pc, 
+.pc,
 .pv {
     display: flex;
     flex-wrap: wrap;
@@ -387,13 +388,33 @@ header a {
 }
 
 @keyframes jump-shaking {
-    0% { transform: translateX(0) }
-    25% { transform: translateY(-13px) }
-    35% { transform: translateY(-13px) rotate(10deg) }
-    55% { transform: translateY(-13px) rotate(-10deg) }
-    65% { transform: translateY(-13px) rotate(10deg) }
-    75% { transform: translateY(-13px) rotate(-10deg) }
-    100% { transform: translateY(0) rotate(0) }
+    0% {
+        transform: translateX(0)
+    }
+
+    25% {
+        transform: translateY(-13px)
+    }
+
+    35% {
+        transform: translateY(-13px) rotate(10deg)
+    }
+
+    55% {
+        transform: translateY(-13px) rotate(-10deg)
+    }
+
+    65% {
+        transform: translateY(-13px) rotate(10deg)
+    }
+
+    75% {
+        transform: translateY(-13px) rotate(-10deg)
+    }
+
+    100% {
+        transform: translateY(0) rotate(0)
+    }
 }
 
 .numero {
@@ -404,7 +425,7 @@ header a {
     margin-top: 20px;
 }
 
-.descripcf{
+.descripcf {
     font-size: 16px;
     font-weight: 200;
     color: #0a0a0a;
@@ -421,13 +442,14 @@ header a {
     background-color: hsla(193, 100%, 50%, 0.30);
     display: flex;
     justify-content: center;
-    gap: 60px;
-    padding-left: 30px;
+    /*gap: 60px;*/
+    /*padding-left: 30px;*/
+    flex-wrap: wrap;
 }
 
 .footer-logo {
     margin-top: 65px;
-    width: 365px;
+    width: 325px;
     height: 60px;
 }
 
@@ -443,9 +465,17 @@ header a {
     margin-bottom: 5px;
 }
 
+.footer-logo-facebook:hover {
+    animation: jump-shaking 0.83s 1;
+}
+
 .footer-logo-twitter {
     width: 50px;
     margin-bottom: 5px;
+}
+
+.footer-logo-twitter:hover {
+    animation: jump-shaking 0.83s 1;
 }
 
 .footer-logo-instagram {
@@ -453,29 +483,41 @@ header a {
     margin-bottom: 5px;
 }
 
+.footer-logo-instagram:hover {
+    animation: jump-shaking 0.83s 1;
+}
+
 .footer-logo-youtube {
     width: 50px;
     margin-bottom: 5px;
 }
 
+.footer-logo-youtube:hover {
+    animation: jump-shaking 0.83s 1;
+}
+
 .footer-list-1 {
     padding-top: 65px;
     list-style-type: none;
+    width: 280px;
 }
 
 .footer-list-2 {
     padding-top: 65px;
     list-style-type: none;
+    width: 280px;
 }
 
 .footer-list-3 {
     padding-top: 65px;
     list-style-type: none;
+    width: 280px;
 }
 
 .footer-list-4 {
     padding-top: 65px;
     list-style-type: none;
+    width: 280px;
 }
 
 .footer-rotulos {
@@ -523,16 +565,16 @@ input:not(:placeholder-shown) {
     color: #0a0a0a;
     background-color: #3333ff;
     border-right: 0;
-    width: 300px;
+    width: 280px;
     position: absolute;
 }
 
 .footer-submit {
-    margin-top: 4px;
-    width: 13%;
-    height: 13%;
+    margin-top: 2.5px;
+    width: 16%;
+    height: 16%;
     position: relative;
-    margin-left: 262px;
+    margin-left: 242px;
     border-radius: 12px;
     background-color: rgba(0, 0, 0, 0);
     border-style: none;
