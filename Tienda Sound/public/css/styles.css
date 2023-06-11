@@ -4,8 +4,8 @@
     font-family: "hoss-round", sans-serif;
 }
 
-a {
-    text-decoration: none;
+body {
+    overflow-x: hidden;
 }
 
 header {
@@ -44,17 +44,16 @@ nav .form {
     height: 45px;
 }
 
-.navbar ul .nav-item:not(:first-child) {
+.navbar ul li:not(:first-child) {
     /*esto significa: seleccioná todos los li menos el primero. Pero que esten dentro de un ul, y ese ul dentro de un tag con clase .navbar*/
     margin-left: 15px;
 }
 
-header .nav-link {
-    color: #ffffff;
-    font-size: 14px;
-    text-decoration: none;
+header a {
+    color: #ffffff !important;
+    font-size: 14px !important;
+    text-decoration: none !important;
 }
-
 
 .items-container {
     display: block;
@@ -64,25 +63,11 @@ header .nav-link {
     border-right: 1px solid white;
     margin-right: 15px;
     padding-right: 15px;
-    font-size: 14px;
 }
 
-.items-container span:hover {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.navbar-nav>div>.dropdown-menu {
+.navbar-nav>li>.dropdown-menu {
     /*esto significa: selecciona un elemento con clase .dropdown-menu, pero su parent directo que sea un li, y el parent directo del li que sea un tag con clase .navbar-nav*/
     background-color: #3333ff;
-}
-
-.dropdown-item {
-    color: #ffffff;
-    font-size: 14px;
-}
-
-.navbar-nav .dropdown-menu a:hover {
-    color: blue !important;
 }
 
 .search {
@@ -126,7 +111,7 @@ header .nav-link {
         padding: 8px;
         border-radius: 20px;
     }
-
+     
     header form input,
     header form button {
         display: none !important;
@@ -136,6 +121,37 @@ header .nav-link {
 }
 
 /* Aca empieza el CARROUSEL*/
+
+.carousel-slides {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-position: center;
+}
+
+.slide1 {
+    background-image: url(/img/carousel/slider1.jpg);
+}
+
+.slide2 {
+    background-image: url(/img/carousel/slider2.jpg);
+}
+
+.slide3 {
+    background-image: url(/img/carousel/slider3.jpg);
+}
+
+.slide4 {
+    background-image: url(/img/carousel/slider4.jpg);
+}
+
+.slide5 {
+    background-image: url(/img/carousel/slider5.jpg);
+}
+
+.slide6 {
+    background-image: url(/img/carousel/slider6.jpg);
+}
 
 .carousel-item {
     position: relative;
@@ -191,7 +207,6 @@ header .nav-link {
 }
 
 /* Aca termina el CARROUSEL */
-
 
 /* Aca empiezan las CATEGORIAS */
 
@@ -329,6 +344,7 @@ header .nav-link {
 
 .plus {
     position: absolute;
+    display: flex;
     z-index: 1200000;
     scale: 185%;
     margin: 0px;
@@ -431,7 +447,7 @@ header .nav-link {
         transform: translateY(-13px) rotate(-10deg)
     }
 
-    100% {
+    100% {       
         transform: translateY(0) rotate(0)
     }
 }
@@ -532,7 +548,6 @@ header .nav-link {
     list-style-type: none;
     width: 280px;
 }
-
 .footer-list-4 {
     padding-top: 65px;
     list-style-type: none;
@@ -556,14 +571,14 @@ input::placeholder {
     color: white !important;
     opacity: 1;
 }
-
+     
 .footer-items a {
     font-weight: 400;
     font-size: 18px;
     text-decoration: none;
     color: #0a0a0a;
 }
-
+     
 .form-control-header {
     font-weight: 400;
     font-size: 18px;
@@ -577,7 +592,7 @@ input:not(:placeholder-shown) {
     color: white;
     opacity: 1;
 }
-
+    
 .form-control-footer {
     font-weight: 400;
     font-size: 18px;
@@ -587,7 +602,7 @@ input:not(:placeholder-shown) {
     width: 280px;
     position: absolute;
 }
-
+    
 .footer-submit {
     margin-top: 2.5px;
     width: 16%;
@@ -599,7 +614,7 @@ input:not(:placeholder-shown) {
     border-style: none;
     border-color: #3333ff;
 }
-
+    
 .footer-he-leido {
     font-weight: 200;
     font-size: 14px;
@@ -611,9 +626,135 @@ input:not(:placeholder-shown) {
 br {
     display: block;
     /* makes it have a width */
-    content: "";
+     content: "";
     /* clears default height */
     margin-top: 0;
     /* change this to whatever height you want it */
 }
 
+/* smartphones */
+
+@media only screen and (max-width: 480px) {
+
+    .banners_container {
+        max-width: 400px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner1,
+    .banner2 {
+        width: 360px;
+        height: 160px;
+        font-size: 12px;
+        border-radius: 45px;
+        transition: 450ms;
+        margin-bottom: 40px;
+    }
+
+    .tit {
+        font-size: 65px;
+        margin: 0px;
+    }
+    
+    .linea1 {
+        font-size: 21px;
+        margin-bottom: -25px;
+    }
+    
+    .linea3 {
+        font-size: 16px;
+        margin-top: -25px
+    }
+
+    .ray {
+        width: 50px;
+        transform: translate(-175px, 35px);
+    }
+    
+    .ray2 {
+        width: 50px;
+        transform: translate(-175px, 35px);
+    }
+    
+    .plus {
+        transform: translate(85px, 30px);
+    }
+}
+
+
+/* tablet */
+
+@media only screen and (min-width: 481px) {
+
+    .banners_container {
+        max-width: 760px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner1,
+    .banner2 {
+        width: 360px;
+        height: 180px;
+        font-size: 14px;
+        border-radius: 50px;
+        transition: 450ms;
+        margin-bottom: 40px;
+
+    }
+
+    .tit {
+        font-size: 72px;
+        margin: 0px;
+    }
+    
+    .linea1 {
+        font-size: 21px;
+        margin-bottom: -25px;
+    }
+    
+    .linea3 {
+        font-size: 16px;
+        margin-top: -25px
+    }
+
+    .ray {
+        width: 50px;
+        transform: translate(-175px, 35px);
+    }
+    
+    .ray2 {
+        width: 50px;
+        transform: translate(-175px, 35px);
+    }
+    
+    .plus {
+        transform: translate(90px, 30px);
+    }
+}
+
+
+/* desktop */
+
+@media only screen and (min-width: 769px) {
+    
+}
+
+
+/* desktop large */
+
+@media only screen and (min-width: 1280px) {
+    
+}

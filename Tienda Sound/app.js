@@ -25,6 +25,12 @@ app.get('/login', (req, res) =>
     res.sendFile(path.resolve(__dirname, './views/login.html'))
 });
 
+app.get('/carrito', (req, res) =>
+{
+    res.sendFile(path.resolve(__dirname, './views/carrito.html'))
+});
+
+
 app.listen(3000, () =>
 {
     console.log("Servidor corriendo en puerto 3000")
