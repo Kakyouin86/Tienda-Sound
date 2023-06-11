@@ -1,4 +1,11 @@
-/* Aquí empieza el HEADER */
+
+* {
+    font-family: "hoss-round", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
 
 * {
     font-family: "hoss-round", sans-serif;
@@ -44,16 +51,17 @@ nav .form {
     height: 45px;
 }
 
-.navbar ul li:not(:first-child) {
+.navbar ul .nav-item:not(:first-child) {
     /*esto significa: seleccioná todos los li menos el primero. Pero que esten dentro de un ul, y ese ul dentro de un tag con clase .navbar*/
     margin-left: 15px;
 }
 
-header a {
-    color: #ffffff !important;
-    font-size: 14px !important;
-    text-decoration: none !important;
+header .nav-link {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
 }
+
 
 .items-container {
     display: block;
@@ -63,11 +71,25 @@ header a {
     border-right: 1px solid white;
     margin-right: 15px;
     padding-right: 15px;
+    font-size: 14px;
 }
 
-.navbar-nav>li>.dropdown-menu {
+.items-container span:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar-nav>div>.dropdown-menu {
     /*esto significa: selecciona un elemento con clase .dropdown-menu, pero su parent directo que sea un li, y el parent directo del li que sea un tag con clase .navbar-nav*/
     background-color: #3333ff;
+}
+
+.dropdown-item {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.navbar-nav .dropdown-menu a:hover {
+    color: blue !important;
 }
 
 .search {
