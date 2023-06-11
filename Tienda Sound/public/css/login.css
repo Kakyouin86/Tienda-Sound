@@ -5,7 +5,7 @@
     font-size: 21px;
 }
 
-.flecha{
+main .flecha{
     color: #3333ff;
     width: 80px;
     height: 80px;
@@ -15,14 +15,14 @@
     
 }
 
-.arrow{
+main .arrow{
     border-color: #3333ff;
     width: 80px;
     height: 80px;
     margin-bottom: 80px;
 }
 
-.volver{
+main .volver{
     font-weight: 400;
     font-size: 21px;
     color: #3333ff;
@@ -31,7 +31,7 @@
     margin-left: 180px;
 }
 
-.titulo1{
+main  .titulo1{
     text-align: center;
     display: flex;
     justify-content: center;
@@ -43,7 +43,7 @@
     padding: 0 0 20px 0;
 }
 
-.titulo2{
+main  .titulo2{
     text-align: center;
     display: flex;
     justify-content: center;
@@ -56,14 +56,14 @@
     padding: 0 0 20px 0;
 }
 
-.container-titulo2{
+main .container-titulo2{
     position: relative;
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
 }
-.titulo2-1{
+main .titulo2-1{
     text-align: center;
     display: flex;
     justify-content: center;
@@ -76,7 +76,7 @@
     padding: 0 0 20px 0;
 }
 
-.container-mail{
+main .container-mail{
     position: relative;
     display: flex;
     justify-content: center;
@@ -84,7 +84,7 @@
     align-items: center;
 }
 
-input{
+main input{
     width: 486px;
     height: 60px;
     display: flex;
@@ -96,7 +96,7 @@ input{
     flex-direction: row;
 }
 
-.dato-mail{
+main .dato-mail{
     color: #3333ff;
     border: 2px solid;
     border-color: #3333ff;
@@ -104,7 +104,7 @@ input{
 }
 
 
-.pregunta{
+main .pregunta{
     font-weight: 400;
     font-size: 21px;
     color: #3333ff;
@@ -117,7 +117,7 @@ input{
     margin-right: 210px;
 }
 
-.inicio{
+main .inicio{
     position: relative;
     display: flex;
     justify-content: center;
@@ -125,7 +125,7 @@ input{
     align-items: center;
 }
 
-.button-inicial{
+main .button-inicial{
     font-weight: 600;
     font-size: 31px;
     width: 486px;
@@ -144,7 +144,7 @@ input{
     margin-bottom: -1px;
 }
 
-.google{
+main .google{
     position: relative;
     display: flex;
     justify-content: center;
