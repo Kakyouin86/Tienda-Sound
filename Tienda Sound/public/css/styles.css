@@ -754,6 +754,10 @@ br {
     /* change this to whatever height you want it */
 }
 
+
+
+/* MEDIA QUERIES */
+
 /* smartphones */
 
 @media only screen and (max-width: 480px) {
@@ -832,7 +836,7 @@ br {
 
 /* tablet */
 
-@media only screen and (min-width: 481px) {
+@media only screen and (max-width: 768px) {
 
     .banners_container {
         max-width: 760px;
@@ -895,9 +899,9 @@ br {
 
 /* desktop */
 
-@media only screen and (min-width: 769px) {}
+@media only screen and (max-width: 1279px) {}
 
 
 /* desktop large */
 
-@media only screen and (min-width: 1280px) {}
+@media only screen and (max-width: 1280px) {}
