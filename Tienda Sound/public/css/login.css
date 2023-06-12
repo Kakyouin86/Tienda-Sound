@@ -1,229 +1,116 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 21px;
+    font-family: "hoss-round", sans-serif;
 }
 
-main .flecha{
-    color: #3333ff;
-    width: 80px;
-    height: 80px;
+
+
+.flecha-volver {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flecha-volver img {
+    width: 40px;
+    height: 40px;
     text-align: left;
     justify-content: left;
-    margin-left: 110px;
-    
+
 }
 
-main .arrow{
-    border-color: #3333ff;
-    width: 80px;
-    height: 80px;
-    margin-bottom: 80px;
+.form-container {
+    margin: 65px 0px 150px 0px;
 }
 
-main .volver{
-    font-weight: 400;
-    font-size: 21px;
-    color: #3333ff;
-    margin: -50px;
-    justify-content: center;
-    margin-left: 180px;
-}
-
-main  .titulo1{
+.form-container h1 {
     text-align: center;
-    display: flex;
-    justify-content: center;
-    margin: -5px;
-    font-size: 54px;
-    font-family: "hoss-round", sans-serif;
-	font-weight: 500;
-	font-style: normal;
-    padding: 0 0 20px 0;
+    font-size: 2.5rem;
+    font-weight: 500;
 }
 
-main  .titulo2{
+.form-container h2 {
     text-align: center;
-    display: flex;
-    justify-content: center;
-    margin: 5px;
-    font-size: 54px;
+    font-size: 2.5rem;
+    font-weight: 700;
     color: black;
-    font-family: "hoss-round", sans-serif;
-	font-weight: 700;
-	font-style: normal;
-    padding: 0 0 20px 0;
+    padding-bottom: 30px;
 }
 
-main .container-titulo2{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-}
-main .titulo2-1{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin: 5px;
-    font-size: 54px;
+.form-container h2 span {
     color: #3333ff;
-    font-family: "hoss-round", sans-serif;
-	font-weight: 700;
-	font-style: normal;
-    padding: 0 0 20px 0;
 }
 
-main .container-mail{
-    position: relative;
+.form-container .login-form {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-main input{
-    width: 486px;
+.login-form input {
+    width: 80%;
     height: 60px;
-    display: flex;
-    justify-content: center;
     border-radius: 15px;
-    border-color: black;
-    border: 1px;
-    margin: 30px;
+    border: 1px #3333ff solid;
+    margin-bottom: 25px;
     flex-direction: row;
 }
 
-main .dato-mail{
-    color: #3333ff;
-    border: 2px solid;
-    border-color: #3333ff;
-    font-size: 13px;
+.login-form input::placeholder {
+    padding-left: 20px;
 }
 
-
-main .pregunta{
+.login-form .pregunta-login {
     font-weight: 400;
-    font-size: 21px;
+    font-size: 1.1rem;
     color: #3333ff;
-    margin: 2px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 210px;
 }
 
-main .inicio{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
 
-main .button-inicial{
-    font-weight: 600;
-    font-size: 31px;
-    width: 486px;
+.login-form .form-btn {
+    width: 80%;
     height: 60px;
-    position: relative;
-    display: flex;
-    justify-content: center;
     border-radius: 15px;
+    border: 0;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.login-form .inicio-btn {
     background-color: #3333ff;
     color: white;
-    border: 1px;
-    margin: 31px;
-    flex-direction: row;
-    cursor: pointer;
-    text-align: center;
-    margin-bottom: -1px;
 }
 
-main .google{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin: 3px;
-}
 
-.button-google{
-    font-weight: 500;
-    font-size: 31px;
-    width: 486px;
-    height: 60px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    border-radius: 15px;
-    border-color: 10px solid #3333ff;
+.login-form .google-btn {
+    border: 1px solid #3333ff;
     background-color: white;
     color: #3333ff;
-    border: 2px solid;
-    margin: 30px;
-    flex-direction: row;
-    cursor: pointer;
-    text-align: center;
-}
-
-.goo{
-    color: #3333ff;
-    width: 50px;
-    height: 50px;
-    text-align: left;
-    justify-content: left;
-    margin-right: 110px;
-}
-
-.logo-google{
-    text-align: center;
-    margin-right: 150px;
-    color: #3333ff;
-}
-
-.facebook{
     position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
 }
 
-.button-facebook{
-    font-weight: 500;
-    font-size: 31px;
-    width: 486px;
-    height: 60px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    border-radius: 15px;
+
+.login-form .facebook-btn {
     background-color: #3333ff;
     color: white;
-    border: 1px;
-    margin: 31px;
-    flex-direction: row;
-    cursor: pointer;
-    text-align: center;
+    position: relative;
 }
 
-.face{
-    color: white;
-    width: 50px;
-    height: 50px;
-    text-align: left;
-    justify-content: left;
-    margin-right: 120px;
+.login-form .google-btn img, .login-form .facebook-btn img{
+    width: 35px;
+    height: auto;
+    position: absolute;
+    left: 10px;
 }
 
-.logo-face{
-    text-align: center;
-    margin-right: 150px;
-    color: white;
+.btn-division{
+    width:80%;
+    border: 1px solid gray;
+    margin: 20px 0px 20px 0px;
 }

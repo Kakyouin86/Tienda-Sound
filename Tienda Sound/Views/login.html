@@ -99,42 +99,41 @@
 
   <main>
 
-    <div class="flecha">
-      <img src="../img/flecha.svg" class="arrow">
+
+    <div class="flecha-volver">
+      <img src="../img/flecha.svg" alt="">
+      <p>Volver</p>
     </div>
 
-    <h2 class="volver">Volver</h2>
-    <h2 class="titulo1">¡Hola!</h2>
+    <section class="form-container container col-5 mx-auto">
 
-    <div class="container-titulo2">
-      <h2 class="titulo2">Inicia sensión o</h2>
-      <h2 class="titulo2-1">creá tu cuenta</h2>
-    </div>
 
-    <div class="container-mail">
-      <input type="text" class="dato-mail" placeholder="Correo electrónico">
-      <input type="password" class="dato-mail" placeholder="Contraseña">
-    </div>
+      <h1>¡Hola!</h1>
+      <h2>Iniciá sesión o <span>créa tu cuenta</span></h2>
 
-    <p class="pregunta">¿Olvidaste tu contraseña?</p>
+      <form action="/" class="login-form">
 
-    <div class="inicio">
-      <button type="button" class="button-inicial">Iniciar sesión</button>
-    </div>
+        <input type="email" placeholder="Correo electrónico" name="email">
+        <input type="password" placeholder="Contraseña" name="password">
 
-    <div class="google">
-      <button type="button" class="button-google">
-        <img src="../img/google_icon.png" class="goo">
-        <span class="logo-google">Continuar con Google</span>
-      </button>
-    </div>
+        <p class="pregunta-login">¿Olvidaste tu contraseña?</p>
 
-    <div class="facebook">
-      <button type="button" class="button-facebook">
-        <img src="../img/facebook_icon.png" class="face">
-        <span class="logo-face">Continuar con Facebook</span>
-      </button>
-    </div>
+        <button type="submit" class="form-btn inicio-btn">Iniciar sesión</button>
+
+        <hr class="btn-division">
+
+        <button type="button" class="form-btn google-btn">
+          <img src="../img/google_icon.png">Continuar con Google</span>
+        </button>
+
+        <button type="button" class="form-btn facebook-btn">
+          <img src="../img/facebook_icon.png">Continuar con Facebook</span>
+        </button>
+
+      </form>
+
+
+    </section>
 
   </main>
 
