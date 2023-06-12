@@ -500,8 +500,8 @@ header form {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-between;
-    margin-top: 140px;
+    justify-content: space-evenly;
+    margin-top: 65px;
     margin-bottom: 140px;
 }
 
@@ -577,7 +577,7 @@ header form {
         transform: translateY(-13px) rotate(-10deg)
     }
 
-    100% {
+    100% {       
         transform: translateY(0) rotate(0)
     }
 }
@@ -762,57 +762,7 @@ br {
 
 @media only screen and (max-width: 480px) {
 
-    .banners_container {
-        max-width: 400px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .banner1,
-    .banner2 {
-        width: 360px;
-        height: 160px;
-        font-size: 12px;
-        border-radius: 45px;
-        transition: 450ms;
-        margin-bottom: 40px;
-    }
-
-    .tit {
-        font-size: 65px;
-        margin: 0px;
-    }
-
-    .linea1 {
-        font-size: 21px;
-        margin-bottom: -25px;
-    }
-
-    .linea3 {
-        font-size: 16px;
-        margin-top: -25px
-    }
-
-    .ray {
-        width: 50px;
-        transform: translate(-175px, 35px);
-    }
-
-    .ray2 {
-        width: 50px;
-        transform: translate(-175px, 35px);
-    }
-
-    .plus {
-        transform: translate(85px, 30px);
-    }
-
-    /*Empieza mobile Agus*/
+    /* Empieza mobile Agus */
 
     .overlay-text h2 {
         font-size: 1.9rem;
@@ -828,49 +778,54 @@ br {
         font-size: 1rem;
     }
 
+    /* Termina mobile Agus */
 
-
-    /*Termina mobile Agus*/
-}
-
-
-/* tablet */
-
-@media only screen and (max-width: 768px) {
+    /* Empieza mobile Juan */
+    /* Acá comienza BANNER */
 
     .banners_container {
-        max-width: 760px;
-        margin-top: 40px;
-        margin-bottom: 40px;
         margin: auto;
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
     }
 
-    .banner1,
-    .banner2 {
+    .banner1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         width: 360px;
-        height: 180px;
-        font-size: 14px;
-        border-radius: 50px;
+        height: 160px;
+        font-size: 12px;
+        border-radius: 45px;
         transition: 450ms;
         margin-bottom: 40px;
-
+    }
+        
+    .banner2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 360px;
+        height: 160px;
+        font-size: 12px;
+        border-radius: 45px;
+        transition: 450ms;
     }
 
     .tit {
-        font-size: 72px;
+        font-size: 65px;
         margin: 0px;
     }
-
+    
     .linea1 {
         font-size: 21px;
         margin-bottom: -25px;
     }
-
+    
     .linea3 {
         font-size: 16px;
         margin-top: -25px
@@ -880,26 +835,186 @@ br {
         width: 50px;
         transform: translate(-175px, 35px);
     }
-
+    
     .ray2 {
         width: 50px;
         transform: translate(-175px, 35px);
     }
-
+    
     .plus {
-        transform: translate(90px, 30px);
+        transform: translate(85px, 30px);
     }
 
+    /* Acá termina BANNER */
+    /* Acá empieza COMO FUNCIONA */
 
+    .comofunciona {
+        padding: 60px;
+        justify-content: center
+    }
+    .icono_funciona_para {
+        scale: 75%;
+    }
+    .paracomprar, .paravender {
+        justify-content: center;
+    }
     
+    /* Acá termina COMO FUNCIONA */
+    /* Termina mobile Juan */
 }
 
 
+/* tablet */
 
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+
+
+    /* Empieza tablet Juan */
+    /* Acá comienza BANNER */
+
+    .banners_container {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 600px;
+        height: 160px;
+        font-size: 12px;
+        border-radius: 45px;
+        transition: 450ms;
+        margin-bottom: 40px;
+    }
+        
+    .banner2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 600px;
+        height: 160px;
+        font-size: 12px;
+        border-radius: 45px;
+        transition: 450ms;
+    }
+
+    .tit {
+        font-size: 65px;
+        margin: 0px;
+    }
+    
+    .linea1 {
+        font-size: 21px;
+        margin-bottom: -25px;
+    }
+    
+    .linea3 {
+        font-size: 16px;
+        margin-top: -25px
+    }
+
+    .ray {
+        width: 50px;
+        transform: translate(-175px, 35px);
+    }
+    
+    .ray2 {
+        width: 50px;
+        transform: translate(-175px, 35px);
+    }
+    
+    .plus {
+        transform: translate(85px, 30px);
+    }
+
+    /* Acá termina BANNER */  
+
+    /* Acá empieza COMO FUNCIONA */
+
+    .comofunciona {
+        padding: 60px
+    }
+    .icono_funciona_para {
+        scale: 85%;
+    }
+
+    /* Acá termina COMO FUNCIONA */
+    /* Termina tablet Juan */
+}
 
 /* desktop */
 
-@media only screen and (max-width: 1279px) {}
+@media only screen and (max-width: 1279px) and (min-width: 769px) {
+
+    /* Empieza desktop Juan */
+    /* Acá comienza BANNER */
+
+    .banners_container {
+        margin: auto;
+        max-width: 1296px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 140px;
+        margin-bottom: 140px;
+    }
+    
+    .banner1 {
+        width: 600px;
+        height: 255px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 20px;
+        color: white;
+        border-radius: 74px;
+        background-image: linear-gradient(180deg, #3333FF, #6666FF, #ABEDFF);
+        transition: 450ms;
+        margin-bottom: 40px;
+        border: 5px solid white;
+    }
+    
+    .banner2 {
+        width: 600px;
+        height: 255px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 20px;
+        color: white;
+        border-radius: 74px;
+        background-image: linear-gradient(180deg, #3333FF, #6666FF, #ABEDFF);
+        transition: 450ms;
+        border: 5px solid white;
+    }
+    
+    /* Acá termina BANNER */
+    /* Acá empieza COMO FUNCIONA */
+
+    .comofunciona {
+        padding: 60px;
+    }
+    .paracomprar,
+    .paravender {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+    /* Acá termina COMO FUNCIONA */ 
+    /* Termina desktop Juan */
+
+}   
 
 
 /* desktop large */
