@@ -1,4 +1,18 @@
-/* Aquí empieza el HEADER */
+* {
+    font-family: "hoss-round", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    font-family: "hoss-round", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
 
 header {
     background-color: #3333ff;
@@ -36,15 +50,17 @@ nav .form {
     height: 45px;
 }
 
-.navbar ul li:not(:first-child) {
+.navbar ul .nav-item:not(:first-child) {
+    /*esto significa: seleccioná todos los li menos el primero. Pero que esten dentro de un ul, y ese ul dentro de un tag con clase .navbar*/
     margin-left: 15px;
 }
 
-a {
-    color: #ffffff !important;
-    font-size: 14px !important;
-    text-decoration: none !important;
+header .nav-link {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
 }
+
 
 .items-container {
     display: block;
@@ -54,18 +70,89 @@ a {
     border-right: 1px solid white;
     margin-right: 15px;
     padding-right: 15px;
+    font-size: 14px;
 }
 
-.navbar-nav>li>.dropdown-menu {
+.items-container span:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar-nav>div>.dropdown-menu {
+    /*esto significa: selecciona un elemento con clase .dropdown-menu, pero su parent directo que sea un li, y el parent directo del li que sea un tag con clase .navbar-nav*/
     background-color: #3333ff;
 }
 
+.dropdown-item {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.navbar-nav .dropdown-menu a:hover {
+    color: blue !important;
+}
+
+header form {
+    position: relative;
+}
+
+.search {
+    background-color: #ABEDFF;
+    height: 100%;
+    width: 30px;
+    border-style: none;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Aquí termina el HEADER */
+@media only screen and (max-width: 992px) {
+
+    /* Aquí empieza el header */
+    .navbar-collapse {
+        background: #3333ff;
+        border-radius: 12px;
+    }
+
+    .nav-1 {
+        height: 45px;
+    }
+
+    .margin-nav {
+        margin: 0 10px;
+    }
+
+    .logo {
+        width: 150px;
+        transition: .5s ease;
+    }
+
+    .items-container span {
+        display: none;
+    }
+
+    .items-container i {
+        margin-right: 10px;
+        font-size: 0.8rem;
+        color: blue !important;
+        background: white;
+        padding: 8px;
+        border-radius: 20px;
+    }
+
+    header form input,
+    header form button {
+        display: none !important;
+    }
+
+    /* Aquí termina el header */
+}
 /* Aquí termina el HEADER */
 
 /* Aquí comienza el MAIN */
 
 main {
-<<<<<<< Updated upstream
     
     font-family: hoss-round, sans-serif;
 }
@@ -128,65 +215,6 @@ main {
     
     width: 6vw;
     padding-left: 1vh;
-=======
-    width: 100%;
-    height: 100%;
-    
-}
-.division-general {
-
-  display: flex; 
-  justify-content: space-around;
-  width: 100%;
-  height: 100%;
-    
-}
-.seccion-izquierda {
-    
-    margin-left: 321px;
-    margin-top: 65px;
-}
-.img-container {
-       
-    width: 580px;
-    height: 747px;
-    margin-right: 30px;
-    margin-left: 30px;
-}
-
-.seccion-derecha {
-    width: 525px;
-    margin-right: 321px;
-    margin-top: 65px;
-}
-.descripcion-producto {
-
-    position: relative;
-    width: 677px;
-    top:60px;
-    bottom: 140px;
-    padding-top: 140px;
-    margin-right: 321px;
-    padding-bottom: 300px;
-
-}
-
-.descripcion-producto h2 {
-    padding-bottom: 65px;
-    font-size: 54px;
-    font-weight:400;
-
-}
-
-.descripcion-producto .pPrimario{
-    font-size: 31px;
-    font-weight:400;
-}
-.descripcion-producto .pSecundario{
-    margin-top: 65px;
-    font-size: 31px;
-    font-weight:400;
->>>>>>> Stashed changes
 }
 .carousel-control-prev{
     
@@ -199,7 +227,6 @@ main {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(15,2,161)' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }  
 
-<<<<<<< Updated upstream
 .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(15,2,161)' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
    }
@@ -277,7 +304,108 @@ main {
 }
 .compra{
     margin-top: 4vh;
-}.div-but-cant{
+}
+/*---------------boton compra*/
+
+.input-general{
+    background-color: #ABEDFF;
+    border-radius: 10px;
+    width: 148px;
+    height: 80px;
+    margin-bottom: 6vh;
+    
+    
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  
+  .number-input {
+    border: 2px solid #3333FF;
+    display: inline-flex;
+    border-radius: 10px;
+    margin-bottom: 6vh;
+    
+    
+  }
+  
+  .number-input,
+  .number-input * {
+    
+    
+  }
+
+  .number-input button {
+    outline:none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    border-radius: 6px;
+    background-color: #3333FF;
+    
+    
+    
+  }
+  
+  .number-input button:before,
+  .number-input button:after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: 2px;
+    background-color: #212121;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  
+  .number-input button.plus:after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    
+  }
+  
+  .number-input input[type=number] {
+    font-family: hoss-round;
+    max-width: 5rem;
+    padding: .5rem;
+    border: solid white;
+    border-width: 0 2px;
+    font-size: 1rem;
+    height: 2rem;
+    font-weight: bold;
+    text-align: center;
+    
+  }
+
+ .input-general p {
+    font-weight: 600;
+    text-align: center;
+    color: #3333FF;
+    position: relative;
+    bottom: 4.5vh;
+ }
+
+  /*-------------------------------------Fin boton cantidad--------------*/
+
+
+
+.div-but-cant{
     display: flex;
     flex-direction: column;
     width: 11vw;
@@ -378,35 +506,159 @@ main {
     width: 3vw;
     margin-right: 1vw;
 }
-=======
-.descripcion-producto p{
-    font-size: 31px;
+
+/* Aquí empieza el FOOTER */
+
+.footer {
+    background-color: hsla(193, 100%, 50%, 0.30);
+    display: flex;
+    justify-content: center;
+    /*padding-left: 30px;*/
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    margin-top: 65px;
+    width: 325px;
+    height: 60px;
+}
+
+.footer-seguinos-en {
+    margin-top: 27px;
     font-weight: 400;
-
-
+    font-size: 23px;
+    margin-left: 5px;
 }
 
-.carrousel-final-main {
+.footer-logo-facebook {
+    width: 50px;
+    margin-bottom: 5px;
+}
+
+.footer-logo-facebook:hover {
+    animation: jump-shaking 0.83s 1;
+}
+
+.footer-logo-twitter {
+    width: 50px;
+    margin-bottom: 5px;
+}
+
+.footer-logo-twitter:hover {
+    animation: jump-shaking 0.83s 1;
+}
+
+.footer-logo-instagram {
+    width: 50px;
+    margin-bottom: 5px;
+}
+
+.footer-logo-instagram:hover {
+    animation: jump-shaking 0.83s 1;
+}
+
+.footer-logo-youtube {
+    width: 50px;
+    margin-bottom: 5px;
+}
+
+.footer-logo-youtube:hover {
+    animation: jump-shaking 0.83s 1;
+}
+
+.footer-list-1 {
+    padding-top: 65px;
+    list-style-type: none;
+    width: 280px;
+}
+
+.footer-list-2 {
+    padding-top: 65px;
+    list-style-type: none;
+    width: 280px;
+}
+
+.footer-list-3 {
+    padding-top: 65px;
+    list-style-type: none;
+    width: 280px;
+}
+
+.footer-list-4 {
+    padding-top: 65px;
+    list-style-type: none;
+    width: 280px;
+}
+
+.footer-rotulos {
+    font-weight: 600;
+    font-size: 23px;
+    color: #3333ff;
+}
+
+.footer-items {
+    font-weight: 400;
+    font-size: 18px;
+    color: #0a0a0a;
+}
+
+.footer input::placeholder {
+    /*Esto sobreescribe los colores de ambos placeholders en búsqueda de footer y header*/
+    color: white !important;
+    opacity: 1;
+}
+
+.footer-items a {
+    font-weight: 400;
+    font-size: 18px;
+    text-decoration: none;
+    color: #0a0a0a;
+}
+
+footer input:not(:placeholder-shown) {
+    /*Esto sobreescribe los colores de ambos placeholders en búsqueda de footer y header*/
+    color: white;
+    opacity: 1;
+}
+
+.form-control-footer {
+    font-weight: 400;
+    font-size: 18px;
+    color: #0a0a0a;
+    background-color: #3333ff;
+    border-right: 0;
+    width: 280px;
+    position: absolute;
+}
+
+.footer-submit {
+    margin-top: 2.5px;
+    width: 16%;
+    height: 16%;
     position: relative;
-    top: 50px;
-    margin-left: 321px;
+    margin-left: 242px;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    border-color: #3333ff;
 }
 
+.footer-he-leido {
+    font-weight: 200;
+    font-size: 14px;
+    color: #0a0a0a;
+    font-style: italic;
+    margin-top: 15px;
+}
 
-
-
-
->>>>>>> Stashed changes
-
-
-
-
-
-
-
-
-
-
+br {
+    display: block;
+    /* makes it have a width */
+    content: "";
+    /* clears default height */
+    margin-top: 0;
+    /* change this to whatever height you want it */
+}
 
 @media only screen and (max-width: 992px) {
 
