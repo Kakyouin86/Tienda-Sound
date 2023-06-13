@@ -1,0 +1,479 @@
+* {
+    font-family: "hoss-round", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    font-family: "hoss-round", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #3333ff;
+}
+
+header form {
+    position: relative;
+}
+
+header i.search {
+    position: absolute;
+    right: 0;
+    align-self: center;
+    padding: 10px;
+}
+
+.margin-nav {
+    margin: 0 85px;
+}
+
+.logo {
+    width: 200px;
+}
+
+nav .form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-1 {
+    height: 75px;
+}
+
+.nav-2 {
+    height: 45px;
+}
+
+.navbar ul .nav-item:not(:first-child) {
+    /*esto significa: seleccioná todos los li menos el primero. Pero que esten dentro de un ul, y ese ul dentro de un tag con clase .navbar*/
+    margin-left: 15px;
+}
+
+header .nav-link {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+
+.items-container {
+    display: block;
+}
+
+.items-container span {
+    border-right: 1px solid white;
+    margin-right: 15px;
+    padding-right: 15px;
+    font-size: 14px;
+}
+
+.items-container span:hover {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.navbar-nav>div>.dropdown-menu {
+    /*esto significa: selecciona un elemento con clase .dropdown-menu, pero su parent directo que sea un li, y el parent directo del li que sea un tag con clase .navbar-nav*/
+    background-color: #3333ff;
+}
+
+.dropdown-item {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.navbar-nav .dropdown-menu a:hover {
+    color: blue !important;
+}
+
+header form {
+    position: relative;
+}
+
+.search {
+    background-color: #ABEDFF;
+    height: 100%;
+    width: 30px;
+    border-style: none;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Aquí termina el HEADER */
+@media only screen and (max-width: 992px) {
+
+    /* Aquí empieza el header */
+    .navbar-collapse {
+        background: #3333ff;
+        border-radius: 12px;
+    }
+
+    .nav-1 {
+        height: 45px;
+    }
+
+    .margin-nav {
+        margin: 0 10px;
+    }
+
+    .logo {
+        width: 150px;
+        transition: .5s ease;
+    }
+
+    .items-container span {
+        display: none;
+    }
+
+    .items-container i {
+        margin-right: 10px;
+        font-size: 0.8rem;
+        color: blue !important;
+        background: white;
+        padding: 8px;
+        border-radius: 20px;
+    }
+
+    header form input,
+    header form button {
+        display: none !important;
+    }
+
+    /* Aquí termina el header */
+}
+
+/* Acá comienza el CARRITO - JUAN */
+
+
+main {
+    margin: auto;
+}
+
+.tit_carrito {
+    font-weight: 400;
+    font-size: 2rem;
+    padding-bottom: 10px;
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cant {
+    margin-left: 15px;
+}
+
+.carrito_page {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 65px;
+}
+
+.compras {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.compra1, .compra2 {
+    width: 58vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.border {
+    width: 58vw;
+    border-bottom: black 1px solid;
+    margin-top: 10px;
+}
+
+.foto_p {
+    width: 162px;
+    scale: 80%;
+}
+
+.prod {
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 0px;
+}
+
+.tit_prod {
+    font-size: 1.3rem;
+}
+
+.des_pr {
+    width: 21vw;
+}
+
+.cantidad {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 11vw;
+    text-align: center;
+    font-size: 14px;
+}
+
+.cantidad img {
+    width: 1.6vw;
+}
+
+.cuantos {
+    width: 4vw;
+    height: 3vh;
+    border: #3333ff 1px solid;
+    border-radius: 8px;
+    margin: auto;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.disponibles {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.cantidad img:hover {
+    opacity: 0.75;
+}
+
+.precio_pr {
+    width: 9vw;
+    font-size: 2rem;
+    text-align: right;
+}
+
+.envio_img {
+    width: 100px;
+}
+
+.envio_compra {
+    width: 58vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.envio_img {
+    width: 90px;
+}
+
+.precio_envio {
+    font-size: 21px;
+    font-weight: 500;
+    color: #3333ff;
+}
+
+.total_compra {
+    width: 58vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 39px;
+    font-weight: 700;
+}
+
+.botones_compra {
+    width: 58vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+#seguircomprando {
+    background-color: #ABEDFF;
+    color: #3333ff;
+    border-radius: 15px;
+    border-style: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    margin-right: 5px;
+}
+
+#seguircomprando:hover {
+    color: white;
+}
+
+#continuar {
+    background-color: #3333ff;
+    color: white;
+    border-radius: 15px;
+    border-style: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+#continuar:hover {
+    background-color: #ABEDFF;
+    color: white;
+}
+
+/* Acá termina el CARRITO - JUAN */
+
+
+/* Acá empieza CARRITO media querries */
+
+/* mobile */
+@media only screen and (max-width: 480px) {
+
+    .compra1, .compra2 {
+        width: 450px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .prod {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tit_prod {
+        text-align: center;
+    }
+    .des_pr {
+        width: 350px;
+        text-align: center;
+    }
+    .cantidad {
+        width: 150px;
+        margin-top: 30px;
+    }
+    .cantidad img {
+        width: 30px;
+    }
+    .cuantos {
+        width: 35px;
+        height: 30px;
+    }
+    .precio_pr {
+        width: 400px;
+        font-size: 2.1rem;
+        text-align: center;
+    }
+    .envio_img {
+        width: 75px;
+    }
+    .precio_envio {
+        font-size: 17px;
+    }
+    .total_compra {
+        width: 400;
+        font-size: 20px;
+    }
+    .botones_compra {
+        width: 400px;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+}
+
+/* tablet */
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+
+    .compra1, .compra2 {
+        width: 450px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .prod {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tit_prod {
+        text-align: center;
+    }
+    .des_pr {
+        width: 350px;
+        text-align: center;
+    }
+
+    .cantidad {
+        width: 150px;
+        margin-top: 30px;
+    }
+
+    .cantidad img {
+        width: 30px;
+    }
+    .cuantos {
+        width: 35px;
+        height: 30px;
+    }
+    .precio_pr {
+        width: 400px;
+        font-size: 2.1rem;
+        text-align: center;
+    }
+    .envio_img {
+        width: 75px;
+    }
+    .precio_envio {
+        font-size: 17px;
+    }
+    .total_compra {
+        width: 400;
+        font-size: 20px;
+    }
+    .botones_compra {
+        width: 400px;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+/* desktop */
+@media only screen and (max-width: 1279px) and (min-width: 769px) {
+
+    .cantidad img {
+        width: 25px;
+    }
+    .cuantos {
+        width: 4vw;
+        height: 3vh;
+        border: #3333ff 1px solid;
+        border-radius: 8px;
+        margin: auto;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+}
+
+/* Acá termina CARRITO media querries */
