@@ -150,7 +150,7 @@ header form {
 }
 /* Aquí termina el HEADER */
 
-/* Aquí comienza el MAIN */
+/* -----------------------------------E M P I E Z A      M A I N -----------------------------------------------------*/
 
 main {
     
@@ -160,7 +160,6 @@ main {
 .division-general {
 
     display: flex;
-    
     margin-left: 5vw;
     margin-right: 5vw;
     margin-top: 5vh;
@@ -168,6 +167,12 @@ main {
     
 }
 
+.main-carousel2 {
+    display: none;
+}
+.descripcion-producto2 {
+    display: none;
+}
 .seccion-izquierda{
 
     
@@ -345,7 +350,7 @@ input[type="number"] {
 
   .number-input button {
     outline:none;
-    -webkit-appearance: none;
+    -webkit-appearance:none;
     background-color: transparent;
     border: none;
     align-items: center;
@@ -357,6 +362,8 @@ input[type="number"] {
     position: relative;
     border-radius: 6px;
     background-color: #3333FF;
+    color: aliceblue;
+    
     
     
     
@@ -369,7 +376,7 @@ input[type="number"] {
     content: '';
     width: 1rem;
     height: 2px;
-    background-color: #212121;
+    background-color: white;
     transform: translate(-50%, -50%);
     
   }
@@ -379,6 +386,7 @@ input[type="number"] {
     transform: translate(-50%, -50%) rotate(90deg);
     
   }
+
   
   .number-input input[type=number] {
     font-family: hoss-round;
@@ -401,9 +409,6 @@ input[type="number"] {
     bottom: 4.5vh;
  }
 
-  /*-------------------------------------Fin boton cantidad--------------*/
-
-
 
 .div-but-cant{
     display: flex;
@@ -415,12 +420,13 @@ input[type="number"] {
     background-color: #3333FF;
     color: white;
     font-size: 14px;
+    text-align: center;
     border-radius: 10px;
     border: solid 1px white;
     padding: 2% 4%;
     margin-bottom: 4vh;
     margin-top: 2vh;
-    
+    width: 148px;
 }
 
 .button-cantidad input{
@@ -507,6 +513,16 @@ input[type="number"] {
     margin-right: 1vw;
 }
 
+
+@media (min-width: 0px) and (max-width: 480px) {
+
+    .seccion-izquierda {
+        display: none;
+    }
+
+
+
+/*----------------------------------------------F  I N    M A  I N -----------------------------------------------------*/
 /* Aquí empieza el FOOTER */
 
 .footer {
