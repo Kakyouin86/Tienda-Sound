@@ -158,17 +158,29 @@ header form {
     background-position: center;
 }
 
-.slide1 {background-image: url(/img/carousel/slider1.jpg);}
+.slide1 {
+    background-image: url(/img/carousel/slider1.jpg);
+}
 
-.slide2 {background-image: url(/img/carousel/slider2.jpg);}
+.slide2 {
+    background-image: url(/img/carousel/slider2.jpg);
+}
 
-.slide3 {background-image: url(/img/carousel/slider3.jpg);}
+.slide3 {
+    background-image: url(/img/carousel/slider3.jpg);
+}
 
-.slide4 {background-image: url(/img/carousel/slider4.jpg);}
+.slide4 {
+    background-image: url(/img/carousel/slider4.jpg);
+}
 
-.slide5 {background-image: url(/img/carousel/slider5.jpg);}
+.slide5 {
+    background-image: url(/img/carousel/slider5.jpg);
+}
 
-.slide6 {background-image: url(/img/carousel/slider6.jpg);}
+.slide6 {
+    background-image: url(/img/carousel/slider6.jpg);
+}
 
 .carousel-item {
     position: relative;
@@ -577,7 +589,7 @@ header form {
         transform: translateY(-13px) rotate(-10deg)
     }
 
-    100% {       
+    100% {
         transform: translateY(0) rotate(0)
     }
 }
@@ -618,45 +630,25 @@ header form {
 }
 
 .footer-seguinos-en {
-    margin-top: 27px;
     font-weight: 400;
-    font-size: 23px;
+    font-size: 18px;
     margin-left: 5px;
 }
 
-.footer-logo-facebook {
-    width: 50px;
+.footer-redes-sociales {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 20px;
+}
+
+.footer-logo-redes {
+    width: 30px;
     margin-bottom: 5px;
 }
 
-.footer-logo-facebook:hover {
-    animation: jump-shaking 0.83s 1;
-}
-
-.footer-logo-twitter {
-    width: 50px;
-    margin-bottom: 5px;
-}
-
-.footer-logo-twitter:hover {
-    animation: jump-shaking 0.83s 1;
-}
-
-.footer-logo-instagram {
-    width: 50px;
-    margin-bottom: 5px;
-}
-
-.footer-logo-instagram:hover {
-    animation: jump-shaking 0.83s 1;
-}
-
-.footer-logo-youtube {
-    width: 50px;
-    margin-bottom: 5px;
-}
-
-.footer-logo-youtube:hover {
+.footer-logo-redes:hover {
     animation: jump-shaking 0.83s 1;
 }
 
@@ -686,13 +678,13 @@ header form {
 
 .footer-rotulos {
     font-weight: 600;
-    font-size: 23px;
+    font-size: 18px;
     color: #3333ff;
 }
 
 .footer-items {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 15px;
     color: #0a0a0a;
 }
 
@@ -704,7 +696,7 @@ header form {
 
 .footer-items a {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 15px;
     text-decoration: none;
     color: #0a0a0a;
 }
@@ -715,9 +707,21 @@ footer input:not(:placeholder-shown) {
     opacity: 1;
 }
 
+.footer-barra {
+    position: relative;
+}
+
+.footer-submit img {
+    position: absolute;
+    right: 0;
+    width: 20px;
+}
+
+
+
 .form-control-footer {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 15px;
     color: #0a0a0a;
     background-color: #3333ff;
     border-right: 0;
@@ -725,21 +729,11 @@ footer input:not(:placeholder-shown) {
     position: absolute;
 }
 
-.footer-submit {
-    margin-top: 2.5px;
-    width: 16%;
-    height: 16%;
-    position: relative;
-    margin-left: 242px;
-    border-radius: 12px;
-    background-color: rgba(0, 0, 0, 0);
-    border-style: none;
-    border-color: #3333ff;
-}
+
 
 .footer-he-leido {
     font-weight: 200;
-    font-size: 14px;
+    font-size: 15px;
     color: #0a0a0a;
     font-style: italic;
     margin-top: 15px;
@@ -803,7 +797,7 @@ br {
         transition: 450ms;
         margin-bottom: 40px;
     }
-        
+
     .banner2 {
         display: flex;
         justify-content: center;
@@ -820,12 +814,12 @@ br {
         font-size: 65px;
         margin: 0px;
     }
-    
+
     .linea1 {
         font-size: 21px;
         margin-bottom: -25px;
     }
-    
+
     .linea3 {
         font-size: 16px;
         margin-top: -25px
@@ -835,12 +829,12 @@ br {
         width: 50px;
         transform: translate(-175px, 35px);
     }
-    
+
     .ray2 {
         width: 50px;
         transform: translate(-175px, 35px);
     }
-    
+
     .plus {
         transform: translate(85px, 30px);
     }
@@ -852,13 +846,16 @@ br {
         padding: 60px;
         justify-content: center
     }
+
     .icono_funciona_para {
         scale: 75%;
     }
-    .paracomprar, .paravender {
+
+    .paracomprar,
+    .paravender {
         justify-content: center;
     }
-    
+
     /* Acá termina COMO FUNCIONA */
     /* Termina mobile Juan */
 }
@@ -892,7 +889,7 @@ br {
         transition: 450ms;
         margin-bottom: 40px;
     }
-        
+
     .banner2 {
         display: flex;
         justify-content: center;
@@ -909,12 +906,12 @@ br {
         font-size: 65px;
         margin: 0px;
     }
-    
+
     .linea1 {
         font-size: 21px;
         margin-bottom: -25px;
     }
-    
+
     .linea3 {
         font-size: 16px;
         margin-top: -25px
@@ -924,23 +921,24 @@ br {
         width: 50px;
         transform: translate(-175px, 35px);
     }
-    
+
     .ray2 {
         width: 50px;
         transform: translate(-175px, 35px);
     }
-    
+
     .plus {
         transform: translate(85px, 30px);
     }
 
-    /* Acá termina BANNER */  
+    /* Acá termina BANNER */
 
     /* Acá empieza COMO FUNCIONA */
 
     .comofunciona {
         padding: 60px
     }
+
     .icono_funciona_para {
         scale: 85%;
     }
@@ -965,7 +963,7 @@ br {
         margin-top: 140px;
         margin-bottom: 140px;
     }
-    
+
     .banner1 {
         width: 600px;
         height: 255px;
@@ -981,7 +979,7 @@ br {
         margin-bottom: 40px;
         border: 5px solid white;
     }
-    
+
     .banner2 {
         width: 600px;
         height: 255px;
@@ -996,25 +994,27 @@ br {
         transition: 450ms;
         border: 5px solid white;
     }
-    
+
     /* Acá termina BANNER */
     /* Acá empieza COMO FUNCIONA */
 
     .comofunciona {
         padding: 60px;
     }
+
     .paracomprar,
     .paravender {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-}
-    /* Acá termina COMO FUNCIONA */ 
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    /* Acá termina COMO FUNCIONA */
     /* Termina desktop Juan */
 
-}   
+}
 
 
 /* desktop large */
