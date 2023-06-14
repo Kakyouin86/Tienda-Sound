@@ -14,6 +14,8 @@ body {
     overflow-x: hidden;
 }
 
+/* Aquí comienza el HEADER */
+
 header {
     background-color: #3333ff;
 }
@@ -110,9 +112,11 @@ header form {
 }
 
 /* Aquí termina el HEADER */
+
+/* Aquí empieza el HEADER con máximo de 992px */
+
 @media only screen and (max-width: 992px) {
 
-    /* Aquí empieza el header */
     .navbar-collapse {
         background: #3333ff;
         border-radius: 12px;
@@ -148,11 +152,11 @@ header form {
     header form button {
         display: none !important;
     }
-
-    /* Aquí termina el header */
 }
 
-/* Aca empieza el CARROUSEL*/
+/* Aquí termina el HEADER con máximo de 992px */
+
+/* Aca empieza el CARROUSEL */
 
 .carousel-slides {
     background-size: cover;
@@ -209,7 +213,6 @@ header form {
     font-weight: 900;
     color: #ABEDFF;
 }
-
 
 .btn-fucsia {
     background-color: #E93882;
@@ -268,11 +271,9 @@ header form {
 
 /* Aca terminan las CATEGORIAS */
 
-
 /* Aca empiezan los PRODUCTOS DESTACADOS*/
 
 .tituloDestacados {
-
     margin-bottom: 65px;
     font-weight: 400;
     font-size: 2rem;
@@ -283,7 +284,6 @@ header form {
 }
 
 .productoDestacado {
-
     padding: 20px;
     border: solid 2px #00c7ff;
     border-radius: 20px;
@@ -291,12 +291,10 @@ header form {
 }
 
 .productoDestacado:hover {
-
     transform: scale(1.02);
     box-shadow: 0px 0px 3px 3px #00c8ff67;
 
     .imgProducto {
-
         transform: scale(1.1);
         transition: 1.5s;
     }
@@ -311,7 +309,6 @@ header form {
 }
 
 .seccionImgDestacado {
-
     position: relative;
     z-index: 0;
     height: 55%;
@@ -321,7 +318,6 @@ header form {
     align-items: center;
 
     .contenedorImgProducto {
-
         height: 100%;
         width: 100%;
         display: flex;
@@ -337,15 +333,12 @@ header form {
         }
     }
 
-
     .etiquetasDestacados {
-
         position: absolute;
         z-index: 1;
         width: 100%;
 
         .iconoDestacado {
-
             right: 0px;
             top: -150px;
             font-size: 30px;
@@ -357,7 +350,6 @@ header form {
         }
 
         .nuevosUsados {
-
             position: inherit;
             width: 25%;
             left: -22px;
@@ -366,7 +358,6 @@ header form {
     }
 
     .iconoDestacado:active {
-
         .siFav {
             display: flex;
         }
@@ -393,7 +384,6 @@ header form {
 
 .nombreProductoDestacado,
 .precioProductoDestacado {
-
     font-size: 170%;
     font-weight: 500;
     margin: inherit;
@@ -401,7 +391,6 @@ header form {
 
 .carousel-control-prev-destacados,
 .carousel-control-next-destacados {
-
     color: #0a0a0a !important;
     background: none;
     opacity: inherit !important;
@@ -545,7 +534,7 @@ header form {
 
 /* Aca terminan los BANNERS */
 
-/* Aca comienza COMO FUNCIONA */
+/* Aca comienza CÓMO FUNCIONA */
 
 .comofunciona {
     margin: auto;
@@ -793,8 +782,6 @@ br {
     /* change this to whatever height you want it */
 }
 
-
-
 /* MEDIA QUERIES */
 
 /* smartphones */
@@ -819,7 +806,7 @@ br {
 
     /* Termina mobile Agus */
 
-    /*PRODUCTOS DESTACADOS*/
+    /* PRODUCTOS DESTACADOS */
 
     .carouselDestacados {
         margin: 0px 10px;
@@ -842,19 +829,16 @@ br {
     }
 
     .iconoDestacado {
-
         font-size: 20px;
         top: -95px;
     }
 
     .nuevosUsados {
-
         width: 35%;
         top: -95px;
     }
 
     .descripcionProductoDestacado {
-
         font-size: 11px;
         white-space: nowrap;
         overflow: hidden;
@@ -873,7 +857,6 @@ br {
     .nombreProductoDestacado,
     .precioProductoDestacado {
         font-size: 70%;
-        ;
     }
 
     .carousel-control-prev-destacados,
@@ -881,9 +864,10 @@ br {
         font-size: 20px;
     }
 
-    /*TERMINA PRODUCTOS DESTACADOS*/
+    /* Acá termina PRODUCTOS DESTACADOS*/
 
     /* Empieza mobile Juan */
+
     /* Acá comienza BANNER */
 
     .banners_container {
@@ -949,7 +933,8 @@ br {
     }
 
     /* Acá termina BANNER */
-    /* Acá empieza COMO FUNCIONA */
+
+    /* Acá empieza CÓMO FUNCIONA */
 
     .comofunciona {
         padding: 60px;
@@ -965,8 +950,9 @@ br {
         justify-content: center;
     }
 
-    /* Acá termina COMO FUNCIONA */
-    /* Termina mobile Juan */
+    /* Acá termina CÓMO FUNCIONA */
+
+    /* Acá termina mobile Juan */
 }
 
 
@@ -974,7 +960,8 @@ br {
 
 @media only screen and (max-width: 768px) and (min-width: 481px) {
 
-    /* Empieza tablet Juan */
+    /* Acá empieza tablet Juan */
+
     /* Acá comienza BANNER */
 
     .banners_container {
@@ -1041,7 +1028,7 @@ br {
 
     /* Acá termina BANNER */
 
-    /* Acá empieza COMO FUNCIONA */
+    /* Acá empieza CÓMO FUNCIONA */
 
     .comofunciona {
         padding: 60px
@@ -1051,10 +1038,11 @@ br {
         scale: 85%;
     }
 
-    /* Acá termina COMO FUNCIONA */
-    /* Termina tablet Juan */
+    /* Acá termina CÓMO FUNCIONA */
 
-    /*PRODUCTOS DESTACADOS*/
+    /* Acá termina tablet Juan */
+
+    /* Acá empieza PRODUCTOS DESTACADOS */
 
     .contenedorProductoDestacado {
         padding: 5px;
@@ -1073,7 +1061,6 @@ br {
     }
 
     .iconoDestacado {
-
         font-size: 20px;
         top: -67px;
     }
@@ -1085,7 +1072,6 @@ br {
     }
 
     .descripcionProductoDestacado {
-
         font-size: 11px;
         white-space: nowrap;
         overflow: hidden;
@@ -1110,14 +1096,15 @@ br {
         font-size: 20px;
     }
 
-    /*TERMINA PRODUCTOS DESTACADOS*/
+    /* Acá termina PRODUCTOS DESTACADOS */
 }
 
 /* desktop */
 
 @media only screen and (max-width: 1279px) and (min-width: 769px) {
 
-    /* Empieza desktop Juan */
+    /* Acá Empieza desktop Juan */
+
     /* Acá comienza BANNER */
 
     .banners_container {
@@ -1162,7 +1149,8 @@ br {
     }
 
     /* Acá termina BANNER */
-    /* Acá empieza COMO FUNCIONA */
+
+    /* Acá empieza CÓMO FUNCIONA */
 
     .comofunciona {
         padding: 60px;
@@ -1177,10 +1165,11 @@ br {
         gap: 40px;
     }
 
-    /* Acá termina COMO FUNCIONA */
+    /* Acá termina CÓMO FUNCIONA */
+
     /* Termina desktop Juan */
 
-    /*PRODUCTOS DESTACADOS*/
+    /* Acá empieza PRODUCTOS DESTACADOS */
 
     .contenedorProductoDestacado {
         padding: 5px;
@@ -1219,10 +1208,8 @@ br {
         top: -110px;
     }
 
-    /*TERMINA PRODUCTOS DESTACADOS*/
-
+    /* Acá termina PRODUCTOS DESTACADOS */
 }
-
 
 /* desktop large */
 
