@@ -342,15 +342,10 @@ input[type="number"] {
     
   }
   
-  .number-input,
-  .number-input * {
-    
-    
-  }
+
 
   .number-input button {
-    outline:none;
-    -webkit-appearance:none;
+    outline:none;    
     background-color: transparent;
     border: none;
     align-items: center;
@@ -362,12 +357,8 @@ input[type="number"] {
     position: relative;
     border-radius: 6px;
     background-color: #3333FF;
-    color: aliceblue;
-    
-    
-    
-    
-  }
+    color: aliceblue; 
+    }
   
   .number-input button:before,
   .number-input button:after {
@@ -523,7 +514,6 @@ input[type="number"] {
 
 
 /*----------------------------------------------F  I N    M A  I N -----------------------------------------------------*/
-/* Aquí empieza el FOOTER */
 
 .footer {
     background-color: hsla(193, 100%, 50%, 0.30);
@@ -676,44 +666,267 @@ br {
     /* change this to whatever height you want it */
 }
 
-@media only screen and (max-width: 992px) {
 
-    /* Aquí empieza el header */
-    .navbar-collapse {
-        background: #3333ff;
-        border-radius: 12px;
+
+/* MEDIA QUERIES */
+
+/* smartphones */
+
+@media only screen and (max-width: 480px) {
+
+    /* Empieza mobile Agus */
+
+    .overlay-text h2 {
+        font-size: 1.9rem;
+        line-height: 1.9rem;
+        width: 70%;
     }
 
-    .nav-1 {
-        height: 45px;
-    }
-
-    .margin-nav {
-        margin: 0 10px;
-    }
-
-    .logo {
-        width: 150px;
-        transition: .5s ease;
-    }
-
-    .items-container span {
-        display: none !important;
-    }
-
-    .items-container i {
-        margin-right: 10px;
+    .btn-fucsia {
         font-size: 0.8rem;
-        color: #3333ff !important;
-        background: #fff;
-        padding: 8px;
-        border-radius: 20px;
     }
 
-    header form input,
-    header form i {
-        display: none !important;
+    .fucsia-text {
+        font-size: 1rem;
     }
 
-    /* Aquí termina el header */
+    /* Termina mobile Agus */
+
+    /* Empieza mobile Juan */
+    /* Acá comienza BANNER */
+
+    .banners_container {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .banner1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 360px;
+        height: 160px;
+        font-size: 12px;
+        border-radius: 45px;
+        transition: 450ms;
+        margin-bottom: 40px;
+    }
+        
+    .banner2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 360px;
+        height: 160px;
+        font-size: 12px;
+        border-radius: 45px;
+        transition: 450ms;
+    }
+
+    .tit {
+        font-size: 65px;
+        margin: 0px;
+    }
+    
+    .linea1 {
+        font-size: 21px;
+        margin-bottom: -25px;
+    }
+    
+    .linea3 {
+        font-size: 16px;
+        margin-top: -25px
+    }
+
+    .ray {
+        width: 50px;
+        transform: translate(-175px, 35px);
+    }
+    
+    .ray2 {
+        width: 50px;
+        transform: translate(-175px, 35px);
+    }
+    
+    .plus {
+        transform: translate(85px, 30px);
+    }
+
+    /* Acá termina BANNER */
+    /* Acá empieza COMO FUNCIONA */
+
+    .comofunciona {
+        padding: 60px;
+        justify-content: center
+    }
+    .icono_funciona_para {
+        scale: 75%;
+    }
+    .paracomprar, .paravender {
+        justify-content: center;
+    }
+    
+    /* Acá termina COMO FUNCIONA */
+    /* Termina mobile Juan */
 }
+
+
+/* tablet */
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+
+
+    /* Empieza tablet Juan */
+    /* Acá comienza BANNER */
+
+    .banners_container {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 600px;
+        height: 160px;
+        font-size: 12px;
+        border-radius: 45px;
+        transition: 450ms;
+        margin-bottom: 40px;
+    }
+        
+    .banner2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 600px;
+        height: 160px;
+        font-size: 12px;
+        border-radius: 45px;
+        transition: 450ms;
+    }
+
+    .tit {
+        font-size: 65px;
+        margin: 0px;
+    }
+    
+    .linea1 {
+        font-size: 21px;
+        margin-bottom: -25px;
+    }
+    
+    .linea3 {
+        font-size: 16px;
+        margin-top: -25px
+    }
+
+    .ray {
+        width: 50px;
+        transform: translate(-175px, 35px);
+    }
+    
+    .ray2 {
+        width: 50px;
+        transform: translate(-175px, 35px);
+    }
+    
+    .plus {
+        transform: translate(85px, 30px);
+    }
+
+    /* Acá termina BANNER */  
+
+    /* Acá empieza COMO FUNCIONA */
+
+    .comofunciona {
+        padding: 60px
+    }
+    .icono_funciona_para {
+        scale: 85%;
+    }
+
+    /* Acá termina COMO FUNCIONA */
+    /* Termina tablet Juan */
+}
+
+/* desktop */
+
+@media only screen and (max-width: 1279px) and (min-width: 769px) {
+
+    /* Empieza desktop Juan */
+    /* Acá comienza BANNER */
+
+    .banners_container {
+        margin: auto;
+        max-width: 1296px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 140px;
+        margin-bottom: 140px;
+    }
+    
+    .banner1 {
+        width: 600px;
+        height: 255px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 20px;
+        color: white;
+        border-radius: 74px;
+        background-image: linear-gradient(180deg, #3333FF, #6666FF, #ABEDFF);
+        transition: 450ms;
+        margin-bottom: 40px;
+        border: 5px solid white;
+    }
+    
+    .banner2 {
+        width: 600px;
+        height: 255px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 20px;
+        color: white;
+        border-radius: 74px;
+        background-image: linear-gradient(180deg, #3333FF, #6666FF, #ABEDFF);
+        transition: 450ms;
+        border: 5px solid white;
+    }
+    
+    /* Acá termina BANNER */
+    /* Acá empieza COMO FUNCIONA */
+
+    .comofunciona {
+        padding: 60px;
+    }
+    .paracomprar,
+    .paravender {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+    /* Acá termina COMO FUNCIONA */ 
+    /* Termina desktop Juan */
+
+}   
+}
+
+/* desktop large */
