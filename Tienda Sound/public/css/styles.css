@@ -809,13 +809,13 @@ br {
         display: flex;
         justify-content: center;
         justify-content: space-between;
-        padding-top: 25px;
-        padding-bottom: 25px;
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
         cursor: pointer;
         width: 100%;
-        font-size: 25px;
+        font-size: 15px;
         border: none;
         text-align: left;
         outline: none;
@@ -843,13 +843,13 @@ br {
 
     .footer-accordion-between-mobile-and-max:after {
         content: "+";
-        font-size: 25px;
+        font-size: 15px;
         margin-left: 5px;
     }
 
     .footer-accordion-between-mobile-and-max.active:after {
         content: "-";
-        font-size: 25px;
+        font-size: 15px;
         margin-left: 5px;
         color: white;
     }
@@ -866,8 +866,10 @@ br {
 
     .footer-items-between-mobile-and-max a {
         font-weight: 400;
-        font-size: 25px;
-        padding: 20px;
+        font-size: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 5px;
         color: #0a0a0a;
     }
 
@@ -902,6 +904,45 @@ br {
     .footer-logo-redes-between-mobile-and-max:hover {
         animation: jump-shaking 0.83s 1;
     }
+
+
+    .footer-barra-between-mobile-and-max {
+        position: relative;
+
+    }
+
+    .footer-submit-between-mobile-and-max {
+        padding: 0;
+        border: 0;
+        background: transparent;
+        margin-left: 225px;
+    }
+
+    .footer-submit-between-mobile-and-max img {
+        position: relative;
+        right: 17px;
+        width: 25px;
+        padding-top: 6px;
+    }
+
+    .form-control-footer-between-mobile-and-max {
+        font-weight: 400;
+        font-size: 15px;
+        color: #0a0a0a;
+        background-color: #3333ff;
+        border-right: 0;
+        width: 240px;
+        position: absolute;
+    }
+
+    .footer-he-leido-between-mobile-and-max {
+        font-weight: 200;
+        font-size: 15px;
+        color: #0a0a0a;
+        font-style: italic;
+        margin-top: 15px;
+    }
+
 }
 
 
