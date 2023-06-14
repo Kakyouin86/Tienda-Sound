@@ -65,7 +65,6 @@ header .nav-link {
     text-decoration: none;
 }
 
-
 .items-container {
     display: block;
 }
@@ -279,7 +278,9 @@ header form {
     font-size: 2rem;
 }
 
-.carousel-innerDestacados{padding: 10px;}
+.carousel-innerDestacados {
+    padding: 10px;
+}
 
 .productoDestacado {
 
@@ -289,20 +290,25 @@ header form {
     height: 95%;
 }
 
-.productoDestacado:hover{
+.productoDestacado:hover {
 
     transform: scale(1.02);
-    box-shadow: 0px 0px 3px 3px  #00c8ff67;
-    .imgProducto{
+    box-shadow: 0px 0px 3px 3px #00c8ff67;
+
+    .imgProducto {
 
         transform: scale(1.1);
         transition: 1.5s;
     }
 }
 
-.carouselDestacados { margin: 0px 30px; }
+.carouselDestacados {
+    margin: 0px 30px;
+}
 
-.contenedorProductoDestacado{ height: 650px; }
+.contenedorProductoDestacado {
+    height: 650px;
+}
 
 .seccionImgDestacado {
 
@@ -313,7 +319,7 @@ header form {
     display: flex;
     justify-content: center;
     align-items: center;
-  
+
     .contenedorImgProducto {
 
         height: 100%;
@@ -322,10 +328,10 @@ header form {
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        
-        .imgProducto{
+
+        .imgProducto {
             height: auto;
-            width:auto;
+            width: auto;
             max-height: 100%;
             max-width: 100%;
         }
@@ -345,7 +351,9 @@ header form {
             font-size: 30px;
             position: inherit;
 
-            .siFav { display: none; }
+            .siFav {
+                display: none;
+            }
         }
 
         .nuevosUsados {
@@ -359,8 +367,13 @@ header form {
 
     .iconoDestacado:active {
 
-        .siFav { display: flex; }
-        .noFav { display: none; }
+        .siFav {
+            display: flex;
+        }
+
+        .noFav {
+            display: none;
+        }
     }
 }
 
@@ -374,12 +387,14 @@ header form {
     margin-bottom: 20px;
 }
 
-.descripcionProductoDestacado { font-size: 120%;}
+.descripcionProductoDestacado {
+    font-size: 120%;
+}
 
 .nombreProductoDestacado,
 .precioProductoDestacado {
 
-    font-size:170%;
+    font-size: 170%;
     font-weight: 500;
     margin: inherit;
 }
@@ -391,11 +406,16 @@ header form {
     background: none;
     opacity: inherit !important;
     font-size: 30px;
-    width: 0!important;
+    width: 0 !important;
 }
 
-.carousel-control-prev-destacados { left: -10px; }
-.carousel-control-next-destacados { right: -10px; }
+.carousel-control-prev-destacados {
+    left: -10px;
+}
+
+.carousel-control-next-destacados {
+    right: -10px;
+}
 
 /* Aca terminan los PRODUCTOS DESTACADOS */
 
@@ -730,15 +750,21 @@ footer input:not(:placeholder-shown) {
 
 .footer-barra {
     position: relative;
+    text-align: end;
+}
+
+.footer-submit {
+    padding: 0;
+    border: 0;
+    background: transparent;
 }
 
 .footer-submit img {
-    position: absolute;
-    right: 0;
-    width: 20px;
+    position: relative;
+    right: 17px;
+    width: 25px;
+    padding-top: 6px;
 }
-
-
 
 .form-control-footer {
     font-weight: 400;
@@ -746,11 +772,9 @@ footer input:not(:placeholder-shown) {
     color: #0a0a0a;
     background-color: #3333ff;
     border-right: 0;
-    width: 280px;
+    width: 240px;
     position: absolute;
 }
-
-
 
 .footer-he-leido {
     font-weight: 200;
@@ -797,40 +821,68 @@ br {
 
     /*PRODUCTOS DESTACADOS*/
 
-    .carouselDestacados { margin: 0px 10px; }
-    .contenedorProductoDestacado { padding: 5px; }
-    .productoDestacado{ padding: 5px; }
-    .tituloDestacados { margin-bottom: 13px;}
-    .contenedorProductoDestacado{ height: 265px;}
-     
-    .iconoDestacado {
- 
-        font-size: 20px ;
-        top: -95px ;
+    .carouselDestacados {
+        margin: 0px 10px;
     }
- 
+
+    .contenedorProductoDestacado {
+        padding: 5px;
+    }
+
+    .productoDestacado {
+        padding: 5px;
+    }
+
+    .tituloDestacados {
+        margin-bottom: 13px;
+    }
+
+    .contenedorProductoDestacado {
+        height: 265px;
+    }
+
+    .iconoDestacado {
+
+        font-size: 20px;
+        top: -95px;
+    }
+
     .nuevosUsados {
- 
+
         width: 35%;
         top: -95px;
     }
-     
-    .descripcionProductoDestacado { 
-          
+
+    .descripcionProductoDestacado {
+
         font-size: 11px;
-        white-space: nowrap; 
+        white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;    
+        text-overflow: ellipsis;
     }
 
-    .imgProducto { padding: 5px; }
-    .informacionProducto{margin-bottom:inherit; padding: 15px 0 ;}
+    .imgProducto {
+        padding: 5px;
+    }
+
+    .informacionProducto {
+        margin-bottom: inherit;
+        padding: 15px 0;
+    }
+
     .nombreProductoDestacado,
-    .precioProductoDestacado { font-size: 70%;; } 
-    .carousel-control-prev-destacados, .carousel-control-next-destacados { font-size: 20px; }   
+    .precioProductoDestacado {
+        font-size: 70%;
+        ;
+    }
+
+    .carousel-control-prev-destacados,
+    .carousel-control-next-destacados {
+        font-size: 20px;
+    }
 
     /*TERMINA PRODUCTOS DESTACADOS*/
-    
+
     /* Empieza mobile Juan */
     /* Acá comienza BANNER */
 
@@ -1004,37 +1056,60 @@ br {
 
     /*PRODUCTOS DESTACADOS*/
 
-    .contenedorProductoDestacado { padding: 5px; }
-    .productoDestacado{ padding: 10px; }
-    .tituloDestacados { margin-bottom: 45px;}
-    .contenedorProductoDestacado{ height: 320px;}
-      
-    .iconoDestacado {
-  
-        font-size: 20px;
-        top: -67px ;
+    .contenedorProductoDestacado {
+        padding: 5px;
     }
-  
+
+    .productoDestacado {
+        padding: 10px;
+    }
+
+    .tituloDestacados {
+        margin-bottom: 45px;
+    }
+
+    .contenedorProductoDestacado {
+        height: 320px;
+    }
+
+    .iconoDestacado {
+
+        font-size: 20px;
+        top: -67px;
+    }
+
     .nuevosUsados {
         width: 35%;
-        left: -12px ;
-        top: -67px ;
+        left: -12px;
+        top: -67px;
     }
-      
-    .descripcionProductoDestacado { 
-           
+
+    .descripcionProductoDestacado {
+
         font-size: 11px;
-        white-space: nowrap; 
+        white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;    
+        text-overflow: ellipsis;
     }
- 
-    .informacionProducto{margin-bottom:inherit;}
-    .descripcionProductoDestacado { font-size: 11px;}
+
+    .informacionProducto {
+        margin-bottom: inherit;
+    }
+
+    .descripcionProductoDestacado {
+        font-size: 11px;
+    }
+
     .nombreProductoDestacado,
-    .precioProductoDestacado { font-size: 17px; } 
-    .carousel-control-prev-destacados, .carousel-control-next-destacados { font-size: 20px; }   
- 
+    .precioProductoDestacado {
+        font-size: 17px;
+    }
+
+    .carousel-control-prev-destacados,
+    .carousel-control-next-destacados {
+        font-size: 20px;
+    }
+
     /*TERMINA PRODUCTOS DESTACADOS*/
 }
 
@@ -1107,26 +1182,43 @@ br {
 
     /*PRODUCTOS DESTACADOS*/
 
-    .contenedorProductoDestacado { padding: 5px; }
-    .productoDestacado{ padding: 10px; }
-    .contenedorProductoDestacado{ height: 500px;}
-    .descripcionProductoDestacado { font-size: 15px;}
+    .contenedorProductoDestacado {
+        padding: 5px;
+    }
+
+    .productoDestacado {
+        padding: 10px;
+    }
+
+    .contenedorProductoDestacado {
+        height: 500px;
+    }
+
+    .descripcionProductoDestacado {
+        font-size: 15px;
+    }
+
     .nombreProductoDestacado,
-    .precioProductoDestacado { font-size: 20px; } 
-    .informacionProducto{padding: 10px 0;}
+    .precioProductoDestacado {
+        font-size: 20px;
+    }
+
+    .informacionProducto {
+        padding: 10px 0;
+    }
 
     .iconoDestacado {
-  
-        font-size: 20px ;
-        top:-110px ;
+
+        font-size: 20px;
+        top: -110px;
     }
- 
+
     .nuevosUsados {
- 
+
         left: -12px;
         top: -110px;
     }
-     
+
     /*TERMINA PRODUCTOS DESTACADOS*/
 
 }
