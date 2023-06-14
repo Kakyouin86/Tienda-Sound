@@ -345,7 +345,9 @@ input[type="number"] {
 
 
   .number-input button {
+    
     outline:none;    
+    -webkit-appearance: none;
     background-color: transparent;
     border: none;
     align-items: center;
@@ -362,6 +364,7 @@ input[type="number"] {
   
   .number-input button:before,
   .number-input button:after {
+    
     display: inline-block;
     position: absolute;
     content: '';
@@ -374,6 +377,7 @@ input[type="number"] {
 
   
   .number-input button.plus:after {
+    
     transform: translate(-50%, -50%) rotate(90deg);
     
   }
@@ -511,9 +515,155 @@ input[type="number"] {
         display: none;
     }
 
+    .main-carousel2{
+        display: flex;
+    }
+
+    .division-general {
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 320px;
+        display: flex;
+        margin-left: 0vw;
+        margin-right: 0vw;
+        margin-top: 0vh;
+        margin-bottom: 0vh;
+    }
+    .carousel-inner {
+        
+        border-radius: 25px;
+        width: 200px;
+        height: 300px;
+        display: flex;
+    }
+    
+    .carousel-control-next, .carousel-control-prev {
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10%;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        background: 0 0;
+        border: 0;
+        opacity: .5;
+        transition: opacity .15s ease;
+    }
+    .carousel-control-next-icon {
+      
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(15,2,161)' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+    }  
+    
+    .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(15,2,161)' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+       }
+    .carousel-inner img {
+        border-radius: 25px;
+        width: 120px !important;
+        height: auto;
+        margin-left: 20%;
+    }
+    
+    .seccion-derecha{
+        width: 400;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        margin-left: 5vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .seccion-derecha .titular {
+        display: flex;
+        flex-wrap: wrap;
+        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .seccion-derecha .titular h2 {
+        font-weight: 600;
+        font-size: 24px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .seccion-derecha .titular p {
+       
+        width: 300px;
+        display: flex;
+        text-align: center  ;
+        font-size: 14px;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+    
+    .sec-der-titular {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .seccion-derecha .titular .sec-der-titular h3{
+    
+        color:#3333FF;
+        font-weight:bold;
+        width: 200px;
+        display: inline-block;
+        font-size: 20px;
+        text-align: center;
+    
+    }
+    
+    .sec-der-titular img {
+        width: 25px;
+        margin-left: 10vw;
+        position: relative;
+        bottom: 1vh;
+        margin: auto;
+    }
+    
+   
+  .number-input button {
+    
+    outline:none;    
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    border-radius: 6px;
+    background-color: #3333FF;
+    color: aliceblue; 
+    }
+    .number-input button.plus {
+        bottom: 30px;
+        right: 85px;
+    }
+    }
 
 
 /*----------------------------------------------F  I N    M A  I N -----------------------------------------------------*/
+
 
 .footer {
     background-color: hsla(193, 100%, 50%, 0.30);
@@ -927,6 +1077,8 @@ br {
     /* Termina desktop Juan */
 
 }   
-}
+
 
 /* desktop large */
+
+@media only screen and (max-width: 1280px) {}
