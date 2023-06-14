@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +17,9 @@
 </head>
 
 <body>
+
   <header>
+
     <nav class="navbar navbar-expand-lg navbar-dark margin-nav nav-1">
       <div class="container-fluid ">
         <img class="logo" src="img/logo_ts.svg" alt="">
@@ -95,10 +96,11 @@
         </div>
       </div>
     </nav>
+
   </header>
 
-  <main>
 
+  <main>
 
     <div class="flecha-volver">
       <img src="../img/flecha.svg" alt="">
@@ -107,16 +109,15 @@
 
     <section class="form-container container col-5 mx-auto">
 
-
       <h1>Registrate!</h1>
     
       <form action="/" class="login-form">
 
         <input type="text" placeholder="Nombre" name="nombre">
         <input type="text" placeholder="Apellido" name="apellido">
-        <input type="date" name="Fecha de Nacimiento" value="2003-01-09" min="1913-06-08" max="2011-01-01">
+        <input type="date" name="Fecha de Nacimiento" min="1913-06-08" max="2011-01-01">
         <input type="number" placeholder="DNI" name="dni">
-        <input type="text" placeholder="Dirección" name="dirección">
+        <input type="text" placeholder="Direccion" name="direccion">
         <input type="text" placeholder="País" name="país">
         <input type="text" placeholder="Provincia" name="provincia">
         <input type="text" placeholder="Localidad" name="localidad">
@@ -125,7 +126,8 @@
         <input type="email" placeholder="Correo electrónico" name="email">
         <input type="password" placeholder="Contraseña" name="password">
         <input type="password" placeholder="Confirmar contraseña" name="password">
-        <input type="checkbox" name="términosYCondiciones" value="He leído y acepto los términos y condiciones de uso">
+        <label for="terminosYCondiciones">He leído y acepto los términos y condiciones de uso</label>
+        <input type="checkbox" name="terminosYCondiciones" value="aceptadas">
 
         <button type="submit" class="form-btn inicio-btn">Registrarse</button>
 
@@ -141,7 +143,69 @@
 
       </form>
 
-
     </section>
 
   </main>
+
+
+  <footer class="footer">
+
+    <div class="footer-div">
+      <img src="img/footer/logo_footer.svg" alt="" class="footer-logo">
+      <p class="footer-seguinos-en">Seguinos en
+        <a href="http://www.facebook.com" target="_blank"><img src="img/footer/facebook.svg" alt=""
+            class="footer-logo-facebook"></a>
+        <a href="http://www.twitter.com" target="_blank"><img src="img/footer/twitter.svg" alt=""
+            class="footer-logo-twitter"></a>
+        <a href="http://www.instagram.com" target="_blank"><img src="img/footer/instagram.svg" alt=""
+            class="footer-logo-instagram"></a>
+        <a href="http://www.youtube.com" target="_blank"><img src="img/footer/youtube.svg" alt=""
+            class="footer-logo-youtube"></a>
+      </p>
+    </div>
+    <ul class="footer-list-1">
+      <li class="footer-rotulos">CATEGORÍAS</li>
+
+      <li class="footer-items"><a href="#">Guitarras & bajos</a></li>
+      <li class="footer-items"><a href="#">Batería & percusión</a></li>
+      <li class="footer-items"><a href="#">Teclados & sintetizadores</a></li>
+      <li class="footer-items"><a href="#">Estudios de grabación & DJs</a></li>
+      <li class="footer-items"><a href="#">Vientos</a></li>
+      <li class="footer-items"><a href="#">Cuerdas</a></li>
+      <li class="footer-items"><a href="#">Micrófonos & accesorios</a></li>
+    </ul>
+    <ul class="footer-list-2">
+      <li class="footer-rotulos">CÓMO FUNCIONA</li>
+
+      <li class="footer-items"><a href="#">Para comprar</a></li>
+      <li class="footer-items"><a href="#">Para vender</a></li>
+    </ul>
+    <ul class="footer-list-3">
+      <li class="footer-rotulos">AYUDA</li>
+
+      <li class="footer-items"><a href="#">Preguntas frecuentes</a></li>
+      <li class="footer-items"><a href="#">Envíos</a></li>
+      <li class="footer-items"><a href="#">Contacto</a></li>
+    </ul>
+    <ul class="footer-list-4">
+      <li class="footer-rotulos">SUSCRIBITE</li>
+
+      <li class="footer-items">Recibí las últimas novedades</li>
+      <input class="form-control form-control-footer" type="text" placeholder="Tu correo electrónico">
+      <button class="footer-submit" type="submit"><img src="img/footer/boton_suscribirsemail.svg" alt=""></button>
+      <div class="footer-he-leido">
+        <input class="form-check-input" type="checkbox" value=""> He leído y aceptado los términos y condiciones
+      </div>
+    </ul>
+
+  </footer>
+
+
+  <script src="https://kit.fontawesome.com/2396c6fc63.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

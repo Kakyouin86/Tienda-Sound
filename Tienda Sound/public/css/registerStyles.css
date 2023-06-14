@@ -114,3 +114,39 @@
     border: 1px solid gray;
     margin: 20px 0px 20px 0px;
 }
+
+
+/* smartphones */
+@media only screen and (max-width: 480px) {
+
+    /* header */
+
+    .overlay-text h2 {
+        font-size: 1.9rem;
+        line-height: 1.9rem;
+        width: 70%;
+    }
+
+    .btn-fucsia {
+        font-size: 0.8rem;
+    }
+
+    .fucsia-text {
+        font-size: 1rem;
+    }
+
+    /* main */
+
+}
+
+/* tablet */
+@media only screen and (max-width: 768px) and (min-width: 481px) {}
+
+/* desktop */
+@media only screen and (max-width: 1279px) and (min-width: 769px) {}
+
+/* desktop large */
+@media only screen and (max-width: 1280px) {}
+
+
+@media only screen and (max-width: 992px) {}
