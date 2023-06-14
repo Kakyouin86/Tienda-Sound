@@ -871,14 +871,37 @@ br {
         color: #0a0a0a;
     }
 
+    .footer-max-width-div-between-mobile-and-max {
+        display: flex;
+        flex-direction: column;
+        background-color: hsla(193, 100%, 50%, 0.30);
+    }
+
     .footer-logo-between-mobile-and-max {
-        margin-top: 25px;
+        margin-top: 5px;
         width: 325px;
         height: 60px;
         display: flex;
-
+        margin: auto;
     }
 
+    .footer-redes-sociales-between-mobile-and-max {
+        gap: 28px;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        margin-top: 20px;
+        margin: auto;
+    }
+
+    .footer-logo-redes-between-mobile-and-max {
+        width: 30px;
+        margin-bottom: 5px;
+    }
+
+    .footer-logo-redes-between-mobile-and-max:hover {
+        animation: jump-shaking 0.83s 1;
+    }
 }
 
 
