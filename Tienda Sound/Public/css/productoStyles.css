@@ -342,15 +342,12 @@ input[type="number"] {
     
   }
   
-  .number-input,
-  .number-input * {
-    
-    
-  }
+
 
   .number-input button {
-    outline:none;
-    -webkit-appearance:none;
+    
+    outline:none;    
+    -webkit-appearance: none;
     background-color: transparent;
     border: none;
     align-items: center;
@@ -362,15 +359,12 @@ input[type="number"] {
     position: relative;
     border-radius: 6px;
     background-color: #3333FF;
-    color: aliceblue;
-    
-    
-    
-    
-  }
+    color: aliceblue; 
+    }
   
   .number-input button:before,
   .number-input button:after {
+    
     display: inline-block;
     position: absolute;
     content: '';
@@ -383,6 +377,7 @@ input[type="number"] {
 
   
   .number-input button.plus:after {
+    
     transform: translate(-50%, -50%) rotate(90deg);
     
   }
@@ -520,10 +515,155 @@ input[type="number"] {
         display: none;
     }
 
+    .main-carousel2{
+        display: flex;
+    }
+
+    .division-general {
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 320px;
+        display: flex;
+        margin-left: 0vw;
+        margin-right: 0vw;
+        margin-top: 0vh;
+        margin-bottom: 0vh;
+    }
+    .carousel-inner {
+        
+        border-radius: 25px;
+        width: 200px;
+        height: 300px;
+        display: flex;
+    }
+    
+    .carousel-control-next, .carousel-control-prev {
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10%;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+        background: 0 0;
+        border: 0;
+        opacity: .5;
+        transition: opacity .15s ease;
+    }
+    .carousel-control-next-icon {
+      
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(15,2,161)' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+    }  
+    
+    .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(15,2,161)' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+       }
+    .carousel-inner img {
+        border-radius: 25px;
+        width: 120px !important;
+        height: auto;
+        margin-left: 20%;
+    }
+    
+    .seccion-derecha{
+        width: 400;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        margin-left: 5vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .seccion-derecha .titular {
+        display: flex;
+        flex-wrap: wrap;
+        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 400px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .seccion-derecha .titular h2 {
+        font-weight: 600;
+        font-size: 24px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .seccion-derecha .titular p {
+       
+        width: 300px;
+        display: flex;
+        text-align: center  ;
+        font-size: 14px;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+    
+    .sec-der-titular {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .seccion-derecha .titular .sec-der-titular h3{
+    
+        color:#3333FF;
+        font-weight:bold;
+        width: 200px;
+        display: inline-block;
+        font-size: 20px;
+        text-align: center;
+    
+    }
+    
+    .sec-der-titular img {
+        width: 25px;
+        margin-left: 10vw;
+        position: relative;
+        bottom: 1vh;
+        margin: auto;
+    }
+    
+   
+  .number-input button {
+    
+    outline:none;    
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    border-radius: 6px;
+    background-color: #3333FF;
+    color: aliceblue; 
+    }
+    .number-input button.plus {
+        bottom: 30px;
+        right: 85px;
+    }
+    }
 
 
 /*----------------------------------------------F  I N    M A  I N -----------------------------------------------------*/
-/* Aquí empieza el FOOTER */
+
 
 .footer {
     background-color: hsla(193, 100%, 50%, 0.30);
@@ -676,44 +816,269 @@ br {
     /* change this to whatever height you want it */
 }
 
-@media only screen and (max-width: 992px) {
 
-    /* Aquí empieza el header */
-    .navbar-collapse {
-        background: #3333ff;
-        border-radius: 12px;
+
+/* MEDIA QUERIES */
+
+/* smartphones */
+
+@media only screen and (max-width: 480px) {
+
+    /* Empieza mobile Agus */
+
+    .overlay-text h2 {
+        font-size: 1.9rem;
+        line-height: 1.9rem;
+        width: 70%;
     }
 
-    .nav-1 {
-        height: 45px;
-    }
-
-    .margin-nav {
-        margin: 0 10px;
-    }
-
-    .logo {
-        width: 150px;
-        transition: .5s ease;
-    }
-
-    .items-container span {
-        display: none !important;
-    }
-
-    .items-container i {
-        margin-right: 10px;
+    .btn-fucsia {
         font-size: 0.8rem;
-        color: #3333ff !important;
-        background: #fff;
-        padding: 8px;
-        border-radius: 20px;
     }
 
-    header form input,
-    header form i {
-        display: none !important;
+    .fucsia-text {
+        font-size: 1rem;
     }
 
-    /* Aquí termina el header */
+    /* Termina mobile Agus */
+
+    /* Empieza mobile Juan */
+    /* Acá comienza BANNER */
+
+    .banners_container {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .banner1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 360px;
+        height: 160px;
+        font-size: 12px;
+        border-radius: 45px;
+        transition: 450ms;
+        margin-bottom: 40px;
+    }
+        
+    .banner2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 360px;
+        height: 160px;
+        font-size: 12px;
+        border-radius: 45px;
+        transition: 450ms;
+    }
+
+    .tit {
+        font-size: 65px;
+        margin: 0px;
+    }
+    
+    .linea1 {
+        font-size: 21px;
+        margin-bottom: -25px;
+    }
+    
+    .linea3 {
+        font-size: 16px;
+        margin-top: -25px
+    }
+
+    .ray {
+        width: 50px;
+        transform: translate(-175px, 35px);
+    }
+    
+    .ray2 {
+        width: 50px;
+        transform: translate(-175px, 35px);
+    }
+    
+    .plus {
+        transform: translate(85px, 30px);
+    }
+
+    /* Acá termina BANNER */
+    /* Acá empieza COMO FUNCIONA */
+
+    .comofunciona {
+        padding: 60px;
+        justify-content: center
+    }
+    .icono_funciona_para {
+        scale: 75%;
+    }
+    .paracomprar, .paravender {
+        justify-content: center;
+    }
+    
+    /* Acá termina COMO FUNCIONA */
+    /* Termina mobile Juan */
 }
+
+
+/* tablet */
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+
+
+    /* Empieza tablet Juan */
+    /* Acá comienza BANNER */
+
+    .banners_container {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 600px;
+        height: 160px;
+        font-size: 12px;
+        border-radius: 45px;
+        transition: 450ms;
+        margin-bottom: 40px;
+    }
+        
+    .banner2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 600px;
+        height: 160px;
+        font-size: 12px;
+        border-radius: 45px;
+        transition: 450ms;
+    }
+
+    .tit {
+        font-size: 65px;
+        margin: 0px;
+    }
+    
+    .linea1 {
+        font-size: 21px;
+        margin-bottom: -25px;
+    }
+    
+    .linea3 {
+        font-size: 16px;
+        margin-top: -25px
+    }
+
+    .ray {
+        width: 50px;
+        transform: translate(-175px, 35px);
+    }
+    
+    .ray2 {
+        width: 50px;
+        transform: translate(-175px, 35px);
+    }
+    
+    .plus {
+        transform: translate(85px, 30px);
+    }
+
+    /* Acá termina BANNER */  
+
+    /* Acá empieza COMO FUNCIONA */
+
+    .comofunciona {
+        padding: 60px
+    }
+    .icono_funciona_para {
+        scale: 85%;
+    }
+
+    /* Acá termina COMO FUNCIONA */
+    /* Termina tablet Juan */
+}
+
+/* desktop */
+
+@media only screen and (max-width: 1279px) and (min-width: 769px) {
+
+    /* Empieza desktop Juan */
+    /* Acá comienza BANNER */
+
+    .banners_container {
+        margin: auto;
+        max-width: 1296px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 140px;
+        margin-bottom: 140px;
+    }
+    
+    .banner1 {
+        width: 600px;
+        height: 255px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 20px;
+        color: white;
+        border-radius: 74px;
+        background-image: linear-gradient(180deg, #3333FF, #6666FF, #ABEDFF);
+        transition: 450ms;
+        margin-bottom: 40px;
+        border: 5px solid white;
+    }
+    
+    .banner2 {
+        width: 600px;
+        height: 255px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 20px;
+        color: white;
+        border-radius: 74px;
+        background-image: linear-gradient(180deg, #3333FF, #6666FF, #ABEDFF);
+        transition: 450ms;
+        border: 5px solid white;
+    }
+    
+    /* Acá termina BANNER */
+    /* Acá empieza COMO FUNCIONA */
+
+    .comofunciona {
+        padding: 60px;
+    }
+    .paracomprar,
+    .paravender {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+}
+    /* Acá termina COMO FUNCIONA */ 
+    /* Termina desktop Juan */
+
+}   
+
+
+/* desktop large */
+
+@media only screen and (max-width: 1280px) {}
