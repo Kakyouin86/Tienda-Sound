@@ -645,12 +645,16 @@ header form {
 
 /* Aquí empieza el FOOTER */
 
-.footer {
+.footer-max-width {
     background-color: hsla(193, 100%, 50%, 0.30);
     display: flex;
     justify-content: center;
     /*padding-left: 30px;*/
     flex-wrap: wrap;
+}
+
+.footer-between-mobile-and-max {
+    display: none;
 }
 
 .footer-logo {
@@ -789,6 +793,95 @@ br {
 /* @media only screen and (max-width: 768px) and (min-width: 481px) {} Tablet */
 
 /* @media only screen and (max-width: 1279px) and (min-width: 769px) {} Desktop */
+
+@media only screen and (max-width: 1500px) {
+    .footer-max-width {
+        display: none;
+    }
+
+    .footer-between-mobile-and-max {
+        display: block;
+    }
+
+    /* Style the buttons that are used to open and close the accordion panel */
+    .footer-accordion-between-mobile-and-max {
+        background-color: hsla(193, 100%, 50%, 0.30);
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-left: 25px;
+        padding-right: 25px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 25px;
+        border: none;
+        text-align: left;
+        outline: none;
+        transition: 0.6s;
+        color: #3333FF;
+        font-weight: bold;
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .footer-accordion-between-mobile-and-max:hover.active {
+        background-color: #3333FF;
+    }
+
+    .footer-accordion-between-mobile-and-max.active {
+        background-color: #3333FF;
+    }
+
+    /* Style the accordion panel. Note: hidden by default */
+    .footer-panel-between-mobile-and-max {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .footer-accordion-between-mobile-and-max:after {
+        content: "+";
+        font-size: 25px;
+        margin-left: 5px;
+    }
+
+    .footer-accordion-between-mobile-and-max.active:after {
+        content: "-";
+        font-size: 25px;
+        margin-left: 5px;
+        color: white;
+    }
+
+    .footer-accordion-between-mobile-and-max.active {
+        color: white;
+        transition: 0.0s;
+    }
+
+    .footer-list-1-between-mobile-and-max {
+        list-style-type: none;
+        width: 100%;
+    }
+
+    .footer-items-between-mobile-and-max a {
+        font-weight: 400;
+        font-size: 25px;
+        padding: 20px;
+        color: #0a0a0a;
+    }
+
+    .footer-logo-between-mobile-and-max {
+        margin-top: 25px;
+        width: 325px;
+        height: 60px;
+        display: flex;
+
+    }
+
+}
+
+
 
 /* Smartphones */
 

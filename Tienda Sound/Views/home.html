@@ -700,8 +700,8 @@
 
 
   <!--COMIENZA: FOOTER - LEO -->
-  <footer class="footer">
-    <div class="footer-div">
+  <footer class="footer-max-width">
+    <div class="footer-max-width-div">
       <img src="img/footer/logo_footer.svg" alt="" class="footer-logo">
       <div class="footer-redes-sociales">
         <p class="footer-seguinos-en">Seguinos en</p>
@@ -749,6 +749,73 @@
       </div>
     </ul>
   </footer>
+
+  <footer class="footer-between-mobile-and-max">
+    <div class="footer-div-between-mobile-and-max">
+      <button class="accordion footer-accordion-between-mobile-and-max">CATEGORÍAS</button>
+      <div class="panel footer-panel-between-mobile-and-max">
+        <p>
+        <ul class="footer-list-1-between-mobile-and-max">
+          <li class="footer-items-between-mobile-and-max"><a href="#">Guitarras & bajos</a></li>
+          <li class="footer-items-between-mobile-and-max"><a href="#">Batería & percusión</a></li>
+          <li class="footer-items-between-mobile-and-max"><a href="#">Teclados & sintetizadores</a></li>
+          <li class="footer-items-between-mobile-and-max"><a href="#">Estudios de grabación & DJs</a></li>
+          <li class="footer-items-between-mobile-and-max"><a href="#">Vientos</a></li>
+          <li class="footer-items-between-mobile-and-max"><a href="#">Cuerdas</a></li>
+        </ul>
+        </p>
+      </div>
+
+      <button class="accordion footer-accordion-between-mobile-and-max">Section 2</button>
+      <div class="panel footer-panel-between-mobile-and-max">
+        <p>Lorem ipsum...</p>
+      </div>
+
+      <button class="accordion footer-accordion-between-mobile-and-max">Section 3</button>
+      <div class="panel footer-panel-between-mobile-and-max">
+        <p>Lorem ipsum...</p>
+      </div>
+    </div>
+
+    <script>
+
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++)
+      {
+        acc[i].addEventListener("click", function ()
+        {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block")
+          {
+            panel.style.display = "none";
+          } else
+          {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+
+    <div class="footer-max-width-div-between-mobile-and-max">
+      <img src="img/footer/logo_footer.svg" alt="" class="footer-logo-between-mobile-and-max">
+      <div class="footer-redes-sociales-between-mobile-and-max">
+        <p class="footer-seguinos-en-between-mobile-and-max">Seguinos en</p>
+        <a href="http://www.facebook.com" target="_blank"><img src="img/footer/facebook.svg" alt=""
+            class="footer-logo-redes-between-mobile-and-max"></a>
+        <a href="http://www.twitter.com" target="_blank"><img src="img/footer/twitter.svg" alt=""
+            class="footer-logo-redes-between-mobile-and-max"></a>
+        <a href="http://www.instagram.com" target="_blank"><img src="img/footer/instagram.svg" alt=""
+            class="footer-logo-redes-between-mobile-and-max"></a>
+        <a href="http://www.youtube.com" target="_blank"><img src="img/footer/youtube.svg" alt=""
+            class="footer-logo-redes-between-mobile-and-max"></a>
+      </div>
+    </div>
+
+  </footer>
+
   <script src="https://kit.fontawesome.com/2396c6fc63.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
