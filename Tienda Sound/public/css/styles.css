@@ -6,10 +6,6 @@ a {
     text-decoration: none;
 }
 
-* {
-    font-family: "hoss-round", sans-serif;
-}
-
 body {
     overflow-x: hidden;
 }
@@ -967,6 +963,23 @@ br {
         font-size: 1rem;
     }
 
+    .categorias-home{
+        padding: 0px 30px 0px 30px;
+    }
+    .categorias-home h2 {
+        font-size: 2rem;
+    }
+    
+    .categorias-home p {
+        font-size: 1rem;
+        line-height: 1rem;
+
+    }
+    
+    .categoria-producto-home img {
+        width: 70px;
+    }
+
     /* Termina mobile Agus */
 
     /* PRODUCTOS DESTACADOS */
@@ -1190,6 +1203,30 @@ br {
     }
 
     /* Acá termina BANNER */
+
+    /* Empieza Tablet AGUS */
+
+    .overlay-text {
+        position: absolute;
+        top: 20%;
+    }
+
+    .overlay-text h2 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        width: 70%;
+    }
+
+    .btn-fucsia {
+        font-size: 0.8rem;
+    }
+
+    .fucsia-text {
+        font-size: 1rem;
+    }
+
+    /* Termina  Tablet AGUS */
+
 
     /* Acá empieza CÓMO FUNCIONA */
 
