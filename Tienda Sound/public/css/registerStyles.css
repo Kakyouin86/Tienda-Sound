@@ -29,6 +29,7 @@
     text-align: center;
     font-size: 2.5rem;
     font-weight: 500;
+    margin-bottom: 25px;
 }
 
 .form-container h2 {
@@ -63,12 +64,16 @@
     padding-left: 20px;
 }
 
-.login-form .pregunta-login {
-    font-weight: 400;
-    font-size: 1.1rem;
-    color: #3333ff;
+.main-he-leido {
+    display: flex;
+    width: 29vw;
+    font-weight: 200;
+    font-size: 15px;
+    color: #0a0a0a;
+    font-style: italic;
+    margin-top: 15px;
+    margin-bottom: 25px;
 }
-
 
 .login-form .form-btn {
     width: 80%;
@@ -85,6 +90,8 @@
 .login-form .inicio-btn {
     background-color: #3333ff;
     color: white;
+    margin-top: 25px;
+    margin-bottom: 5px;
 }
 
 
@@ -93,6 +100,7 @@
     background-color: white;
     color: #3333ff;
     position: relative;
+    margin-top: 5px;
 }
 
 
@@ -119,8 +127,6 @@
 /* smartphones */
 @media only screen and (max-width: 480px) {
 
-    /* header */
-
     .overlay-text h2 {
         font-size: 1.9rem;
         line-height: 1.9rem;
@@ -136,6 +142,28 @@
     }
 
     /* main */
+
+    .form-container h1{
+        display: flex;
+        justify-content: center;
+    }
+
+    .form-container input{
+        width: 210%;
+    }
+
+    .login-form .inicio-btn {
+        width: 100%;
+    }
+
+    .login-form .google-btn {
+        width: 190%;
+    }
+    
+    
+    .login-form .facebook-btn {
+        width: 190%;
+    }
 
 }
 
