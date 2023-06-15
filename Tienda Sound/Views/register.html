@@ -115,12 +115,8 @@
         <input type="text" placeholder="Nombre" name="nombre">
         <input type="text" placeholder="Apellido" name="apellido">
         <input type="date" name="Fecha de Nacimiento" min="1913-06-08" max="2011-01-01">
-        <input type="number" placeholder="DNI" name="dni">
         <input type="text" placeholder="Direccion" name="direccion">
         <input type="text" placeholder="País" name="país">
-        <input type="text" placeholder="Provincia" name="provincia">
-        <input type="text" placeholder="Localidad" name="localidad">
-        <input type="number" placeholder="CP" name="cp">
         <input type="tel" placeholder="Celular" name="celular">
         <input type="email" placeholder="Correo electrónico" name="email">
         <input type="password" placeholder="Contraseña" name="password">
@@ -148,8 +144,8 @@
   </main>
 
 
-  <footer class="footer">
-    <div class="footer-div">
+  <footer class="footer-max-width">
+    <div class="footer-max-width-div">
       <img src="img/footer/logo_footer.svg" alt="" class="footer-logo">
       <div class="footer-redes-sociales">
         <p class="footer-seguinos-en">Seguinos en</p>
@@ -191,11 +187,107 @@
         <input class="form-control form-control-footer" type="text" placeholder="Tu correo electrónico">
         <button class="footer-submit" type="submit"><img src="img/footer/boton_suscribirsemail.svg" alt=""></button>
       </form>
+
       <div class="footer-he-leido">
         <input class="form-check-input" type="checkbox" value=""> He leído y aceptado los términos y condiciones
       </div>
     </ul>
   </footer>
+
+  <footer class="footer-between-mobile-and-max">
+    <div class="footer-div-between-mobile-and-max">
+      <button class="accordion footer-accordion-between-mobile-and-max">CATEGORÍAS</button>
+      <div class="panel footer-panel-between-mobile-and-max">
+        <p>
+        <ul class="footer-list-1-between-mobile-and-max">
+          <li class="footer-items-between-mobile-and-max"><a href="#">Guitarras & bajos</a></li>
+          <li class="footer-items-between-mobile-and-max"><a href="#">Batería & percusión</a></li>
+          <li class="footer-items-between-mobile-and-max"><a href="#">Teclados & sintetizadores</a></li>
+          <li class="footer-items-between-mobile-and-max"><a href="#">Estudios de grabación & DJs</a></li>
+          <li class="footer-items-between-mobile-and-max"><a href="#">Vientos</a></li>
+          <li class="footer-items-between-mobile-and-max"><a href="#">Cuerdas</a></li>
+        </ul>
+        </p>
+      </div>
+
+      <button class="accordion footer-accordion-between-mobile-and-max">CÓMO FUNCIONA</button>
+      <div class="panel footer-panel-between-mobile-and-max">
+        <p>
+        <ul class="footer-list-1-between-mobile-and-max">
+          <li class="footer-items-between-mobile-and-max"><a href="#">Para comprar</a></li>
+          <li class="footer-items-between-mobile-and-max"><a href="#">Para vender</a></li>
+        </ul>
+        </p>
+      </div>
+
+      <button class="accordion footer-accordion-between-mobile-and-max">AYUDA</button>
+      <div class="panel footer-panel-between-mobile-and-max">
+        <p>
+        <ul class="footer-list-1-between-mobile-and-max">
+          <li class="footer-items-between-mobile-and-max"><a href="#">Preguntas frecuentes</a></li>
+          <li class="footer-items-between-mobile-and-max"><a href="#">Envío</a></li>
+          <li class="footer-items-between-mobile-and-max"><a href="#">Contacto</a></li>
+        </ul>
+        </p>
+      </div>
+
+      <button class="accordion footer-accordion-between-mobile-and-max">SUSCRIBITE</button>
+      <div class="panel footer-panel-between-mobile-and-max">
+        <p>
+        <ul class="footer-list-1-between-mobile-and-max">
+          <li class="footer-items-between-mobile-and-max">Recibí las últimas novedades</li>
+          <form class="footer-barra-between-mobile-and-max">
+            <input class="form-control form-control-footer-between-mobile-and-max" type="text"
+              placeholder="Tu correo electrónico">
+            <button class="footer-submit-between-mobile-and-max" type="submit"><img
+                src="img/footer/boton_suscribirsemail.svg" alt=""></button>
+          </form>
+          <div class="footer-he-leido-between-mobile-and-max">
+            <input class="form-check-input-between-mobile-and-max" type="checkbox" value=""> He leído y aceptado los
+            términos y condiciones
+        </ul>
+        </p>
+      </div>
+
+    </div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+      for (i = 0; i < acc.length; i++)
+      {
+        acc[i].addEventListener("click", function ()
+        {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block")
+          {
+            panel.style.display = "none";
+          } else
+          {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+
+    <div class="footer-max-width-div-between-mobile-and-max">
+      <img src="img/footer/logo_footer.svg" alt="" class="footer-logo-between-mobile-and-max">
+      <div class="footer-redes-sociales-between-mobile-and-max">
+        <p class="footer-seguinos-en-between-mobile-and-max">Seguinos en</p>
+        <a href="http://www.facebook.com" target="_blank"><img src="img/footer/facebook.svg" alt=""
+            class="footer-logo-redes-between-mobile-and-max"></a>
+        <a href="http://www.twitter.com" target="_blank"><img src="img/footer/twitter.svg" alt=""
+            class="footer-logo-redes-between-mobile-and-max"></a>
+        <a href="http://www.instagram.com" target="_blank"><img src="img/footer/instagram.svg" alt=""
+            class="footer-logo-redes-between-mobile-and-max"></a>
+        <a href="http://www.youtube.com" target="_blank"><img src="img/footer/youtube.svg" alt=""
+            class="footer-logo-redes-between-mobile-and-max"></a>
+      </div>
+    </div>
+
+  </footer>
+
   <script src="https://kit.fontawesome.com/2396c6fc63.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
