@@ -520,6 +520,10 @@ header form {
     transform: translate(135px, 40px);
 }
 
+.fa-circle-plus {
+    color: white;
+}
+
 .banner1:hover .plus {
     color: #ABEDFF;
 }
@@ -1105,7 +1109,7 @@ br {
     }
 
     .plus {
-        transform: translate(85px, 30px);
+        transform: translate(85px, 27px);
     }
 
     /* Acá termina BANNER */
@@ -1159,6 +1163,8 @@ br {
         border-radius: 45px;
         transition: 450ms;
         margin-bottom: 40px;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 
     .banner2 {
@@ -1171,6 +1177,8 @@ br {
         font-size: 12px;
         border-radius: 45px;
         transition: 450ms;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 
     .tit {
@@ -1199,7 +1207,7 @@ br {
     }
 
     .plus {
-        transform: translate(85px, 30px);
+        transform: translate(85px, 25px);
     }
 
     /* Acá termina BANNER */
