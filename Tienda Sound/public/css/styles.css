@@ -6,10 +6,6 @@ a {
     text-decoration: none;
 }
 
-* {
-    font-family: "hoss-round", sans-serif;
-}
-
 body {
     overflow-x: hidden;
 }
@@ -645,12 +641,16 @@ header form {
 
 /* Aquí empieza el FOOTER */
 
-.footer {
+.footer-max-width {
     background-color: hsla(193, 100%, 50%, 0.30);
     display: flex;
     justify-content: center;
     /*padding-left: 30px;*/
     flex-wrap: wrap;
+}
+
+.footer-between-mobile-and-max {
+    display: none;
 }
 
 .footer-logo {
@@ -790,6 +790,159 @@ br {
 
 /* @media only screen and (max-width: 1279px) and (min-width: 769px) {} Desktop */
 
+@media only screen and (max-width: 1500px) {
+    .footer-max-width {
+        display: none;
+    }
+
+    .footer-between-mobile-and-max {
+        display: block;
+    }
+
+    /* Style the buttons that are used to open and close the accordion panel */
+    .footer-accordion-between-mobile-and-max {
+        background-color: hsla(193, 100%, 50%, 0.30);
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 15px;
+        border: none;
+        text-align: left;
+        outline: none;
+        transition: 0.6s;
+        color: #3333FF;
+        font-weight: bold;
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .footer-accordion-between-mobile-and-max:hover.active {
+        background-color: #3333FF;
+    }
+
+    .footer-accordion-between-mobile-and-max.active {
+        background-color: #3333FF;
+    }
+
+    /* Style the accordion panel. Note: hidden by default */
+    .footer-panel-between-mobile-and-max {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .footer-accordion-between-mobile-and-max:after {
+        content: "+";
+        font-size: 15px;
+        margin-left: 5px;
+    }
+
+    .footer-accordion-between-mobile-and-max.active:after {
+        content: "-";
+        font-size: 15px;
+        margin-left: 5px;
+        color: white;
+    }
+
+    .footer-accordion-between-mobile-and-max.active {
+        color: white;
+        transition: 0.0s;
+    }
+
+    .footer-list-1-between-mobile-and-max {
+        list-style-type: none;
+        width: 100%;
+    }
+
+    .footer-items-between-mobile-and-max a {
+        font-weight: 400;
+        font-size: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 5px;
+        color: #0a0a0a;
+    }
+
+    .footer-max-width-div-between-mobile-and-max {
+        display: flex;
+        flex-direction: column;
+        background-color: hsla(193, 100%, 50%, 0.30);
+    }
+
+    .footer-logo-between-mobile-and-max {
+        margin-top: 5px;
+        width: 325px;
+        height: 60px;
+        display: flex;
+        margin: auto;
+    }
+
+    .footer-redes-sociales-between-mobile-and-max {
+        gap: 28px;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        margin-top: 20px;
+        margin: auto;
+    }
+
+    .footer-logo-redes-between-mobile-and-max {
+        width: 30px;
+        margin-bottom: 5px;
+    }
+
+    .footer-logo-redes-between-mobile-and-max:hover {
+        animation: jump-shaking 0.83s 1;
+    }
+
+
+    .footer-barra-between-mobile-and-max {
+        position: relative;
+
+    }
+
+    .footer-submit-between-mobile-and-max {
+        padding: 0;
+        border: 0;
+        background: transparent;
+        margin-left: 225px;
+    }
+
+    .footer-submit-between-mobile-and-max img {
+        position: relative;
+        right: 17px;
+        width: 25px;
+        padding-top: 6px;
+    }
+
+    .form-control-footer-between-mobile-and-max {
+        font-weight: 400;
+        font-size: 15px;
+        color: #0a0a0a;
+        background-color: #3333ff;
+        border-right: 0;
+        width: 240px;
+        position: absolute;
+    }
+
+    .footer-he-leido-between-mobile-and-max {
+        font-weight: 200;
+        font-size: 15px;
+        color: #0a0a0a;
+        font-style: italic;
+        margin-top: 15px;
+    }
+
+}
+
+
+
 /* Smartphones */
 
 @media only screen and (max-width: 480px) {
@@ -808,6 +961,23 @@ br {
 
     .fucsia-text {
         font-size: 1rem;
+    }
+
+    .categorias-home{
+        padding: 0px 30px 0px 30px;
+    }
+    .categorias-home h2 {
+        font-size: 2rem;
+    }
+    
+    .categorias-home p {
+        font-size: 1rem;
+        line-height: 1rem;
+
+    }
+    
+    .categoria-producto-home img {
+        width: 70px;
     }
 
     /* Termina mobile Agus */
@@ -1033,6 +1203,30 @@ br {
     }
 
     /* Acá termina BANNER */
+
+    /* Empieza Tablet AGUS */
+
+    .overlay-text {
+        position: absolute;
+        top: 20%;
+    }
+
+    .overlay-text h2 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        width: 70%;
+    }
+
+    .btn-fucsia {
+        font-size: 0.8rem;
+    }
+
+    .fucsia-text {
+        font-size: 1rem;
+    }
+
+    /* Termina  Tablet AGUS */
+
 
     /* Acá empieza CÓMO FUNCIONA */
 
