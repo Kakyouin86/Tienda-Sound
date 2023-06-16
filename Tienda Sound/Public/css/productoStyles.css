@@ -6,13 +6,11 @@ a {
     text-decoration: none;
 }
 
-* {
-    font-family: "hoss-round", sans-serif;
-}
-
 body {
     overflow-x: hidden;
 }
+
+/* Aquí comienza el HEADER */
 
 header {
     background-color: #3333ff;
@@ -55,12 +53,15 @@ nav .form {
     margin-left: 15px;
 }
 
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 0;
+}
+
 header .nav-link {
     color: #ffffff;
     font-size: 14px;
     text-decoration: none;
 }
-
 
 .items-container {
     display: block;
@@ -107,9 +108,11 @@ header form {
 }
 
 /* Aquí termina el HEADER */
+
+/* Aquí empieza el HEADER con máximo de 992px */
+
 @media only screen and (max-width: 992px) {
 
-    /* Aquí empieza el header */
     .navbar-collapse {
         background: #3333ff;
         border-radius: 12px;
@@ -145,10 +148,7 @@ header form {
     header form button {
         display: none !important;
     }
-
-    /* Aquí termina el header */
 }
-/* Aquí termina el HEADER */
 
 /* -----------------------------------E M P I E Z A      M A I N -----------------------------------------------------*/
 
@@ -883,13 +883,16 @@ input[type="number"] {
 
 /*----------------------------------------------F  I N    M A  I N -----------------------------------------------------*/
 
-
-.footer {
+.footer-max-width {
     background-color: hsla(193, 100%, 50%, 0.30);
     display: flex;
     justify-content: center;
     /*padding-left: 30px;*/
     flex-wrap: wrap;
+}
+
+.footer-between-mobile-and-max {
+    display: none;
 }
 
 .footer-logo {
@@ -899,45 +902,25 @@ input[type="number"] {
 }
 
 .footer-seguinos-en {
-    margin-top: 27px;
     font-weight: 400;
-    font-size: 23px;
+    font-size: 18px;
     margin-left: 5px;
 }
 
-.footer-logo-facebook {
-    width: 50px;
+.footer-redes-sociales {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 20px;
+}
+
+.footer-logo-redes {
+    width: 30px;
     margin-bottom: 5px;
 }
 
-.footer-logo-facebook:hover {
-    animation: jump-shaking 0.83s 1;
-}
-
-.footer-logo-twitter {
-    width: 50px;
-    margin-bottom: 5px;
-}
-
-.footer-logo-twitter:hover {
-    animation: jump-shaking 0.83s 1;
-}
-
-.footer-logo-instagram {
-    width: 50px;
-    margin-bottom: 5px;
-}
-
-.footer-logo-instagram:hover {
-    animation: jump-shaking 0.83s 1;
-}
-
-.footer-logo-youtube {
-    width: 50px;
-    margin-bottom: 5px;
-}
-
-.footer-logo-youtube:hover {
+.footer-logo-redes:hover {
     animation: jump-shaking 0.83s 1;
 }
 
@@ -967,13 +950,13 @@ input[type="number"] {
 
 .footer-rotulos {
     font-weight: 600;
-    font-size: 23px;
+    font-size: 18px;
     color: #3333ff;
 }
 
 .footer-items {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 15px;
     color: #0a0a0a;
 }
 
@@ -985,7 +968,7 @@ input[type="number"] {
 
 .footer-items a {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 15px;
     text-decoration: none;
     color: #0a0a0a;
 }
@@ -996,31 +979,37 @@ footer input:not(:placeholder-shown) {
     opacity: 1;
 }
 
-.form-control-footer {
-    font-weight: 400;
-    font-size: 18px;
-    color: #0a0a0a;
-    background-color: #3333ff;
-    border-right: 0;
-    width: 280px;
-    position: absolute;
+.footer-barra {
+    position: relative;
+    text-align: end;
 }
 
 .footer-submit {
-    margin-top: 2.5px;
-    width: 16%;
-    height: 16%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.footer-submit img {
     position: relative;
-    margin-left: 242px;
-    border-radius: 12px;
-    background-color: rgba(0, 0, 0, 0);
-    border-style: none;
-    border-color: #3333ff;
+    right: 17px;
+    width: 25px;
+    padding-top: 6px;
+}
+
+.form-control-footer {
+    font-weight: 400;
+    font-size: 15px;
+    color: #0a0a0a;
+    background-color: #3333ff;
+    border-right: 0;
+    width: 240px;
+    position: absolute;
 }
 
 .footer-he-leido {
     font-weight: 200;
-    font-size: 14px;
+    font-size: 15px;
     color: #0a0a0a;
     font-style: italic;
     margin-top: 15px;
@@ -1035,11 +1024,169 @@ br {
     /* change this to whatever height you want it */
 }
 
+/* |||||||| MEDIA QUERIES |||||||| */
+
+/* @media only screen and (max-width: 480px) {} Smartphones */
+
+/* @media only screen and (max-width: 768px) and (min-width: 481px) {} Tablet */
+
+/* @media only screen and (max-width: 1279px) and (min-width: 769px) {} Desktop */
+
+@media only screen and (max-width: 1500px) {
+    .footer-max-width {
+        display: none;
+    }
+
+    .footer-between-mobile-and-max {
+        display: block;
+    }
+
+    /* Style the buttons that are used to open and close the accordion panel */
+    .footer-accordion-between-mobile-and-max {
+        background-color: hsla(193, 100%, 50%, 0.30);
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 15px;
+        border: none;
+        text-align: left;
+        outline: none;
+        transition: 0.6s;
+        color: #3333FF;
+        font-weight: bold;
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .footer-accordion-between-mobile-and-max:hover.active {
+        background-color: #3333FF;
+    }
+
+    .footer-accordion-between-mobile-and-max.active {
+        background-color: #3333FF;
+    }
+
+    /* Style the accordion panel. Note: hidden by default */
+    .footer-panel-between-mobile-and-max {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .footer-accordion-between-mobile-and-max:after {
+        content: "+";
+        font-size: 15px;
+        margin-left: 5px;
+    }
+
+    .footer-accordion-between-mobile-and-max.active:after {
+        content: "-";
+        font-size: 15px;
+        margin-left: 5px;
+        color: white;
+    }
+
+    .footer-accordion-between-mobile-and-max.active {
+        color: white;
+        transition: 0.0s;
+    }
+
+    .footer-list-1-between-mobile-and-max {
+        list-style-type: none;
+        width: 100%;
+    }
+
+    .footer-items-between-mobile-and-max a {
+        font-weight: 400;
+        font-size: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 5px;
+        color: #0a0a0a;
+    }
+
+    .footer-max-width-div-between-mobile-and-max {
+        display: flex;
+        flex-direction: column;
+        background-color: hsla(193, 100%, 50%, 0.30);
+    }
+
+    .footer-logo-between-mobile-and-max {
+        width: 275px;
+        height: 60px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    .footer-redes-sociales-between-mobile-and-max {
+        gap: 18px;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        margin-top: 20px;
+        margin: auto;
+    }
+
+    .footer-logo-redes-between-mobile-and-max {
+        width: 30px;
+        margin-bottom: 5px;
+    }
+
+    .footer-logo-redes-between-mobile-and-max:hover {
+        animation: jump-shaking 0.83s 1;
+    }
 
 
-/* MEDIA QUERIES */
+    .footer-barra-between-mobile-and-max {
+        position: relative;
 
-/* smartphones */
+    }
+
+    .footer-submit-between-mobile-and-max {
+        padding: 0;
+        border: 0;
+        background: transparent;
+        margin-left: 225px;
+    }
+
+    .footer-submit-between-mobile-and-max img {
+        position: relative;
+        right: 17px;
+        width: 25px;
+        padding-top: 6px;
+    }
+
+    .form-control-footer-between-mobile-and-max {
+        font-weight: 400;
+        font-size: 15px;
+        color: #0a0a0a;
+        background-color: #3333ff;
+        border-right: 0;
+        width: 240px;
+        position: absolute;
+    }
+
+    .footer-he-leido-between-mobile-and-max {
+        font-weight: 200;
+        font-size: 15px;
+        color: #0a0a0a;
+        font-style: italic;
+        margin-top: 15px;
+    }
+
+}
+
+
+
+/* Smartphones */
 
 @media only screen and (max-width: 480px) {
 
@@ -1059,9 +1206,88 @@ br {
         font-size: 1rem;
     }
 
+    .categorias-home {
+        padding: 0px 30px 0px 30px;
+    }
+
+    .categorias-home h2 {
+        font-size: 2rem;
+    }
+
+    .categorias-home p {
+        font-size: 1rem;
+        line-height: 1rem;
+
+    }
+
+    .categoria-producto-home img {
+        width: 70px;
+    }
+
     /* Termina mobile Agus */
 
+    /* PRODUCTOS DESTACADOS */
+
+    .carouselDestacados {
+        margin: 0px 10px;
+    }
+
+    .contenedorProductoDestacado {
+        padding: 5px;
+    }
+
+    .productoDestacado {
+        padding: 5px;
+    }
+
+    .tituloDestacados {
+        margin-bottom: 13px;
+    }
+
+    .contenedorProductoDestacado {
+        height: 265px;
+    }
+
+    .iconoDestacado {
+        font-size: 20px;
+        top: -95px;
+    }
+
+    .nuevosUsados {
+        width: 35%;
+        top: -95px;
+    }
+
+    .descripcionProductoDestacado {
+        font-size: 11px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .imgProducto {
+        padding: 5px;
+    }
+
+    .informacionProducto {
+        margin-bottom: inherit;
+        padding: 15px 0;
+    }
+
+    .nombreProductoDestacado,
+    .precioProductoDestacado {
+        font-size: 70%;
+    }
+
+    .carousel-control-prev-destacados,
+    .carousel-control-next-destacados {
+        font-size: 20px;
+    }
+
+    /* Acá termina PRODUCTOS DESTACADOS*/
+
     /* Empieza mobile Juan */
+
     /* Acá comienza BANNER */
 
     .banners_container {
@@ -1084,7 +1310,7 @@ br {
         transition: 450ms;
         margin-bottom: 40px;
     }
-        
+
     .banner2 {
         display: flex;
         justify-content: center;
@@ -1101,12 +1327,12 @@ br {
         font-size: 65px;
         margin: 0px;
     }
-    
+
     .linea1 {
         font-size: 21px;
         margin-bottom: -25px;
     }
-    
+
     .linea3 {
         font-size: 16px;
         margin-top: -25px
@@ -1116,41 +1342,46 @@ br {
         width: 50px;
         transform: translate(-175px, 35px);
     }
-    
+
     .ray2 {
         width: 50px;
         transform: translate(-175px, 35px);
     }
-    
+
     .plus {
-        transform: translate(85px, 30px);
+        transform: translate(85px, 27px);
     }
 
     /* Acá termina BANNER */
-    /* Acá empieza COMO FUNCIONA */
+
+    /* Acá empieza CÓMO FUNCIONA */
 
     .comofunciona {
         padding: 60px;
         justify-content: center
     }
+
     .icono_funciona_para {
         scale: 75%;
     }
-    .paracomprar, .paravender {
+
+    .paracomprar,
+    .paravender {
         justify-content: center;
     }
-    
-    /* Acá termina COMO FUNCIONA */
-    /* Termina mobile Juan */
+
+    /* Acá termina CÓMO FUNCIONA */
+
+    /* Acá termina mobile Juan */
 }
 
 
-/* tablet */
+/* Tablet */
 
 @media only screen and (max-width: 768px) and (min-width: 481px) {
 
+    /* Acá empieza Tablet Juan */
 
-    /* Empieza tablet Juan */
     /* Acá comienza BANNER */
 
     .banners_container {
@@ -1172,8 +1403,10 @@ br {
         border-radius: 45px;
         transition: 450ms;
         margin-bottom: 40px;
+        margin-left: 40px;
+        margin-right: 40px;
     }
-        
+
     .banner2 {
         display: flex;
         justify-content: center;
@@ -1184,18 +1417,20 @@ br {
         font-size: 12px;
         border-radius: 45px;
         transition: 450ms;
+        margin-left: 40px;
+        margin-right: 40px;
     }
 
     .tit {
         font-size: 65px;
         margin: 0px;
     }
-    
+
     .linea1 {
         font-size: 21px;
         margin-bottom: -25px;
     }
-    
+
     .linea3 {
         font-size: 16px;
         margin-top: -25px
@@ -1205,36 +1440,119 @@ br {
         width: 50px;
         transform: translate(-175px, 35px);
     }
-    
+
     .ray2 {
         width: 50px;
         transform: translate(-175px, 35px);
     }
-    
+
     .plus {
-        transform: translate(85px, 30px);
+        transform: translate(85px, 25px);
     }
 
-    /* Acá termina BANNER */  
+    /* Acá termina BANNER */
 
-    /* Acá empieza COMO FUNCIONA */
+    /* Empieza Tablet AGUS */
+
+    .overlay-text {
+        position: absolute;
+        top: 20%;
+    }
+
+    .overlay-text h2 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        width: 70%;
+    }
+
+    .btn-fucsia {
+        font-size: 0.8rem;
+    }
+
+    .fucsia-text {
+        font-size: 1rem;
+    }
+
+    /* Termina  Tablet AGUS */
+
+
+    /* Acá empieza CÓMO FUNCIONA */
 
     .comofunciona {
         padding: 60px
     }
+
     .icono_funciona_para {
         scale: 85%;
     }
 
-    /* Acá termina COMO FUNCIONA */
-    /* Termina tablet Juan */
+    /* Acá termina CÓMO FUNCIONA */
+
+    /* Acá termina Tablet Juan */
+
+    /* Acá empieza PRODUCTOS DESTACADOS */
+
+    .contenedorProductoDestacado {
+        padding: 5px;
+    }
+
+    .productoDestacado {
+        padding: 10px;
+    }
+
+    .tituloDestacados {
+        margin-bottom: 45px;
+    }
+
+    .contenedorProductoDestacado {
+        height: 320px;
+    }
+
+    .iconoDestacado {
+        font-size: 20px;
+        top: -67px;
+    }
+
+    .nuevosUsados {
+        width: 35%;
+        left: -12px;
+        top: -67px;
+    }
+
+    .descripcionProductoDestacado {
+        font-size: 11px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .informacionProducto {
+        margin-bottom: inherit;
+    }
+
+    .descripcionProductoDestacado {
+        font-size: 11px;
+    }
+
+    .nombreProductoDestacado,
+    .precioProductoDestacado {
+        font-size: 17px;
+    }
+
+    .carousel-control-prev-destacados,
+    .carousel-control-next-destacados {
+        font-size: 20px;
+    }
+
+    /* Acá termina PRODUCTOS DESTACADOS */
 }
 
 /* desktop */
 
 @media only screen and (max-width: 1279px) and (min-width: 769px) {
 
-    /* Empieza desktop Juan */
+    /* Acá Empieza desktop Juan */
+
     /* Acá comienza BANNER */
 
     .banners_container {
@@ -1246,7 +1564,7 @@ br {
         margin-top: 140px;
         margin-bottom: 140px;
     }
-    
+
     .banner1 {
         width: 600px;
         height: 255px;
@@ -1262,7 +1580,7 @@ br {
         margin-bottom: 40px;
         border: 5px solid white;
     }
-    
+
     .banner2 {
         width: 600px;
         height: 255px;
@@ -1277,26 +1595,69 @@ br {
         transition: 450ms;
         border: 5px solid white;
     }
-    
+
     /* Acá termina BANNER */
-    /* Acá empieza COMO FUNCIONA */
+
+    /* Acá empieza CÓMO FUNCIONA */
 
     .comofunciona {
         padding: 60px;
     }
+
     .paracomprar,
     .paravender {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    gap: 40px;
-}
-    /* Acá termina COMO FUNCIONA */ 
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    /* Acá termina CÓMO FUNCIONA */
+
     /* Termina desktop Juan */
 
-}   
+    /* Acá empieza PRODUCTOS DESTACADOS */
 
+    .contenedorProductoDestacado {
+        padding: 5px;
+    }
+
+    .productoDestacado {
+        padding: 10px;
+    }
+
+    .contenedorProductoDestacado {
+        height: 500px;
+    }
+
+    .descripcionProductoDestacado {
+        font-size: 15px;
+    }
+
+    .nombreProductoDestacado,
+    .precioProductoDestacado {
+        font-size: 20px;
+    }
+
+    .informacionProducto {
+        padding: 10px 0;
+    }
+
+    .iconoDestacado {
+
+        font-size: 20px;
+        top: -110px;
+    }
+
+    .nuevosUsados {
+
+        left: -12px;
+        top: -110px;
+    }
+
+    /* Acá termina PRODUCTOS DESTACADOS */
+}
 
 /* desktop large */
 
