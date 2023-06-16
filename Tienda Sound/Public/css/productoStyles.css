@@ -174,7 +174,8 @@ main {
     display: none;
 }
 .seccion-izquierda{
-    width: 50vw;
+    
+    width: 55vw;
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-left: 5vw;
@@ -190,8 +191,8 @@ main {
 
     
     border-radius: 25px;
-    width: 500px;
-    height: 600px;
+    width: 400px;
+    height: 550px;
     display: flex;
 }
 .carousel-inner img {
@@ -200,7 +201,7 @@ main {
     border-radius: 25px;
     width: 250px !important;
     height: 500px;
-    margin-left: 25%;
+    margin-left: 20%;
 }
 .carousel-indicators button {
     border-radius: 50%;
@@ -254,7 +255,7 @@ main {
 
 .seccion-derecha{
     
-    width: 30vw;
+    width: 45vw;
     margin-top: 5vh;
     margin-bottom: 5vh;
     margin-left: 0vw;
@@ -490,26 +491,31 @@ input[type="number"] {
     margin-bottom: -3vh;
     
 }
+.formas-de-pago{
+    
+    width: 250px;
+}
 .formas-de-pago ul{
     
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     width: 100%;
-    margin-left: 0vw;
+    margin: 0;
     font-size: 12px;
     font-weight: 400;
+    margin-left: -33px;
    
 }
 .formas-de-pago ul li{
     
-    margin-top: 1vh;
-    margin-left: -2vw;
-    margin-right: 5vw;
+    margin: 0;
     list-style: none;
+    margin-right: 15px;
 }
 
 .formas-pago-iconos img {
-    width: 60px;
+    width: 65px;
     margin-right: 20px;
     margin-top: 20px;
 }
@@ -748,33 +754,53 @@ input[type="number"] {
     .form-pago-linea{
         width: 49vw;
     }
-    .formas-de-pago ul {
-        margin-left: 5vw;
-        display: block;
-        font-size: 14px;
-    }
     .formas-de-pago{
-        margin-left: 5vw;
+        border: solid 1px red;
+        width: 250px;
     }
+    .formas-de-pago h5{
+        text-align: center;
+    }
+    .formas-de-pago ul{
+        border: solid 1px blue;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        width: 100%;
+        margin: 0;
+        font-size: 12px;
+        font-weight: 400;
+        margin-left: -20px;
+       
+    }
+    .formas-de-pago ul li{
+        border: solid 1px orange;
+        margin: 0;
+        list-style: none;
+        margin-right: 10px;
+    }
+    
     .formas-pago-iconos img {
-        
-        width: 30px;
-        margin-left: 5px;
+        width: 65px;
+        margin-left: 30px;
+        margin-right: 20px;
+        margin-top: 20px;
     }
+    
 }
 
     @media (min-width: 481px) and (max-width: 768px) {
 
     .seccion-izquierda{
-        border: solid 1px red;
+        
         margin-left: 0vw;
     }
     .seccion-derecha{
-        border: solid 1px blue;
+        
         margin-left: 10vw ;
     }         
     .carousel-inner {
-        border: solid 1px green;                
+                       
         border-radius: 25px;
         width: 250px;
         height: 450px;
