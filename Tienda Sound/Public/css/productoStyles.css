@@ -273,7 +273,7 @@ main {
     
     color:#3333FF;
     font-weight:bold;
-    width: 10vw;
+    width: 100px;
     display: inline-block;
     font-size: 20px;
     
@@ -291,6 +291,10 @@ main {
     font-size: 30px;
     width: 24vw;
     
+}
+
+.ranking-mobile {
+    display: none;
 }
 
 .seccion-derecha .titular p{
@@ -511,12 +515,13 @@ input[type="number"] {
 
 @media (min-width: 0px) and (max-width: 480px) {
 
+
     .seccion-izquierda {
         display: none;
     }
 
-    .main-carousel2{
-        display: flex;
+    .ranking {
+        display: none;
     }
 
     .division-general {
@@ -528,11 +533,111 @@ input[type="number"] {
         align-items: center;
         width: 320px;
         display: flex;
-        margin-left: 0vw;
-        margin-right: 0vw;
-        margin-top: 0vh;
-        margin-bottom: 0vh;
+        margin:auto
     }
+    .seccion-derecha{
+        width: 400;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        margin-left: 1vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .seccion-derecha .titular {
+        
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 98vw;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .encabezado-titular{
+        
+        display: flex;
+        justify-content: space-between;
+        width: 97vw;
+    }
+    .ranking-mobile{
+        
+        display: block;
+        width: 97vw;    
+    }
+    .imagen-star{
+        
+        display: flex;
+        justify-content: flex-end;
+        width: 90px;
+        margin-right: 0px;
+        margin-left: 0px        
+    }
+
+    .img-star{
+        width: 12px;
+        margin-right: 5px;
+        margin-bottom: 8px;
+    }
+    .sec-der-titular{
+        
+        display: flex;
+        justify-content: flex-end;
+        width: 97vw;
+        margin: 0;
+        padding: 0;
+    }
+    .sec-der-titular h3{
+        
+        color:#3333FF;
+        font: weight 600px;;
+        display: block;
+        text-align: right;
+        font-size: 16px !important;
+        margin-right: 0px;
+        padding: 0;
+        justify-content: flex-end;
+        }
+    .sec-der-titular .img-heart {
+        
+        width: 14px;  
+        margin-right: 21px;
+        margin-left: 5px;
+        padding: 0;
+        margin-bottom: 7px;
+        
+    }
+
+    .seccion-derecha .titular h2 {  
+        font-weight: 600;
+        font-size: 24px;
+        max-width: 100vw;
+        width: 98vw;
+        display: inline;
+        position: relative;
+        text-align: center;
+        margin-top: 5vw;        
+    }
+    
+    .seccion-derecha .titular p {
+       
+        width: 300px;
+        display: flex;
+        text-align: center  ;
+        font-size: 14px;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+    .main-carousel2{
+        display: flex;
+    }
+
     .carousel-inner {
         
         border-radius: 25px;
@@ -570,73 +675,14 @@ input[type="number"] {
         margin-left: 20%;
     }
     
-    .seccion-derecha{
-        width: 400;
-        margin-top: 5vh;
-        margin-bottom: 5vh;
-        margin-left: 5vw;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
+    .compra{
+        margin: 0;
     }
-    
-    .seccion-derecha .titular {
-        display: flex;
-        flex-wrap: wrap;
-        
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-width: 400px;
-        margin-left: 10px;
-        margin-right: 10px;
+    .compra h2{
+        font-size: 30px;
     }
-    
-    .seccion-derecha .titular h2 {
-        font-weight: 600;
-        font-size: 24px;
-        width: 400px;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-    
-    .seccion-derecha .titular p {
-       
-        width: 300px;
-        display: flex;
-        text-align: center  ;
-        font-size: 14px;
-        margin-left: 3vw;
-        margin-right: 3vw;
-    }
-    
-    .sec-der-titular {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    
-    .seccion-derecha .titular .sec-der-titular h3{
-    
-        color:#3333FF;
-        font-weight:bold;
-        width: 200px;
-        display: inline-block;
-        font-size: 20px;
-        text-align: center;
-    
-    }
-    
-    .sec-der-titular img {
-        width: 25px;
-        margin-left: 10vw;
-        position: relative;
-        bottom: 1vh;
-        margin: auto;
-    }
-    
+
+
    
   .number-input button {
     
@@ -659,6 +705,321 @@ input[type="number"] {
         bottom: 30px;
         right: 85px;
     }
+    .llega-hoy h5, .llega-hoy h6{
+
+        position: relative;
+      
+        
+    }
+    .llega-hoy img {
+        width: 40px;
+        position: relative;
+        bottom: 3vh;
+        left: 2vw;
+    }
+    
+    .llega-hoy h5{
+        left: 55px;
+        bottom: 40px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #3333FF;
+        margin-left: 10px;
+    }
+    .llega-hoy h6{
+        
+        font-size: 14px;
+        width: 200px;
+        font-weight: 400;
+        margin-left: -25px;
+        
+    }
+    .formas-de-pago{
+        
+        width: 50vw;
+
+    }
+    .formas-de-pago h5 {
+        font-size: 16px;
+        margin-left: 5vw;
+    }
+    .form-pago-linea{
+        width: 49vw;
+    }
+    .formas-de-pago ul {
+        margin-left: 5vw;
+        display: block;
+        font-size: 14px;
+    }
+    .formas-pago-iconos img {
+        
+        width: 7vw;
+        margin-left: 0.5vw;
+    }
+}
+
+    @media (min-width: 481px) and (max-width: 768px) {
+
+
+        .seccion-izquierda {
+            display: none;
+        }
+    
+        .ranking {
+            display: none;
+        }
+    
+        .division-general {
+    
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 320px;
+            display: flex;
+            margin:auto
+        }
+        .seccion-derecha{
+            width: 400;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+            margin-left: 1vw;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .seccion-derecha .titular {
+            
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: wrap;
+            justify-content: center;
+            align-items: center;
+            max-width: 98vw;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    
+        .encabezado-titular{           
+            display: flex;
+            justify-content: space-between;
+            width: 50vw;
+        }
+        .ranking-mobile{
+            
+            display: block;
+            width: 97vw;    
+        }
+        .imagen-star{
+            
+            display: flex;
+            justify-content: flex-end;
+            width: 90px;
+            margin-right: 0px;
+            margin-left: 0px        
+        }
+    
+        .img-star{
+            width: 12px;
+            margin-right: 5px;
+            margin-bottom: 8px;
+        }
+        .sec-der-titular{
+            
+            display: flex;
+            justify-content: flex-end;
+            width: 97vw;
+            margin: 0;
+            padding: 0;
+        }
+        .sec-der-titular h3{
+            
+            color:#3333FF;
+            font: weight 600px;;
+            display: block;
+            text-align: right;
+            font-size: 16px !important;
+            margin-right: 0px;
+            padding: 0;
+            justify-content: flex-end;
+            }
+        .sec-der-titular .img-heart {
+            
+            width: 14px;  
+            margin-right: 21px;
+            margin-left: 5px;
+            padding: 0;
+            margin-bottom: 7px;
+            
+        }
+    
+        .seccion-derecha .titular h2 {  
+            font-weight: 600;
+            font-size: 24px;
+            max-width: 100vw;
+            width: 98vw;
+            display: inline;
+            position: relative;
+            text-align: center;
+            margin-top: 5vw;        
+        }
+        
+        .seccion-derecha .titular p {
+           
+            width: 300px;
+            display: flex;
+            text-align: center  ;
+            font-size: 14px;
+            margin-left: 3vw;
+            margin-right: 3vw;
+        }
+    
+        .main-carousel2{
+            display: flex;
+        }
+    
+        .carousel-inner {
+            
+            border-radius: 25px;
+            width: 200px;
+            height: 300px;
+            display: flex;
+        }
+        
+        .carousel-control-next, .carousel-control-prev {
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 10%;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+            background: 0 0;
+            border: 0;
+            opacity: .5;
+            transition: opacity .15s ease;
+        }
+        .carousel-control-next-icon {
+          
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(15,2,161)' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+        }  
+        
+        .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='rgb(15,2,161)' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+           }
+        .carousel-inner img {
+            border-radius: 25px;
+            width: 120px !important;
+            height: auto;
+            margin-left: 20%;
+        }
+        
+        .compra{
+            
+            margin: 0;
+        }
+        .compra h2{
+            
+            font-size: 30px;
+            text-align: center;
+        }
+        .button-comprarAhora{
+            margin-left: 4%;
+        }
+        .compra h3{
+            text-align: center;
+        }
+        .input-general {
+            
+            margin-left: 4%;
+        }
+    
+       
+      .number-input button {
+        
+        outline:none;    
+        -webkit-appearance: none;
+        background-color: transparent;
+        border: none;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        cursor: pointer;
+        margin: 0;
+        position: relative;
+        border-radius: 6px;
+        background-color: #3333FF;
+        color: aliceblue; 
+        }
+        .number-input button.plus {
+            bottom: 30px;
+            right: 85px;
+        }
+        .llega-hoy h5, .llega-hoy h6{
+    
+            position: relative;
+          
+            
+        }
+        .llega-hoy img {
+            width: 40px;
+            position: relative;
+            bottom: 3vh;
+            left: 2vw;
+        }
+        
+        .llega-hoy h5{
+            left: 55px;
+            bottom: 40px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #3333FF;
+            margin-left: 10px;
+        }
+        .llega-hoy h6{
+            
+            font-size: 14px;
+            width: 180px;
+            font-weight: 400;
+            margin-left: -20px;
+            
+        }
+        .formas-de-pago{
+            
+            width: 50vw;
+    
+        }
+        .formas-de-pago h5 {
+            font-size: 16px;
+            text-align: center;
+        }
+        .form-pago-linea{
+            width: 49vw;
+        }
+        .formas-de-pago ul {
+            margin-left: 0vw;
+            display: block;
+            font-size: 14px;
+            text-align: center ;
+        }
+        .formas-pago-iconos{
+            width: 47vw;
+            margin-left: 1.5vw;
+            
+        }
+        .formas-pago-iconos img {
+            
+            width: 7vw;
+            margin-left: 0.5vw;
+        }
+        
+
     }
 
 
