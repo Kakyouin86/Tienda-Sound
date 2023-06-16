@@ -880,15 +880,16 @@ br {
     }
 
     .footer-logo-between-mobile-and-max {
-        margin-top: 5px;
-        width: 325px;
+        width: 275px;
         height: 60px;
         display: flex;
-        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
     }
 
     .footer-redes-sociales-between-mobile-and-max {
-        gap: 28px;
+        gap: 18px;
         display: flex;
         flex-direction: row;
         align-items: baseline;
@@ -967,19 +968,20 @@ br {
         font-size: 1rem;
     }
 
-    .categorias-home{
+    .categorias-home {
         padding: 0px 30px 0px 30px;
     }
+
     .categorias-home h2 {
         font-size: 2rem;
     }
-    
+
     .categorias-home p {
         font-size: 1rem;
         line-height: 1rem;
 
     }
-    
+
     .categoria-producto-home img {
         width: 70px;
     }

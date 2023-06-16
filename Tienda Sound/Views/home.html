@@ -98,18 +98,13 @@
 
   <div id="carouselExample" class="carousel slide">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
-        aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"
-        aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"
-        aria-label="Slide 3"></button>
-      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3"
-        aria-label="Slide 4"></button>
-      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4"
-        aria-label="Slide 5"></button>
-      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="5"
-        aria-label="Slide 6"></button>
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="5" aria-label="Slide 6"></button>
     </div>
 
     <div class="carousel-inner">
@@ -812,13 +807,17 @@
     <script>
       var acc = document.getElementsByClassName("accordion");
       var i;
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
+      for (i = 0; i < acc.length; i++)
+      {
+        acc[i].addEventListener("click", function ()
+        {
           this.classList.toggle("active");
           var panel = this.nextElementSibling;
-          if (panel.style.display === "block") {
+          if (panel.style.display === "block")
+          {
             panel.style.display = "none";
-          } else {
+          } else
+          {
             panel.style.display = "block";
           }
         });
