@@ -29,6 +29,7 @@
     text-align: center;
     font-size: 2.5rem;
     font-weight: 500;
+    margin-bottom: 25px;
 }
 
 .form-container h2 {
@@ -63,12 +64,16 @@
     padding-left: 20px;
 }
 
-.login-form .pregunta-login {
-    font-weight: 400;
-    font-size: 1.1rem;
-    color: #3333ff;
+.main-he-leido {
+    display: flex;
+    width: 8vw;
+    font-weight: 200;
+    font-size: 15px;
+    color: #0a0a0a;
+    font-style: italic;
+    margin-top: 15px;
+    margin-bottom: 25px;
 }
-
 
 .login-form .form-btn {
     width: 80%;
@@ -85,6 +90,8 @@
 .login-form .inicio-btn {
     background-color: #3333ff;
     color: white;
+    margin-top: 25px;
+    margin-bottom: 5px;
 }
 
 
@@ -93,6 +100,7 @@
     background-color: white;
     color: #3333ff;
     position: relative;
+    margin-top: 5px;
 }
 
 
@@ -114,3 +122,64 @@
     border: 1px solid gray;
     margin: 20px 0px 20px 0px;
 }
+
+
+/* smartphones */
+@media only screen and (max-width: 480px) {
+
+    .overlay-text h2 {
+        font-size: 1.9rem;
+        line-height: 1.9rem;
+        width: 70%;
+    }
+
+    .btn-fucsia {
+        font-size: 0.8rem;
+    }
+
+    .fucsia-text {
+        font-size: 1rem;
+    }
+
+    /* main */
+
+    .form-container h1{
+        display: flex;
+        justify-content: center;
+    }
+
+    .main-he-leido {
+        width: 80%;
+    }
+    
+
+    .form-container input{
+        width: 210%;
+    }
+
+    .login-form .inicio-btn {
+        width: 100%;
+    }
+
+    .login-form .google-btn {
+        width: 190%;
+    }
+    
+    
+    .login-form .facebook-btn {
+        width: 190%;
+    }
+
+}
+
+/* tablet */
+@media only screen and (max-width: 768px) and (min-width: 481px) {}
+
+/* desktop */
+@media only screen and (max-width: 1279px) and (min-width: 769px) {}
+
+/* desktop large */
+@media only screen and (max-width: 1280px) {}
+
+
+@media only screen and (max-width: 992px) {}
