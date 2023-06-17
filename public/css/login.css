@@ -111,3 +111,22 @@
     border: 1px solid gray;
     margin: 20px 0px 20px 0px;
 }
+
+
+/* |||||||| MEDIA QUERIES |||||||| */
+
+
+/* Smartphones */
+
+@media only screen and (max-width: 480px) {
+    
+    
+}
+
+
+/* Tablet */
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+
+    
+}
