@@ -992,6 +992,7 @@ br {
 
     .carouselDestacados {
         margin: 0px 10px;
+        margin-bottom: 20%;
     }
 
     .contenedorProductoDestacado {
@@ -1011,13 +1012,13 @@ br {
     }
 
     .iconoDestacado {
-        font-size: 20px;
-        top: -95px;
+        font-size: 80% !important;
+        top: -55px !important;
     }
 
     .nuevosUsados {
-        width: 35%;
-        top: -95px;
+        top: -50px !important;
+        left: -7px !important;
     }
 
     .descripcionProductoDestacado {
@@ -1254,6 +1255,7 @@ br {
 
     /* Acá empieza PRODUCTOS DESTACADOS */
 
+    .carouselDestacados{ margin-bottom: 10%; }
     .contenedorProductoDestacado {
         padding: 5px;
     }
@@ -1271,14 +1273,14 @@ br {
     }
 
     .iconoDestacado {
-        font-size: 20px;
-        top: -67px;
+        font-size: 20px !important;
+        top: -67px !important;
     }
 
     .nuevosUsados {
-        width: 35%;
-        left: -12px;
-        top: -67px;
+
+        left: -12px !important;
+        top: -67px !important;
     }
 
     .descripcionProductoDestacado {
@@ -1394,7 +1396,7 @@ br {
     }
 
     .descripcionProductoDestacado {
-        font-size: 15px;
+        font-size: 80%;
     }
 
     .nombreProductoDestacado,
@@ -1408,14 +1410,14 @@ br {
 
     .iconoDestacado {
 
-        font-size: 20px;
-        top: -110px;
+        font-size: 20px !important;
+        top: -110px !important;
     }
 
     .nuevosUsados {
 
-        left: -12px;
-        top: -110px;
+        left: -12px !important;
+        top: -110px !important;
     }
 
     /* Acá termina PRODUCTOS DESTACADOS */
