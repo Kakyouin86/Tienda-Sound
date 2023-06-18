@@ -887,42 +887,33 @@ br {
 
 }
 
-
-
 /* Smartphones */
 
 @media only screen and (max-width: 480px) {
 
     /* Empieza mobile Agus */
-
     .overlay-text h2 {
         font-size: 1.9rem;
         line-height: 1.9rem;
         width: 70%;
     }
-
     .btn-fucsia {
         font-size: 0.8rem;
     }
-
     .fucsia-text {
         font-size: 1rem;
     }
-
     .categorias-home {
         padding: 0px 30px 0px 30px;
+        margin-bottom: 50px;
     }
-
     .categorias-home h2 {
         font-size: 2rem;
     }
-
     .categorias-home p {
-        font-size: 1rem;
-        line-height: 1rem;
-
+        font-size: 0.8rem;
+        line-height: 0.8rem;
     }
-
     .categoria-producto-home img {
         width: 70px;
     }
@@ -946,6 +937,7 @@ br {
 
     .tituloDestacados {
         margin-bottom: 13px;
+        padding: 0px 30px 10px 30px;
     }
 
     .contenedorProductoDestacado {
@@ -1047,7 +1039,6 @@ br {
     /* Acá empieza CÓMO FUNCIONA */
 
     .comofunciona {
-        padding: 60px;
         justify-content: center
     }
 
