@@ -1252,65 +1252,6 @@ br {
 
     /* Termina mobile Agus */
 
-    /* PRODUCTOS DESTACADOS */
-
-    .carouselDestacados {
-        margin: 0px 10px;
-    }
-
-    .contenedorProductoDestacado {
-        padding: 5px;
-    }
-
-    .productoDestacado {
-        padding: 5px;
-    }
-
-    .tituloDestacados {
-        margin-bottom: 13px;
-    }
-
-    .contenedorProductoDestacado {
-        height: 265px;
-    }
-
-    .iconoDestacado {
-        font-size: 20px;
-        top: -95px;
-    }
-
-    .nuevosUsados {
-        width: 35%;
-        top: -95px;
-    }
-
-    .descripcionProductoDestacado {
-        font-size: 11px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .imgProducto {
-        padding: 5px;
-    }
-
-    .informacionProducto {
-        margin-bottom: inherit;
-        padding: 15px 0;
-    }
-
-    .nombreProductoDestacado,
-    .precioProductoDestacado {
-        font-size: 70%;
-    }
-
-    .carousel-control-prev-destacados,
-    .carousel-control-next-destacados {
-        font-size: 20px;
-    }
-
-    /* Acá termina PRODUCTOS DESTACADOS*/
 
     /* Empieza mobile Juan */
 
@@ -1516,61 +1457,7 @@ br {
 
     /* Acá termina Tablet Juan */
 
-    /* Acá empieza PRODUCTOS DESTACADOS */
-
-    .contenedorProductoDestacado {
-        padding: 5px;
-    }
-
-    .productoDestacado {
-        padding: 10px;
-    }
-
-    .tituloDestacados {
-        margin-bottom: 45px;
-    }
-
-    .contenedorProductoDestacado {
-        height: 320px;
-    }
-
-    .iconoDestacado {
-        font-size: 20px;
-        top: -67px;
-    }
-
-    .nuevosUsados {
-        width: 35%;
-        left: -12px;
-        top: -67px;
-    }
-
-    .descripcionProductoDestacado {
-        font-size: 11px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .informacionProducto {
-        margin-bottom: inherit;
-    }
-
-    .descripcionProductoDestacado {
-        font-size: 11px;
-    }
-
-    .nombreProductoDestacado,
-    .precioProductoDestacado {
-        font-size: 17px;
-    }
-
-    .carousel-control-prev-destacados,
-    .carousel-control-next-destacados {
-        font-size: 20px;
-    }
-
-    /* Acá termina PRODUCTOS DESTACADOS */
+    
 }
 
 /* desktop */
@@ -1643,48 +1530,74 @@ br {
 
     /* Termina desktop Juan */
 
-    /* Acá empieza PRODUCTOS DESTACADOS */
-
-    .contenedorProductoDestacado {
-        padding: 5px;
-    }
-
-    .productoDestacado {
-        padding: 10px;
-    }
-
-    .contenedorProductoDestacado {
-        height: 500px;
-    }
-
-    .descripcionProductoDestacado {
-        font-size: 15px;
-    }
-
-    .nombreProductoDestacado,
-    .precioProductoDestacado {
-        font-size: 20px;
-    }
-
-    .informacionProducto {
-        padding: 10px 0;
-    }
-
-    .iconoDestacado {
-
-        font-size: 20px;
-        top: -110px;
-    }
-
-    .nuevosUsados {
-
-        left: -12px;
-        top: -110px;
-    }
-
-    /* Acá termina PRODUCTOS DESTACADOS */
+  
 }
 
 /* desktop large */
 
 @media only screen and (max-width: 1280px) {}
+
+
+/*---PRODUCTOS RECOMENDADOS--*/
+
+.seccion-recomendado{
+    width: 100vw;
+    margin: 0 5vw !important;
+    margin-bottom: 5% !important;
+}
+
+.titulo-recomendado, .carousel-recomendado{ margin: 0 5vw !important;}
+
+.carousel-recomendado, .carousel-inner-recomendado, .carousel-item-recomendado,.row-recomendado, .contenedor-recomendado{ height: 300px !important;}
+.carousel-inner-recomendado{
+    
+    width: 100%;
+    display: block;
+}
+
+.contenedor-recomendado{ padding: 20px; }
+
+.producto{
+    background-color: #d8d8d89d;
+    border-radius: 10px;
+}
+
+.seccionImgProducto {
+   
+    height: 55%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contenedorImgProducto {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        .imgProducto {
+            height: auto;
+            width: auto;
+            max-height: 100%;
+            max-width: 100%;
+            margin: inherit;
+            padding: 10px;
+            border-radius: inherit;
+        }
+    }
+}
+
+.informacionProducto{
+    padding: 0 10px;
+    height: 45%;
+}
+
+.descripcionProducto { font-size: 85%; }
+.precioProducto { font-size: 130%; }
+.carousel-control-next-recomendado { right: -100px !important; }
+.carousel-control-prev-recomendado { left: -80px !important; }
+
+

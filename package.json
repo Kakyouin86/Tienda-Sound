@@ -18,6 +18,5 @@
     "readline": "^1.3.0",
     "readline-sync": "^1.4.10"
   },
-  "description": "Tienda Sound es un ecommerce de venta de instrumentos y equipos musicales. Busca destacarse por sobre sus competidores en el segmento, priorizando en todo momento la experiencia del usuario. Varios son los problemas que aborda un usuario que ha decidido comprar un instrumento, ya sea alguien que recién comienza o un músico con amplios conocimientos del mercado.",
-  "devDependencies": {}
+  "description": "Tienda Sound es un ecommerce de venta de instrumentos y equipos musicales. Busca destacarse por sobre sus competidores en el segmento, priorizando en todo momento la experiencia del usuario. Varios son los problemas que aborda un usuario que ha decidido comprar un instrumento, ya sea alguien que recién comienza o un músico con amplios conocimientos del mercado."
 }
