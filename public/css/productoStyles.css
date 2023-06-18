@@ -1548,10 +1548,7 @@ br {
     margin-bottom: 5% !important;
 }
 
-.carousel-recomendado{margin-left: 8.5%;}
-
-.titulo-recomendado{  margin-left: 8.5%;}
-
+.carousel-recomendado,.titulo-recomendado {margin-left: 8.5%;}
 .carousel-recomendado, .carousel-inner-recomendado, .carousel-item-recomendado,.row-recomendado, .contenedor-recomendado{ height: auto !important; border-radius: inherit;}
 p{margin: inherit}
 
@@ -1559,7 +1556,6 @@ p{margin: inherit}
     width: 100%;
     display: block;
 }
-
 .contenedor-recomendado {
     padding: 20px;
     border-radius: inherit;
@@ -1568,12 +1564,12 @@ p{margin: inherit}
     background-color: #d8d8d89d;
     border-radius: 10px;
 }
-
 .producto:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
+    transition: 1.2s;
     
     .imgProducto {
-        transform: scale(1.02);
+        transform: scale(1.1);
         transition: 1.5s;
     }
 }
@@ -1593,6 +1589,7 @@ p{margin: inherit}
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        margin: 10px;
 
         .imgProducto {
             height: auto;
@@ -1600,7 +1597,6 @@ p{margin: inherit}
             max-height: 100%;
             max-width: 100%;
             margin: inherit;
-            padding: 10px;
             border-radius: inherit;
         }
     }
@@ -1641,18 +1637,10 @@ p{margin: inherit}
 
     .carruselComp{display: none;}
     .carruselTabCel{ display: block;}
-    
     .seccion-recomendado { margin-left: 1.5% !important;}
-    .seccion-recomendado{
-      
-      margin-bottom: inherit;
-    }
-    
-  
+    .seccion-recomendado{ margin-bottom: inherit; }
     .precioProducto { font-size: 100%; }
     .carousel-item-recomendado{ max-width: 638px !important;}
-    
-    
 }
 
 @media only screen and (max-width: 480px) {
@@ -1663,8 +1651,6 @@ p{margin: inherit}
     .carousel-recomendado{margin-bottom: 10%;}
     .descripcionProducto{padding-top: 5px;}
     .precioProducto { font-size: 80%; padding-bottom: 5px;}
-
-
     .span-recom{width: 15px !important;}
 }
 
