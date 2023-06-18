@@ -265,6 +265,8 @@ header form {
 
 /* Aca empiezan los PRODUCTOS DESTACADOS*/
 
+.secc-mob{display: none;}
+
 .tituloDestacados {
     margin-bottom: 65px;
     font-weight: 400;
@@ -922,12 +924,16 @@ br {
 
     /* PRODUCTOS DESTACADOS */
 
+    .secc-desk{display: none;}
+    .secc-mob{display: block;}
+
     .carouselDestacados {
-        margin: 0px 10px;
-        margin-bottom: 20%;
+        margin: 0px 25%;
+        margin-bottom: 10%;
     }
 
     .contenedorProductoDestacado {
+        height: 350px;
         padding: 5px;
     }
 
@@ -940,22 +946,18 @@ br {
         padding: 0px 30px 10px 30px;
     }
 
-    .contenedorProductoDestacado {
-        height: 265px;
-    }
-
     .iconoDestacado {
         font-size: 80% !important;
-        top: -55px !important;
+        top: -70px !important;
     }
 
     .nuevosUsados {
-        top: -50px !important;
+        top: -70px !important;
         left: -7px !important;
     }
 
     .descripcionProductoDestacado {
-        font-size: 11px;
+        font-size: 13px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -967,12 +969,12 @@ br {
 
     .informacionProducto {
         margin-bottom: inherit;
-        padding: 15px 0;
+        padding: 20px 0;
     }
 
     .nombreProductoDestacado,
     .precioProductoDestacado {
-        font-size: 70%;
+        font-size: 95%;
     }
 
     .carousel-control-prev-destacados,
