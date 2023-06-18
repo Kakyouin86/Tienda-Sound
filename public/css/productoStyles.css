@@ -1538,7 +1538,9 @@ br {
 @media only screen and (max-width: 1280px) {}
 
 
-/*---PRODUCTOS RECOMENDADOS--*/
+/*--- PRODUCTOS RECOMENDADOS-KIARA --*/
+
+.carruselTabCel{ display: none;}
 
 .seccion-recomendado{
     width: 100vw;
@@ -1560,6 +1562,15 @@ br {
 .producto{
     background-color: #d8d8d89d;
     border-radius: 10px;
+}
+
+.producto:hover {
+    transform: scale(1.02);
+    
+    .imgProducto {
+        transform: scale(1.02);
+        transition: 1.5s;
+    }
 }
 
 .seccionImgProducto {
@@ -1599,5 +1610,51 @@ br {
 .precioProducto { font-size: 130%; }
 .carousel-control-next-recomendado { right: -100px !important; }
 .carousel-control-prev-recomendado { left: -80px !important; }
+
+/*--MEDIA QUERIES PRODUCTOS RECOMENDADOS--*/
+
+@media only screen and (max-width: 1280px) {
+
+    .titulo-recomendado{ margin-bottom: 3% !important;}
+    .seccionImgProducto { height: 20%; }
+    .contenedor-recomendado { padding: 5px; }
+
+    .descripcionProducto {
+
+        font-size:80%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .precioProducto { font-size: 120%; }
+    .carousel-control-next-recomendado { right: -50px !important; height: 75% !important; }
+    .carousel-control-prev-recomendado { left: -55px !important; height: 75% !important; }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+    .carruselComp{display: none;}
+    .carruselTabCel{ display: block;}
+    .seccion-recomendado{
+      
+      margin-bottom: inherit;
+    }
+    .carousel-recomendado, .carousel-inner-recomendado, .carousel-item-recomendado, .row-recomendado, .contenedor-recomendado {
+        height: 200px !important;
+    }
+  
+    .precioProducto { font-size: 100%; }
+    .carousel-control-next-recomendado { right: -37px !important; height: 60% !important; font-size: 20% !important; }
+    .carousel-control-prev-recomendado { left: -42px !important; height: 60% !important; }
+
+    .carousel-item-recomendado{ max-width: 638px !important;}
+    
+
+}
+
+
+
 
 
