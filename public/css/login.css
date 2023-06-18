@@ -5,10 +5,22 @@
     font-family: "hoss-round", sans-serif;
 }
 
+.main-login{
+    position: relative;
+}
+
 .flecha-volver {
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: absolute;
+    left: 25%;
+    top: 60px;
+}
+
+.flecha-volver p{
+    margin-bottom: 0;
+    color:#3333ff;
 }
 
 .flecha-volver img {
@@ -19,7 +31,7 @@
 }
 
 .form-container {
-    margin: 65px 0px 150px 0px;
+    padding: 65px 0px 150px 0px;
 }
 
 .form-container h1 {
@@ -119,7 +131,36 @@
 /* Smartphones */
 
 @media only screen and (max-width: 480px) {
+
+    .form-container h1 {
+        font-size: 2rem;
+    }
     
+    .form-container h2 {
+        font-size: 2rem;
+        padding: 0px 20px 30px 20px;
+
+    }
+
+    .login-form input, .login-form .form-btn {
+        width: 90%;
+        font-size: 1rem;
+
+    }
+
+    .form-container {
+        padding: 70px 0px 70px 0px;
+    }
+
+    .flecha-volver {
+        left: 2%;
+    }
+
+    .flecha-volver img {
+        width: 25px;
+        height: 25px;
+    }
+
     
 }
 
