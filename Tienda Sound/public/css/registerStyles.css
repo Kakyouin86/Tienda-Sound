@@ -44,11 +44,12 @@
     color: #3333ff;
 }
 
-.form-container .login-form {
+.login-form {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .login-form input {
@@ -66,13 +67,18 @@
 
 .main-he-leido {
     display: flex;
-    width: 8vw;
+    width: 47%;
+    border: 1px solid red;
     font-weight: 200;
     font-size: 15px;
     color: #0a0a0a;
     font-style: italic;
     margin-top: 15px;
     margin-bottom: 25px;
+}
+
+.main-he-leido .cajaCheckbox {
+
 }
 
 .login-form .form-btn {
