@@ -1645,7 +1645,7 @@ p{margin: inherit}
 
 @media only screen and (max-width: 480px) {
 
-    .titulo-recomendado{ text-align: center; font-size: 120%;}
+    .titulo-recomendado{ text-align: center; font-size: 120%; margin-bottom:8% !important;}
     .titulo-recomendado, .carousel-recomendado{margin: 0 10px;}
     .seccion-recomendado{margin: inherit !important;}
     .carousel-recomendado{margin-bottom: 10%;}
