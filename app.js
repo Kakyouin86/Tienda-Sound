@@ -1,5 +1,9 @@
 //npm init
 //npm install express
+//npm i ejs
+//<%- include('./partials/header')%>
+//<%- include('./partials/footer')%>
+
 
 const express = require("express");
 const path = require("path");
@@ -9,15 +13,16 @@ app.use(express.static(path.resolve(__dirname, './public')));
 app.use('/nmb', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/css')));
 app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js')));
 app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')));
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) =>
 {
     res.sendFile(path.resolve(__dirname, './views/home.html'))
 });
 
-app.get('/producto', (req, res) =>
+app.get('/carrito', (req, res) =>
 {
-    res.sendFile(path.resolve(__dirname, './views/producto.html'))
+    res.sendFile(path.resolve(__dirname, './views/carrito.html'))
 });
 
 app.get('/login', (req, res) =>
@@ -25,9 +30,14 @@ app.get('/login', (req, res) =>
     res.sendFile(path.resolve(__dirname, './views/login.html'))
 });
 
-app.get('/carrito', (req, res) =>
+app.get('/producto', (req, res) =>
 {
-    res.sendFile(path.resolve(__dirname, './views/carrito.html'))
+    res.sendFile(path.resolve(__dirname, './views/producto.html'))
+});
+
+app.get('/producto3', (req, res) =>
+{
+    res.sendFile(path.resolve(__dirname, './views/producto3.html'))
 });
 
 app.get('/register', (req, res) =>
