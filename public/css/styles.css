@@ -265,7 +265,9 @@ header form {
 
 /* Aca empiezan los PRODUCTOS DESTACADOS*/
 
-.secc-mob{display: none;}
+.secc-mob {
+    display: none;
+}
 
 .tituloDestacados {
     margin-bottom: 65px;
@@ -414,7 +416,8 @@ header form {
     margin-bottom: 140px;
 }
 
-.banner1, .banner2 {
+.banner1,
+.banner2 {
     width: 600px;
     height: 255px;
     display: flex;
@@ -427,9 +430,13 @@ header form {
     transition: 450ms;
 }
 
-.banner1{background-image: linear-gradient(180deg, #3333FF, #6666FF, #ABEDFF);}
+.banner1 {
+    background-image: linear-gradient(180deg, #3333FF, #6666FF, #ABEDFF);
+}
 
-.banner2 {background-image: linear-gradient(180deg, #3333FF, #6666FF, #ABEDFF);}
+.banner2 {
+    background-image: linear-gradient(180deg, #3333FF, #6666FF, #ABEDFF);
+}
 
 .banner1:hover {
     background-image: linear-gradient(0deg, #3333FF, #6666FF, #ABEDFF);
@@ -441,7 +448,8 @@ header form {
     scale: 103%
 }
 
-.b1, .b2 {
+.b1,
+.b2 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -469,7 +477,8 @@ header form {
     margin-top: -25px
 }
 
-.ray, .ray2 {
+.ray,
+.ray2 {
     position: absolute;
     width: 100px;
     z-index: 1000000;
@@ -478,9 +487,12 @@ header form {
     transform: translate(-270px, 45px);
 }
 
-.ray2 {display: none;}
+.ray2 {
+    display: none;
+}
 
-.banner1:hover .ray2, .banner2:hover .ray2 {
+.banner1:hover .ray2,
+.banner2:hover .ray2 {
     display: block;
 }
 
@@ -530,7 +542,8 @@ header form {
     text-align: center;
 }
 
-.paracomprar, .paravender {
+.paracomprar,
+.paravender {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -541,7 +554,8 @@ header form {
     margin-bottom: 50px;
 }
 
-.pc, .pv {
+.pc,
+.pv {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -660,7 +674,10 @@ header form {
     animation: jump-shaking 0.83s 1;
 }
 
-.footer-list-1, .footer-list-2, .footer-list-3, .footer-list-4 {
+.footer-list-1,
+.footer-list-2,
+.footer-list-3,
+.footer-list-4 {
     padding-top: 65px;
     list-style-type: none;
     width: 280px;
@@ -676,6 +693,10 @@ header form {
     font-weight: 400;
     font-size: 15px;
     color: #0a0a0a;
+}
+
+footer input::placeholder {
+    color: white !important;
 }
 
 .footer input::placeholder {
@@ -772,7 +793,8 @@ br {
     }
 
     /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-    .footer-accordion-between-mobile-and-max:hover.active, .footer-accordion-between-mobile-and-max.active {
+    .footer-accordion-between-mobile-and-max:hover.active,
+    .footer-accordion-between-mobile-and-max.active {
         background-color: #3333FF;
     }
 
@@ -837,7 +859,8 @@ br {
         flex-direction: row;
         align-items: baseline;
         margin-top: 20px;
-        margin: auto;
+        margin-bottom: 40px;
+        justify-content: center;
     }
 
     .footer-logo-redes-between-mobile-and-max {
@@ -899,23 +922,29 @@ br {
         line-height: 1.9rem;
         width: 70%;
     }
+
     .btn-fucsia {
         font-size: 0.8rem;
     }
+
     .fucsia-text {
         font-size: 1rem;
     }
+
     .categorias-home {
         padding: 0px 30px 0px 30px;
         margin-bottom: 50px;
     }
+
     .categorias-home h2 {
         font-size: 2rem;
     }
+
     .categorias-home p {
         font-size: 0.8rem;
         line-height: 0.8rem;
     }
+
     .categoria-producto-home img {
         width: 70px;
     }
@@ -924,8 +953,13 @@ br {
 
     /* PRODUCTOS DESTACADOS */
 
-    .secc-desk{display: none;}
-    .secc-mob{display: block;}
+    .secc-desk {
+        display: none;
+    }
+
+    .secc-mob {
+        display: block;
+    }
 
     .carouselDestacados {
         margin: 0px 25%;
@@ -996,7 +1030,8 @@ br {
         align-items: center;
     }
 
-    .banner1, .banner2 {
+    .banner1,
+    .banner2 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1006,9 +1041,10 @@ br {
         font-size: 12px;
         border-radius: 45px;
         transition: 450ms;
-       
+
     }
-    .banner1{
+
+    .banner1 {
         margin-bottom: 40px;
     }
 
@@ -1027,7 +1063,8 @@ br {
         margin-top: -25px
     }
 
-    .ray, .ray2 {
+    .ray,
+    .ray2 {
         width: 50px;
         transform: translate(-175px, 35px);
     }
@@ -1048,7 +1085,8 @@ br {
         scale: 75%;
     }
 
-    .paracomprar, .paravender {
+    .paracomprar,
+    .paravender {
         justify-content: center;
     }
 
@@ -1072,7 +1110,8 @@ br {
         align-items: center;
     }
 
-    .banner1, .banner2 {
+    .banner1,
+    .banner2 {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1086,7 +1125,9 @@ br {
         margin-right: 40px;
     }
 
-    .banner1{margin-bottom: 40px;}
+    .banner1 {
+        margin-bottom: 40px;
+    }
 
     .tit {
         font-size: 65px;
@@ -1103,7 +1144,8 @@ br {
         margin-top: -25px
     }
 
-    .ray, .ray2 {
+    .ray,
+    .ray2 {
         width: 50px;
         transform: translate(-175px, 35px);
     }
@@ -1138,9 +1180,13 @@ br {
     /* Termina  Tablet AGUS */
     /* Acá empieza CÓMO FUNCIONA */
 
-    .comofunciona {padding: 60px}
+    .comofunciona {
+        padding: 60px
+    }
 
-    .icono_funciona_para {scale: 85%;}
+    .icono_funciona_para {
+        scale: 85%;
+    }
 
     /* Acá termina CÓMO FUNCIONA */
 
@@ -1148,7 +1194,10 @@ br {
 
     /* Acá empieza PRODUCTOS DESTACADOS */
 
-    .carouselDestacados{ margin-bottom: 10%;}
+    .carouselDestacados {
+        margin-bottom: 10%;
+    }
+
     .contenedorProductoDestacado {
         padding: 5px;
     }
@@ -1190,11 +1239,13 @@ br {
         font-size: 11px;
     }
 
-    .nombreProductoDestacado, .precioProductoDestacado {
+    .nombreProductoDestacado,
+    .precioProductoDestacado {
         font-size: 17px;
     }
 
-    .carousel-control-prev-destacados, .carousel-control-next-destacados {
+    .carousel-control-prev-destacados,
+    .carousel-control-next-destacados {
         font-size: 20px;
     }
 
@@ -1219,7 +1270,8 @@ br {
         margin-bottom: 140px;
     }
 
-    .banner1, .banner2 {
+    .banner1,
+    .banner2 {
         width: 600px;
         height: 255px;
         display: flex;
@@ -1234,7 +1286,9 @@ br {
         border: 5px solid white;
     }
 
-    .banner1 {margin-bottom: 40px;}
+    .banner1 {
+        margin-bottom: 40px;
+    }
 
     /* Acá termina BANNER */
 
@@ -1244,7 +1298,8 @@ br {
         padding: 60px;
     }
 
-    .paracomprar, .paravender {
+    .paracomprar,
+    .paravender {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
@@ -1273,7 +1328,8 @@ br {
         font-size: 80%;
     }
 
-    .nombreProductoDestacado, .precioProductoDestacado {
+    .nombreProductoDestacado,
+    .precioProductoDestacado {
         font-size: 20px;
     }
 
