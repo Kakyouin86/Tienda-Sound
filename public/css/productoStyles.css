@@ -755,7 +755,7 @@ input[type="number"] {
         width: 49vw;
     }
     .formas-de-pago{
-        border: solid 1px red;
+        
         width: 250px;
     }
     .formas-de-pago h5{
@@ -774,7 +774,7 @@ input[type="number"] {
        
     }
     .formas-de-pago ul li{
-        border: solid 1px orange;
+        
         margin: 0;
         list-style: none;
         margin-right: 10px;
