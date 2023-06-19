@@ -1,9 +1,6 @@
 //npm init
 //npm install express
 //npm i ejs
-//<%- include('./partials/header')%>
-//<%- include('./partials/footer')%>
-
 
 const express = require("express");
 const path = require("path");
