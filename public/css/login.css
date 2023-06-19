@@ -48,8 +48,9 @@
     padding-bottom: 30px;
 }
 
-.form-container h2 span {
+.texto-resaltado {
     color: #3333ff;
+    font-weight: bold;
 }
 
 .form-container .login-form {
@@ -59,7 +60,7 @@
     align-items: center;
 }
 
-.login-form input {
+.login-form input[type=text], .login-form input[type=email], .login-form input[type=password]{
     width: 80%;
     height: 60px;
     border-radius: 15px;
@@ -124,6 +125,30 @@
     margin: 20px 0px 20px 0px;
 }
 
+
+/*Register form*/
+
+.form-register h1{
+    padding-bottom: 40px;
+}
+
+.terminos-condiciones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.terminos-condiciones span{
+    font-style:italic;
+    margin-left: 10px;
+}
+
+.terminos-condiciones input[type=checkbox]{
+    border: 1px solid #3333ff;
+    width: 20px;
+    height: 20px;
+}
 
 /* |||||||| MEDIA QUERIES |||||||| */
 
