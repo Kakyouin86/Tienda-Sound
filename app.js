@@ -17,32 +17,32 @@ app.set('view engine', 'ejs');
 
 app.get('/', (req, res) =>
 {
-    res.sendFile(path.resolve(__dirname, './views/home.html'))
+    res.sendFile(path.resolve(__dirname, './views/pages/home.html'))
 });
 
 app.get('/carrito', (req, res) =>
 {
-    res.sendFile(path.resolve(__dirname, './views/carrito.html'))
+    res.sendFile(path.resolve(__dirname, './views/pages/carrito.html'))
 });
 
 app.get('/login', (req, res) =>
 {
-    res.sendFile(path.resolve(__dirname, './views/login.html'))
+    res.sendFile(path.resolve(__dirname, './views/pages/login.html'))
 });
 
 app.get('/producto', (req, res) =>
 {
-    res.sendFile(path.resolve(__dirname, './views/producto.html'))
+    res.sendFile(path.resolve(__dirname, './views/pages/producto.html'))
 });
 
 app.get('/producto3', (req, res) =>
 {
-    res.sendFile(path.resolve(__dirname, './views/producto3.html'))
+    res.sendFile(path.resolve(__dirname, './views/pages/producto3.html'))
 });
 
 app.get('/register', (req, res) =>
 {
-    res.sendFile(path.resolve(__dirname, './views/register.html'))
+    res.sendFile(path.resolve(__dirname, './views/pages/register.html'))
 });
 
 app.listen(3000, () =>
