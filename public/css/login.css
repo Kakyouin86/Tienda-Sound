@@ -168,7 +168,7 @@
     }
 
     .login-form input, .login-form .form-btn {
-        width: 90%;
+        width: 80%;
         font-size: 1rem;
 
     }
@@ -184,6 +184,14 @@
     .flecha-volver img {
         width: 25px;
         height: 25px;
+    }
+
+    .terminos-condiciones span{
+        font-size: 12px;
+    }
+
+    .flecha-volver-register{
+        top: 20px;
     }
 
     
