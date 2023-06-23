@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./nmb/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/gaj1ybf.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <link rel="shortcut icon" href="img/icon_ts.svg" />
+    <title>Tienda Sound</title>
+  </head>
+</head>
+
+<body>
+
+  <%- include('./../partials/header')  %>
+
+
+  <main class="main-login">
+
+    <div class="flecha-volver flecha-volver-register">
+      <img src="../img/flecha.svg" alt="">
+      <p>Volver</p>
+    </div>
+
+
+    <section class="form-register form-container container col-lg-5 col-md-8 col-sm-12 mx-auto">
+
+      <h1><span class="texto-resaltado">Registrate</span> y creá tu cuenta!</h1>
+
+      <form action="/" class="login-form">
+        <input type="text" placeholder="Nombre Completo" name="nombreCompleto">
+        <input type="email" placeholder="Correo electrónico" name="email">
+        <input type="password" placeholder="Contraseña" name="password">
+        <input type="password" placeholder="Confirmar contraseña" name="password">
+        <div class="terminos-condiciones">
+          <input type="checkbox" value="">
+          <span>He leído y acepto los terminos y condiciones</span>
+        </div>
+
+        <button type="submit" class="form-btn inicio-btn">Registrarme</button>
+
+        <hr class="btn-division">
+
+        <button type="button" class="form-btn google-btn">
+          <img src="../img/google_icon.png">Crea tu cuenta con Google
+        </button>
+
+        <button type="button" class="form-btn facebook-btn">
+          <img src="../img/facebook_icon.png">Crea tu cuenta con Facebook
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+  <%- include('./../partials/footer')  %>
+
+  <script src="https://kit.fontawesome.com/2396c6fc63.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
