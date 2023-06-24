@@ -34,32 +34,45 @@
 
         <form action="/" class="base-form crearProducto-form">
 
-          <input type="text" placeholder="Nombre del Producto" name="nombreProducto">
-          <textarea placeholder="Breve descripción" name="descripcionProducto" id="" cols="30" rows="3"></textarea>
+          <label for="nombreProducto">Nombre del Producto</label>
+          <input type="text" placeholder="Ej: Guitarra eléctrica G&L" name="nombreProducto">
 
+          <label for="descripcionProductoCorta">Breve descripción</label>
+          <textarea placeholder="Color, tamaño, año, etc..." name="descripcionProductoCorta" id="" cols="30" rows="3"></textarea>
+          
+          <label for="nombreProducto">Precio en AR$</label>
           <input type="number" name="precioProducto" placeholder="Precio del producto">
 
-          <label for="estado">Estado</label>
-          <label class="opcion"><input type="radio" name="perfil" value="Comprador"> Comprador</label>
-          <label class="opcion"> <input type="radio" name="perfil" value="Vendedor"> Vendedor</label>
+          <div class="dos-col">
+            <label for="estado">Estado</label>
+            <label><input type="radio" name="estadoProducto" value="Nuevo">Nuevo</label>
+            <label><input type="radio" name="estadoProducto" value="Usado"> Usado</label>
+          </div>
 
-          <textarea placeholder="Descripción detallada del producto" name="descripcionProducto" id="" cols="30"
-            rows="3"></textarea>
+          <label for="descripcionProductoLarga">Descripción detallada</label>
+          <textarea placeholder="Descripción detallada del producto" name="descripcionProductoLarga" id="" cols="30"
+            rows="6"></textarea>
 
-          <label for="categoria">Categoría del Producto</label>
+          <div class="dos-col">
+            <label for="categoriaProducto">Categoría del Producto</label>
+            <select name="categoriaProducto" id="">
+              <option value="guitarrasBajos">Guitatarras y bajos</option>
+              <option value="bateriasPercusion">Baterias y percusión</option>
+              <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
+              <option value="vientos">Vientos</option>
+              <option value="cuerdas">Cuerdas</option>
+            </select>
+          </div>
 
-          <button type="submit" class="form-btn inicio-btn">Borrar todo</button>
-          <button type="submit" class="form-btn inicio-btn">Agregar producto</button>
+          <label for="fotoDestacada">Imagen destacada</label>
+          <input type="file" name="fotoDestacada">
 
-          <hr class="btn-division">
+          <div class="dos-col">
+            <button type="submit" class="form-btn inicio-btn">Borrar todo</button>
+            <button type="submit" class="form-btn inicio-btn">Agregar producto</button>
+          </div>
 
-          <button type="button" class="form-btn google-btn">
-            <img src="../img/google_icon.png">Continuar con Google</span>
-          </button>
 
-          <button type="button" class="form-btn facebook-btn">
-            <img src="../img/facebook_icon.png">Continuar con Facebook</span>
-          </button>
 
         </form>
 

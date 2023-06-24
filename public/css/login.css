@@ -60,17 +60,28 @@
     align-items: center;
 }
 
-.base-form input[type=text], .base-form input[type=email], .base-form input[type=password]{
+.base-form input[type=text], .base-form input[type=email], .base-form input[type=password],
+.base-form input[type=number], .base-form input[type=file]{
     width: 80%;
     height: 60px;
     border-radius: 15px;
     border: 1px #3333ff solid;
     margin-bottom: 25px;
-    flex-direction: row;
 }
 
-.base-form input::placeholder {
+.base-form textarea{
+    width: 80%;
+    border-radius: 15px;
+    border: 1px #3333ff solid;
+    margin-bottom: 25px;
+}
+
+.base-form input::placeholder{
     padding-left: 20px;
+}
+
+.base-form textarea::placeholder {
+    padding: 10px 0px 0px 20px;
 }
 
 .base-form .pregunta-login {
@@ -148,6 +159,27 @@
     border: 1px solid #3333ff;
     width: 20px;
     height: 20px;
+}
+
+
+/*Producto form*/
+
+.dos-col{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+
+.crearProducto-form .dos-col .form-btn:first-child{
+    background-color: #6666ff83;
+    margin-right: 20px;
+}
+
+.crearProducto-form label{
+    display: inline-block;
+    width: 80%;
+    text-align: left;
+    margin-bottom: 10px;
 }
 
 /* |||||||| MEDIA QUERIES |||||||| */
