@@ -13,6 +13,9 @@ let mainController = {
     },
     carrito: function(req,res){
         res.render('./pages/carrito');
+    },
+    crearProducto: function(req,res){
+        res.render('./pages/crearProducto');
     }
 
 

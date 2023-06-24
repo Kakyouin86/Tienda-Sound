@@ -53,14 +53,14 @@
     font-weight: bold;
 }
 
-.form-container .login-form {
+.form-container .base-form {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.login-form input[type=text], .login-form input[type=email], .login-form input[type=password]{
+.base-form input[type=text], .base-form input[type=email], .base-form input[type=password]{
     width: 80%;
     height: 60px;
     border-radius: 15px;
@@ -69,18 +69,18 @@
     flex-direction: row;
 }
 
-.login-form input::placeholder {
+.base-form input::placeholder {
     padding-left: 20px;
 }
 
-.login-form .pregunta-login {
+.base-form .pregunta-login {
     font-weight: 400;
     font-size: 1.1rem;
     color: #3333ff;
 }
 
 
-.login-form .form-btn {
+.base-form .form-btn {
     width: 80%;
     height: 60px;
     border-radius: 15px;
@@ -92,13 +92,13 @@
     margin-bottom: 25px;
 }
 
-.login-form .inicio-btn {
+.base-form .inicio-btn {
     background-color: #3333ff;
     color: white;
 }
 
 
-.login-form .google-btn {
+.base-form .google-btn {
     border: 1px solid #3333ff;
     background-color: white;
     color: #3333ff;
@@ -106,13 +106,13 @@
 }
 
 
-.login-form .facebook-btn {
+.base-form .facebook-btn {
     background-color: #3333ff;
     color: white;
     position: relative;
 }
 
-.login-form .google-btn img, .login-form .facebook-btn img{
+.base-form .google-btn img, .base-form .facebook-btn img{
     width: 35px;
     height: auto;
     position: absolute;
@@ -167,7 +167,7 @@
 
     }
 
-    .login-form input, .login-form .form-btn {
+    .base-form input, .base-form .form-btn {
         width: 80%;
         font-size: 1rem;
 
