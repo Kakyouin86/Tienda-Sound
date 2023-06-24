@@ -1,0 +1,206 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "hoss-round", sans-serif;
+}
+
+.main-login{
+    position: relative;
+}
+
+.flecha-volver {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    left: 25%;
+    top: 60px;
+}
+
+.flecha-volver p{
+    margin-bottom: 0;
+    color:#3333ff;
+}
+
+.flecha-volver img {
+    width: 40px;
+    height: 40px;
+    text-align: left;
+    justify-content: left;
+}
+
+.form-container {
+    padding: 65px 0px 150px 0px;
+}
+
+.form-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.form-container h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: black;
+    padding-bottom: 30px;
+}
+
+.texto-resaltado {
+    color: #3333ff;
+    font-weight: bold;
+}
+
+.form-container .login-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form input[type=text], .login-form input[type=email], .login-form input[type=password]{
+    width: 80%;
+    height: 60px;
+    border-radius: 15px;
+    border: 1px #3333ff solid;
+    margin-bottom: 25px;
+    flex-direction: row;
+}
+
+.login-form input::placeholder {
+    padding-left: 20px;
+}
+
+.login-form .pregunta-login {
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #3333ff;
+}
+
+
+.login-form .form-btn {
+    width: 80%;
+    height: 60px;
+    border-radius: 15px;
+    border: 0;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.login-form .inicio-btn {
+    background-color: #3333ff;
+    color: white;
+}
+
+
+.login-form .google-btn {
+    border: 1px solid #3333ff;
+    background-color: white;
+    color: #3333ff;
+    position: relative;
+}
+
+
+.login-form .facebook-btn {
+    background-color: #3333ff;
+    color: white;
+    position: relative;
+}
+
+.login-form .google-btn img, .login-form .facebook-btn img{
+    width: 35px;
+    height: auto;
+    position: absolute;
+    left: 10px;
+}
+
+.btn-division{
+    width:80%;
+    border: 1px solid gray;
+    margin: 20px 0px 20px 0px;
+}
+
+
+/*Register form*/
+
+.form-register h1{
+    padding-bottom: 40px;
+}
+
+.terminos-condiciones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.terminos-condiciones span{
+    font-style:italic;
+    margin-left: 10px;
+}
+
+.terminos-condiciones input[type=checkbox]{
+    border: 1px solid #3333ff;
+    width: 20px;
+    height: 20px;
+}
+
+/* |||||||| MEDIA QUERIES |||||||| */
+
+
+/* Smartphones */
+
+@media only screen and (max-width: 480px) {
+
+    .form-container h1 {
+        font-size: 2rem;
+    }
+    
+    .form-container h2 {
+        font-size: 2rem;
+        padding: 0px 20px 30px 20px;
+
+    }
+
+    .login-form input, .login-form .form-btn {
+        width: 80%;
+        font-size: 1rem;
+
+    }
+
+    .form-container {
+        padding: 70px 0px 70px 0px;
+    }
+
+    .flecha-volver {
+        left: 2%;
+    }
+
+    .flecha-volver img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .terminos-condiciones span{
+        font-size: 12px;
+    }
+
+    .flecha-volver-register{
+        top: 20px;
+    }
+
+    
+}
+
+
+/* Tablet */
+
+@media only screen and (max-width: 768px) and (min-width: 481px) {
+
+    
+}

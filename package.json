@@ -1,0 +1,21 @@
+{
+  "name": "tienda-sound",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "npx nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "jquery": "^3.7.0",
+    "moment": "^2.29.4",
+    "nodemon": "^2.0.22"
+  },
+  "description": "Tienda Sound es un ecommerce de venta de instrumentos y equipos musicales. Busca destacarse por sobre sus competidores en el segmento, priorizando en todo momento la experiencia del usuario. Varios son los problemas que aborda un usuario que ha decidido comprar un instrumento, ya sea alguien que recién comienza o un músico con amplios conocimientos del mercado."
+}
