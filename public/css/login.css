@@ -61,7 +61,7 @@
 }
 
 .base-form input[type=text], .base-form input[type=email], .base-form input[type=password],
-.base-form input[type=number], .base-form input[type=file]{
+.base-form input[type=number], .base-form input[type=file], .crearProducto-form select{
     width: 80%;
     height: 60px;
     border-radius: 15px;
@@ -78,10 +78,12 @@
 
 .base-form input::placeholder{
     padding-left: 20px;
+    color: #B7B7B7;
 }
 
 .base-form textarea::placeholder {
     padding: 10px 0px 0px 20px;
+    color: #B7B7B7;
 }
 
 .base-form .pregunta-login {
@@ -168,6 +170,8 @@
     display: flex;
     flex-direction: row;
     width: 80%;
+    margin-bottom: 20px;
+    align-items: center;
 }
 
 .crearProducto-form .dos-col .form-btn:first-child{
@@ -180,6 +184,22 @@
     width: 80%;
     text-align: left;
     margin-bottom: 10px;
+}
+.crearProducto-form .dos-col label:first-child{
+    width: 40%;
+
+}
+
+.crearProducto-form input[type=radio]{
+    margin-right: 10px;
+}
+
+.crearProducto-form select, .crearProducto-form input[type=file]{
+    padding-left: 20px;
+}
+
+.crearProducto-form input[type=file]{
+    padding-top: 12px;
 }
 
 /* |||||||| MEDIA QUERIES |||||||| */
