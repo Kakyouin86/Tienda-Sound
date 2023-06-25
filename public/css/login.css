@@ -185,10 +185,7 @@
     text-align: left;
     margin-bottom: 10px;
 }
-.crearProducto-form .dos-col label:first-child{
-    width: 40%;
-
-}
+.crearProducto-form .dos-col label{width: 15%;}
 
 .crearProducto-form input[type=radio]{
     margin-right: 10px;

@@ -16,6 +16,9 @@ let mainController = {
     },
     crearProducto: function(req,res){
         res.render('./pages/crearProducto');
+    },
+    editarProducto: function(req,res){
+        res.render('./pages/editarProducto');
     }
 
 
