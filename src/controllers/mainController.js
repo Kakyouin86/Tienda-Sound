@@ -11,6 +11,12 @@ let mainController = {
     producto: function(req,res){
         res.render('./pages/producto');
     },
+
+    /* FUNCIÓN QUE RENDERIZA VISTA DE TODOS LOS PRODUCTOS --> CORREGIR */
+    productos: function(req,res){
+        res.render('./pages/productos');
+    },
+
     carrito: function(req,res){
         res.render('./pages/carrito');
     },

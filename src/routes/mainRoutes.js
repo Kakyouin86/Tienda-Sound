@@ -10,6 +10,10 @@ router.get('/', mainController.index);
 router.get('/login', mainController.login);
 router.get('/register', mainController.register);
 router.get('/producto', mainController.producto);
+
+/* RUTA A VISTA DE TODOS LOS PRODUCTOS --> CORREGIR */
+router.get('/productos', mainController.productos);
+
 router.get('/carrito', mainController.carrito);
 router.get('/crearProducto', mainController.crearProducto);
 router.get('/editarProducto', mainController.editarProducto);
