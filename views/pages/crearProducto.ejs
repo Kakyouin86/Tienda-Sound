@@ -32,15 +32,15 @@
 
         <h2>Creá un <span class="texto-resaltado">nuevo producto!</span></h2>
 
-        <form action="/" class="base-form crearProducto-form">
+        <form action="/crearProducto" method="POST" class="base-form crearProducto-form">
 
-          <label for="nombreProducto">Nombre del Producto</label>
+          <label for="">Nombre del Producto</label>
           <input type="text" placeholder="Ej: Guitarra eléctrica G&L" name="nombreProducto">
 
           <label for="descripcionProductoCorta">Breve descripción</label>
           <textarea placeholder="Color, tamaño, año, etc..." name="descripcionProductoCorta" id="" cols="30" rows="3"></textarea>
           
-          <label for="nombreProducto">Precio en AR$</label>
+          <label for="">Precio en AR$</label>
           <input type="number" name="precioProducto" placeholder="Precio del producto">
 
           <div class="dos-col">

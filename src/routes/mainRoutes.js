@@ -9,14 +9,16 @@ const mainController = require("../controllers/mainController");
 router.get('/', mainController.index);
 router.get('/login', mainController.login);
 router.get('/register', mainController.register);
-router.get('/producto', mainController.producto);
+router.get('/producto/:id?', mainController.producto);
 
-/* RUTA A VISTA DE TODOS LOS PRODUCTOS --> CORREGIR */
 router.get('/productos', mainController.productos);
 
 router.get('/carrito', mainController.carrito);
-router.get('/crearProducto', mainController.crearProducto);
-router.get('/editarProducto', mainController.editarProducto);
 
+router.get('/crearProducto', mainController.renderCrearProducto);
+router.post('/crearProducto', mainController.guardarProducto);
+
+router.get('/editarProducto', mainController.renderEditarProducto);
+router.put('/editarProducto', mainController.editarProducto);
 
 module.exports = router;

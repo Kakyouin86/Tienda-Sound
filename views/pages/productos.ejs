@@ -18,126 +18,21 @@
     
 <main>
     <section class="grid">
-
+      <% for(let i=0; i<producto.length; i++){%>
         <article>
+          <a href="/producto/<%=producto[i].id%>">
           <div class="img-cont">
-          <img src="../../img/productos/productos_1.jpg" alt="Sample photo">
+          <img src="../../img/productos/<%=producto[i].fotoDestacada%>" alt="Sample photo">
           </div>
           <div class="text">
-            <p class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>NUEVO</p>
-            <h3>Guitarra eléctrica G&L Tribute Legacy </h3>
+            <p class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i><%=producto[i].estadoProducto%></p>
+            <h3><%=producto[i].nombreProducto%></h3>
             <p class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></p>
-            <p class="precio-prod">$ 432.120</p>
+            <p class="precio-prod">$ <%=producto[i].precioProducto%></p>
           </div>
+        </a>
         </article>
-
-        <article>
-          <div class="img-cont">
-          <img src="../../img/productos/productos_2.jpg" alt="Sample photo">
-          </div>
-          <div class="text">
-            <p class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>USADO</p>
-            <h3>Guitarra eléctrica Fender Stratocaster</h3>
-            <p class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></p>
-            <p class="precio-prod">$ 152.720</p>
-          </div>
-        </article>
-
-        <article>
-          <div class="img-cont">
-          <img src="../../img/productos/productos_3.jpg" alt="Sample photo">
-          </div>
-          <div class="text">
-            <p class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>NUEVO</p>
-            <h3>Sintetizador Moog Matriarch</h3>
-            <p class="envio-prod">Acordar con vendedor</p>
-            <p class="precio-prod">$ 542.900</p>
-          </div>
-        </article>
-
-        <article>
-          <div class="img-cont">
-          <img src="../../img/productos/productos_4.jpg" alt="Sample photo">
-          </div>
-          <div class="text">
-            <p class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>NUEVO</p>
-            <h3>Bateria Mapex Voyager 5 Cuerpos</h3>
-            <p class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></p>
-            <p class="precio-prod">$ 352.670</p>
-          </div>
-        </article>
-
-        <article>
-          <div class="img-cont">
-          <img src="../../img/productos/productos_5.jpg" alt="Sample photo">
-          </div>
-          <div class="text">
-            <p class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>NUEVO</p>
-            <h3>Guitarra eléctrica Fender Telecaster</h3>
-            <p class="envio-prod">Acordar con vendedor</p>
-            <p class="precio-prod">$ 321.670</p>
-          </div>
-        </article>
-
-        <article>
-          <div class="img-cont">
-          <img src="../../img/productos/productos_6.jpg" alt="Sample photo">
-          </div>
-          <div class="text">
-            <p class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>USADO</p>
-            <h3>Bajo Eléctrico Fender Precision</h3>
-            <p class="envio-prod">Acordar con vendedor</p>
-            <p class="precio-prod">$ 171.800</p>
-          </div>
-        </article>
-
-        <article>
-          <div class="img-cont">
-          <img src="../../img/productos/productos_7.jpg" alt="Sample photo">
-          </div>
-          <div class="text">
-            <p class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>USADO</p>
-            <h3>Guitarra eléctrica Gibson Les Paul </h3>
-            <p class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></p>
-            <p class="precio-prod">$ 162.000</p>
-          </div>
-        </article>
-
-        <article>
-          <div class="img-cont">
-          <img src="../../img/productos/productos_8.jpg" alt="Sample photo">
-          </div>
-          <div class="text">
-            <p class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>NUEVO</p>
-            <h3>Guitarra eléctrica Fender Stratocaster</h3>
-            <p class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></p>
-            <p class="precio-prod">$ 232.680</p>
-          </div>
-        </article>
-
-        <article>
-          <div class="img-cont">
-          <img src="../../img/productos/productos_9.jpg" alt="Sample photo">
-          </div>
-          <div class="text">
-            <p class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>USADO</p>
-            <h3>Guitarra eléctrica Fender Telecaster</h3>
-            <p class="envio-prod">Acordar con vendedor</p>
-            <p class="precio-prod">$ 210.400</p>
-          </div>
-        </article>
-
-        <article>
-          <div class="img-cont">
-          <img src="../../img/productos/productos_10.jpg" alt="Sample photo">
-          </div>
-          <div class="text">
-            <p class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>NUEVO</p>
-            <h3>Bajo Eléctrico Fender Precision con estuche</h3>
-            <p class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></p>
-            <p class="precio-prod">$ 212.670</p>
-          </div>
-        </article>
+      <% } %>
 
     </section>
 </main>
