@@ -7,7 +7,7 @@
         "estadoProducto": "Nuevo",
         "descripcionProductoLarga": "Lorem ipsum...",
         "categoriaProducto": "guitarrasBajos",
-        "fotoDestacada": "sfhjsf.jpg"
+        "fotoDestacada": "productos_1.jpg"
     },
     {
         "id": 2,
@@ -17,7 +17,7 @@
         "estadoProducto": "Nuevo",
         "descripcionProductoLarga": "Lorem ipsum...",
         "categoriaProducto": "guitarrasBajos",
-        "fotoDestacada": "sfhjsf.jpg"
+        "fotoDestacada": "productos_2.jpg"
     },
     {
         "id": 3,
@@ -27,7 +27,7 @@
         "estadoProducto": "Nuevo",
         "descripcionProductoLarga": "Lorem ipsum...",
         "categoriaProducto": "guitarrasBajos",
-        "fotoDestacada": "sfhjsf.jpg"
+        "fotoDestacada": "productos_3.jpg"
     },
     {
         "id": 4,
@@ -37,7 +37,7 @@
         "estadoProducto": "Nuevo",
         "descripcionProductoLarga": "Lorem ipsum...",
         "categoriaProducto": "guitarrasBajos",
-        "fotoDestacada": "sfhjsf.jpg"
+        "fotoDestacada": "productos_4.jpg"
     }
 
 ]

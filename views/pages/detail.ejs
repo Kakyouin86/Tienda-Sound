@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./nmb/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/gaj1ybf.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/productoStyles.css">
     <link rel="shortcut icon" href="img/icon_ts.svg" />
     <title>Tienda Sound</title>
@@ -16,7 +17,7 @@
 </head>
 
 <body>
-  <%- include('./../partials/header')  %>
+  <%- include('./../partials/header') %>
 
   <main>
     <div class="division-general">
@@ -51,10 +52,10 @@
           </div>
             <div class="descripcion-producto">
                 <h2 class="Titulo">
-                    Descripción del producto
+                    <%= producto.nombreProducto %>
                 </h2>
                 <p>
-                  Disfrutá con esta guitarra G&L Tribute de la conexión con la música. Con este instrumento descubrirás nuevos acordes, entonarás tus canciones y disfrutarás de la vida musical. Explorá, amplificá tu creatividad y desarrollá tu pasión.
+                  <%= producto.descripcionProductoCorta %>
                 </p>
                 <ul>
                   <li>Fabricada en fresno/tilo con acabado brillante.</li>
@@ -84,14 +85,14 @@
                   </div>            
                 </div>
                 <div class="sec-der-titular">
-                    <h3>Usado</h3>
+                    <h3><%= producto.estadoProducto %></h3>
                     <img class="img-heart" src="/img/producto/favorito_producto.svg" alt="">
                 </div>   
 
               </div>
                              
-              <h2>Guitarra eléctrica G&L</h2>
-              <p>Tribute Legacy de fresno/tilo surf green brillante con diapasón de jatoba</p>
+              <h2><%= producto.nombreProducto %></h2>
+              <p><%= producto.descripcionProductoCorta %></p>
             </div>
             <div class="ranking">
               <img src="/img/producto/estrellitaranking.svg" alt="">
@@ -99,7 +100,6 @@
               <img src="/img/producto/estrellitaranking.svg" alt="">
               <img src="/img/producto/estrellitaranking.svg" alt="">
               <img src="/img/producto/estrellitaranking.svg" alt="">
-                        
             </div>
 
                           <div class="main-carousel2">
