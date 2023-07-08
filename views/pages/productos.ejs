@@ -19,9 +19,10 @@
 <main>
     <section class="grid">
 
+      <% for(let i=0; i<producto.length; i++){%>
         <article>
           <div class="img-cont">
-          <img src="../../img/productos/productos_1.jpg" alt="Sample photo">
+          <img src="../../img/productos/<%producto[i]%>" alt="Sample photo">
           </div>
           <div class="text">
             <p class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>NUEVO</p>
@@ -30,6 +31,9 @@
             <p class="precio-prod">$ 432.120</p>
           </div>
         </article>
+
+      <% } %>
+        
 
         <article>
           <div class="img-cont">

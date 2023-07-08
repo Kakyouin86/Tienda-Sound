@@ -3,6 +3,8 @@
 //npm i ejs
 
 const mainRoutes = require('./src/routes/mainRoutes');
+const productRoutes = require('./src/routes/productRoutes');
+const userRoutes = require('./src/routes/userRoutes');
 
 const express = require("express");
 const path = require("path");
@@ -17,8 +19,10 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')))
 app.set('view engine', 'ejs');
 
 
+// seteo de enrutadores
 app.use('/', mainRoutes);
-
+app.use('/productos', productRoutes);
+app.use('/usuarios', userRoutes);
 
 app.listen(3000, () =>
 {
