@@ -58,8 +58,13 @@ nav .form {
 }
 
 header .nav-link {
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.75);
     font-size: 14px;
+    text-decoration: none;
+}
+
+header .nav-link:hover {
+    color: white;
     text-decoration: none;
 }
 

@@ -1,52 +1,52 @@
 [
- {
-  "id": 1,
-  "nombreProducto": "Guitarra",
-  "descripcionProductoCorta": "Lorem ipsum...",
-  "precioProducto": 23940,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Lorem ipsum...",
-  "categoriaProducto": "guitarrasBajos",
-  "fotoDestacada": "productos_1.jpg"
- },
- {
-  "id": 2,
-  "nombreProducto": "Guitarra",
-  "descripcionProductoCorta": "Lorem ipsum...",
-  "precioProducto": 23940,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Lorem ipsum...",
-  "categoriaProducto": "guitarrasBajos",
-  "fotoDestacada": "productos_2.jpg"
- },
- {
-  "id": 3,
-  "nombreProducto": "Guitarra",
-  "descripcionProductoCorta": "Lorem ipsum...",
-  "precioProducto": 23940,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Lorem ipsum...",
-  "categoriaProducto": "guitarrasBajos",
-  "fotoDestacada": "productos_3.jpg"
- },
- {
-  "id": 4,
-  "nombreProducto": "Guitarra",
-  "descripcionProductoCorta": "Lorem ipsum...",
-  "precioProducto": 23940,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Lorem ipsum...",
-  "categoriaProducto": "guitarrasBajos",
-  "fotoDestacada": "productos_4.jpg"
- },
- {
-  "id": 5,
-  "nombreProducto": "Prueba 1",
-  "descripcionProductoCorta": "sdflkd",
-  "precioProducto": 345,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "sdfds",
-  "categoriaProducto": "bateriasPercusion",
-  "fotoDestacada": ""
- }
+    {
+        "id": 1,
+        "nombreProducto": "Guitarra",
+        "descripcionProductoCorta": "Lorem ipsum...",
+        "precioProducto": 23940,
+        "estadoProducto": "Nuevo",
+        "descripcionProductoLarga": "Lorem ipsum...",
+        "categoriaProducto": "guitarrasBajos",
+        "fotoDestacada": "productos_1.jpg"
+    },
+    {
+        "id": 2,
+        "nombreProducto": "Guitarra",
+        "descripcionProductoCorta": "Lorem ipsum...",
+        "precioProducto": 23940,
+        "estadoProducto": "Nuevo",
+        "descripcionProductoLarga": "Lorem ipsum...",
+        "categoriaProducto": "guitarrasBajos",
+        "fotoDestacada": "productos_2.jpg"
+    },
+    {
+        "id": 3,
+        "nombreProducto": "Guitarra",
+        "descripcionProductoCorta": "Lorem ipsum...",
+        "precioProducto": 23940,
+        "estadoProducto": "Nuevo",
+        "descripcionProductoLarga": "Lorem ipsum...",
+        "categoriaProducto": "guitarrasBajos",
+        "fotoDestacada": "productos_3.jpg"
+    },
+    {
+        "id": 4,
+        "nombreProducto": "Guitarra",
+        "descripcionProductoCorta": "Lorem ipsum...",
+        "precioProducto": 23940,
+        "estadoProducto": "Nuevo",
+        "descripcionProductoLarga": "Lorem ipsum...",
+        "categoriaProducto": "guitarrasBajos",
+        "fotoDestacada": "productos_4.jpg"
+    },
+    {
+        "id": 5,
+        "nombreProducto": "Prueba 1",
+        "descripcionProductoCorta": "sdflkd",
+        "precioProducto": 345,
+        "estadoProducto": "Nuevo",
+        "descripcionProductoLarga": "sdfds",
+        "categoriaProducto": "bateriasPercusion",
+        "fotoDestacada": "productos_5.jpg"
+    }
 ]

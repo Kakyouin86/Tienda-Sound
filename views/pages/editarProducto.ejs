@@ -2,44 +2,36 @@
 <html lang="en">
 
 <head>
-
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./nmb/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.typekit.net/gaj1ybf.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/login.css">
-
-    <link rel="shortcut icon" href="img/icon_ts.svg" />
-    <title>Tienda Sound</title>
-  </head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/nmb/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.typekit.net/gaj1ybf.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/login.css">
+  <link rel="shortcut icon" href="/img/icon_ts.svg" />
+  <title>Tienda Sound</title>
 </head>
 
 <body>
   <%- include('./../partials/header') %>
 
     <main class="main-login">
-
-
       <div class="flecha-volver">
-        <img src="../img/flecha.svg" alt="">
+        <img src="/img/flecha.svg" alt="">
         <p>Volver</p>
       </div>
-
       <section class="form-container container col-lg-5 col-md-8 col-sm-12 mx-auto">
-
         <h2>Editá <span class="texto-resaltado">el producto!</span></h2>
-
         <form action="/" class="base-form crearProducto-form">
 
           <label for="nombreProducto">Nombre del Producto</label>
           <input type="text" placeholder="Ej: Guitarra eléctrica G&L" name="nombreProducto">
 
           <label for="descripcionProductoCorta">Breve descripción</label>
-          <textarea placeholder="Color, tamaño, año, etc..." name="descripcionProductoCorta" id="" cols="30" rows="3"></textarea>
-          
+          <textarea placeholder="Color, tamaño, año, etc..." name="descripcionProductoCorta" id="" cols="30"
+            rows="3"></textarea>
+
           <label for="nombreProducto">Precio en AR$</label>
           <input type="number" name="precioProducto" placeholder="Precio del producto">
 
@@ -53,15 +45,14 @@
           <textarea placeholder="Descripción detallada del producto" name="descripcionProductoLarga" id="" cols="30"
             rows="6"></textarea>
 
-          
-            <label for="categoriaProducto">Categoría del Producto</label>
-            <select name="categoriaProducto" id="">
-              <option value="guitarrasBajos">Guitatarras y bajos</option>
-              <option value="bateriasPercusion">Baterias y percusión</option>
-              <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
-              <option value="vientos">Vientos</option>
-              <option value="cuerdas">Cuerdas</option>
-            </select>
+          <label for="categoriaProducto">Categoría del Producto</label>
+          <select name="categoriaProducto" id="">
+            <option value="guitarrasBajos">Guitatarras y bajos</option>
+            <option value="bateriasPercusion">Baterias y percusión</option>
+            <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
+            <option value="vientos">Vientos</option>
+            <option value="cuerdas">Cuerdas</option>
+          </select>
 
           <label for="fotoDestacada">Imagen destacada</label>
           <input type="file" name="fotoDestacada">
@@ -70,18 +61,10 @@
             <button type="reset" class="form-btn inicio-btn">Borrar todo</button>
             <button type="submit" class="form-btn inicio-btn">Aceptar</button>
           </div>
-
-
-
         </form>
-
-
       </section>
-
     </main>
-
     <%- include('./../partials/footer') %>
-
       <script src="https://kit.fontawesome.com/2396c6fc63.js" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"

@@ -1,47 +1,50 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./nmb/bootstrap.min.css">
+  <link rel="stylesheet" href="/nmb/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.typekit.net/gaj1ybf.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/productos.css">
-  <link rel="shortcut icon" href="img/icon_ts.svg" />
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/productos.css">
+  <link rel="shortcut icon" href="/img/icon_ts.svg" />
   <title>Tienda Sound</title>
 </head>
 
 <body>
-  <%- include('./../partials/header')  %>
-    
-<main>
-    <section class="grid">
-      <% for(let i=0; i<producto.length; i++){%>
-        <article>
-          <a href="/producto/<%=producto[i].id%>">
-          <div class="img-cont">
-          <img src="../../img/productos/<%=producto[i].fotoDestacada%>" alt="Sample photo">
-          </div>
-          <div class="text">
-            <p class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i><%=producto[i].estadoProducto%></p>
-            <h3><%=producto[i].nombreProducto%></h3>
-            <p class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></p>
-            <p class="precio-prod">$ <%=producto[i].precioProducto%></p>
-          </div>
-        </a>
-        </article>
-      <% } %>
+  <%- include('./../partials/header') %>
 
-    </section>
-</main>
-
-    <%- include('./../partials/footer')  %>
-    <script src="https://kit.fontawesome.com/2396c6fc63.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-      crossorigin="anonymous"></script>
-    
+    <main>
+      <section class="grid">
+        <% for(let i=0; i<producto.length; i++){%>
+          <article>
+            <a href="/producto/<%=producto[i].id%>">
+              <div class="img-cont">
+                <img src="/img/productos/<%=producto[i].fotoDestacada%>" alt="Sample photo">
+              </div>
+              <div class="text">
+                <p class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>
+                  <%=producto[i].estadoProducto%>
+                </p>
+                <h3>
+                  <%=producto[i].nombreProducto%>
+                </h3>
+                <p class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></p>
+                <p class="precio-prod">$ <%=producto[i].precioProducto%>
+                </p>
+              </div>
+            </a>
+          </article>
+          <% } %>
+      </section>
+    </main>
+    <%- include('./../partials/footer') %>
+      <script src="https://kit.fontawesome.com/2396c6fc63.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
