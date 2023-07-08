@@ -18,7 +18,7 @@ router.get('/carrito', mainController.carrito);
 router.get('/crearProducto', mainController.renderCrearProducto);
 router.post('/crearProducto', mainController.guardarProducto);
 
-router.get('/editarProducto', mainController.renderEditarProducto);
+router.get('/editarProducto/:id', mainController.renderEditarProducto);
 router.put('/editarProducto', mainController.editarProducto);
 
 module.exports = router;
