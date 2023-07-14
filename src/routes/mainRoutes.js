@@ -19,6 +19,8 @@ router.get('/crearProducto', mainController.renderCrearProducto);
 router.post('/crearProducto', mainController.guardarProducto);
 
 router.get('/editarProducto/:id', mainController.renderEditarProducto);
-router.put('/editarProducto', mainController.editarProducto);
+router.put('/editarProducto/:id', mainController.editarProducto);
+
+router.delete('/borrarProducto/:id', mainController.borrarProducto);
 
 module.exports = router;

@@ -5,11 +5,11 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-
 let mainController = {
 	// metodos de /
 	index: function (req, res)
 	{
+		const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		res.render('./pages/home');
 	},
 	login: function (req, res)
@@ -26,6 +26,7 @@ let mainController = {
 	// renderiza todos los productos en grid
 	productos: function (req, res)
 	{
+		const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		res.render('./pages/productos', { producto: productos });
 	},
 
@@ -104,22 +105,21 @@ let mainController = {
 		}
 		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
 		res.redirect('/productos');
-
 	},
-
-
-
 
 	carrito: function (req, res)
 	{
 		res.render('./pages/carrito');
 	},
 
-
-
-
-
-
+	borrarProducto: (req, res) =>
+	{
+		let idProductoBuscado = req.params.id;
+		let productosActualizados = productos.filter(product => product.id != idProductoBuscado);
+		fs.writeFileSync(productsFilePath, JSON.stringify(productosActualizados, null, ' '));
+		productos;
+		res.redirect('/productos');
+	}
 }
 
 module.exports = mainController;

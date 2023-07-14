@@ -56,6 +56,9 @@
             </p>
           </div>
           <a href="/editarProducto/<%= producto.id %>" class="action-button">EDITAR PRODUCTO</a>
+          <form action="/borrarProducto/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+            <button type="submit" class="action-button delete">BORRAR PRODUCTO</button>
+          </form>
           <div class="ranking">
             <img src="/img/producto/estrellitaranking.svg" alt="">
             <img src="/img/producto/estrellitaranking.svg" alt="">
