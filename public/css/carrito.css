@@ -300,8 +300,8 @@ main {
 }
 
 #seguircomprando {
-    background-color: #ABEDFF;
-    color: #3333ff;
+    background-color: #3333ff;
+    color: white;
     border-radius: 15px;
     border-style: none;
     font-size: 18px;
@@ -311,11 +311,12 @@ main {
 }
 
 #seguircomprando:hover {
+    background-color: #6666ff83;
     color: white;
 }
 
 #continuar {
-    background-color: #3333ff;
+    background-color: #E93882 ;
     color: white;
     border-radius: 15px;
     border-style: none;
@@ -326,7 +327,7 @@ main {
 }
 
 #continuar:hover {
-    background-color: #ABEDFF;
+    background-color: #eaa5c2 ;
     color: white;
 }
 

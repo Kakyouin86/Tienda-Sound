@@ -1,41 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/nmb/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.typekit.net/gaj1ybf.css">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/css/productos.css">
-  <link rel="shortcut icon" href="/img/icon_ts.svg" />
-  <title>Tienda Sound</title>
-</head>
-
+  <%- include('./../partials/head.ejs', { title: 'Productos' }) %>
 <body>
   <%- include('./../partials/header') %>
-
     <main>
       <section class="grid">
         <% for(let i=0; i<producto.length; i++){%>
           <article>
-            <a href="/producto/<%=producto[i].id%>">
-              <div class="img-cont">
-                <img src="/img/productos/<%=producto[i].fotoDestacada%>" alt="Sample photo">
-              </div>
-              <div class="text">
-                <p class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>
+            <div class="productogrid">
+              <a href="/producto/<%=producto[i].id%>">
+                <div class="img-cont">
+                  <img src="/img/productos/<%=producto[i].fotoDestacada%>" alt="foto">
+                </div>
+                <div class="text">
+                  <div class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>
                   <%=producto[i].estadoProducto%>
-                </p>
-                <h3>
+                  </div>
+                  <h3>
                   <%=producto[i].nombreProducto%>
-                </h3>
-                <p class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></p>
-                <p class="precio-prod">$ <%=producto[i].precioProducto%>
-                </p>
-              </div>
-            </a>
+                  </h3>
+                  <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
+                  <div class="precio-prod">$ <%=producto[i].precioProducto%>
+                  </div>
+                </div>
+              </a>
+            </div>
           </article>
           <% } %>
       </section>
