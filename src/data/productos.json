@@ -48,5 +48,15 @@
         "descripcionProductoLarga": "sdfds",
         "categoriaProducto": "bateriasPercusion",
         "fotoDestacada": "productos_5.jpg"
+    },
+    {
+        "id": 6,
+        "nombreProducto": "Batería electrónica",
+        "descripcionProductoCorta": "Es una batería electrónica Roland",
+        "precioProducto": 500,
+        "estadoProducto": "Nuevo",
+        "descripcionProductoLarga": "Bata electrónica Roland para departamentos.",
+        "categoriaProducto": "bateriasPercusion",
+        "fotoDestacada": ""
     }
 ]

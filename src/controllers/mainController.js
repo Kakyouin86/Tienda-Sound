@@ -30,21 +30,18 @@ let mainController = {
 	},
 
 	// detalle de un solo producto
-
 	producto: function (req, res)
 	{
 		let idProductoBuscado = req.params.id;
 		let productoBuscado;
 		for (let i = 0; i < productos.length; i++)
 		{
-
 			if (idProductoBuscado == productos[i].id)
 			{
 				productoBuscado = productos[i];
 			}
 		}
 		res.render('./pages/producto', { producto: productoBuscado });
-
 	},
 
 	// renderiza el form
@@ -57,7 +54,6 @@ let mainController = {
 	guardarProducto: function (req, res)
 	{
 		let idNuevoProducto = productos[productos.length - 1].id + 1;
-
 		let objNuevoProducto = {
 			id: idNuevoProducto,
 			nombreProducto: req.body.nombreProducto,
@@ -72,7 +68,6 @@ let mainController = {
 		productos.push(objNuevoProducto);
 		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
 		res.redirect('/productos');
-
 	},
 
 	// renderiza el form de editar producto
@@ -88,8 +83,7 @@ let mainController = {
 				productoBuscado = productos[i];
 			}
 		}
-
-		res.render('editarProducto', { producto: productoBuscado });
+		res.render('./pages/editarProducto', { producto: productoBuscado });
 	},
 	// actualiza el json
 	editarProducto: (req, res) =>
@@ -107,7 +101,6 @@ let mainController = {
 				productos[i].categoriaProducto = req.body.categoriaProducto;
 				break;
 			}
-
 		}
 		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
 		res.redirect('/productos');

@@ -26,32 +26,63 @@
         <form action="/" class="base-form crearProducto-form">
 
           <label for="nombreProducto">Nombre del Producto</label>
-          <input type="text" placeholder="Ej: Guitarra eléctrica G&L" name="nombreProducto">
+          <input type="text" value="<%= producto.nombreProducto %>" name="nombreProducto">
 
           <label for="descripcionProductoCorta">Breve descripción</label>
-          <textarea placeholder="Color, tamaño, año, etc..." name="descripcionProductoCorta" id="" cols="30"
-            rows="3"></textarea>
+          <textarea name="descripcionProductoCorta" id="" cols="30"
+            rows="3"><%= producto.descripcionProductoCorta %></textarea>
 
           <label for="nombreProducto">Precio en AR$</label>
-          <input type="number" name="precioProducto" placeholder="Precio del producto">
+          <input type="number" name="precioProducto" value="<%= producto.precioProducto %>">
 
           <div class="dos-col">
             <label for="estado">Estado</label>
-            <label><input type="radio" name="estadoProducto" value="Nuevo"> Nuevo</label>
-            <label><input type="radio" name="estadoProducto" value="Usado"> Usado</label>
+            <%if (producto.estadoProducto==="Nuevo" ) { %>
+              <label><input type="radio" name="estadoProducto" value="Nuevo" checked> Nuevo</label><label><input
+                  type="radio" name="estadoProducto" value="Usado"> Usado</label>
+              <% } else { %>
+                <label><input type="radio" name="estadoProducto" value="Nuevo"> Nuevo</label><label><input type="radio"
+                    name="estadoProducto" value="Usado" checked> Usado</label>
+                <%}%>
           </div>
 
           <label for="descripcionProductoLarga">Descripción detallada</label>
-          <textarea placeholder="Descripción detallada del producto" name="descripcionProductoLarga" id="" cols="30"
-            rows="6"></textarea>
+          <textarea name="descripcionProductoLarga" id="" cols="30"
+            rows="6"><%= producto.descripcionProductoLarga %></textarea>
 
           <label for="categoriaProducto">Categoría del Producto</label>
           <select name="categoriaProducto" id="">
-            <option value="guitarrasBajos">Guitatarras y bajos</option>
-            <option value="bateriasPercusion">Baterias y percusión</option>
-            <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
-            <option value="vientos">Vientos</option>
-            <option value="cuerdas">Cuerdas</option>
+            <% if (producto.categoriaProducto=="guitarrasBajos" ) {%>
+              <option value="guitarrasBajos" selected>Guitarras y bajos</option>
+              <option value="bateriasPercusion">Baterias y percusión</option>
+              <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
+              <option value="vientos">Vientos</option>
+              <option value="cuerdas">Cuerdas</option>
+              <% } else if (producto.categoriaProducto=="bateriasPercusion" ){ %>
+                <option value="guitarrasBajos">Guitarras y bajos</option>
+                <option value="bateriasPercusion" selected>Baterias y percusión</option>
+                <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
+                <option value="vientos">Vientos</option>
+                <option value="cuerdas">Cuerdas</option>
+                <% } else if (producto.categoriaProducto=="tecladosSintetizadores" ){ %>
+                  <option value="guitarrasBajos">Guitarras y bajos</option>
+                  <option value="bateriasPercusion">Baterias y percusión</option>
+                  <option value="tecladosSintetizadores" selected>Teclados y Sintetizadores</option>
+                  <option value="vientos">Vientos</option>
+                  <option value="cuerdas">Cuerdas</option>
+                  <% } else if (producto.categoriaProducto=="vientos" ){ %>
+                    <option value="guitarrasBajos">Guitarras y bajos</option>
+                    <option value="bateriasPercusion">Baterias y percusión</option>
+                    <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
+                    <option value="vientos" selected>Vientos</option>
+                    <option value="cuerdas">Cuerdas</option>
+                    <% } else { %>
+                      <option value="guitarrasBajos">Guitarras y bajos</option>
+                      <option value="bateriasPercusion">Baterias y percusión</option>
+                      <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
+                      <option value="vientos">Vientos</option>
+                      <option value="cuerdas" selected>Cuerdas</option>
+                      <%}%>
           </select>
 
           <label for="fotoDestacada">Imagen destacada</label>
