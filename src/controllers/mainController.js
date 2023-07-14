@@ -7,47 +7,56 @@ const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 let mainController = {
-    // metodos de /
-    index: function(req,res){
-        res.render('./pages/home');
-    },
-    login: function(req,res){
-        res.render('./pages/login');
-    },
-    register: function(req,res){
-        res.render('./pages/register');
-    },
-    
-    // metodos de productos
-    
-    // renderiza todos los productos en grid
-    productos: function(req,res){
-        res.render('./pages/productos', { producto: productos });
-    },
+	// metodos de /
+	index: function (req, res)
+	{
+		res.render('./pages/home');
+	},
+	login: function (req, res)
+	{
+		res.render('./pages/login');
+	},
+	register: function (req, res)
+	{
+		res.render('./pages/register');
+	},
 
-    // detalle de un solo producto
+	// metodos de productos
 
-    producto: function(req,res){
-        let idProductoBuscado = req.params.id;
+	// renderiza todos los productos en grid
+	productos: function (req, res)
+	{
+		res.render('./pages/productos', { producto: productos });
+	},
+
+	// detalle de un solo producto
+
+	producto: function (req, res)
+	{
+		let idProductoBuscado = req.params.id;
 		let productoBuscado;
-		for (let i = 0; i < productos.length; i++) {
+		for (let i = 0; i < productos.length; i++)
+		{
 
-			if (idProductoBuscado == productos[i].id) {
+			if (idProductoBuscado == productos[i].id)
+			{
 				productoBuscado = productos[i];
 			}
 		}
 		res.render('./pages/producto', { producto: productoBuscado });
 
-    },
+	},
 
-    // renderiza el form
-    renderCrearProducto: function(req,res){
-        res.render('./pages/crearProducto');
-    },
+	// renderiza el form
+	renderCrearProducto: function (req, res)
+	{
+		res.render('./pages/crearProducto');
+	},
 
-    // guardar los datos en json
-    guardarProducto: function(req,res){
-        let idNuevoProducto = productos[productos.length - 1].id + 1;
+	// guardar los datos en json
+	guardarProducto: function (req, res)
+	{
+		let idNuevoProducto = productos[productos.length - 1].id + 1;
 
 		let objNuevoProducto = {
 			id: idNuevoProducto,
@@ -64,16 +73,18 @@ let mainController = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
 		res.redirect('/productos');
 
-    },
+	},
 
-
-    // renderiza el form de editar producto
-	renderEditarProducto: (req, res) => {
+	// renderiza el form de editar producto
+	renderEditarProducto: (req, res) =>
+	{
 		let idProductoBuscado = req.params.id;
 		let productoBuscado;
-		for (let i = 0; i < productos.length; i++) {
+		for (let i = 0; i < productos.length; i++)
+		{
 
-			if (idProductoBuscado == productos[i].id) {
+			if (idProductoBuscado == productos[i].id)
+			{
 				productoBuscado = productos[i];
 			}
 		}
@@ -81,16 +92,19 @@ let mainController = {
 		res.render('editarProducto', { producto: productoBuscado });
 	},
 	// actualiza el json
-	editarProducto: (req, res) => {
+	editarProducto: (req, res) =>
+	{
 		let idProductoBuscado = req.params.id;
-		for (let i = 0; i < productos.length; i++) {
-			if (idProductoBuscado == productos[i].id) {
+		for (let i = 0; i < productos.length; i++)
+		{
+			if (idProductoBuscado == productos[i].id)
+			{
 				productos[i].nombreProducto = req.body.nombreProducto;
 				productos[i].descripcionProductoCorta = req.body.descripcionProductoCorta;
 				productos[i].precioProducto = parseInt(req.body.precioProducto);
 				productos[i].estadoProducto = req.body.estadoProducto;
 				productos[i].descripcionProductoLarga = req.body.descripcionProductoLarga;
-                productos[i].categoriaProducto = req.body.categoriaProducto;
+				productos[i].categoriaProducto = req.body.categoriaProducto;
 				break;
 			}
 
@@ -101,13 +115,14 @@ let mainController = {
 	},
 
 
-   
 
-    carrito: function(req,res){
-        res.render('./pages/carrito');
-    },
-    
-    
+
+	carrito: function (req, res)
+	{
+		res.render('./pages/carrito');
+	},
+
+
 
 
 

@@ -7,8 +7,7 @@ const mainRoutes = require('./src/routes/mainRoutes');
 const express = require("express");
 const path = require("path");
 const app = express();
-const methodOverride =  require('method-override');
-
+const methodOverride = require('method-override');
 
 app.use(express.static(path.resolve(__dirname, './public')));
 app.use(express.json());
@@ -23,9 +22,7 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')))
 // seteado de EJS
 app.set('view engine', 'ejs');
 
-
 app.use('/', mainRoutes);
-
 
 app.listen(3000, () =>
 {

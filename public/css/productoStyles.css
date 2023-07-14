@@ -181,7 +181,6 @@ main {
 }
 
 .seccion-izquierda {
-
     width: 55vw;
     margin-top: 5vh;
     margin-bottom: 5vh;
@@ -189,14 +188,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-
 }
 
 
 .carousel-inner {
-
-
     border-radius: 25px;
     width: 400px;
     height: 550px;
@@ -204,8 +199,6 @@ main {
 }
 
 .carousel-inner img {
-
-
     border-radius: 25px;
     width: 250px !important;
     height: 500px;
@@ -547,18 +540,11 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 @media (min-width: 0px) and (max-width: 480px) {
-
-
-    .seccion-izquierda {
-        display: none;
-    }
-
     .ranking {
         display: none;
     }
 
     .division-general {
-
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
