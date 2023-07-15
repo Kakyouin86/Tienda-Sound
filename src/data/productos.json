@@ -1,119 +1,119 @@
 [
- {
-  "id": 1,
-  "nombreProducto": "Guitarra",
-  "descripcionProductoCorta": "Lorem ipsum1",
-  "precioProducto": 3,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Lorem ipsum2",
-  "categoriaProducto": "guitarrasBajos",
-  "fotoDestacada": "productos_1.jpg"
- },
- {
-  "id": 2,
-  "nombreProducto": "Batería",
-  "descripcionProductoCorta": "Lorem ipsum corta 2",
-  "precioProducto": 23940,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Lorem ipsum larga 2",
-  "categoriaProducto": "bateriasPercusion",
-  "fotoDestacada": "productos_2.jpg"
- },
- {
-  "id": 3,
-  "nombreProducto": "Piano",
-  "descripcionProductoCorta": "Lorem ipsum3",
-  "precioProducto": 50,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Lorem ipsum3",
-  "categoriaProducto": "teclados",
-  "fotoDestacada": "productos_3.jpg"
- },
- {
-  "id": 4,
-  "nombreProducto": "Bajo",
-  "descripcionProductoCorta": "Lorem ipsum4",
-  "precioProducto": 10,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Lorem ipsum4",
-  "categoriaProducto": "guitarrasBajos",
-  "fotoDestacada": "productos_4.jpg"
- },
- {
-  "id": 5,
-  "nombreProducto": "Prueba 1",
-  "descripcionProductoCorta": "sdflkd",
-  "precioProducto": 345,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "sdfds",
-  "categoriaProducto": "bateriasPercusion",
-  "fotoDestacada": "productos_5.jpg"
- },
- {
-  "id": 6,
-  "nombreProducto": "salmlmkñalkñdñlka",
-  "descripcionProductoCorta": "asdsdssda",
-  "precioProducto": 8,
-  "descripcionProductoLarga": "sasdsdadsadsa",
-  "categoriaProducto": "bateriasPercusion",
-  "fotoDestacada": "/img/productos/producto-1689447174571.jpg"
- },
- {
-  "id": 7,
-  "nombreProducto": "prueba multer 2",
-  "descripcionProductoCorta": "ahjsahjkashkjaskjh",
-  "precioProducto": 8,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "sjsajklsdjklsadjkldsajkldsakljads",
-  "categoriaProducto": "guitarrasBajos",
-  "fotoDestacada": "/img/productos/producto-1689447273043.jpg"
- },
- {
-  "id": 8,
-  "nombreProducto": "multer ok",
-  "descripcionProductoCorta": "sjsdjhdsjhdsj",
-  "precioProducto": 1234455678,
-  "estadoProducto": "Usado",
-  "descripcionProductoLarga": "dkldkjdkjldjklds\r\ndsjkdjhkdhjkdfshjkdfs\r\nkdkjldjkldfsjkldfsjkldsf",
-  "categoriaProducto": "bateriasPercusion",
-  "fotoDestacada": "/img/productos/producto-1689447395122.jpeg"
- },
- {
-  "id": 9,
-  "nombreProducto": "asasds",
-  "descripcionProductoCorta": "dasdsa",
-  "precioProducto": 12345678,
-  "descripcionProductoLarga": "sddsfdfs",
-  "categoriaProducto": "guitarrasBajos",
-  "fotoDestacada": "/img/productos/default-photo.jpg"
- },
- {
-  "id": 10,
-  "nombreProducto": "multer 1",
-  "descripcionProductoCorta": "qwerty",
-  "precioProducto": 12345,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "qwertyuiop´",
-  "categoriaProducto": "tecladosSintetizadores",
-  "fotoDestacada": "/img/productos/1689447698369AdobeStock_351831636.jpeg"
- },
- {
-  "id": 11,
-  "nombreProducto": "qwertyu",
-  "descripcionProductoCorta": "",
-  "precioProducto": null,
-  "descripcionProductoLarga": "",
-  "categoriaProducto": "guitarrasBajos",
-  "fotoDestacada": "1689447803190cheetah-leopard-animal-big-87403.jpeg"
- },
- {
-  "id": 12,
-  "nombreProducto": "asdfghj",
-  "descripcionProductoCorta": "asdfgh",
-  "precioProducto": 123456,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "qwertyu",
-  "categoriaProducto": "guitarrasBajos",
-  "fotoDestacada": "default-photo.jpg"
- }
+    {
+        "id": 1,
+        "nombreProducto": "Guitarra",
+        "descripcionProductoCorta": "Lorem ipsum1",
+        "precioProducto": 3000,
+        "estadoProducto": "Nuevo",
+        "descripcionProductoLarga": "Lorem ipsum2",
+        "categoriaProducto": "guitarrasBajos",
+        "fotoDestacada": "productos_1.jpg"
+    },
+    {
+        "id": 2,
+        "nombreProducto": "Batería",
+        "descripcionProductoCorta": "Lorem ipsum corta 2",
+        "precioProducto": 23940,
+        "estadoProducto": "Nuevo",
+        "descripcionProductoLarga": "Lorem ipsum larga 2",
+        "categoriaProducto": "bateriasPercusion",
+        "fotoDestacada": "productos_2.jpg"
+    },
+    {
+        "id": 3,
+        "nombreProducto": "Piano",
+        "descripcionProductoCorta": "Lorem ipsum3",
+        "precioProducto": 50,
+        "estadoProducto": "Nuevo",
+        "descripcionProductoLarga": "Lorem ipsum3",
+        "categoriaProducto": "teclados",
+        "fotoDestacada": "productos_3.jpg"
+    },
+    {
+        "id": 4,
+        "nombreProducto": "Bajo",
+        "descripcionProductoCorta": "Lorem ipsum4",
+        "precioProducto": 10,
+        "estadoProducto": "Nuevo",
+        "descripcionProductoLarga": "Lorem ipsum4",
+        "categoriaProducto": "guitarrasBajos",
+        "fotoDestacada": "productos_4.jpg"
+    },
+    {
+        "id": 5,
+        "nombreProducto": "Prueba 1",
+        "descripcionProductoCorta": "sdflkd",
+        "precioProducto": 345,
+        "estadoProducto": "Nuevo",
+        "descripcionProductoLarga": "sdfds",
+        "categoriaProducto": "bateriasPercusion",
+        "fotoDestacada": "productos_5.jpg"
+    },
+    {
+        "id": 6,
+        "nombreProducto": "salmlmkñalkñdñlka",
+        "descripcionProductoCorta": "asdsdssda",
+        "precioProducto": 8,
+        "descripcionProductoLarga": "sasdsdadsadsa",
+        "categoriaProducto": "bateriasPercusion",
+        "fotoDestacada": "/img/productos/producto-1689447174571.jpg"
+    },
+    {
+        "id": 7,
+        "nombreProducto": "prueba multer 2",
+        "descripcionProductoCorta": "ahjsahjkashkjaskjh",
+        "precioProducto": 8,
+        "estadoProducto": "Nuevo",
+        "descripcionProductoLarga": "sjsajklsdjklsadjkldsajkldsakljads",
+        "categoriaProducto": "guitarrasBajos",
+        "fotoDestacada": "/img/productos/producto-1689447273043.jpg"
+    },
+    {
+        "id": 8,
+        "nombreProducto": "multer ok",
+        "descripcionProductoCorta": "sjsdjhdsjhdsj",
+        "precioProducto": 1234455678,
+        "estadoProducto": "Usado",
+        "descripcionProductoLarga": "dkldkjdkjldjklds\r\ndsjkdjhkdhjkdfshjkdfs\r\nkdkjldjkldfsjkldfsjkldsf",
+        "categoriaProducto": "bateriasPercusion",
+        "fotoDestacada": "/img/productos/producto-1689447395122.jpeg"
+    },
+    {
+        "id": 9,
+        "nombreProducto": "asasds",
+        "descripcionProductoCorta": "dasdsa",
+        "precioProducto": 12345678,
+        "descripcionProductoLarga": "sddsfdfs",
+        "categoriaProducto": "guitarrasBajos",
+        "fotoDestacada": "/img/productos/default-photo.jpg"
+    },
+    {
+        "id": 10,
+        "nombreProducto": "multer 1",
+        "descripcionProductoCorta": "qwerty",
+        "precioProducto": 12345,
+        "estadoProducto": "Nuevo",
+        "descripcionProductoLarga": "qwertyuiop´",
+        "categoriaProducto": "tecladosSintetizadores",
+        "fotoDestacada": "/img/productos/1689447698369AdobeStock_351831636.jpeg"
+    },
+    {
+        "id": 11,
+        "nombreProducto": "qwertyu",
+        "descripcionProductoCorta": "",
+        "precioProducto": null,
+        "descripcionProductoLarga": "",
+        "categoriaProducto": "guitarrasBajos",
+        "fotoDestacada": "1689447803190cheetah-leopard-animal-big-87403.jpeg"
+    },
+    {
+        "id": 12,
+        "nombreProducto": "asdfghj",
+        "descripcionProductoCorta": "asdfgh",
+        "precioProducto": 123456,
+        "estadoProducto": "Nuevo",
+        "descripcionProductoLarga": "qwertyu",
+        "categoriaProducto": "guitarrasBajos",
+        "fotoDestacada": "default-photo.jpg"
+    }
 ]

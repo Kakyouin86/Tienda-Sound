@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/nmb/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.typekit.net/gaj1ybf.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/productos.css">
-    <link rel="stylesheet" href="/css/login.css">
-    <link rel="stylesheet" href="/css/carrito.css">
-    <link rel="shortcut icon" href="/img/icon_ts.svg" />
-    <title>Tienda Sound</title>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/nmb/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.typekit.net/gaj1ybf.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/productos.css">
+  <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" href="/css/carrito.css">
+  <link rel="shortcut icon" href="/img/icon_ts.svg" />
+  <title>Tienda Sound</title>
 </head>
 
 <body>
@@ -141,354 +142,107 @@
     <!--desktop -->
 
     <section class="container text-center containerDestacados secc-desk">
-
-
       <h2 class="tituloDestacados">Productos destacados</h2>
-
       <div id="carouselExampleDestacados" class="carousel slide carouselDestacados ">
-
         <div class="carousel-inner carousel-innerDestacados">
-
           <div class="carousel-item active container text-center">
-
             <div class="destacados row justify-content-start">
-
-              <div class="contenedorProductoDestacado col-4">
-
-                <div class="productoDestacado ">
-
-                  <div class="seccionImgDestacado">
-
-                    <div class="etiquetasDestacados">
-
-                      <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
-
-                      <div class="iconoDestacado">
-                        <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
-                        <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+              <% for (let i=0; i < 3; i++) { %>
+                <div class="contenedorProductoDestacado col-4">
+                  <div class="productoDestacado ">
+                    <div class="seccionImgDestacado">
+                      <div class="etiquetasDestacados">
+                        <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
+                        <div class="iconoDestacado">
+                          <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
+                          <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+                        </div>
                       </div>
-
-                    </div>
-
-                    <div class="contenedorImgProducto ">
-                      <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                    </div>
-
-                  </div>
-
-                  <div class="informacionProducto">
-
-                    <p class="nombreProductoDestacado">Bajo con estuche</p>
-                    <p class="descripcionProductoDestacado">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eaque dolorum quis magni iure debitis</p>
-                    <p class="precioProductoDestacado">$1770.218</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="contenedorProductoDestacado col-4">
-
-                <div class="productoDestacado">
-
-                  <div class="seccionImgDestacado">
-                    <div class="etiquetasDestacados">
-
-                      <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
-
-                      <div class="iconoDestacado">
-                        <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
-                        <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+                      <div class="contenedorImgProducto ">
+                        <img class="imgProducto " src="/img/productos/<%=producto[i].fotoDestacada%>" alt="img-">
                       </div>
-
                     </div>
-
-                    <div class="contenedorImgProducto ">
-                      <img class="imgProducto " src="/img/productos_destacados/teclado.webp" alt="img-">
+                    <div class="informacionProducto">
+                      <p class="nombreProductoDestacado">
+                        <%=producto[i].nombreProducto%>
+                      </p>
+                      <p class="descripcionProductoDestacado">
+                        <%=producto[i].descripcionProductoCorta%>
+                      </p>
+                      <p class="precioProductoDestacado">$ <%=producto[i].precioProducto%>
+                      </p>
                     </div>
-
                   </div>
-
-                  <div class="informacionProducto">
-
-                    <p class="nombreProductoDestacado">Teclado</p>
-                    <p class="descripcionProductoDestacado">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eaque dolorum quis magni iure debitis</p>
-                    <p class="precioProductoDestacado">$4770.270</p>
-
-                  </div>
-
                 </div>
-
-
-              </div>
-
-              <div class="contenedorProductoDestacado col-4">
-
-                <div class="productoDestacado ">
-
-                  <div class="seccionImgDestacado">
-                    <div class="etiquetasDestacados">
-
-                      <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
-
-                      <div class="iconoDestacado">
-                        <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
-                        <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
-                      </div>
-
-                    </div>
-
-                    <div class="contenedorImgProducto ">
-                      <img class="imgProducto" src="/img/productos_destacados/bateria.webp" alt="img-">
-                    </div>
-
-                  </div>
-
-                  <div class="informacionProducto">
-
-                    <p class="nombreProductoDestacado">Bateria</p>
-                    <p class="descripcionProductoDestacado">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eaque dolorum quis magni iure debitis</p>
-                    <p class="precioProductoDestacado">$8770.370</p>
-
-                  </div>
-
-                </div>
-              </div>
-
+                <%}%>
             </div>
-
           </div>
 
           <div class="carousel-item  container text-center">
-
             <div class="destacados row justify-content-start">
-
-              <div class="contenedorProductoDestacado col-4">
-
-                <div class="productoDestacado ">
-
-                  <div class="seccionImgDestacado">
-                    <div class="etiquetasDestacados">
-
-                      <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
-
-                      <div class="iconoDestacado">
-                        <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
-                        <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+              <% for (let i=3; i < 6; i++) { %>
+                <div class="contenedorProductoDestacado col-4">
+                  <div class="productoDestacado ">
+                    <div class="seccionImgDestacado">
+                      <div class="etiquetasDestacados">
+                        <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
+                        <div class="iconoDestacado">
+                          <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
+                          <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+                        </div>
                       </div>
-
-                    </div>
-
-                    <div class="contenedorImgProducto ">
-                      <img class="imgProducto " src="/img/productos_destacados/guitarra_2.jpg" alt="img-">
-                    </div>
-
-                  </div>
-
-                  <div class="informacionProducto">
-
-                    <p class="nombreProductoDestacado">Guitarra</p>
-                    <p class="descripcionProductoDestacado">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eaque dolorum quis magni iure debitis</p>
-                    <p class="precioProductoDestacado">$1770.218</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="contenedorProductoDestacado col-4">
-
-                <div class="productoDestacado">
-
-                  <div class="seccionImgDestacado">
-                    <div class="etiquetasDestacados">
-
-                      <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
-
-                      <div class="iconoDestacado">
-                        <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
-                        <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+                      <div class="contenedorImgProducto ">
+                        <img class="imgProducto " src="/img/productos/<%=producto[i].fotoDestacada%>" alt="img-">
                       </div>
-
                     </div>
-
-                    <div class="contenedorImgProducto ">
-                      <img class="imgProducto " src="/img/productos_destacados/guitarra_3.webp" alt="img-">
+                    <div class="informacionProducto">
+                      <p class="nombreProductoDestacado">
+                        <%=producto[i].nombreProducto%>
+                      </p>
+                      <p class="descripcionProductoDestacado">
+                        <%=producto[i].descripcionProductoCorta%>
+                      </p>
+                      <p class="precioProductoDestacado">$ <%=producto[i].precioProducto%>
+                      </p>
                     </div>
-
                   </div>
-
-                  <div class="informacionProducto">
-
-                    <p class="nombreProductoDestacado">Guitarra</p>
-                    <p class="descripcionProductoDestacado">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eaque dolorum quis magni iure debitis</p>
-                    <p class="precioProductoDestacado">$4770.270</p>
-
-                  </div>
-
                 </div>
-
-
-              </div>
-
-              <div class="contenedorProductoDestacado col-4">
-
-                <div class="productoDestacado ">
-
-                  <div class="seccionImgDestacado">
-                    <div class="etiquetasDestacados">
-
-                      <img class="nuevosUsados" src="/img/productos_destacados/usado_destacado.svg" alt="nuevoUsado">
-
-                      <div class="iconoDestacado">
-                        <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
-                        <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
-                      </div>
-
-                    </div>
-
-                    <div class="contenedorImgProducto ">
-                      <img class="imgProducto" src="/img/productos_destacados/guitarra_4.jpg" alt="img-">
-                    </div>
-
-                  </div>
-
-                  <div class="informacionProducto">
-
-                    <p class="nombreProductoDestacado">Guitarra</p>
-                    <p class="descripcionProductoDestacado">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eaque dolorum quis magni iure debitis</p>
-                    <p class="precioProductoDestacado">$8770.370</p>
-
-                  </div>
-
-                </div>
-              </div>
-
+                <%}%>
             </div>
-
           </div>
 
           <div class="carousel-item  container text-center">
-
             <div class="destacados row justify-content-start">
-
-              <div class="contenedorProductoDestacado col-4">
-
-                <div class="productoDestacado ">
-
-                  <div class="seccionImgDestacado">
-                    <div class="etiquetasDestacados">
-
-                      <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
-
-                      <div class="iconoDestacado">
-                        <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
-                        <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+              <% for (let i=6; i < 9; i++) { %>
+                <div class="contenedorProductoDestacado col-4">
+                  <div class="productoDestacado ">
+                    <div class="seccionImgDestacado">
+                      <div class="etiquetasDestacados">
+                        <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
+                        <div class="iconoDestacado">
+                          <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
+                          <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+                        </div>
                       </div>
-
-                    </div>
-
-                    <div class="contenedorImgProducto ">
-                      <img class="imgProducto " src="/img/productos_destacados/guitarra_5.webp" alt="img-">
-                    </div>
-
-                  </div>
-
-                  <div class="informacionProducto">
-
-                    <p class="nombreProductoDestacado">Bajo</p>
-                    <p class="descripcionProductoDestacado">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eaque dolorum quis magni iure debitis</p>
-                    <p class="precioProductoDestacado">$1770.218</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="contenedorProductoDestacado col-4">
-
-                <div class="productoDestacado">
-
-                  <div class="seccionImgDestacado">
-                    <div class="etiquetasDestacados">
-
-                      <img class="nuevosUsados" src="/img/productos_destacados/usado_destacado.svg" alt="nuevoUsado">
-
-                      <div class="iconoDestacado">
-                        <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
-                        <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+                      <div class="contenedorImgProducto ">
+                        <img class="imgProducto " src="/img/productos/<%=producto[i].fotoDestacada%>" alt="img-">
                       </div>
-
                     </div>
-
-                    <div class="contenedorImgProducto ">
-                      <img class="imgProducto " src="/img/productos_destacados/guitarra_6.jpg" alt="img-">
+                    <div class="informacionProducto">
+                      <p class="nombreProductoDestacado">
+                        <%=producto[i].nombreProducto%>
+                      </p>
+                      <p class="descripcionProductoDestacado">
+                        <%=producto[i].descripcionProductoCorta%>
+                      </p>
+                      <p class="precioProductoDestacado">$ <%=producto[i].precioProducto%>
+                      </p>
                     </div>
-
                   </div>
-
-                  <div class="informacionProducto">
-
-                    <p class="nombreProductoDestacado">Guitarra</p>
-                    <p class="descripcionProductoDestacado">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eaque dolorum quis magni iure debitis</p>
-                    <p class="precioProductoDestacado">$4770.270</p>
-
-                  </div>
-
                 </div>
-
-
-              </div>
-
-              <div class="contenedorProductoDestacado col-4">
-
-                <div class="productoDestacado ">
-
-                  <div class="seccionImgDestacado">
-                    <div class="etiquetasDestacados">
-
-                      <img class="nuevosUsados" src="/img/productos_destacados/usado_destacado.svg" alt="nuevoUsado">
-
-                      <div class="iconoDestacado">
-                        <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
-                        <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
-                      </div>
-
-                    </div>
-
-                    <div class="contenedorImgProducto ">
-                      <img class="imgProducto" src="/img/productos_destacados/guitarra_7.jpg" alt="img-">
-                    </div>
-
-                  </div>
-
-                  <div class="informacionProducto">
-
-                    <p class="nombreProductoDestacado">Guitarra</p>
-                    <p class="descripcionProductoDestacado">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eaque dolorum quis magni iure debitis</p>
-                    <p class="precioProductoDestacado">$8770.370</p>
-
-                  </div>
-
-                </div>
-              </div>
-
+                <%}%>
             </div>
-
           </div>
-
         </div>
 
         <button class="carousel-control-prev carousel-control-prev-destacados" type="button"
@@ -512,273 +266,43 @@
     <!--mobile -->
 
     <section class="container text-center containerDestacados secc-mob">
-
       <h2 class="tituloDestacados">Productos destacados</h2>
 
       <div id="carouselExampleDestacados-mob" class="carousel slide carouselDestacados ">
 
         <div class="carousel-inner carousel-innerDestacados">
-
-          <div class="carousel-item active container text-center">
-
-            <div class="destacados row justify-content-start">
-
-              <div class="contenedorProductoDestacado col-12">
-
-                <div class="productoDestacado ">
-
-                  <div class="seccionImgDestacado">
-
-                    <div class="etiquetasDestacados">
-
-                      <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
-
-                      <div class="iconoDestacado">
-                        <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
-                        <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+          <% for(let i=0; i < 3; i++) { %>
+            <div class="carousel-item active container text-center">
+              <div class="destacados row justify-content-start">
+                <div class="contenedorProductoDestacado col-12">
+                  <div class="productoDestacado ">
+                    <div class="seccionImgDestacado">
+                      <div class="etiquetasDestacados">
+                        <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
+                        <div class="iconoDestacado">
+                          <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
+                          <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+                        </div>
                       </div>
-
-                    </div>
-
-                    <div class="contenedorImgProducto ">
-                      <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                    </div>
-
-                  </div>
-
-                  <div class="informacionProducto">
-
-                    <p class="nombreProductoDestacado">Bajo con estuche</p>
-                    <p class="descripcionProductoDestacado">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eaque dolorum quis magni iure debitis</p>
-                    <p class="precioProductoDestacado">$1770.218</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="carousel-item container text-center">
-
-            <div class="destacados row justify-content-start">
-
-              <div class="contenedorProductoDestacado col-12">
-
-                <div class="productoDestacado">
-
-                  <div class="seccionImgDestacado">
-                    <div class="etiquetasDestacados">
-
-                      <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
-
-                      <div class="iconoDestacado">
-                        <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
-                        <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+                      <div class="contenedorImgProducto ">
+                        <img class="imgProducto " src="/img/productos/<%=producto[i].fotoDestacada%>" alt="img-">
                       </div>
-
                     </div>
-
-                    <div class="contenedorImgProducto ">
-                      <img class="imgProducto " src="/img/productos_destacados/teclado.webp" alt="img-">
+                    <div class="informacionProducto">
+                      <p class="nombreProductoDestacado">
+                        <%=producto[i].nombreProducto%>
+                      </p>
+                      <p class="descripcionProductoDestacado">
+                        <%=producto[i].descripcionProductoCorta%>
+                      </p>
+                      <p class="precioProductoDestacado">$ <%=producto[i].precioProducto%>
+                      </p>
                     </div>
-
                   </div>
-
-                  <div class="informacionProducto">
-
-                    <p class="nombreProductoDestacado">Teclado</p>
-                    <p class="descripcionProductoDestacado">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eaque dolorum quis magni iure debitis</p>
-                    <p class="precioProductoDestacado">$4770.270</p>
-
-                  </div>
-
-                </div>
-
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="carousel-item container text-center">
-
-            <div class="destacados row justify-content-start">
-
-              <div class="contenedorProductoDestacado col-12">
-
-                <div class="productoDestacado ">
-
-                  <div class="seccionImgDestacado">
-                    <div class="etiquetasDestacados">
-
-                      <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
-
-                      <div class="iconoDestacado">
-                        <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
-                        <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
-                      </div>
-
-                    </div>
-
-                    <div class="contenedorImgProducto ">
-                      <img class="imgProducto" src="/img/productos_destacados/bateria.webp" alt="img-">
-                    </div>
-
-                  </div>
-
-                  <div class="informacionProducto">
-
-                    <p class="nombreProductoDestacado">Bateria</p>
-                    <p class="descripcionProductoDestacado">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eaque dolorum quis magni iure debitis</p>
-                    <p class="precioProductoDestacado">$8770.370</p>
-
-                  </div>
-
                 </div>
               </div>
-
             </div>
-
-          </div>
-
-          <div class="carousel-item  container text-center">
-
-            <div class="destacados row justify-content-start">
-
-              <div class="contenedorProductoDestacado col-12">
-
-                <div class="productoDestacado ">
-
-                  <div class="seccionImgDestacado">
-                    <div class="etiquetasDestacados">
-
-                      <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
-
-                      <div class="iconoDestacado">
-                        <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
-                        <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
-                      </div>
-
-                    </div>
-
-                    <div class="contenedorImgProducto ">
-                      <img class="imgProducto " src="/img/productos_destacados/guitarra_2.jpg" alt="img-">
-                    </div>
-
-                  </div>
-
-                  <div class="informacionProducto">
-
-                    <p class="nombreProductoDestacado">Guitarra</p>
-                    <p class="descripcionProductoDestacado">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eaque dolorum quis magni iure debitis</p>
-                    <p class="precioProductoDestacado">$1770.218</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="carousel-item  container text-center">
-
-            <div class="destacados row justify-content-start">
-
-              <div class="contenedorProductoDestacado col-12">
-
-                <div class="productoDestacado ">
-
-                  <div class="seccionImgDestacado">
-                    <div class="etiquetasDestacados">
-
-                      <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
-
-                      <div class="iconoDestacado">
-                        <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
-                        <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
-                      </div>
-
-                    </div>
-
-                    <div class="contenedorImgProducto ">
-                      <img class="imgProducto " src="/img/productos_destacados/guitarra_5.webp" alt="img-">
-                    </div>
-
-                  </div>
-
-                  <div class="informacionProducto">
-
-                    <p class="nombreProductoDestacado">Guitarra</p>
-                    <p class="descripcionProductoDestacado">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eaque dolorum quis magni iure debitis</p>
-                    <p class="precioProductoDestacado">$1770.218</p>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="carousel-item  container text-center">
-
-            <div class="destacados row justify-content-start">
-
-              <div class="contenedorProductoDestacado col-12">
-
-                <div class="productoDestacado">
-
-                  <div class="seccionImgDestacado">
-                    <div class="etiquetasDestacados">
-
-                      <img class="nuevosUsados" src="/img/productos_destacados/usado_destacado.svg" alt="nuevoUsado">
-
-                      <div class="iconoDestacado">
-                        <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
-                        <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
-                      </div>
-
-                    </div>
-
-                    <div class="contenedorImgProducto ">
-                      <img class="imgProducto " src="/img/productos_destacados/guitarra_6.jpg" alt="img-">
-                    </div>
-
-                  </div>
-
-                  <div class="informacionProducto">
-
-                    <p class="nombreProductoDestacado">Guitarra</p>
-                    <p class="descripcionProductoDestacado">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Eaque dolorum quis magni iure debitis</p>
-                    <p class="precioProductoDestacado">$4770.270</p>
-
-                  </div>
-
-                </div>
-
-
-              </div>
-
-            </div>
-
-          </div>
-
+            <%}%>
         </div>
 
         <button class="carousel-control-prev carousel-control-prev-destacados" type="button"
@@ -794,7 +318,6 @@
               style="color: #3333ff;"></i></span>
           <span class="visually-hidden">Next</span>
         </button>
-
       </div>
 
     </section>
