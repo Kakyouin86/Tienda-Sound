@@ -9,6 +9,14 @@
     position: relative;
 }
 
+.main-login input {
+    padding: 0 10px 0 10px;
+}
+
+.main-login textarea {
+    padding: 10px 10px 0 10px;
+}
+
 .flecha-volver {
     display: flex;
     flex-direction: row;
