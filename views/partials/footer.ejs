@@ -26,8 +26,8 @@
   </ul>
   <ul class="footer-list-2">
     <li class="footer-rotulos">CÓMO FUNCIONA</li>
-    <li class="footer-items"><a href="#">Para comprar</a></li>
-    <li class="footer-items"><a href="#">Para vender</a></li>
+    <li class="footer-items"><a href=/productos>Para comprar</a></li>
+    <li class="footer-items"><a href=/crearProducto>Para vender</a></li>
   </ul>
   <ul class="footer-list-3">
     <li class="footer-rotulos">AYUDA</li>
@@ -110,13 +110,17 @@
   <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
-    for (i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
+    for (i = 0; i < acc.length; i++)
+    {
+      acc[i].addEventListener("click", function ()
+      {
         this.classList.toggle("active");
         var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
+        if (panel.style.display === "block")
+        {
           panel.style.display = "none";
-        } else {
+        } else
+        {
           panel.style.display = "block";
         }
       });

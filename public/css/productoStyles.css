@@ -509,7 +509,7 @@ input[type=number]::-webkit-outer-spin-button {
     border-top: #0a0a0a 1px solid;
 }
 
-.fp li{
+.fp li {
     margin-top: 10px;
 }
 
@@ -518,14 +518,15 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: 20px;
 }
 
-.producto-detail-btn{
+.producto-detail-btn {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-top: 40px;
-  }
+}
 
-.btn-editar, .btn-eliminar {
+.btn-editar,
+.btn-eliminar {
     border: none;
     color: white;
     padding: 20px;
@@ -537,17 +538,20 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
     border-radius: 8px;
     transition: 500ms;
-  }
+}
 
-.btn-editar{
+.btn-editar {
     background-color: #3333FF;
 }
+
 .btn-eliminar {
     background-color: #E93882;
 }
+
 .btn-editar:hover {
     background-color: #8c8cf9;
 }
+
 .btn-eliminar:hover {
     background-color: #eb8eb5;
 }
@@ -575,16 +579,19 @@ input[type=number]::-webkit-outer-spin-button {
         width: 390px;
         border-radius: 15px
     }
+
     .descripcion-producto h2 {
         margin: auto;
         text-align: center;
     }
-    .descripcion-producto p { 
+
+    .descripcion-producto p {
         margin: auto;
         text-align: center;
         margin-top: 40px;
         margin-bottom: 40px;
     }
+
     .seccion-izquierda {
         display: flex;
         flex-direction: column;
@@ -832,6 +839,7 @@ input[type=number]::-webkit-outer-spin-button {
     .formas-pago-iconos img {
         margin-top: 20px;
     }
+
     .producto-detail-btn {
         width: 400px;
         justify-content: center;
@@ -871,16 +879,19 @@ input[type=number]::-webkit-outer-spin-button {
         width: 390px;
         border-radius: 15px
     }
+
     .descripcion-producto h2 {
         margin: auto;
         text-align: center;
     }
-    .descripcion-producto p { 
+
+    .descripcion-producto p {
         margin: auto;
         text-align: center;
         margin-top: 40px;
         margin-bottom: 40px;
     }
+
     .seccion-izquierda {
         display: flex;
         flex-direction: column;
@@ -1128,6 +1139,7 @@ input[type=number]::-webkit-outer-spin-button {
     .formas-pago-iconos img {
         margin-top: 20px;
     }
+
     .producto-detail-btn {
         width: 400px;
         justify-content: center;

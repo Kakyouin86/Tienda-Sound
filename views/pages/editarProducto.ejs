@@ -1,97 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./../partials/head.ejs', { title: 'Editar producto'}) %>
-<body>
-  <%- include('./../partials/header') %>
+<%- include('./../partials/head.ejs', { title: 'Editar producto' }) %>
 
-    <main class="main-login">
-      <a href="/producto/<%= producto.id%>">
-        <div class="flecha-volver">
-        <img src="/img/flecha.svg" alt="">
-        <p>Volver</p>
-      </div>
-      </a>
-      
-      <section class="form-container container col-lg-5 col-md-8 col-sm-12 mx-auto">
-        <h2>Editá <span class="texto-resaltado">el producto!</span></h2>
-        <form action="/editarProducto/<%= producto.id %>?_method=PUT" method="POST"
-          class="base-form crearProducto-form" enctype="multipart/form-data">
-
-          <label for="nombreProducto">Nombre del Producto</label>
-          <input type="text" value="<%= producto.nombreProducto %>" name="nombreProducto">
-
-          <label for="descripcionProductoCorta">Breve descripción</label>
-          <textarea name="descripcionProductoCorta" id="" cols="30"
-            rows="3"><%= producto.descripcionProductoCorta %></textarea>
-
-          <label for="nombreProducto">Precio en AR$</label>
-          <input type="number" name="precioProducto" value="<%= producto.precioProducto %>">
-
-          <div class="dos-col">
-            <label for="estado">Estado</label>
-            <%if (producto.estadoProducto==="Nuevo" ) { %>
-              <label><input type="radio" name="estadoProducto" value="Nuevo" checked> Nuevo</label><label><input
-                  type="radio" name="estadoProducto" value="Usado"> Usado</label>
-              <% } else { %>
-                <label><input type="radio" name="estadoProducto" value="Nuevo"> Nuevo</label><label><input type="radio"
-                    name="estadoProducto" value="Usado" checked> Usado</label>
-                <%}%>
+  <body>
+    <%- include('./../partials/header') %>
+      <main class="main-login">
+        <a href="/producto/<%= producto.id%>">
+          <div class="flecha-volver">
+            <img src="/img/flecha.svg" alt="">
+            <p>Volver</p>
           </div>
+        </a>
 
-          <label for="descripcionProductoLarga">Descripción detallada</label>
-          <textarea name="descripcionProductoLarga" id="" cols="30"
-            rows="6"><%= producto.descripcionProductoLarga %></textarea>
+        <section class="form-container container col-lg-5 col-md-8 col-sm-12 mx-auto">
+          <h2>Editá <span class="texto-resaltado">el producto!</span></h2>
+          <form action="/editarProducto/<%= producto.id %>?_method=PUT" method="POST"
+            class="base-form crearProducto-form" enctype="multipart/form-data">
 
-          <label for="categoriaProducto">Categoría del Producto</label>
-          <select name="categoriaProducto" id="">
-            <% if (producto.categoriaProducto=="guitarrasBajos" ) {%>
-              <option value="guitarrasBajos" selected>Guitarras y bajos</option>
-              <option value="bateriasPercusion">Baterias y percusión</option>
-              <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
-              <option value="vientos">Vientos</option>
-              <option value="cuerdas">Cuerdas</option>
-              <% } else if (producto.categoriaProducto=="bateriasPercusion" ){ %>
-                <option value="guitarrasBajos">Guitarras y bajos</option>
-                <option value="bateriasPercusion" selected>Baterias y percusión</option>
+            <label for="nombreProducto">Nombre del Producto</label>
+            <input type="text" value="<%= producto.nombreProducto %>" name="nombreProducto">
+
+            <label for="descripcionProductoCorta">Breve descripción</label>
+            <textarea name="descripcionProductoCorta" id="" cols="30"
+              rows="3"><%= producto.descripcionProductoCorta %></textarea>
+
+            <label for="nombreProducto">Precio en AR$</label>
+            <input type="number" name="precioProducto" value="<%= producto.precioProducto %>">
+
+            <div class="dos-col">
+              <label for="estado">Estado</label>
+              <%if (producto.estadoProducto==="Nuevo" ) { %>
+                <label><input type="radio" name="estadoProducto" value="Nuevo" checked> Nuevo</label><label><input
+                    type="radio" name="estadoProducto" value="Usado"> Usado</label>
+                <% } else { %>
+                  <label><input type="radio" name="estadoProducto" value="Nuevo"> Nuevo</label><label><input
+                      type="radio" name="estadoProducto" value="Usado" checked> Usado</label>
+                  <%}%>
+            </div>
+
+            <label for="descripcionProductoLarga">Descripción detallada</label>
+            <textarea name="descripcionProductoLarga" id="" cols="30"
+              rows="6"><%= producto.descripcionProductoLarga %></textarea>
+
+            <label for="categoriaProducto">Categoría del Producto</label>
+            <select name="categoriaProducto" id="">
+              <% if (producto.categoriaProducto=="guitarrasBajos" ) {%>
+                <option value="guitarrasBajos" selected>Guitarras y bajos</option>
+                <option value="bateriasPercusion">Baterias y percusión</option>
                 <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
                 <option value="vientos">Vientos</option>
                 <option value="cuerdas">Cuerdas</option>
-                <% } else if (producto.categoriaProducto=="tecladosSintetizadores" ){ %>
+                <% } else if (producto.categoriaProducto=="bateriasPercusion" ){ %>
                   <option value="guitarrasBajos">Guitarras y bajos</option>
-                  <option value="bateriasPercusion">Baterias y percusión</option>
-                  <option value="tecladosSintetizadores" selected>Teclados y Sintetizadores</option>
+                  <option value="bateriasPercusion" selected>Baterias y percusión</option>
+                  <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
                   <option value="vientos">Vientos</option>
                   <option value="cuerdas">Cuerdas</option>
-                  <% } else if (producto.categoriaProducto=="vientos" ){ %>
+                  <% } else if (producto.categoriaProducto=="tecladosSintetizadores" ){ %>
                     <option value="guitarrasBajos">Guitarras y bajos</option>
                     <option value="bateriasPercusion">Baterias y percusión</option>
-                    <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
-                    <option value="vientos" selected>Vientos</option>
+                    <option value="tecladosSintetizadores" selected>Teclados y Sintetizadores</option>
+                    <option value="vientos">Vientos</option>
                     <option value="cuerdas">Cuerdas</option>
-                    <% } else { %>
+                    <% } else if (producto.categoriaProducto=="vientos" ){ %>
                       <option value="guitarrasBajos">Guitarras y bajos</option>
                       <option value="bateriasPercusion">Baterias y percusión</option>
                       <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
-                      <option value="vientos">Vientos</option>
-                      <option value="cuerdas" selected>Cuerdas</option>
-                      <%}%>
-          </select>
+                      <option value="vientos" selected>Vientos</option>
+                      <option value="cuerdas">Cuerdas</option>
+                      <% } else { %>
+                        <option value="guitarrasBajos">Guitarras y bajos</option>
+                        <option value="bateriasPercusion">Baterias y percusión</option>
+                        <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
+                        <option value="vientos">Vientos</option>
+                        <option value="cuerdas" selected>Cuerdas</option>
+                        <%}%>
+            </select>
 
-          <label for="fotoDestacada">Imagen destacada</label>
-          <input type="file" name="fotoDestacada">
+            <label for="fotoDestacada">Imagen destacada</label>
+            <input type="file" name="fotoDestacada">
 
-          <div class="dos-col">
-            <button type="reset" class="form-btn inicio-btn">Borrar todo</button>
-            <button type="submit" class="form-btn inicio-btn">Aceptar</button>
-          </div>
-        </form>
-      </section>
-    </main>
-    <%- include('./../partials/footer') %>
-      <script src="https://kit.fontawesome.com/2396c6fc63.js" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
-</body>
+            <div class="dos-col">
+              <button type="reset" class="form-btn inicio-btn">Borrar todo</button>
+              <button type="submit" class="form-btn inicio-btn">Aceptar</button>
+            </div>
+          </form>
+        </section>
+      </main>
+      <%- include('./../partials/footer') %>
+        <script src="https://kit.fontawesome.com/2396c6fc63.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+          crossorigin="anonymous"></script>
+  </body>
 
 </html>
