@@ -53,9 +53,9 @@ nav .form {
     margin-left: 15px;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link {
+/*.navbar-expand-lg .navbar-nav .nav-link {
     padding-left: 0;
-}
+}*/
 
 header .nav-link {
     color: rgba(255, 255, 255, 0.75);
@@ -115,6 +115,45 @@ header form {
     top: 0;
     right: 0;
 }
+
+.icon-header {
+    margin-right: 10px;
+}
+
+.fa-user:hover, .fa-heart:hover, .fa-cart-shopping:hover {
+    color: #ABEDFF !important;
+}
+
+.stroke ul li a{
+  position: relative;
+}
+.stroke ul li a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #ABEDFF;
+  height: 4px;
+}
+.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+.stroke ul li a,
+.stroke ul li a:after,
+.stroke ul li a:before {
+  transition: all .5s;
+}
+.stroke ul li a:hover {
+  color: #ABEDFF;
+}
+
+
+
 
 /* Aquí termina el HEADER */
 
@@ -268,10 +307,20 @@ header form {
     font-size: 1rem;
     line-height: 1.1rem;
     padding-top: 20px;
+    transition: all .2s ease-in-out; 
+}
+
+.categorias-home p:hover {
+    color:#3333FF;
 }
 
 .categoria-producto-home img {
     width: 100px;
+    transition: all .5s ease-in-out; 
+}
+
+.categoria-producto-home img:hover {
+    transform: scale(1.1); 
 }
 
 /* Aca terminan las CATEGORIAS */
