@@ -5,10 +5,13 @@
   <%- include('./../partials/header') %>
 
     <main class="main-login">
-      <div class="flecha-volver">
+      <a href="/producto/<%= producto.id%>">
+        <div class="flecha-volver">
         <img src="/img/flecha.svg" alt="">
         <p>Volver</p>
       </div>
+      </a>
+      
       <section class="form-container container col-lg-5 col-md-8 col-sm-12 mx-auto">
         <h2>Editá <span class="texto-resaltado">el producto!</span></h2>
         <form action="/editarProducto/<%= producto.id %>?_method=PUT" method="POST"
