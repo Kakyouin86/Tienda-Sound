@@ -268,41 +268,168 @@
     <section class="container text-center containerDestacados secc-mob">
       <h2 class="tituloDestacados">Productos destacados</h2>
 
-      <div id="carouselExampleDestacados-mob" class="carousel slide carouselDestacados ">
-
+      <div id="carouselExampleDestacados-mob" class="carousel slide carouselDestacados">
         <div class="carousel-inner carousel-innerDestacados">
-          <% for(let i=0; i < 3; i++) { %>
             <div class="carousel-item active container text-center">
-              <div class="destacados row justify-content-start">
-                <div class="contenedorProductoDestacado col-12">
-                  <div class="productoDestacado ">
-                    <div class="seccionImgDestacado">
-                      <div class="etiquetasDestacados">
-                        <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
-                        <div class="iconoDestacado">
-                          <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
-                          <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+                <div class="destacados row justify-content-start">
+                  <% for(let i=0; i < 1; i++) { %>
+                    <div class="contenedorProductoDestacado col-12">
+                      <div class="productoDestacado ">
+                        <div class="seccionImgDestacado">
+                          <div class="etiquetasDestacados">
+                            <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
+                            <div class="iconoDestacado">
+                              <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
+                              <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+                            </div>
+                          </div>
+                          <div class="contenedorImgProducto ">
+                            <img class="imgProducto " src="/img/productos/<%=producto[i].fotoDestacada%>" alt="img-">
+                          </div>
+                        </div>
+                        <div class="informacionProducto">
+                          <p class="nombreProductoDestacado">
+                            <%=producto[i].nombreProducto%>
+                          </p>
+                          <p class="descripcionProductoDestacado">
+                            <%=producto[i].descripcionProductoCorta%>
+                          </p>
+                          <p class="precioProductoDestacado">$ <%=producto[i].precioProducto%>
+                          </p>
                         </div>
                       </div>
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos/<%=producto[i].fotoDestacada%>" alt="img-">
+                    </div>
+                  <%}%> 
+                </div>
+            </div>
+            <div class="carousel-item container text-center">
+              <div class="destacados row justify-content-start">
+                <% for(let i=1; i < 2; i++) { %>
+                  <div class="contenedorProductoDestacado col-12">
+                    <div class="productoDestacado ">
+                      <div class="seccionImgDestacado">
+                        <div class="etiquetasDestacados">
+                          <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
+                          <div class="iconoDestacado">
+                            <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
+                            <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+                          </div>
+                        </div>
+                        <div class="contenedorImgProducto ">
+                          <img class="imgProducto " src="/img/productos/<%=producto[i].fotoDestacada%>" alt="img-">
+                        </div>
+                      </div>
+                      <div class="informacionProducto">
+                        <p class="nombreProductoDestacado">
+                          <%=producto[i].nombreProducto%>
+                        </p>
+                        <p class="descripcionProductoDestacado">
+                          <%=producto[i].descripcionProductoCorta%>
+                        </p>
+                        <p class="precioProductoDestacado">$ <%=producto[i].precioProducto%>
+                        </p>
                       </div>
                     </div>
-                    <div class="informacionProducto">
-                      <p class="nombreProductoDestacado">
-                        <%=producto[i].nombreProducto%>
-                      </p>
-                      <p class="descripcionProductoDestacado">
-                        <%=producto[i].descripcionProductoCorta%>
-                      </p>
-                      <p class="precioProductoDestacado">$ <%=producto[i].precioProducto%>
-                      </p>
-                    </div>
                   </div>
-                </div>
+                <%}%> 
               </div>
             </div>
-            <%}%>
+            <div class="carousel-item container text-center">
+              <div class="destacados row justify-content-start">
+                <% for(let i=2; i < 3; i++) { %>
+                  <div class="contenedorProductoDestacado col-12">
+                    <div class="productoDestacado ">
+                      <div class="seccionImgDestacado">
+                        <div class="etiquetasDestacados">
+                          <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
+                          <div class="iconoDestacado">
+                            <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
+                            <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+                          </div>
+                        </div>
+                        <div class="contenedorImgProducto ">
+                          <img class="imgProducto " src="/img/productos/<%=producto[i].fotoDestacada%>" alt="img-">
+                        </div>
+                      </div>
+                      <div class="informacionProducto">
+                        <p class="nombreProductoDestacado">
+                          <%=producto[i].nombreProducto%>
+                        </p>
+                        <p class="descripcionProductoDestacado">
+                          <%=producto[i].descripcionProductoCorta%>
+                        </p>
+                        <p class="precioProductoDestacado">$ <%=producto[i].precioProducto%>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                <%}%> 
+              </div>
+            </div>
+            <div class="carousel-item container text-center">
+              <div class="destacados row justify-content-start">
+                <% for(let i=3; i < 4; i++) { %>
+                  <div class="contenedorProductoDestacado col-12">
+                    <div class="productoDestacado ">
+                      <div class="seccionImgDestacado">
+                        <div class="etiquetasDestacados">
+                          <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
+                          <div class="iconoDestacado">
+                            <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
+                            <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+                          </div>
+                        </div>
+                        <div class="contenedorImgProducto ">
+                          <img class="imgProducto " src="/img/productos/<%=producto[i].fotoDestacada%>" alt="img-">
+                        </div>
+                      </div>
+                      <div class="informacionProducto">
+                        <p class="nombreProductoDestacado">
+                          <%=producto[i].nombreProducto%>
+                        </p>
+                        <p class="descripcionProductoDestacado">
+                          <%=producto[i].descripcionProductoCorta%>
+                        </p>
+                        <p class="precioProductoDestacado">$ <%=producto[i].precioProducto%>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                <%}%> 
+              </div>
+            </div>
+            <div class="carousel-item container text-center">
+              <div class="destacados row justify-content-start">
+                <% for(let i=4; i < 5; i++) { %>
+                  <div class="contenedorProductoDestacado col-12">
+                    <div class="productoDestacado ">
+                      <div class="seccionImgDestacado">
+                        <div class="etiquetasDestacados">
+                          <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
+                          <div class="iconoDestacado">
+                            <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
+                            <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
+                          </div>
+                        </div>
+                        <div class="contenedorImgProducto ">
+                          <img class="imgProducto " src="/img/productos/<%=producto[i].fotoDestacada%>" alt="img-">
+                        </div>
+                      </div>
+                      <div class="informacionProducto">
+                        <p class="nombreProductoDestacado">
+                          <%=producto[i].nombreProducto%>
+                        </p>
+                        <p class="descripcionProductoDestacado">
+                          <%=producto[i].descripcionProductoCorta%>
+                        </p>
+                        <p class="precioProductoDestacado">$ <%=producto[i].precioProducto%>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                <%}%> 
+              </div>
+            </div>
         </div>
 
         <button class="carousel-control-prev carousel-control-prev-destacados" type="button"
