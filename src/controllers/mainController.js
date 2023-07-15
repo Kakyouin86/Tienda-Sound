@@ -55,7 +55,7 @@ let mainController = {
 			descripcionProductoLarga: req.body.descripcionProductoLarga,
 			categoriaProducto: req.body.categoriaProducto,
 			/* if ternario para preguntar si viene imagen, que la escriba, sino que se quede con la foto por default */
-			fotoDestacada: req.file ? `/img/productos/${req.file.filename}` : "/img/productos/default-photo.jpg"
+			fotoDestacada: req.file ? `${req.file.filename}` : "default-photo.jpg"
 		};
 
 		productos.push(objNuevoProducto);
