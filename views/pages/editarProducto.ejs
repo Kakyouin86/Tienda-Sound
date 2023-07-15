@@ -15,7 +15,7 @@
       <section class="form-container container col-lg-5 col-md-8 col-sm-12 mx-auto">
         <h2>Editá <span class="texto-resaltado">el producto!</span></h2>
         <form action="/editarProducto/<%= producto.id %>?_method=PUT" method="POST"
-          class="base-form crearProducto-form">
+          class="base-form crearProducto-form" enctype="multipart/form-data">
 
           <label for="nombreProducto">Nombre del Producto</label>
           <input type="text" value="<%= producto.nombreProducto %>" name="nombreProducto">
