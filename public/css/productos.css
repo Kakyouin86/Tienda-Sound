@@ -15,14 +15,14 @@
   padding: 40px 50px;
 }
 .grid > article .productogrid{
-  border: 1px solid #ccc;
+  border: 1px solid #00c7ff;
   background-color: white;
   border-radius: 10px;
   transition: 500ms;
 }
 .grid > article:hover .productogrid{
   scale: 103%;
-  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .img-cont{
   display: flex;
