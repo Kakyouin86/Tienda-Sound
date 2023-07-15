@@ -16,9 +16,11 @@
 <body>
   <%- include('./../partials/header') %>
     <main>
+
+    <div class="todo">
       <div class="division-general">
         <div class="seccion-izquierda">
-          <img src="/img/productos/<%= producto.fotoDestacada%>" alt="">
+          <img class="foto-detalle" src="/img/productos/<%= producto.fotoDestacada%>" alt="">
           <div class="descripcion-producto">
             <h2 class="Titulo">
               Descripción del producto
@@ -55,10 +57,6 @@
               <%= producto.descripcionProductoCorta %>
             </p>
           </div>
-          <a href="/editarProducto/<%= producto.id %>" class="action-button">EDITAR PRODUCTO</a>
-          <form action="/borrarProducto/<%= producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-            <button type="submit" class="action-button delete">BORRAR PRODUCTO</button>
-          </form>
           <div class="ranking">
             <img src="/img/producto/estrellitaranking.svg" alt="">
             <img src="/img/producto/estrellitaranking.svg" alt="">
@@ -105,28 +103,37 @@
 
 
           </div>
-          <div class="formas-de-pago">
-            <h5>Formas de Pago:</h5>
-            <img class="form-pago-linea" src="/img/producto/linea_formasdepago.svg" alt="">
-            <ul>
-              <li>EFECTIVO</li>
-              <li>TRANSFERENCIA</li>
-              <li>TARJETAS</li>
 
-            </ul>
+          <div class="formas-de-pago">
+
+            <h5>Formas de Pago</h5>
+              <div class="fp">
+                <li>EFECTIVO</li>
+                <li>TRANSFERENCIA</li>
+                <li>TARJETAS</li>
+              </div>
             <div class="formas-pago-iconos">
-              <img src="/img/producto/logo_mercadopago.svg" alt="">
-              <img src="/img/producto/logo_mastercard.svg" alt="">
-              <img src="/img/producto/logo_visa.svg" alt="">
-              <img src="/img/producto/logo_pagofacil.svg" alt="">
+              <img src="/img/producto/logo_formasdepago.svg" alt="">
             </div>
 
-
           </div>
+
+          <!-- botones EDITAR y BORRAR-->
+          <div class="producto-detail-btn">
+            <a href="/editarProducto/<%= producto.id %>" class="btn-editar">EDITAR PRODUCTO</a>
+            <form action="/borrarProducto/<%= producto.id %>?_method=DELETE" method="POST">
+              <button type="submit" class="btn-eliminar">ELIMINAR</button>
+            </form>
+          </div>
+
+
+          
         </div>
 
 
       </div>
+
+    </div>
 
       <!----------------------SECCION RECOMENDACION - KIARA----------------------------------------------------->
 
@@ -654,10 +661,8 @@
             <span class="carousel-control-next-icon span-recom" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
-
         </div>
-
-      </section>
+      </div>
 
     </main>
     <%- include('./../partials/footer') %>

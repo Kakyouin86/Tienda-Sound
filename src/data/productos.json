@@ -1,62 +1,52 @@
 [
-    {
-        "id": 1,
-        "nombreProducto": "Guitarra",
-        "descripcionProductoCorta": "Lorem ipsum1",
-        "precioProducto": 3,
-        "estadoProducto": "Nuevo",
-        "descripcionProductoLarga": "Lorem ipsum2",
-        "categoriaProducto": "guitarrasBajos",
-        "fotoDestacada": "productos_1.jpg"
-    },
-    {
-        "id": 2,
-        "nombreProducto": "Batería",
-        "descripcionProductoCorta": "Lorem ipsum corta 2",
-        "precioProducto": 23940,
-        "estadoProducto": "Nuevo",
-        "descripcionProductoLarga": "Lorem ipsum larga 2",
-        "categoriaProducto": "bateriasPercusion",
-        "fotoDestacada": "productos_2.jpg"
-    },
-    {
-        "id": 3,
-        "nombreProducto": "Piano",
-        "descripcionProductoCorta": "Lorem ipsum3",
-        "precioProducto": 50,
-        "estadoProducto": "Nuevo",
-        "descripcionProductoLarga": "Lorem ipsum3",
-        "categoriaProducto": "teclados",
-        "fotoDestacada": "productos_3.jpg"
-    },
-    {
-        "id": 4,
-        "nombreProducto": "Bajo",
-        "descripcionProductoCorta": "Lorem ipsum4",
-        "precioProducto": 10,
-        "estadoProducto": "Nuevo",
-        "descripcionProductoLarga": "Lorem ipsum4",
-        "categoriaProducto": "guitarrasBajos",
-        "fotoDestacada": "productos_4.jpg"
-    },
-    {
-        "id": 5,
-        "nombreProducto": "Prueba 1",
-        "descripcionProductoCorta": "sdflkd",
-        "precioProducto": 345,
-        "estadoProducto": "Nuevo",
-        "descripcionProductoLarga": "sdfds",
-        "categoriaProducto": "bateriasPercusion",
-        "fotoDestacada": "productos_5.jpg"
-    },
-    {
-        "id": 6,
-        "nombreProducto": "Batería electrónica",
-        "descripcionProductoCorta": "Es una batería electrónica Roland",
-        "precioProducto": 200,
-        "estadoProducto": "Nuevo",
-        "descripcionProductoLarga": "Bata electrónica Roland para departamentos.",
-        "categoriaProducto": "bateriasPercusion",
-        "fotoDestacada": ""
-    }
+ {
+  "id": 1,
+  "nombreProducto": "Guitarra",
+  "descripcionProductoCorta": "Lorem ipsum1",
+  "precioProducto": 3,
+  "estadoProducto": "Nuevo",
+  "descripcionProductoLarga": "Lorem ipsum2",
+  "categoriaProducto": "guitarrasBajos",
+  "fotoDestacada": "productos_1.jpg"
+ },
+ {
+  "id": 2,
+  "nombreProducto": "Batería",
+  "descripcionProductoCorta": "Lorem ipsum corta 2",
+  "precioProducto": 23940,
+  "estadoProducto": "Nuevo",
+  "descripcionProductoLarga": "Lorem ipsum larga 2",
+  "categoriaProducto": "bateriasPercusion",
+  "fotoDestacada": "productos_2.jpg"
+ },
+ {
+  "id": 3,
+  "nombreProducto": "Piano",
+  "descripcionProductoCorta": "Lorem ipsum3",
+  "precioProducto": 50,
+  "estadoProducto": "Nuevo",
+  "descripcionProductoLarga": "Lorem ipsum3",
+  "categoriaProducto": "teclados",
+  "fotoDestacada": "productos_3.jpg"
+ },
+ {
+  "id": 4,
+  "nombreProducto": "Bajo",
+  "descripcionProductoCorta": "Lorem ipsum4",
+  "precioProducto": 10,
+  "estadoProducto": "Nuevo",
+  "descripcionProductoLarga": "Lorem ipsum4",
+  "categoriaProducto": "guitarrasBajos",
+  "fotoDestacada": "productos_4.jpg"
+ },
+ {
+  "id": 5,
+  "nombreProducto": "Prueba 1",
+  "descripcionProductoCorta": "sdflkd",
+  "precioProducto": 345,
+  "estadoProducto": "Nuevo",
+  "descripcionProductoLarga": "sdfds",
+  "categoriaProducto": "bateriasPercusion",
+  "fotoDestacada": "productos_5.jpg"
+ }
 ]
