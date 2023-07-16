@@ -347,7 +347,6 @@ header form {
     padding: 20px;
     border: solid 2px #00c7ff;
     border-radius: 20px;
-    height: 95%;
     transition: all .5s ease-in-out;
 }
 
@@ -431,23 +430,28 @@ header form {
 
 .informacionProducto {
     text-align: start;
-    height: 50%;
     padding: 10px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 
 .descripcionProductoDestacado {
-    font-size: 120%;
+    font-size: 14px;
 }
 
 .nombreProductoDestacado,
 .precioProductoDestacado {
-    font-size: 170%;
+    font-size: 22px;
     font-weight: 500;
     margin: inherit;
+    transition: all .2s ease-in-out;
+
+}
+
+.nombreProductoDestacado:hover,
+.precioProductoDestacado:hover{
+    color: #3333FF;
 }
 
 .carousel-control-prev-destacados,

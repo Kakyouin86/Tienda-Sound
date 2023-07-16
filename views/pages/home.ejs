@@ -148,27 +148,28 @@
           <div class="carousel-item active container text-center">
             <div class="destacados row justify-content-start">
               <% for (let i=0; i < 3; i++) { %>
+                
                 <div class="contenedorProductoDestacado col-4">
                   <div class="productoDestacado ">
                     <div class="seccionImgDestacado">
-                      <div class="etiquetasDestacados">
+                      <div class="etiquetasDestacados">             
                         <img class="nuevosUsados" src="/img/productos_destacados/nuevo_destacado.svg" alt="nuevoUsado">
                         <div class="iconoDestacado">
                           <i class="fa-regular fa-heart noFav" style="color: #3333ff;"></i>
                           <i class="fa-solid fa-heart siFav" style="color: #3333ff;"></i>
                         </div>
                       </div>
-                      <div class="contenedorImgProducto ">
+                      <a href="producto/<%=producto[i].id%>">
+                      <div class="contenedorImgProducto">
                         <img class="imgProducto " src="/img/productos/<%=producto[i].fotoDestacada%>" alt="img-">
                       </div>
+                    </a>
                     </div>
                     <div class="informacionProducto">
                       <p class="nombreProductoDestacado">
                         <%=producto[i].nombreProducto%>
                       </p>
-                      <p class="descripcionProductoDestacado">
-                        <%=producto[i].descripcionProductoCorta%>
-                      </p>
+                      <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
                       <p class="precioProductoDestacado">$ <%=producto[i].precioProducto%>
                       </p>
                     </div>
@@ -199,9 +200,7 @@
                       <p class="nombreProductoDestacado">
                         <%=producto[i].nombreProducto%>
                       </p>
-                      <p class="descripcionProductoDestacado">
-                        <%=producto[i].descripcionProductoCorta%>
-                      </p>
+                      <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
                       <p class="precioProductoDestacado">$ <%=producto[i].precioProducto%>
                       </p>
                     </div>
@@ -232,9 +231,7 @@
                       <p class="nombreProductoDestacado">
                         <%=producto[i].nombreProducto%>
                       </p>
-                      <p class="descripcionProductoDestacado">
-                        <%=producto[i].descripcionProductoCorta%>
-                      </p>
+                      <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
                       <p class="precioProductoDestacado">$ <%=producto[i].precioProducto%>
                       </p>
                     </div>
@@ -291,9 +288,7 @@
                           <p class="nombreProductoDestacado">
                             <%=producto[i].nombreProducto%>
                           </p>
-                          <p class="descripcionProductoDestacado">
-                            <%=producto[i].descripcionProductoCorta%>
-                          </p>
+                          <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
                           <p class="precioProductoDestacado">$ <%=producto[i].precioProducto%>
                           </p>
                         </div>
