@@ -1,44 +1,59 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.grid { 
+.main-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 30px;
-  max-width: 1296px;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 50px;
   margin: auto;
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 40px 50px;
+  max-width: 1580px;
+
 }
-.grid > article .productogrid{
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+
+}
+
+.grid>article .productogrid {
   border: 1px solid #00c7ff;
   background-color: white;
   border-radius: 10px;
   transition: 500ms;
 }
-.grid > article:hover .productogrid{
+
+.grid>article:hover .productogrid {
   scale: 103%;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.img-cont{
+
+.img-cont {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 0px;
 }
-.img-cont img{
+
+.img-cont img {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 0px;
 }
+
 .text {
   padding: 0 20px;
 }
-.nuevo-usado{
+
+.nuevo-usado {
   font-size: 12px;
   font-weight: 500;
   text-align: left;
@@ -50,12 +65,14 @@
   text-transform: uppercase;
   transition: 500ms;
 }
+
 article:hover .nuevo-usado {
   color: white;
   border: #3333FF 1px solid;
-  background-color:#3333FF;
+  background-color: #3333FF;
 }
-.text h3{
+
+.text h3 {
   font-weight: 500;
   font-size: 18px;
   color: #212529;
@@ -66,16 +83,19 @@ article:hover .nuevo-usado {
   -webkit-box-orient: vertical;
   margin-bottom: 10px;
 }
+
 article:hover .text h3 {
   color: #3333FF;
 }
-.envio-prod{
+
+.envio-prod {
   font-weight: 400;
   font-size: 14px;
   text-align: left;
   color: #E93882;
   margin-bottom: 10px;
 }
+
 .precio-prod {
   font-size: 30px;
   font-weight: 400;
@@ -83,18 +103,76 @@ article:hover .text h3 {
   margin-bottom: 10px;
 }
 
+
+.main-grid .filtros h1 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  border-bottom: 1px solid #00c7ff;
+  padding-bottom: 20px;
+}
+
+.main-grid .filtros h2 {
+  font-weight: 400;
+  font-size: 1.2em;
+  color: #3333FF;
+  margin-top: 40px;
+}
+
+.main-grid .filtros ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.main-grid .filtros ul li {
+  color: gray;
+  font-weight: lighter;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.main-grid .filtros ul li:hover {
+  color: #212529;
+}
+
+.main-grid .filtros input {
+  border-radius: 8px;
+  border: 1px #3333ff solid;
+  padding: 10px 0px;
+  width: 30%;
+  height: 50px;
+  margin-right: 5px;
+}
+
+.main-grid .filtros input::placeholder {
+  padding-left: 10px;
+}
+
+.main-grid .filtros button {
+  border-radius: 8px;
+  background-color: #3333FF;
+  width: 15%;
+  color: white;
+  border: 0;
+  height: 50px;
+}
+
+
+
+
+
+
 /* smartphone */
 @media (max-width: 480px) {
-  .grid { 
+  .grid {
     grid-template-columns: 1fr;
     max-width: 440px;
     padding: 0px 40px;
-  } 
+  }
 }
 
 /* tablet */
 @media (min-width: 481px) and (max-width: 768px) {
-  .grid { 
+  .grid {
     grid-template-columns: 1fr 1fr;
     max-width: 600px;
     padding: 20px 40px;
@@ -103,7 +181,7 @@ article:hover .text h3 {
 
 /* tablet / desktop small */
 @media (min-width: 769px) and (max-width: 1000px) {
-  .grid { 
+  .grid {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 900px;
     padding: 30px 50px;
