@@ -348,6 +348,7 @@ header form {
     border: solid 2px #00c7ff;
     border-radius: 20px;
     height: 95%;
+    transition: all .5s ease-in-out;
 }
 
 .productoDestacado:hover {

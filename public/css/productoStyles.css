@@ -120,6 +120,47 @@ header form {
     right: 0;
 }
 
+.icon-header {
+    margin-right: 10px;
+}
+
+.fa-user:hover,
+.fa-heart:hover,
+.fa-cart-shopping:hover {
+    color: #ABEDFF !important;
+}
+
+.stroke ul li a {
+    position: relative;
+}
+
+.stroke ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #ABEDFF;
+    height: 4px;
+}
+
+.stroke ul li a:hover:after {
+    width: 100%;
+}
+
+.stroke ul li a,
+.stroke ul li a:after,
+.stroke ul li a:before {
+    transition: all .5s;
+}
+
+.stroke ul li a:hover {
+    color: #ABEDFF;
+}
+
 /* Aquí termina el HEADER */
 
 /* Aquí empieza el HEADER con máximo de 992px */
