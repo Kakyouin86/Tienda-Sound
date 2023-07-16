@@ -23,7 +23,6 @@ const upload = multer({ storage: storage });
 
 router.get('/', mainController.index);
 router.get('/login', mainController.login);
-router.get('/register', mainController.register);
 router.get('/producto/:id?', mainController.producto);
 
 router.get('/productos', mainController.productos);
@@ -37,6 +36,10 @@ router.get('/editarProducto/:id', mainController.renderEditarProducto);
 router.put('/editarProducto/:id',  upload.single('fotoDestacada'), mainController.editarProducto);
 
 router.delete('/borrarProducto/:id', mainController.borrarProducto);
+
+
+router.get('/register', mainController.register);
+router.post('/register', mainController.guardarUser);
 
 
 

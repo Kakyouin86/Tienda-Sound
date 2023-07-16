@@ -5,55 +5,43 @@ const path = require('path');
 const productsFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const usersFilePath = path.join(__dirname, '../data/usuarios.json');
+const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
 let mainController = {
 	// metodos de /
-	index: function (req, res)
-	{
+	index: function (req, res) {
 		const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		res.render('./pages/home', { producto: productos });
 	},
-	login: function (req, res)
-	{
+	login: function (req, res) {
 		res.render('./pages/login');
-	},
-	register: function (req, res)
-	{
-		res.render('./pages/register');
 	},
 
 	// metodos de productos
 
 	// renderiza todos los productos en grid
-	productos: function (req, res)
-	{
+	productos: function (req, res) {
 		const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		res.render('./pages/productos', { producto: productos });
 	},
-
 	// detalle de un solo producto
-	producto: function (req, res)
-	{
+	producto: function (req, res) {
 		let idProductoBuscado = req.params.id;
 		let productoBuscado;
-		for (let i = 0; i < productos.length; i++)
-		{
-			if (idProductoBuscado == productos[i].id)
-			{
+		for (let i = 0; i < productos.length; i++) {
+			if (idProductoBuscado == productos[i].id) {
 				productoBuscado = productos[i];
 			}
 		}
 		res.render('./pages/producto', { producto: productoBuscado });
 	},
-
 	// renderiza el form
-	renderCrearProducto: function (req, res)
-	{
+	renderCrearProducto: function (req, res) {
 		res.render('./pages/crearProducto');
 	},
-
 	// guardar los datos en json
-	guardarProducto: function (req, res)
-	{
+	guardarProducto: function (req, res) {
 		let idNuevoProducto = productos[productos.length - 1].id + 1;
 		let objNuevoProducto = {
 			id: idNuevoProducto,
@@ -71,30 +59,23 @@ let mainController = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
 		res.redirect('/productos');
 	},
-
 	// renderiza el form de editar producto
-	renderEditarProducto: (req, res) =>
-	{
+	renderEditarProducto: (req, res) => {
 		let idProductoBuscado = req.params.id;
 		let productoBuscado;
-		for (let i = 0; i < productos.length; i++)
-		{
+		for (let i = 0; i < productos.length; i++) {
 
-			if (idProductoBuscado == productos[i].id)
-			{
+			if (idProductoBuscado == productos[i].id) {
 				productoBuscado = productos[i];
 			}
 		}
 		res.render('./pages/editarProducto', { producto: productoBuscado });
 	},
 	// actualiza el json
-	editarProducto: (req, res) =>
-	{
+	editarProducto: (req, res) => {
 		let idProductoBuscado = req.params.id;
-		for (let i = 0; i < productos.length; i++)
-		{
-			if (idProductoBuscado == productos[i].id)
-			{
+		for (let i = 0; i < productos.length; i++) {
+			if (idProductoBuscado == productos[i].id) {
 				productos[i].nombreProducto = req.body.nombreProducto;
 				productos[i].descripcionProductoCorta = req.body.descripcionProductoCorta;
 				productos[i].precioProducto = parseInt(req.body.precioProducto);
@@ -106,8 +87,7 @@ let mainController = {
 
 				fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
 				res.redirect('/productos');
-			} else
-			{
+			} else {
 				res.send(`
 				<div style="text-align: center; padding-top:30px">
 				<h1>El producto no se puede editar</h1>
@@ -117,15 +97,7 @@ let mainController = {
 			};
 		}
 	},
-
-
-	carrito: function (req, res)
-	{
-		res.render('./pages/carrito');
-	},
-
-	borrarProducto: (req, res) =>
-	{
+	borrarProducto: (req, res) => {
 		let idProductoBuscado = req.params.id;
 		let productosActualizados = productos.filter(product => product.id != idProductoBuscado);
 
@@ -137,8 +109,7 @@ let mainController = {
 
 		/* utilizo fs.existsSync para saber si existe una imagen física en nuestra carpeta estatica, si la tiene que la borre con fsUnlink, sino que no haga nada */
 
-		if (fs.existsSync(path.join(publicPath, productToDelete.fotoDestacada)))
-		{
+		if (fs.existsSync(path.join(publicPath, productToDelete.fotoDestacada))) {
 			fs.unlinkSync(
 				path.join(publicPath, productToDelete.fotoDestacada)
 			);
@@ -147,8 +118,49 @@ let mainController = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(productosActualizados, null, ' '));
 		productos;
 		res.redirect('/productos');
-	}
+	},
+	carrito: function (req, res) {
+		res.render('./pages/carrito');
+	},
 
+	// Metodos de usuarios
+	register: function (req, res) {
+		res.render('./pages/register');
+	},
+
+	guardarUser: function (req, res) {
+		let idNuevoUsuario = usuarios[usuarios.length - 1].id + 1;
+
+		let objNuevoUsuario = {
+			id: idNuevoUsuario,
+			nombreCompleto: req.body.nombreCompleto,
+			password: req.body.password,
+			email: req.body.email
+		};
+
+		let usuarioExiste = false;
+
+		for (let i = 0; i < usuarios.length; i++) {
+		  if (objNuevoUsuario.email === usuarios[i].email) {
+			usuarioExiste = true;
+			break;
+		  }
+		}
+	  
+		if (usuarioExiste) {
+		  res.send(`
+		  <div style="text-align: center; padding-top:30px">
+		  <h1 style="font-family: Montserrat;">Ya existe un usuario registrado con ese email, intenta nuevamente!</h1>
+		  <img style="width:40%;" src="/img/productos/default-photo.jpg">
+		  </div>
+		  `);
+		} else {
+		  usuarios.push(objNuevoUsuario);
+		  fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, " "));
+		  res.redirect("/");
+		}
+
+	}
 }
 
 module.exports = mainController;
