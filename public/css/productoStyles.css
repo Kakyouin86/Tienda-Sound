@@ -220,13 +220,9 @@ main {
 }
 
 .division-general {
-
     display: flex;
     margin-left: 5vw;
     margin-right: 5vw;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-
 }
 
 .main-carousel2 {
@@ -607,9 +603,11 @@ input[type=number]::-webkit-outer-spin-button {
     .ranking {
         display: none;
     }
+
     .foto-detalle {
         width: 320px;
     }
+
     .division-general {
         display: flex;
         flex-wrap: wrap;

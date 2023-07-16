@@ -7,9 +7,7 @@
       <main>
         <div class="main-grid">
           <section class="filtros">
-
             <h1>Productos</h1>
-
             <h2>Categorias</h2>
             <ul>
               <li>Guitarras y Bajos</li>
@@ -19,7 +17,6 @@
               <li>Vientos</li>
               <li>Cuerdas</li>
             </ul>
-
             <h2>Marcas</h2>
             <ul>
               <li>Audio Anatomy</li>
@@ -29,27 +26,18 @@
               <li>Ernie Ball</li>
               <li>Legends</li>
             </ul>
-
             <h2>Estado</h2>
             <ul>
               <li>Nuevo</li>
               <li>Usado</li>
             </ul>
-
             <h2>Precio</h2>
             <div>
               <input type="number" placeholder="Desde">
               <input type="number" placeholder="Hasta">
               <button>Ok</button>
             </div>
-
-
-
-
           </section>
-
-
-
           <section class="grid">
             <% for(let i=0; i<producto.length; i++){%>
               <article>
@@ -59,15 +47,24 @@
                       <img src="/img/productos/<%=producto[i].fotoDestacada%>" alt="foto">
                     </div>
                     <div class="text">
-                      <div class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>
-                        <%=producto[i].estadoProducto%>
-                      </div>
-                      <h3>
-                        <%=producto[i].nombreProducto%>
-                      </h3>
-                      <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
-                      <div class="precio-prod">$ <%=producto[i].precioProducto%>
-                      </div>
+                      <% if (producto[i].estadoProducto=="Nuevo" ) { %>
+                        <div class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>
+                          <%=producto[i].estadoProducto%>
+                        </div>
+                        <%}%>
+                          <h3>
+                            <%=producto[i].nombreProducto%>
+                          </h3>
+                          <%if(producto[i].envio==0) { %>
+                            <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
+                            <%} else{ %>
+                              <div class="envio-prod">Envio <span style="font-weight: 600;">
+                                  <%=producto[i].envio%>
+                                </span>
+                              </div>
+                              <%} %>
+                                <div class="precio-prod">$ <%=producto[i].precioProducto%>
+                                </div>
                     </div>
                   </a>
                 </div>

@@ -5,12 +5,12 @@
     font-family: "hoss-round", sans-serif;
 }
 
-.main-login{
+.main-login {
     position: relative;
 }
 
 .main-login input {
-    padding: 0 10px 0 10px;
+    padding: 0px 10px 0px 10px;
 }
 
 .main-login textarea {
@@ -26,12 +26,32 @@
     top: 60px;
 }
 
-.flecha-volver p{
+.flecha-volver p {
     margin-bottom: 0;
-    color:#3333ff;
+    color: #3333ff;
 }
 
 .flecha-volver img {
+    width: 40px;
+    height: 40px;
+    text-align: left;
+    justify-content: left;
+}
+
+.producto-volver-flecha-volver {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.producto-volver-flecha-volver p {
+    margin-bottom: 0;
+    color: #3333ff;
+}
+
+.producto-volver-flecha-volver img {
     width: 40px;
     height: 40px;
     text-align: left;
@@ -66,10 +86,19 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    text-align: left !important;
+
+    .nombreProducto {
+        text-align: left !important;
+    }
 }
 
-.base-form input[type=text], .base-form input[type=email], .base-form input[type=password],
-.base-form input[type=number], .base-form input[type=file], .crearProducto-form select{
+.base-form input[type=text],
+.base-form input[type=email],
+.base-form input[type=password],
+.base-form input[type=number],
+.base-form input[type=file],
+.crearProducto-form select {
     width: 80%;
     height: 60px;
     border-radius: 15px;
@@ -77,14 +106,14 @@
     margin-bottom: 25px;
 }
 
-.base-form textarea{
+.base-form textarea {
     width: 80%;
     border-radius: 15px;
     border: 1px #3333ff solid;
     margin-bottom: 25px;
 }
 
-.base-form input::placeholder{
+.base-form input::placeholder {
     padding-left: 20px;
     color: #B7B7B7;
 }
@@ -133,15 +162,16 @@
     position: relative;
 }
 
-.base-form .google-btn img, .base-form .facebook-btn img{
+.base-form .google-btn img,
+.base-form .facebook-btn img {
     width: 35px;
     height: auto;
     position: absolute;
     left: 10px;
 }
 
-.btn-division{
-    width:80%;
+.btn-division {
+    width: 80%;
     border: 1px solid gray;
     margin: 20px 0px 20px 0px;
 }
@@ -149,23 +179,23 @@
 
 /*Register form*/
 
-.form-register h1{
+.form-register h1 {
     padding-bottom: 40px;
 }
 
-.terminos-condiciones{
+.terminos-condiciones {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 30px;
 }
 
-.terminos-condiciones span{
-    font-style:italic;
+.terminos-condiciones span {
+    font-style: italic;
     margin-left: 10px;
 }
 
-.terminos-condiciones input[type=checkbox]{
+.terminos-condiciones input[type=checkbox] {
     border: 1px solid #3333ff;
     width: 20px;
     height: 20px;
@@ -174,7 +204,7 @@
 
 /*Producto form*/
 
-.dos-col{
+.dos-col {
     display: flex;
     flex-direction: row;
     width: 80%;
@@ -182,28 +212,32 @@
     align-items: center;
 }
 
-.crearProducto-form .dos-col .form-btn:first-child{
+.crearProducto-form .dos-col .form-btn:first-child {
     background-color: #6666ff83;
     margin-right: 20px;
 }
 
-.crearProducto-form label{
+.crearProducto-form name {
     display: inline-block;
     width: 80%;
     text-align: left;
     margin-bottom: 10px;
 }
-.crearProducto-form .dos-col label{width: 15%;}
 
-.crearProducto-form input[type=radio]{
+.crearProducto-form .dos-col name {
+    width: 15%;
+}
+
+.crearProducto-form input[type=radio] {
     margin-right: 10px;
 }
 
-.crearProducto-form select, .crearProducto-form input[type=file]{
+.crearProducto-form select,
+.crearProducto-form input[type=file] {
     padding-left: 20px;
 }
 
-.crearProducto-form input[type=file]{
+.crearProducto-form input[type=file] {
     padding-top: 12px;
 }
 
@@ -217,25 +251,29 @@
     .form-container h1 {
         font-size: 2rem;
     }
-    
+
     .form-container h2 {
         font-size: 2rem;
         padding: 0px 20px 30px 20px;
-
     }
 
-    .base-form input, .base-form .form-btn {
+    .base-form input,
+    .base-form .form-btn {
         width: 80%;
         font-size: 1rem;
-
     }
 
     .form-container {
-        padding: 70px 0px 70px 0px;
+        padding: 00px 0px 0px 0px;
     }
 
     .flecha-volver {
         left: 2%;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        top: 10px;
     }
 
     .flecha-volver img {
@@ -243,21 +281,21 @@
         height: 25px;
     }
 
-    .terminos-condiciones span{
+    .terminos-condiciones span {
         font-size: 12px;
     }
 
-    .flecha-volver-register{
+    .flecha-volver-register {
         top: 20px;
     }
 
-    
+    .producto-volver-flecha-volver {
+        padding-top: 5px !important;
+        padding-left: 5px !important;
+    }
 }
 
 
 /* Tablet */
 
-@media only screen and (max-width: 768px) and (min-width: 481px) {
-
-    
-}
+@media only screen and (max-width: 768px) and (min-width: 481px) {}

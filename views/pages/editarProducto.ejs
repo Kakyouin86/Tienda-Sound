@@ -11,38 +11,31 @@
             <p>Volver</p>
           </div>
         </a>
-
         <section class="form-container container col-lg-5 col-md-8 col-sm-12 mx-auto">
-          <h2>Editá <span class="texto-resaltado">el producto!</span></h2>
+          <h1>Editá <span class="texto-resaltado">el producto!</span></h1>
           <form action="/editarProducto/<%= producto.id %>?_method=PUT" method="POST"
-            class="base-form crearProducto-form" enctype="multipart/form-data">
-
-            <label for="nombreProducto">Nombre del Producto</label>
+            class="base-form crearProducto-form" enctype="multipart/form-data" name="nombreProducto">
+            <name for="nombreProducto">Nombre del Producto</name>
             <input type="text" value="<%= producto.nombreProducto %>" name="nombreProducto">
-
-            <label for="descripcionProductoCorta">Breve descripción</label>
+            <name for="descripcionProductoCorta">Breve descripción</name>
             <textarea name="descripcionProductoCorta" id="" cols="30"
               rows="3"><%= producto.descripcionProductoCorta %></textarea>
-
-            <label for="nombreProducto">Precio en AR$</label>
+            <name for="nombreProducto">Precio en ARS</name>
             <input type="number" name="precioProducto" value="<%= producto.precioProducto %>">
-
             <div class="dos-col">
-              <label for="estado">Estado</label>
+              <name for="estado">Estado</name>
               <%if (producto.estadoProducto==="Nuevo" ) { %>
-                <label><input type="radio" name="estadoProducto" value="Nuevo" checked> Nuevo</label><label><input
-                    type="radio" name="estadoProducto" value="Usado"> Usado</label>
+                <name><input type="radio" name="estadoProducto" value="Nuevo" checked> Nuevo</name>
+                <name><input type="radio" name="estadoProducto" value="Usado"> Usado</name>
                 <% } else { %>
-                  <label><input type="radio" name="estadoProducto" value="Nuevo"> Nuevo</label><label><input
-                      type="radio" name="estadoProducto" value="Usado" checked> Usado</label>
+                  <name><input type="radio" name="estadoProducto" value="Nuevo"> Nuevo</name>
+                  <name><input type="radio" name="estadoProducto" value="Usado" checked> Usado</name>
                   <%}%>
             </div>
-
-            <label for="descripcionProductoLarga">Descripción detallada</label>
+            <name for="descripcionProductoLarga">Descripción detallada</name>
             <textarea name="descripcionProductoLarga" id="" cols="30"
               rows="6"><%= producto.descripcionProductoLarga %></textarea>
-
-            <label for="categoriaProducto">Categoría del Producto</label>
+            <name for="categoriaProducto">Categoría del Producto</name>
             <select name="categoriaProducto" id="">
               <% if (producto.categoriaProducto=="guitarrasBajos" ) {%>
                 <option value="guitarrasBajos" selected>Guitarras y bajos</option>
@@ -76,10 +69,11 @@
                         <option value="cuerdas" selected>Cuerdas</option>
                         <%}%>
             </select>
-
-            <label for="fotoDestacada">Imagen destacada</label>
+            <name for="fotoDestacada">Imagen destacada</name>
+            <div class="img-cont">
+              <img src="/img/productos/<%=producto.fotoDestacada%>" alt="foto">
+            </div>
             <input type="file" name="fotoDestacada">
-
             <div class="dos-col">
               <button type="reset" class="form-btn inicio-btn">Borrar todo</button>
               <button type="submit" class="form-btn inicio-btn">Aceptar</button>

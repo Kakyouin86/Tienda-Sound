@@ -41,6 +41,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 0px;
+  margin-bottom: 10px;
 }
 
 .img-cont img {
@@ -90,7 +91,7 @@ article:hover .text h3 {
 
 .envio-prod {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 20px;
   text-align: left;
   color: #E93882;
   margin-bottom: 10px;

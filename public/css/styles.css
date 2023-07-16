@@ -294,7 +294,7 @@ header form {
 
 .categorias-home {
     color: #0a0a0a;
-    margin-bottom: 140px;
+    margin-bottom: 40px;
 }
 
 .categorias-home h2 {
@@ -334,7 +334,6 @@ header form {
 }
 
 .tituloDestacados {
-    margin-bottom: 65px;
     font-weight: 400;
     font-size: 2rem;
 }
@@ -365,7 +364,7 @@ header form {
 }
 
 .contenedorProductoDestacado {
-    height: 650px;
+    height: 550px;
 }
 
 .seccionImgDestacado {
@@ -450,7 +449,7 @@ header form {
 }
 
 .nombreProductoDestacado:hover,
-.precioProductoDestacado:hover{
+.precioProductoDestacado:hover {
     color: #3333FF;
 }
 
@@ -481,8 +480,6 @@ header form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 140px;
-    margin-bottom: 140px;
 }
 
 .banner1,
@@ -600,8 +597,8 @@ header form {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-top: 65px;
-    margin-bottom: 140px;
+    margin-top: 45px;
+    margin-bottom: 50px;
 }
 
 .comofunciona h2 {
@@ -1036,7 +1033,7 @@ br {
     }
 
     .contenedorProductoDestacado {
-        height: 350px;
+        height: 320px;
         padding: 5px;
     }
 
@@ -1044,18 +1041,15 @@ br {
         padding: 5px;
     }
 
-    .tituloDestacados {
-        margin-bottom: 13px;
-        padding: 0px 30px 10px 30px;
-    }
+    .tituloDestacados {}
 
     .iconoDestacado {
         font-size: 80% !important;
-        top: -70px !important;
+        top: -55px !important;
     }
 
     .nuevosUsados {
-        top: -70px !important;
+        top: -55px !important;
         left: -7px !important;
     }
 
@@ -1092,11 +1086,11 @@ br {
     /* Acá comienza BANNER */
 
     .banners_container {
-        margin: auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
+        margin-top: -30px;
     }
 
     .banner1,
@@ -1110,7 +1104,6 @@ br {
         font-size: 12px;
         border-radius: 45px;
         transition: 450ms;
-
     }
 
     .banner1 {
@@ -1250,7 +1243,7 @@ br {
     /* Acá empieza CÓMO FUNCIONA */
 
     .comofunciona {
-        padding: 60px
+        padding: 60px;
     }
 
     .icono_funciona_para {
@@ -1334,9 +1327,7 @@ br {
         max-width: 1296px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 140px;
-        margin-bottom: 140px;
+        justify-content: cente
     }
 
     .banner1,
@@ -1407,7 +1398,6 @@ br {
     }
 
     .iconoDestacado {
-
         font-size: 20px !important;
         top: -110px !important;
     }
