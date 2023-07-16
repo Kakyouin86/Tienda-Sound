@@ -145,249 +145,45 @@
           <div class="carousel-inner carousel-inner-recomendado">
             <div class="carousel-item active container carousel-item-recomendado ">
               <div class="row justify-content-start row-recomendado">
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
+                <%for(let i=0; i<6; i++){%>
+                  <div class=" col-2 contenedor-recomendado">
+                    <div class="producto">
+                      <div class="seccionImgProducto">
+                        <div class="contenedorImgProducto">
+                          <img class="imgProducto " src="/img/productos/<%= productos[i].fotoDestacada%>" alt="img-">
+                        </div>
+                      </div>
+                      <div class="informacionProducto">
+                        <p class="descripcionProducto"><%= productos[i].nombreProducto%></p>
+                        <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
+                        <p class="precioProducto">$ <%= productos[i].precioProducto%>
+                        </p>
                       </div>
                     </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$ <%= producto.precioProducto%>
-                      </p>
-                    </div>
                   </div>
-                </div>
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
+                <%}%>
               </div>
             </div>
+
             <div class="carousel-item  container carousel-item-recomendado">
               <div class="row justify-content-start row-recomendado">
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
+                <%for(let i=6; i<12; i++){%>
+                  <div class=" col-2 contenedor-recomendado">
+                    <div class="producto">
+                      <div class="seccionImgProducto">
+                        <div class="contenedorImgProducto">
+                          <img class="imgProducto " src="/img/productos/<%= productos[i].fotoDestacada%>" alt="img-">
+                        </div>
+                      </div>
+                      <div class="informacionProducto">
+                        <p class="descripcionProducto"><%= productos[i].nombreProducto%></p>
+                        <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
+                        <p class="precioProducto">$ <%= productos[i].precioProducto%>
+                        </p>
                       </div>
                     </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
                   </div>
-                </div>
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item  container carousel-item-recomendado">
-              <div class=" row justify-content-start row-recomendado">
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-2 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
+                <%}%>
               </div>
             </div>
           </div>

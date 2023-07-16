@@ -34,7 +34,7 @@ let mainController = {
 				productoBuscado = productos[i];
 			}
 		}
-		res.render('./pages/producto', { producto: productoBuscado });
+		res.render('./pages/producto', { producto: productoBuscado, productos: productos });
 	},
 	// renderiza el form
 	renderCrearProducto: function (req, res) {

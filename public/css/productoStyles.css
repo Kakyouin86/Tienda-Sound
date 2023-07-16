@@ -1282,13 +1282,14 @@ p {
 }
 
 .contenedor-recomendado {
-    padding: 20px;
     border-radius: inherit;
 }
 
 .producto {
-    background-color: #d8d8d89d;
+    border: 1px solid #00c7ff;
     border-radius: 10px;
+    height: 290px;
+
 }
 
 .producto:hover {
