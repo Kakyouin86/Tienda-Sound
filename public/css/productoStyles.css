@@ -215,6 +215,10 @@ main {
     font-family: hoss-round, sans-serif;
 }
 
+.foto-detalle {
+    width: 100%;
+}
+
 .division-general {
 
     display: flex;

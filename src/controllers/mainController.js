@@ -73,17 +73,18 @@ let mainController = {
 	},
 	// actualiza el json
 	editarProducto: (req, res) => {
-		let idProductoBuscado = req.params.id;
-		for (let i = 0; i < productos.length; i++) {
-			if (idProductoBuscado == productos[i].id) {
-				productos[i].nombreProducto = req.body.nombreProducto;
-				productos[i].descripcionProductoCorta = req.body.descripcionProductoCorta;
-				productos[i].precioProducto = parseInt(req.body.precioProducto);
-				productos[i].estadoProducto = req.body.estadoProducto;
-				productos[i].descripcionProductoLarga = req.body.descripcionProductoLarga;
-				productos[i].categoriaProducto = req.body.categoriaProducto;
+		
+		const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); // hasta aquí
+		const producto = productos.find(producto => producto.id == req.params.id);
 
-				productos[i].fotoDestacada = req.file ? `/img/productos/${req.file.filename}` : productos[i].fotoDestacada;
+			if (producto) {
+				producto.nombreProducto = req.body.nombreProducto;
+				producto.descripcionProductoCorta = req.body.descripcionProductoCorta;
+				producto.precioProducto = parseInt(req.body.precioProducto);
+				producto.estadoProducto = req.body.estadoProducto;
+				producto.descripcionProductoLarga = req.body.descripcionProductoLarga;
+				producto.categoriaProducto = req.body.categoriaProducto;
+				producto.fotoDestacada = req.file ? `${req.file.filename}` : producto.fotoDestacada;
 
 				fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
 				res.redirect('/productos');
@@ -95,7 +96,6 @@ let mainController = {
 				</div>
 				`);
 			};
-		}
 	},
 	borrarProducto: (req, res) => {
 		let idProductoBuscado = req.params.id;
@@ -104,7 +104,7 @@ let mainController = {
 		/* busco la foto a borrar para eliminarle la imagen */
 
 		const productToDelete = productos.find((product) => product.id == req.params.id);
-		const publicPath = path.join(__dirname, "../../public");
+		const publicPath = path.join(__dirname, "../../public/img/productos/");
 		console.log(publicPath);
 
 		/* utilizo fs.existsSync para saber si existe una imagen física en nuestra carpeta estatica, si la tiene que la borre con fsUnlink, sino que no haga nada */
