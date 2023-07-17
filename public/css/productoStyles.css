@@ -1268,8 +1268,9 @@ br {
 .contenedor-recomendado {
     height: auto !important;
     border-radius: inherit;
+    
 }
-
+.carousel-inner-recomendado { padding: 20px 0;}
 p {
     margin: inherit
 }
@@ -1295,7 +1296,7 @@ p {
     transition: 1.2s;
 
     .imgProducto {
-        transform: scale(1.1);
+        transform: scale(1.05);
         transition: 1.5s;
     }
 }
@@ -1316,6 +1317,7 @@ p {
         align-items: center;
         overflow: hidden;
         margin: 10px;
+        border-radius: 10px;
 
         .imgProducto {
             height: auto;
@@ -1335,10 +1337,12 @@ p {
 
 .descripcionProducto {
     font-size: 85%;
+    height: 50%;
 }
 
 .precioProducto {
     font-size: 130%;
+    height: 25%;
 }
 
 .carousel-control-next-recomendado {
@@ -1364,9 +1368,7 @@ p {
         margin-left: 3% !important;
     }
 
-    .seccionImgProducto {
-        height: 20%;
-    }
+
 
     .contenedor-recomendado {
         padding: 5px;
@@ -1378,14 +1380,21 @@ p {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        height: 30%;
     }
 
     .precioProducto {
         font-size: 110%;
+        height: 35%;
+        
     }
 
     .span-recom {
         width: 20px !important;
+    }
+
+    .informacionProducto {
+        padding: 10px 10px;
     }
 }
 
@@ -1414,6 +1423,9 @@ p {
     .carousel-item-recomendado {
         max-width: 638px !important;
     }
+    
+    
+    
 }
 
 @media only screen and (max-width: 480px) {

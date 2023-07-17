@@ -91,10 +91,10 @@ article:hover .text h3 {
 
 .envio-prod {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 120%;
   text-align: left;
   color: #E93882;
-  margin-bottom: 10px;
+  height: 25%;
 }
 
 .precio-prod {
@@ -160,7 +160,14 @@ article:hover .text h3 {
 
 
 
+@media only screen and (max-width: 1280px) {
 
+  .envio-prod {
+    font-size: 100%;
+    height: 35%;
+  }
+
+}
 
 /* smartphone */
 @media (max-width: 480px) {
@@ -188,3 +195,4 @@ article:hover .text h3 {
     padding: 30px 50px;
   }
 }
+

@@ -333,6 +333,10 @@ header form {
     display: none;
 }
 
+.containerDestacados {
+    margin: 6% auto;
+}
+
 .tituloDestacados {
     font-weight: 400;
     font-size: 2rem;
