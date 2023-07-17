@@ -153,7 +153,6 @@
                 <%}%>
               </div>
             </div>
-
             <div class="carousel-item  container carousel-item-recomendado">
               <div class="row justify-content-start row-recomendado">
                 <%for(let i=6; i<12; i++){%>
@@ -188,140 +187,49 @@
           </button>
         </div>
       </section>
-
       <!----------------------SECCION tablet-celulares----------------------------------------------------->
-
       <section class="container seccion-recomendado col-12 carruselTabCel ">
         <h5 class="titulo-recomendado">También te puede interesar</h5>
         <div id="carouselExample-rec-2" class="carousel slide carousel-recomendado ">
           <div class="carousel-inner carousel-inner-recomendado">
             <div class="carousel-item active container carousel-item-recomendado ">
               <div class="row justify-content-start row-recomendado">
+                <%for(let i=0; i<3; i++){%>
                 <div class=" col-4 contenedor-recomendado">
                   <div class="producto ">
                     <div class="seccionImgProducto">
                       <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
+                        <img class="imgProducto " src="/img/productos/<%= productos[i].fotoDestacada%>" alt="img-">
                       </div>
                     </div>
                     <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
+                      <p class="descripcionProducto"><%= productos[i].nombreProducto%></p>
+                      <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
+                      <p class="precioProducto">$ <%= productos[i].precioProducto%>
                     </div>
                   </div>
                 </div>
-                <div class=" col-4 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-4 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
+                <%}%>
               </div>
             </div>
             <div class="carousel-item  container carousel-item-recomendado">
               <div class="row justify-content-start row-recomendado">
-                <div class=" col-4 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
+                <%for(let i=3; i<6; i++){%>
+                  <div class=" col-4 contenedor-recomendado">
+                    <div class="producto ">
+                      <div class="seccionImgProducto">
+                        <div class="contenedorImgProducto ">
+                          <img class="imgProducto " src="/img/productos/<%= productos[i].fotoDestacada%>" alt="img-">
+                        </div>
+                      </div>
+                      <div class="informacionProducto">
+                        <p class="descripcionProducto"><%= productos[i].nombreProducto%></p>
+                        <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
+                        <p class="precioProducto">$ <%= productos[i].precioProducto%>
                       </div>
                     </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
                   </div>
-                </div>
-                <div class=" col-4 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-4 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item  container carousel-item-recomendado">
-              <div class=" row justify-content-start row-recomendado">
-                <div class=" col-4 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-4 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
-                <div class=" col-4 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos_destacados/guitara_1.webp" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto">Guitarra electrica fender standard stratocater</p>
-                      <p class="precioProducto">$1770.218</p>
-                    </div>
-                  </div>
-                </div>
+                  <%}%>
               </div>
             </div>
           </div>
@@ -336,7 +244,7 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        </div>
+      </section>
     </main>
     <%- include('./../partials/footer') %>
       <script src="https://kit.fontawesome.com/2396c6fc63.js" crossorigin="anonymous"></script>
