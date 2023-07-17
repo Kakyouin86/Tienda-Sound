@@ -23,6 +23,11 @@ app.set('view engine', 'ejs');
 app.use('/', mainRoutes);
 
 
+app.use((req, res, next) => 
+{ 
+    res.status(404).render('pages/not-found'); 
+});
+
 app.listen(3000, () =>
 {
     console.log("Servidor corriendo en puerto 3000")
