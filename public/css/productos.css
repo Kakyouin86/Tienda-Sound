@@ -13,7 +13,6 @@
   margin-bottom: 50px;
   padding: 40px 50px;
   max-width: 1580px;
-
 }
 
 
@@ -172,27 +171,51 @@ article:hover .text h3 {
 /* smartphone */
 @media (max-width: 480px) {
   .grid {
+    display: grid;
     grid-template-columns: 1fr;
     max-width: 440px;
-    padding: 0px 40px;
+    padding: 20px 0px;
+  }
+
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 40px 50px;
+    max-width: 440px;
   }
 }
 
 /* tablet */
 @media (min-width: 481px) and (max-width: 768px) {
   .grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    padding: 20px 0px;
+    margin: auto;
+  }
+  .main-grid {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 600px;
-    padding: 20px 40px;
   }
 }
 
 /* tablet / desktop small */
 @media (min-width: 769px) and (max-width: 1000px) {
   .grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 900px;
-    padding: 30px 50px;
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+    padding: 30px 20px;
   }
 }
 
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 800px;
+    padding: 30px 0px;
+  }
+}
