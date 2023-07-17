@@ -6,10 +6,6 @@ a {
     text-decoration: none;
 }
 
-body {
-    overflow-x: hidden;
-}
-
 /* Aquí comienza el HEADER */
 
 header {
@@ -57,12 +53,12 @@ nav .form {
     margin-left: 15px;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link {
+/*.navbar-expand-lg .navbar-nav .nav-link {
     padding-left: 0;
-}
+}*/
 
 header .nav-link {
-    color: rgba(255, 255, 255, 0.75);
+    color: #ffffff;
     font-size: 14px;
     text-decoration: none;
 }
