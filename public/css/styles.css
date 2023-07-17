@@ -340,6 +340,8 @@ header form {
 .tituloDestacados {
     font-weight: 400;
     font-size: 2rem;
+    margin-top: 65px;
+    padding-bottom: 30px;
 }
 
 .carousel-innerDestacados {
@@ -484,6 +486,7 @@ header form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 30px
 }
 
 .banner1,
@@ -538,13 +541,15 @@ header form {
     font-weight: 300;
     margin: 0px;
     margin-bottom: -25px;
+    color: white;
 }
 
 .linea3 {
     font-size: 23px;
     font-weight: 300;
     margin: 0px;
-    margin-top: -25px
+    margin-top: -25px;
+    color: white;
 }
 
 .ray,
@@ -601,15 +606,15 @@ header form {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-top: 45px;
-    margin-bottom: 50px;
+    margin-bottom: 65px;
 }
 
 .comofunciona h2 {
     font-weight: 400;
     font-size: 2rem;
-    margin-bottom: 65px;
+    margin-bottom: 50px;
     text-align: center;
+    margin-top: 65px;
 }
 
 .paracomprar,
@@ -1045,8 +1050,6 @@ br {
         padding: 5px;
     }
 
-    .tituloDestacados {}
-
     .iconoDestacado {
         font-size: 80% !important;
         top: -55px !important;
@@ -1094,7 +1097,7 @@ br {
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
-        margin-top: -30px;
+        margin-top: 65px;
     }
 
     .banner1,
@@ -1331,7 +1334,7 @@ br {
         max-width: 1296px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: cente
+        justify-content: center;
     }
 
     .banner1,
