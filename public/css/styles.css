@@ -351,6 +351,7 @@ header form {
     border: solid 2px #00c7ff;
     border-radius: 20px;
     transition: all .5s ease-in-out;
+    height: 100%;
 }
 
 .productoDestacado:hover {
@@ -433,10 +434,11 @@ header form {
 
 .informacionProducto {
     text-align: start;
-    padding: 10px 0;
+    padding: 15px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 45%;
 }
 
 .descripcionProductoDestacado {
@@ -445,10 +447,23 @@ header form {
 
 .nombreProductoDestacado,
 .precioProductoDestacado {
-    font-size: 22px;
+    
     font-weight: 500;
     margin: inherit;
     transition: all .2s ease-in-out;
+
+}
+
+
+.nombreProductoDestacado{
+ 
+    height: 50%;
+    font-size: 140%;
+}
+.precioProductoDestacado {
+ 
+   height: 25%;
+   font-size: 190%;
 
 }
 
@@ -1073,9 +1088,11 @@ br {
         padding: 20px 0;
     }
 
-    .nombreProductoDestacado,
+    .nombreProductoDestacado{
+        font-size: 70%;
+    }
     .precioProductoDestacado {
-        font-size: 95%;
+      font-size: 100%;
     }
 
     .carousel-control-prev-destacados,
@@ -1305,14 +1322,15 @@ br {
         font-size: 11px;
     }
 
-    .nombreProductoDestacado,
-    .precioProductoDestacado {
-        font-size: 17px;
-    }
-
     .carousel-control-prev-destacados,
     .carousel-control-next-destacados {
         font-size: 20px;
+    }
+    .nombreProductoDestacado{
+        font-size: 70%;
+    }
+    .precioProductoDestacado {
+      font-size: 100%;
     }
 
     /* Acá termina PRODUCTOS DESTACADOS */
