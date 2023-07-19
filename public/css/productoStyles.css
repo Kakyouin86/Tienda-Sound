@@ -498,32 +498,42 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 20px;
 }
 
-.llega-hoy h5,
-.llega-hoy h6 {
-
-    position: relative;
-    left: 4vw;
-    bottom: 5vh;
+.llega-hoy {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
-
 .llega-hoy img {
-    width: 2.5vw;
-    margin-bottom: 2vh;
+    width: 40px;
+    display: flex;
 }
-
-.llega-hoy h5 {
-    font-size: 14px;
+.llega-hoy .hoy {
+    font-size: 17px;
     font-weight: 400;
     color: #3333FF;
+    display: flex;
+}
+.llega-hoy .hoy img{
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
-.llega-hoy h6 {
-    font-size: 12px;
+.llega-hoy p {
+    font-size: 14px;
     font-weight: 400;
+    text-align: center;
+    display: flex;
 }
 
 .formas-de-pago h5 {
-    font-size: 12px;
+    font-size: 16px;
+    margin-top: 50px;
+}
+
+.formas-de-pago h5 {
+    font-size: 14px;
     font-weight: 400;
 }
 
@@ -535,7 +545,6 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    width: 90%;
     margin-top: 0;
     font-size: 12px;
     font-weight: 400;
@@ -551,7 +560,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .formas-pago-iconos img {
-    margin-right: 20px;
     margin-top: 20px;
 }
 
@@ -621,7 +629,7 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     .descripcion-producto {
-        width: 300px;
+        width: 280px;
         font-size: 14px;
         font-weight: 300;
     }
@@ -734,7 +742,7 @@ input[type=number]::-webkit-outer-spin-button {
     .seccion-derecha .titular p {
         text-align: center;
         font-size: 16px;
-        width: 320px;
+        width: 280px;
         margin-top: 10px;
     }
 
@@ -814,35 +822,31 @@ input[type=number]::-webkit-outer-spin-button {
         color: aliceblue;
     }
 
-    .llega-hoy h5,
-    .llega-hoy h6 {
-
-        position: relative;
+    .llega-hoy {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-
     .llega-hoy img {
         width: 40px;
-        position: relative;
-        bottom: 1vh;
-        left: 2vw;
+        display: flex;
     }
-
-    .llega-hoy h5 {
-        left: 55px;
-        bottom: 40px;
+    .llega-hoy .hoy {
         font-size: 16px;
         font-weight: 400;
         color: #3333FF;
-        margin-left: 10px;
+        display: flex;
     }
-
-    .llega-hoy h6 {
-
+    .llega-hoy p {
         font-size: 14px;
-        width: 200px;
         font-weight: 400;
-        margin-left: -25px;
+        text-align: center;
+        display: flex;
     }
+
+
 
     .formas-de-pago {
         width: 50vw;
@@ -852,16 +856,13 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 16px;
     }
 
-    .form-pago-linea {
-        width: 49vw;
-    }
-
     .formas-de-pago {
         width: 250px;
     }
 
     .formas-de-pago h5 {
         text-align: center;
+        margin-top: 20px;
     }
 
     .formas-de-pago ul {
@@ -1127,46 +1128,33 @@ input[type=number]::-webkit-outer-spin-button {
         color: aliceblue;
     }
 
-    .llega-hoy h5,
-    .llega-hoy h6 {
-
-        position: relative;
+    .llega-hoy {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-
     .llega-hoy img {
         width: 40px;
-        position: relative;
-        bottom: 1vh;
-        left: 2vw;
+        display: flex;
     }
-
-    .llega-hoy h5 {
-        left: 55px;
-        bottom: 40px;
+    .llega-hoy .hoy {
         font-size: 16px;
         font-weight: 400;
         color: #3333FF;
-        margin-left: 10px;
+        display: flex;
     }
-
-    .llega-hoy h6 {
-
+    .llega-hoy p {
         font-size: 14px;
-        width: 200px;
         font-weight: 400;
-        margin-left: -25px;
-    }
-
-    .formas-de-pago {
-        width: 50vw;
+        text-align: center;
+        display: flex;
     }
 
     .formas-de-pago h5 {
         font-size: 16px;
-    }
-
-    .form-pago-linea {
-        width: 49vw;
+        margin-top: 30px;
     }
 
     .formas-de-pago {
