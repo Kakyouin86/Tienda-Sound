@@ -354,6 +354,7 @@ header form {
     border-radius: 20px;
     transition: all .5s ease-in-out;
     height: 100%;
+    overflow: hidden;
 }
 
 .productoDestacado:hover {
