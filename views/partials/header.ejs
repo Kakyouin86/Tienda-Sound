@@ -17,7 +17,7 @@
   </nav>
   <nav class="navbar navbar-expand-lg margin-nav nav-3 navbar-dark">
     <div class="container-fluid">
-      <div class="navbar-collapse stroke">
+      <div class="collapse navbar-collapse stroke" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <div class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -32,49 +32,61 @@
               <li><a class="dropdown-item" href="#">Cuerdas</a></li>
             </ul>
           </div>
-          <li class="nav-item">
-            <a class="nav-link" href="/productos">Productos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/crearProducto">Vender</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Promociones</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">¿Cómo funciona?</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Ayuda</a>
-          </li>
+          <div>
+            <li class="nav-item">
+              <a class="nav-link" href="/productos">Productos</a>
+            </li>
+          </div>
+          <div>
+            <li class="nav-item">
+              <a class="nav-link" href="/crearProducto">Vender</a>
+            </li>
+          </div>
+          <div>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Promociones</a>
+            </li>
+          </div>
+          <div>
+            <li class="nav-item">
+              <a class="nav-link" href="#">¿Cómo funciona?</a>
+            </li>
+          </div>
+          <div>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ayuda</a>
+            </li>
+          </div>
         </ul>
-      </div>
-      <div class="stroke">
         <ul class="navbar-nav">
+
           <li>
-            <a href=" /register" class="nav-link">Registro</a>
+            <a href="/register" class="nav-link">Registro</a>
           </li>
-          <li class="nav-item">
-            <a href="/login" class="nav-link register-login-link">Login</a>
-          </li>
+
+          <div>
+            <li class="nav-item">
+              <a href="/login" class="nav-link register-login-link">Login</a>
+            </li>
+          </div>
         </ul>
       </div>
-      <div class="items-container d-flex align-items-center">
-        <div>
-          <a href="" class="link-light icon-header">
-            <i class="fa-solid fa-heart" style="color: #ffffff;"></i>
-          </a>
-        </div>
-        <div>
-          <a href="" class="link-light icon-header">
-            <i class="fa-solid fa-user" style="color: #ffffff;"></i>
-          </a>
-        </div>
-        <div>
-          <a href="/carrito">
-            <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
-          </a>
-        </div>
+    </div>
+    <div class="items-container d-flex align-items-center" style="padding-left:20px">
+      <div>
+        <a href="" class=" link-light icon-header">
+          <i class="fa-solid fa-heart" style="color: #ffffff;"></i>
+        </a>
+      </div>
+      <div>
+        <a href="" class="link-light icon-header">
+          <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+        </a>
+      </div>
+      <div>
+        <a href="/carrito">
+          <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+        </a>
       </div>
     </div>
   </nav>
