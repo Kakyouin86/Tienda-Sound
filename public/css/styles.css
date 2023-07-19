@@ -343,7 +343,7 @@ header form {
     font-weight: 400;
     font-size: 2rem;
     margin-top: 65px;
-    padding-bottom: 30px;
+
 }
 
 .carousel-innerDestacados {
@@ -505,7 +505,6 @@ header form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 30px
 }
 
 .banner1,
@@ -1055,14 +1054,10 @@ br {
         display: block;
     }
 
-    .carouselDestacados {
-        margin: 0px 25%;
-        margin-bottom: 10%;
-    }
+    .carouselDestacados {}
 
     .contenedorProductoDestacado {
         height: 320px;
-        padding: 5px;
     }
 
     .productoDestacado {
@@ -1119,7 +1114,6 @@ br {
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
-        margin-top: 65px;
     }
 
     .banner1,
