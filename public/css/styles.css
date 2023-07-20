@@ -355,7 +355,7 @@ header form {
     border: solid 2px #00c7ff;
     border-radius: 20px;
     transition: all .5s ease-in-out;
-    height: 100%;
+    height: 85%;
     overflow: hidden;
 }
 
@@ -409,7 +409,7 @@ header form {
 
         .iconoDestacado {
             right: 0px;
-            top: -150px;
+            top: -120px;
             font-size: 30px;
             position: inherit;
 
@@ -422,7 +422,7 @@ header form {
             position: inherit;
             width: 25%;
             left: -22px;
-            top: -150px;
+            top: -120px;
         }
     }
 
@@ -443,7 +443,6 @@ header form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 45%;
 }
 
 .descripcionProductoDestacado {
@@ -454,15 +453,12 @@ header form {
 .precioProductoDestacado {
 
     font-weight: 500;
-    margin: inherit;
     transition: all .2s ease-in-out;
 
 }
 
 
 .nombreProductoDestacado {
-
-    height: 50%;
     font-size: 140%;
 }
 
@@ -1065,13 +1061,15 @@ br {
     }
 
     .iconoDestacado {
-        font-size: 80% !important;
-        top: -55px !important;
+        font-size: 150% !important;
+        top: -60px !important;
+        right: 5px !important;
     }
 
     .nuevosUsados {
         top: -55px !important;
         left: -7px !important;
+        width: 40%;
     }
 
     .descripcionProductoDestacado {
@@ -1090,12 +1088,16 @@ br {
         padding: 20px 0;
     }
 
-    .nombreProductoDestacado {
-        font-size: 70%;
+    .nombreProductoDestacado, .precioProductoDestacado {
+        font-size: 16px;
+        line-height: 18px;
+        padding-left: 10px;
+        margin-bottom: 5px;
     }
 
-    .precioProductoDestacado {
-        font-size: 100%;
+    .envio-prod{
+        padding-left: 10px;
+        font-size: 14px;
     }
 
     .carousel-control-prev-destacados,
