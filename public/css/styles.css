@@ -1438,3 +1438,44 @@ br {
 
     /* Acá termina PRODUCTOS DESTACADOS */
 }
+
+.flecha-volver {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    left: 25%;
+    top: 25px;
+}
+
+.flecha-volver p {
+    margin-bottom: 0;
+    color: #3333ff;
+}
+
+.flecha-volver img {
+    width: 40px;
+    height: 40px;
+    text-align: left;
+    justify-content: left;
+}
+
+.producto-volver-flecha-volver {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.producto-volver-flecha-volver p {
+    margin-bottom: 0;
+    color: #3333ff;
+}
+
+.producto-volver-flecha-volver img {
+    width: 40px;
+    height: 40px;
+    text-align: left;
+    justify-content: left;
+}
