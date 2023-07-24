@@ -157,7 +157,8 @@ header form {
     color: #ABEDFF;
 }
 
-.register-login-link {}
+.register-login-link {
+}
 
 /* Aquí termina el HEADER */
 
@@ -335,15 +336,14 @@ header form {
     display: none;
 }
 
-.containerDestacados {
-    margin: 6% auto;
-}
+/* .containerDestacados { margin: 6% auto; } */
+
 
 .tituloDestacados {
     font-weight: 400;
     font-size: 2rem;
     margin-top: 65px;
-
+    padding-bottom: 30px;
 }
 
 .carousel-innerDestacados {
@@ -589,15 +589,6 @@ header form {
     display: block;
 }
 
-.plus {
-    position: absolute;
-    display: flex;
-    z-index: 1200000;
-    scale: 185%;
-    margin: 0px;
-    padding: 0px;
-    transform: translate(135px, 40px);
-}
 
 .fa-circle-plus {
     color: white;
@@ -1158,10 +1149,6 @@ br {
         transform: translate(-175px, 35px);
     }
 
-    .plus {
-        transform: translate(85px, 27px);
-    }
-
     /* Acá termina BANNER */
 
     /* Acá empieza CÓMO FUNCIONA */
@@ -1237,10 +1224,6 @@ br {
     .ray2 {
         width: 50px;
         transform: translate(-175px, 35px);
-    }
-
-    .plus {
-        transform: translate(85px, 25px);
     }
 
     /* Acá termina BANNER */
