@@ -457,9 +457,13 @@ header form {
 
 }
 
+.envio-prod{
+    color: #E93882;
+}
 
 .nombreProductoDestacado {
     font-size: 140%;
+    color: #0a0a0a;
 }
 
 .precioProductoDestacado {
@@ -1049,8 +1053,6 @@ br {
     .secc-mob {
         display: block;
     }
-
-    .carouselDestacados {}
 
     .contenedorProductoDestacado {
         height: 320px;

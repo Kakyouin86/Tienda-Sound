@@ -1121,6 +1121,7 @@ p {
 .precioProducto {
     font-size: 130%;
     height: 25%;
+    color: #3333FF;
 }
 
 .carousel-control-next-recomendado {
