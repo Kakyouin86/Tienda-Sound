@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/nmb/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.typekit.net/gaj1ybf.css">
-  <link rel="stylesheet" href="/css/productos.css">
-  <link rel="stylesheet" href="/css/login.css">
-  <link rel="stylesheet" href="/css/carrito.css">
-  <link rel="stylesheet" href="/css/productoStyles.css">
-  <link rel="shortcut icon" href="/img/icon_ts.svg" />
-  <title>Detalle</title>
-</head>
+<%- include('./../partials/head.ejs', { style: 'productoStyles.css', title: 'Detalle ' +producto.nombreProducto }) %>
 
 <body>
   <%- include('./../partials/header') %>
@@ -97,9 +85,8 @@
               </div>
               <!----------------------Aca termino de poner el boton de cantidad----------------------------------------------------->
               <div class="llega-hoy">
-                <img src="/img/producto/envio.svg" alt="">
-                <h5>Llega HOY</h5>
-                <h6>Ver otras formas de envío</h6>
+                <p class="hoy"><img src="/img/producto/envio.svg" alt="">Llega HOY</h5>
+                <p>Ver otras formas de envío</p>
               </div>
             </div>
             <div class="formas-de-pago">
@@ -143,6 +130,7 @@
                         </div>
                       </div>
                       <div class="informacionProducto">
+                        
                         <p class="descripcionProducto"><%= productos[i].nombreProducto%></p>
                         <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
                         <p class="precioProducto">$ <%= productos[i].precioProducto%>

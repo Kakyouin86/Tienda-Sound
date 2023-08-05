@@ -1,209 +1,3 @@
-* {
-    font-family: "hoss-round", sans-serif;
-}
-
-a {
-    text-decoration: none;
-}
-
-/* Aquí comienza el HEADER */
-
-header {
-    background-color: #3333ff;
-}
-
-header form {
-    position: relative;
-}
-
-header i.search {
-    position: absolute;
-    right: 0;
-    align-self: center;
-    padding: 10px;
-}
-
-.margin-nav {
-    margin: 0 85px;
-}
-
-.logo {
-    width: 200px;
-}
-
-.barra-busqueda {
-    margin-right: 180px;
-}
-
-nav .form {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.nav-1 {
-    height: 75px;
-}
-
-.nav-2 {
-    height: 45px;
-}
-
-.navbar ul .nav-item:not(:first-child) {
-    /*esto significa: seleccioná todos los li menos el primero. Pero que esten dentro de un ul, y ese ul dentro de un tag con clase .navbar*/
-    margin-left: 15px;
-}
-
-/*.navbar-expand-lg .navbar-nav .nav-link {
-    padding-left: 0;
-}*/
-
-header .nav-link {
-    color: #ffffff;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-header .nav-link:hover {
-    color: white;
-    text-decoration: none;
-}
-
-.items-container {
-    display: block;
-}
-
-.items-container span {
-    border-right: 1px solid white;
-    margin-right: 15px;
-    padding-right: 15px;
-    font-size: 14px;
-}
-
-.items-container span:hover {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.navbar-nav>div>.dropdown-menu {
-    /*esto significa: selecciona un elemento con clase .dropdown-menu, pero su parent directo que sea un li, y el parent directo del li que sea un tag con clase .navbar-nav*/
-    background-color: #3333ff;
-}
-
-.dropdown-item {
-    color: #ffffff;
-    font-size: 14px;
-}
-
-.navbar-nav .dropdown-menu a:hover {
-    color: blue !important;
-}
-
-header form {
-    position: relative;
-}
-
-.search-bar {
-    margin-right: 200px;
-}
-
-.search {
-    background-color: #ABEDFF;
-    height: 100%;
-    width: 30px;
-    border-style: none;
-    border-radius: 0 5px 5px 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.icon-header {
-    margin-right: 10px;
-}
-
-.fa-user:hover,
-.fa-heart:hover,
-.fa-cart-shopping:hover {
-    color: #ABEDFF !important;
-}
-
-.stroke ul li a {
-    position: relative;
-}
-
-.stroke ul li a:after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 0%;
-    content: '.';
-    color: transparent;
-    background: #ABEDFF;
-    height: 4px;
-}
-
-.stroke ul li a:hover:after {
-    width: 100%;
-}
-
-.stroke ul li a,
-.stroke ul li a:after,
-.stroke ul li a:before {
-    transition: all .5s;
-}
-
-.stroke ul li a:hover {
-    color: #ABEDFF;
-}
-
-/* Aquí termina el HEADER */
-
-/* Aquí empieza el HEADER con máximo de 992px */
-
-@media only screen and (max-width: 992px) {
-
-    .navbar-collapse {
-        background: #3333ff;
-        border-radius: 12px;
-    }
-
-    .nav-1 {
-        height: 45px;
-    }
-
-    .margin-nav {
-        margin: 0 10px;
-    }
-
-    .logo {
-        width: 150px;
-        transition: .5s ease;
-    }
-
-    .items-container span {
-        display: none;
-    }
-
-    .items-container i {
-        margin-right: 10px;
-        font-size: 0.8rem;
-        color: blue !important;
-        background: white;
-        padding: 8px;
-        border-radius: 20px;
-    }
-
-    header form input,
-    header form button {
-        display: none !important;
-    }
-}
-
-/* Aquí termina el HEADER con máximo de 992px */
-
-
-
 /* -----------------------------------E M P I E Z A      M A I N -----------------------------------------------------*/
 
 main {
@@ -498,32 +292,42 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 20px;
 }
 
-.llega-hoy h5,
-.llega-hoy h6 {
-
-    position: relative;
-    left: 4vw;
-    bottom: 5vh;
+.llega-hoy {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
-
 .llega-hoy img {
-    width: 2.5vw;
-    margin-bottom: 2vh;
+    width: 40px;
+    display: flex;
 }
-
-.llega-hoy h5 {
-    font-size: 14px;
+.llega-hoy .hoy {
+    font-size: 17px;
     font-weight: 400;
     color: #3333FF;
+    display: flex;
+}
+.llega-hoy .hoy img{
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
-.llega-hoy h6 {
-    font-size: 12px;
+.llega-hoy p {
+    font-size: 14px;
     font-weight: 400;
+    text-align: center;
+    display: flex;
 }
 
 .formas-de-pago h5 {
-    font-size: 12px;
+    font-size: 16px;
+    margin-top: 50px;
+}
+
+.formas-de-pago h5 {
+    font-size: 14px;
     font-weight: 400;
 }
 
@@ -535,7 +339,6 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    width: 90%;
     margin-top: 0;
     font-size: 12px;
     font-weight: 400;
@@ -551,7 +354,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .formas-pago-iconos img {
-    margin-right: 20px;
     margin-top: 20px;
 }
 
@@ -621,7 +423,7 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     .descripcion-producto {
-        width: 300px;
+        width: 280px;
         font-size: 14px;
         font-weight: 300;
     }
@@ -734,7 +536,7 @@ input[type=number]::-webkit-outer-spin-button {
     .seccion-derecha .titular p {
         text-align: center;
         font-size: 16px;
-        width: 320px;
+        width: 280px;
         margin-top: 10px;
     }
 
@@ -814,35 +616,31 @@ input[type=number]::-webkit-outer-spin-button {
         color: aliceblue;
     }
 
-    .llega-hoy h5,
-    .llega-hoy h6 {
-
-        position: relative;
+    .llega-hoy {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-
     .llega-hoy img {
         width: 40px;
-        position: relative;
-        bottom: 1vh;
-        left: 2vw;
+        display: flex;
     }
-
-    .llega-hoy h5 {
-        left: 55px;
-        bottom: 40px;
+    .llega-hoy .hoy {
         font-size: 16px;
         font-weight: 400;
         color: #3333FF;
-        margin-left: 10px;
+        display: flex;
     }
-
-    .llega-hoy h6 {
-
+    .llega-hoy p {
         font-size: 14px;
-        width: 200px;
         font-weight: 400;
-        margin-left: -25px;
+        text-align: center;
+        display: flex;
     }
+
+
 
     .formas-de-pago {
         width: 50vw;
@@ -852,16 +650,13 @@ input[type=number]::-webkit-outer-spin-button {
         font-size: 16px;
     }
 
-    .form-pago-linea {
-        width: 49vw;
-    }
-
     .formas-de-pago {
         width: 250px;
     }
 
     .formas-de-pago h5 {
         text-align: center;
+        margin-top: 20px;
     }
 
     .formas-de-pago ul {
@@ -1127,46 +922,33 @@ input[type=number]::-webkit-outer-spin-button {
         color: aliceblue;
     }
 
-    .llega-hoy h5,
-    .llega-hoy h6 {
-
-        position: relative;
+    .llega-hoy {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-
     .llega-hoy img {
         width: 40px;
-        position: relative;
-        bottom: 1vh;
-        left: 2vw;
+        display: flex;
     }
-
-    .llega-hoy h5 {
-        left: 55px;
-        bottom: 40px;
+    .llega-hoy .hoy {
         font-size: 16px;
         font-weight: 400;
         color: #3333FF;
-        margin-left: 10px;
+        display: flex;
     }
-
-    .llega-hoy h6 {
-
+    .llega-hoy p {
         font-size: 14px;
-        width: 200px;
         font-weight: 400;
-        margin-left: -25px;
-    }
-
-    .formas-de-pago {
-        width: 50vw;
+        text-align: center;
+        display: flex;
     }
 
     .formas-de-pago h5 {
         font-size: 16px;
-    }
-
-    .form-pago-linea {
-        width: 49vw;
+        margin-top: 30px;
     }
 
     .formas-de-pago {
@@ -1339,6 +1121,7 @@ p {
 .precioProducto {
     font-size: 130%;
     height: 25%;
+    color: #3333FF;
 }
 
 .carousel-control-next-recomendado {

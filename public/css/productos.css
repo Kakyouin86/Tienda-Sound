@@ -182,9 +182,8 @@ article:hover .text h3 {
     grid-template-columns: 1fr;
     grid-gap: 50px;
     margin: auto;
-    margin-top: 50px;
     margin-bottom: 50px;
-    padding: 40px 50px;
+    padding: 10px 20px;
     max-width: 440px;
   }
 }
@@ -197,6 +196,7 @@ article:hover .text h3 {
     padding: 20px 0px;
     margin: auto;
   }
+
   .main-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

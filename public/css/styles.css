@@ -58,7 +58,7 @@ nav .form {
 }*/
 
 header .nav-link {
-    color: rgba(255, 255, 255, 0.75);
+    color: #ffffff;
     font-size: 14px;
     text-decoration: none;
 }
@@ -155,6 +155,9 @@ header form {
 
 .stroke ul li a:hover {
     color: #ABEDFF;
+}
+
+.register-login-link {
 }
 
 /* Aquí termina el HEADER */
@@ -333,9 +336,8 @@ header form {
     display: none;
 }
 
-.containerDestacados {
-    margin: 6% auto;
-}
+/* .containerDestacados { margin: 6% auto; } */
+
 
 .tituloDestacados {
     font-weight: 400;
@@ -353,7 +355,7 @@ header form {
     border: solid 2px #00c7ff;
     border-radius: 20px;
     transition: all .5s ease-in-out;
-    height: 100%;
+    height: 85%;
     overflow: hidden;
 }
 
@@ -407,7 +409,7 @@ header form {
 
         .iconoDestacado {
             right: 0px;
-            top: -150px;
+            top: -120px;
             font-size: 30px;
             position: inherit;
 
@@ -420,7 +422,7 @@ header form {
             position: inherit;
             width: 25%;
             left: -22px;
-            top: -150px;
+            top: -120px;
         }
     }
 
@@ -441,7 +443,6 @@ header form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 45%;
 }
 
 .descripcionProductoDestacado {
@@ -450,23 +451,25 @@ header form {
 
 .nombreProductoDestacado,
 .precioProductoDestacado {
-    
+
     font-weight: 500;
-    margin: inherit;
     transition: all .2s ease-in-out;
 
 }
 
-
-.nombreProductoDestacado{
- 
-    height: 50%;
-    font-size: 140%;
+.envio-prod{
+    color: #E93882;
 }
+
+.nombreProductoDestacado {
+    font-size: 140%;
+    color: #0a0a0a;
+}
+
 .precioProductoDestacado {
- 
-   height: 25%;
-   font-size: 190%;
+
+    height: 25%;
+    font-size: 190%;
 
 }
 
@@ -502,7 +505,6 @@ header form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 30px
 }
 
 .banner1,
@@ -587,15 +589,6 @@ header form {
     display: block;
 }
 
-.plus {
-    position: absolute;
-    display: flex;
-    z-index: 1200000;
-    scale: 185%;
-    margin: 0px;
-    padding: 0px;
-    transform: translate(135px, 40px);
-}
 
 .fa-circle-plus {
     color: white;
@@ -1052,14 +1045,8 @@ br {
         display: block;
     }
 
-    .carouselDestacados {
-        margin: 0px 25%;
-        margin-bottom: 10%;
-    }
-
     .contenedorProductoDestacado {
         height: 320px;
-        padding: 5px;
     }
 
     .productoDestacado {
@@ -1067,13 +1054,15 @@ br {
     }
 
     .iconoDestacado {
-        font-size: 80% !important;
-        top: -55px !important;
+        font-size: 150% !important;
+        top: -60px !important;
+        right: 5px !important;
     }
 
     .nuevosUsados {
         top: -55px !important;
         left: -7px !important;
+        width: 40%;
     }
 
     .descripcionProductoDestacado {
@@ -1092,11 +1081,16 @@ br {
         padding: 20px 0;
     }
 
-    .nombreProductoDestacado{
-        font-size: 70%;
+    .nombreProductoDestacado, .precioProductoDestacado {
+        font-size: 16px;
+        line-height: 18px;
+        padding-left: 10px;
+        margin-bottom: 5px;
     }
-    .precioProductoDestacado {
-      font-size: 100%;
+
+    .envio-prod{
+        padding-left: 10px;
+        font-size: 14px;
     }
 
     .carousel-control-prev-destacados,
@@ -1115,7 +1109,6 @@ br {
         flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
-        margin-top: 65px;
     }
 
     .banner1,
@@ -1154,10 +1147,6 @@ br {
     .ray2 {
         width: 50px;
         transform: translate(-175px, 35px);
-    }
-
-    .plus {
-        transform: translate(85px, 27px);
     }
 
     /* Acá termina BANNER */
@@ -1235,10 +1224,6 @@ br {
     .ray2 {
         width: 50px;
         transform: translate(-175px, 35px);
-    }
-
-    .plus {
-        transform: translate(85px, 25px);
     }
 
     /* Acá termina BANNER */
@@ -1330,11 +1315,13 @@ br {
     .carousel-control-next-destacados {
         font-size: 20px;
     }
-    .nombreProductoDestacado{
+
+    .nombreProductoDestacado {
         font-size: 70%;
     }
+
     .precioProductoDestacado {
-      font-size: 100%;
+        font-size: 100%;
     }
 
     /* Acá termina PRODUCTOS DESTACADOS */
@@ -1435,4 +1422,45 @@ br {
     }
 
     /* Acá termina PRODUCTOS DESTACADOS */
+}
+
+.flecha-volver {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    left: 25%;
+    top: 25px;
+}
+
+.flecha-volver p {
+    margin-bottom: 0;
+    color: #3333ff;
+}
+
+.flecha-volver img {
+    width: 40px;
+    height: 40px;
+    text-align: left;
+    justify-content: left;
+}
+
+.producto-volver-flecha-volver {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.producto-volver-flecha-volver p {
+    margin-bottom: 0;
+    color: #3333ff;
+}
+
+.producto-volver-flecha-volver img {
+    width: 40px;
+    height: 40px;
+    text-align: left;
+    justify-content: left;
 }

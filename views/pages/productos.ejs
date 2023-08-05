@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./../partials/head.ejs', { title: 'Productos' }) %>
+<%- include('./../partials/head.ejs', {style: 'productos.css',title: 'Productos' }) %>
 
   <body>
     <%- include('./../partials/header') %>
+      <a href="/">
+        <div class="producto-volver-flecha-volver">
+          <img src="/img/flecha.svg" alt="">
+          <p>Volver</p>
+        </div>
+      </a>
       <main>
         <div class="main-grid">
           <section class="filtros">
@@ -59,7 +65,7 @@
                             <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
                             <%} else{ %>
                               <div class="envio-prod">Envio <span style="font-weight: 600;">
-                                  <%=producto[i].envio%>
+                                  $ <%=producto[i].envio%>
                                 </span>
                               </div>
                               <%} %>
