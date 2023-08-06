@@ -6,10 +6,23 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const methodOverride = require('method-override');
+const session = require('express-session');
+const cookies = require('cookie-parser');
+const userLoggedMiddleware = require("./src/middlewares/userLoggedMiddleware")
 
 app.use(express.static(path.resolve(__dirname, './public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use(session({
+	secret: "Hola. Esto es secreto",
+	resave: false,
+	saveUninitialized: false,
+}));
+
+app.use(cookies());
+app.use(userLoggedMiddleware);
+
 
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 

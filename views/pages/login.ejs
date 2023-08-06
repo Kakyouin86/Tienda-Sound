@@ -14,9 +14,25 @@
         <section class="form-container container col-lg-5 col-md-8 col-sm-12 mx-auto">
           <h1>¡Hola!</h1>
           <h1 class="iniciaSesion">Iniciá sesión o <span class="texto-resaltado">créa tu cuenta</span></h1>
-          <form action="/" class="base-form login-form">
+          <form action="/login" class="base-form login-form" method="POST">
             <input type="email" placeholder="Correo electrónico" name="email">
+            <% if (locals.errors && errors.email) { %>
+              <div class="text-danger">
+                <%= errors.email.msg %>
+              </div>
+            <% } %>
             <input type="password" placeholder="Contraseña" name="password">
+            <% if (locals.errors && errors.password) { %>
+              <div class="text-danger">
+                <%= errors.password.msg %>
+              </div>
+            <% } %>
+
+            <div class="recordar-usuario ">
+              <input type="checkbox" name="checkbox">
+              <span>Recordar usuario</span>
+            </div>
+
             <p class="pregunta-login">¿Olvidaste tu contraseña?</p>
             <button type="submit" class="form-btn inicio-btn">Iniciar sesión</button>
             <hr class="btn-division">

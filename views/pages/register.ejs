@@ -12,15 +12,44 @@
           </div>
         </a>
         <section class="form-register form-container container col-lg-5 col-md-8 col-sm-12 mx-auto">
-          <h1><span class="texto-resaltado">Registrate</span> y creá tu cuenta!</h1>
+          <h1><span class="texto-resaltado">Registrate</span> y creá tu cuenta!</h1>     
+    
           <form action="/register" class="base-form register-form" method="POST">
-            <input type="text" placeholder="Nombre Completo" name="nombreCompleto">
-            <input type="email" placeholder="Correo electrónico" name="email">
-            <input type="password" placeholder="Contraseña" name="password">
-            <div class="terminos-condiciones">
-              <input type="checkbox" value="">
-              <span>He leído y acepto los terminos y condiciones</span>
+            <input type="text" placeholder="Nombre Completo" name="nombreCompleto" value="<%= locals.oldData ? oldData.nombreCompleto : null  %>">
+            <% if (locals.errors && errors.nombreCompleto) { %>
+            <div class="text-danger">
+             <%= errors.nombreCompleto.msg %>
             </div>
+            <% } %>
+            <input type="email" placeholder="Correo electrónico" name="email" value="<%= locals.oldData ? oldData.email : null  %>">
+
+            <% if (locals.errors && errors.email) { %>
+              <div class="text-danger">
+              <%= errors.email.msg %>
+              </div>
+             <% } %>
+
+            <input type="password" placeholder="Contraseña" name="password" value="<%= locals.oldData ? oldData.password : null  %>">
+
+            <% if (locals.errors && errors.password) { %>
+              <div class="text-danger">
+              <%= errors.password.msg %>
+              </div>
+             <% } %>
+
+            <div class="terminos-condiciones">
+              <input type="checkbox" value="" name="checkbox">
+              <% if (locals.errors && errors.checkbox) { %>
+                <div class="text-danger">
+                <%= errors.checkbox.msg %>
+                </div>
+               <% } %>
+              <span>He leído y acepto los terminos y condiciones</span>
+            
+            </div>
+
+          
+
             <button type="submit" class="form-btn inicio-btn">Registrarme</button>
             <hr class="btn-division">
             <button type="button" class="form-btn google-btn">

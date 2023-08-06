@@ -4,6 +4,10 @@ const app = express();
 const multer = require('multer');
 const router = express.Router();
 const mainController = require("../controllers/mainController");
+const validations = require("./../middlewares/registerValidation")
+const guestMiddleware = require("./../middlewares/guestMiddleware")
+const authMiddleware = require("./../middlewares/authMiddleware")
+
 /* configuración del almacenamiento de multer */
 const storage = multer.diskStorage({
     destination: function (req, file, cb)
@@ -17,9 +21,14 @@ const storage = multer.diskStorage({
     },
 });
 
+//requerir express validator
+
 const upload = multer({ storage: storage });
 router.get('/', mainController.index);
-router.get('/login', mainController.login);
+router.get('/login', guestMiddleware, mainController.login);
+router.post('/login', mainController.loginProcess);
+router.post('/logout', mainController.logout);
+router.get('/profile', authMiddleware, mainController.profile);
 router.get('/producto/:id?', mainController.producto);
 router.get('/productos', mainController.productos);
 router.get('/productosNuevos', mainController.productosNuevos);
@@ -30,6 +39,6 @@ router.post('/crearProducto', upload.single('fotoDestacada'), mainController.gua
 router.get('/editarProducto/:id', mainController.renderEditarProducto);
 router.put('/editarProducto/:id', upload.single('fotoDestacada'), mainController.editarProducto);
 router.delete('/borrarProducto/:id', mainController.borrarProducto);
-router.get('/register', mainController.register);
-router.post('/register', mainController.guardarUser);
+router.get('/register', guestMiddleware, mainController.register);
+router.post('/register', validations, mainController.guardarUser);
 module.exports = router;

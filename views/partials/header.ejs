@@ -59,16 +59,27 @@
           </div>
         </ul>
         <ul class="navbar-nav">
-
-          <li>
-            <a href="/register" class="nav-link">Registro</a>
-          </li>
-
-          <div>
-            <li class="nav-item">
-              <a href="/login" class="nav-link register-login-link">Login</a>
+          <% if (locals.isLogged) { %>
+            <li>
+              <a href="/profile" class="nav-link">Hola, <%= locals.userLogged.nombreCompleto %></a>
             </li>
-          </div>
+            <div>
+              <li class="nav-item">
+                <form action="/logout"  method="POST">
+                  <button type="submit" class="nav-link register-login-link"> Logout </button>
+              </form>
+              </li>
+            </div>
+          <% } else { %>
+            <li>
+              <a href="/register" class="nav-link">Registro</a>
+            </li>
+            <div>
+              <li class="nav-item">
+                <a href="/login" class="nav-link register-login-link">Login</a>
+              </li>
+            </div>
+          <% } %>
         </ul>
       </div>
     </div>
@@ -79,7 +90,7 @@
         </a>
       </div>
       <div>
-        <a href="" class="link-light icon-header">
+        <a href="/profile" class="link-light icon-header">
           <i class="fa-solid fa-user" style="color: #ffffff;"></i>
         </a>
       </div>

@@ -1,32 +1,9 @@
 [
  {
   "id": 1,
-  "nombreCompleto": "Martin Fernandez",
-  "password": "hola1234",
-  "email": "mfernandez@gmail.com"
- },
- {
-  "id": 2,
-  "nombreCompleto": "Fernanda Lopez",
-  "password": "picopico12",
-  "email": "ferchu@gmail.com"
- },
- {
-  "id": 3,
-  "nombreCompleto": "Marcela Arce",
-  "password": "holamarce09",
-  "email": "marcelaar@gmail.com"
- },
- {
-  "id": 4,
-  "nombreCompleto": "Franco Scorzo",
-  "password": "guigui45",
-  "email": "franscorzo@gmail.com"
- },
- {
-  "id": 5,
-  "nombreCompleto": "Agustina Lima",
-  "password": "prueba123",
-  "email": "agustinalima3089@gmail.com"
+  "nombreCompleto": "Juan",
+  "email": "jjbarrea@gmail.com",
+  "password": "$2a$10$2UNkqj7/RiEA/xPOUxlySeaLqmEkL58EcDnWipbuFIAhITgWhFXXK",
+  "checkbox": ""
  }
 ]

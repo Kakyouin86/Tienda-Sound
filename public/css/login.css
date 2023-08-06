@@ -163,7 +163,23 @@
     width: 20px;
     height: 20px;
 }
+.recordar-usuario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+}
 
+.recordar-usuario  span {
+    font-style: italic;
+    margin-left: 10px;
+}
+
+.recordar-usuario input[type=checkbox] {
+    border: 1px solid #3333ff;
+    width: 20px;
+    height: 20px;
+}
 
 /*Producto form*/
 
