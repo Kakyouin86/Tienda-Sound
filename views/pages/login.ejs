@@ -13,18 +13,21 @@
         </a>
         <section class="form-container container col-lg-5 col-md-8 col-sm-12 mx-auto">
           <h1>¡Hola!</h1>
-          <h1 class="iniciaSesion">Iniciá sesión o <span class="texto-resaltado">créa tu cuenta</span></h1>
+          <h1 class="iniciaSesion">Iniciá sesión o <span class="texto-resaltado"><a href="/register">créa tu cuenta</a></span></h1>
+          
           <form action="/login" class="base-form login-form" method="POST">
+
             <input type="email" placeholder="Correo electrónico" name="email">
             <% if (locals.errors && errors.email) { %>
               <div class="text-danger">
-                <%= errors.email.msg %>
+                <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.email.msg %>
               </div>
             <% } %>
+
             <input type="password" placeholder="Contraseña" name="password">
             <% if (locals.errors && errors.password) { %>
               <div class="text-danger">
-                <%= errors.password.msg %>
+                <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.password.msg %>
               </div>
             <% } %>
 

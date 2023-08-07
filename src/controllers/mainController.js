@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs');
+const {validationResult} = require("express-validator");
+const User = require("../models/User");
 
 // Traemos los datos de json y lo convertimos a objeto lit.
 const productsFilePath = path.join(__dirname, '../data/productos.json');
@@ -9,8 +11,6 @@ const usersFilePath = path.join(__dirname, '../data/usuarios.json');
 const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const productosNuevos = productos.filter(item => item.estadoProducto === "Nuevo");
 const productosUsados = productos.filter(item => item.estadoProducto === "Usado");
-const {validationResult} = require("express-validator");
-const User = require("../models/User");
 
 
 let mainController = {
@@ -28,11 +28,10 @@ let mainController = {
 	loginProcess: function (req, res)
 	{
 		let userToLogin = User.findByField('email', req.body.email)
-
 		if (userToLogin) {
 			let isPasswordOk = bcrypt.compareSync(req.body.password, userToLogin.password)
 			if (isPasswordOk) {
-				delete userToLogin.password
+				delete userToLogin.password;
 				req.session.userLogged = userToLogin;
 				if (req.body.checkbox = true) {
 					res.cookie('userEmailCookie', req.body.email, {maxAge: 6000})
@@ -59,16 +58,14 @@ let mainController = {
 	},
 	logout: function (req, res)
 	{
-		/* NO FUNCIONA ---> RENEMOS QUE RESOLVERLO
-		res.clear.Cookie('userEmailCookie');
-		*/
+		res.clearCookie('userEmailCookie');
 		req.session.destroy();
 		return res.redirect ('/')
 	},
 	profile: function (req, res)
 	{	
-		res.render('./pages/profile',{
-			user: req.session.userLogged,
+		res.render('./pages/profile', {
+			user: req.session.userLogged
 		});
 	},
 	register: function (req, res)
@@ -89,7 +86,7 @@ let mainController = {
 			return res.render('./pages/register', {
 				errors: {
 					email: {
-						msg: 'este mail ya está registrado'
+						msg: 'El email que desea ingresar ya está registrado.'
 					}
 				},
 				oldData: req.body
@@ -98,10 +95,10 @@ let mainController = {
 		let userToCreate = {
 			...req.body,
 			password: bcrypt.hashSync(req.body.password, 10),
-			// avatar: req.file.filename
+			avatar: req.file.filename
 		};
 		let userCreated = User.create(userToCreate);
-		return res.redirect("login")
+		return res.redirect("/login")
 	},
 
 	// metodos de productos

@@ -14,18 +14,21 @@
         <section class="form-register form-container container col-lg-5 col-md-8 col-sm-12 mx-auto">
           <h1><span class="texto-resaltado">Registrate</span> y creá tu cuenta!</h1>     
     
-          <form action="/register" class="base-form register-form" method="POST">
+          <form action="/register" class="base-form register-form" method="POST" enctype="multipart/form-data">
+            
             <input type="text" placeholder="Nombre Completo" name="nombreCompleto" value="<%= locals.oldData ? oldData.nombreCompleto : null  %>">
+            
             <% if (locals.errors && errors.nombreCompleto) { %>
             <div class="text-danger">
-             <%= errors.nombreCompleto.msg %>
+              <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.nombreCompleto.msg %>
             </div>
             <% } %>
+
             <input type="email" placeholder="Correo electrónico" name="email" value="<%= locals.oldData ? oldData.email : null  %>">
 
             <% if (locals.errors && errors.email) { %>
               <div class="text-danger">
-              <%= errors.email.msg %>
+              <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.email.msg %>
               </div>
              <% } %>
 
@@ -33,20 +36,31 @@
 
             <% if (locals.errors && errors.password) { %>
               <div class="text-danger">
-              <%= errors.password.msg %>
+              <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.password.msg %>
               </div>
              <% } %>
+             
+            <!-- avatar -->
+            <label for="avatar" style="padding-bottom: 5px;"><i class="fa-regular fa-id-card"></i>  Imagen de tu Perfil</label>
+            <input type="file" name="avatar" style="padding-top: 17px;">
+           <% if (locals.errors && errors.avatar) { %>
+             <div class="text-danger">
+              <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.avatar.msg %>
+             </div>
+           <% } %>
+            <!-- avatar -->
 
             <div class="terminos-condiciones">
               <input type="checkbox" value="" name="checkbox">
-              <% if (locals.errors && errors.checkbox) { %>
-                <div class="text-danger">
-                <%= errors.checkbox.msg %>
-                </div>
-               <% } %>
               <span>He leído y acepto los terminos y condiciones</span>
-            
             </div>
+            <% if (locals.errors && errors.checkbox) { %>
+              <div class="text-danger">
+              <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.checkbox.msg %>
+              </div>
+            <% } %>
+
+            
 
           
 

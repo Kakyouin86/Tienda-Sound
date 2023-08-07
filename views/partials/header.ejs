@@ -63,13 +63,13 @@
             <li>
               <a href="/profile" class="nav-link">Hola, <%= locals.userLogged.nombreCompleto %></a>
             </li>
-            <div>
+          
               <li class="nav-item">
-                <form action="/logout"  method="POST">
-                  <button type="submit" class="nav-link register-login-link"> Logout </button>
+                <form action="/logout"  method="POST" onsubmit="return confirm('¿Está seguro/a que desea cerrar sesión?');">
+                  <a href=""><button type="submit" class="nav-link"> Cerrar sesión <i class="fa-solid fa-right-from-bracket"></i></button></a>
               </form>
               </li>
-            </div>
+            
           <% } else { %>
             <li>
               <a href="/register" class="nav-link">Registro</a>

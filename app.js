@@ -17,12 +17,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(session({
 	secret: "Hola. Esto es secreto",
 	resave: false,
-	saveUninitialized: false,
+	saveUninitialized: false
 }));
-
 app.use(cookies());
 app.use(userLoggedMiddleware);
-
 
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
