@@ -33,28 +33,27 @@ let mainController = {
 			if (isPasswordOk) {
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;
-				if (req.body.checkbox = true) {
-					res.cookie('userEmailCookie', req.body.email, {maxAge: 6000})
+
+				if (req.body.recordarUsuario) {
+					res.cookie('userEmailCookie', req.body.email, { maxAge: 6000} )
 				}
-				res.redirect('/profile')
-			} else {
-				res.render('./pages/login', {
+				return res.redirect('/profile')
+			} 
+			return res.render('./pages/login', {
 				errors: {
 					password: {
-						msg: 'La contraseña es incorrecta.'
+						msg: 'La contaseña es incorrecta.'
 					}
  				}
-			})}
-		} else {
-		res.render('./pages/login', {
+			});
+		}
+		return res.render('./pages/login', {
 			errors: {
 				email: {
-					msg: 'Este mail no se encuentra en nuestra base de datos.'
+					msg: 'Este email no se encuentra en nuestra base de datos.'
 				}
 			},
-			oldData: req.body
 		});
-		}
 	},
 	logout: function (req, res)
 	{
