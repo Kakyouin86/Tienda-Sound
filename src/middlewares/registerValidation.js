@@ -8,12 +8,12 @@ const validations = [
     // check("checkbox").isIn().withMessage("Tenés que aceptar nuestros términos y condiciones")
     check("avatar").custom((value, { req }) => {
         let file = req.file;
-		// let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+		let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
 		
 		if (!file) {
 			throw new Error('Tenés que subir una imagen con formato .jpg, .jpeg, .png, .gif');
 		}
-		/*
+		
 		else {
 			let fileExtension = path.extname(file.originalname);
 			if (!acceptedExtensions.includes(fileExtension)) {
@@ -21,7 +21,7 @@ const validations = [
 			}
 		}
 		return true;
-		*/
+	
 	})
 ]
 
