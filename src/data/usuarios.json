@@ -61,5 +61,13 @@
   "password": "$2a$10$5J2qIJgTLruB0Ol/MIm6mO2N30fTZ6.PiEhCJLChtThZKWpyxqQr.",
   "checkbox": "",
   "avatar": "1691366433499_img.jpeg"
+ },
+ {
+  "id": 9,
+  "nombreCompleto": "Agustina",
+  "email": "agustinalima3089@gmail.com",
+  "password": "$2a$10$blUdXMQUm8IKSQVgpj33h.1R5NtI4vS3HA0VjRsWR4GdfT5EW/Bju",
+  "checkbox": "",
+  "avatar": "1691959316237_img.png"
  }
 ]

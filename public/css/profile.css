@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 50px;
+  margin: auto;
+  padding: 40px 50px;
+  max-width: 1580px;
+  height: 80vh;
+}
+
+.profile-menu{
+  padding: 0px 30px;
+}
+
+.profile-menu article h2{
+  padding:20px 0px;
+  border-bottom: 1px solid #00c7ff;
+}
+.profile-menu article img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.profile-nav ul{
+  list-style: none;
+  padding: 30px 0px;
+}
+
+.profile-nav ul li{
+  color: #B7B7B7;
+  font-weight: lighter;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  padding: 12px 0px 0px 12px;
+  transition: all 0.4s ease-in;
+  border-left: 3px solid white; 
+  height: 50px;
+}
+
+.profile-nav ul li:hover{
+  border-left: 3px solid #ABEDFF; 
+  background-color: rgba(217, 215, 215, 0.201);
+}
+
+.profile-nav i{
+  margin-right: 10px;
+}
+
+
+.producto-volver-flecha-volver {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
+.producto-volver-flecha-volver p {
+  margin-bottom: 0;
+  color: #3333ff;
+}
+
+.producto-volver-flecha-volver img {
+  width: 40px;
+  height: 40px;
+  text-align: left;
+  justify-content: left;
+}
+
+/*FORM*/
+
+.profile-form-container h1{
+  padding-bottom: 20px;
+}
+
+.profile-form input[type=text],
+.profile-form input[type=email],
+.profile-form input[type=password],
+.profile-form input[type=number],
+.profile-form input[type=file]{
+    width: 50%;
+    height: 60px;
+    border-radius: 15px;
+    border: 1px #3333ff solid;
+    margin-bottom: 25px;
+}
+
+.profile-form input::placeholder {
+  padding-left: 20px;
+  color: #B7B7B7;
+}
+
+.profile-form .form-btn {
+  width: 50%;
+  height: 60px;
+  border-radius: 15px;
+  border: 0;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.profile-form .inicio-btn {
+  background-color: #3333ff;
+  color: white;
+}
+
+
+.texto-resaltado {
+  color: #3333ff;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1280px) {
+
+  .envio-prod {
+    font-size: 100%;
+    height: 25%;
+  }
+
+}
+
+/* smartphone */
+@media (max-width: 480px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    padding: 20px 0px;
+  }
+
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    max-width: 440px;
+  }
+}
+
+/* tablet */
+@media (min-width: 481px) and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    padding: 20px 0px;
+    margin: auto;
+  }
+
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* tablet / desktop small */
+@media (min-width: 769px) and (max-width: 1000px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 700px;
+    padding: 30px 20px;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1200px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 800px;
+    padding: 30px 0px;
+  }
+}

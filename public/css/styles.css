@@ -119,10 +119,13 @@ header form {
 .icon-header {
     margin-right: 10px;
 }
+.fa-user.fa-heart,.fa-cart-shopping,.fa-money-check-dollar,.fa-bag-shopping,
+.fa-gear, .fa-headset,.fa-right-from-bracket{
+    transition: all 0.4s ease-in;
+}
 
-.fa-user:hover,
-.fa-heart:hover,
-.fa-cart-shopping:hover {
+.fa-user:hover,.fa-heart:hover,.fa-cart-shopping:hover,.fa-money-check-dollar:hover,.fa-bag-shopping:hover,
+.fa-gear:hover, .fa-headset:hover,.fa-right-from-bracket:hover{
     color: #ABEDFF !important;
 }
 
