@@ -3,6 +3,8 @@ const path = require('path');
 const bcrypt = require('bcryptjs');
 const {validationResult} = require("express-validator");
 const User = require("../models/User");
+const cloudinary = require('cloudinary').v2;
+const streamifier = require('streamifier');
 
 // Traemos los datos de json y lo convertimos a objeto lit.
 const productsFilePath = path.join(__dirname, '../data/productos.json');
@@ -11,6 +13,13 @@ const usersFilePath = path.join(__dirname, '../data/usuarios.json');
 const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const productosNuevos = productos.filter(item => item.estadoProducto === "Nuevo");
 const productosUsados = productos.filter(item => item.estadoProducto === "Usado");
+
+// credenciales Cloudinary 
+cloudinary.config({ 
+	cloud_name: 'drildjjlp', 
+	api_key: '352426147639488', 
+	api_secret: 'jbRxuL50_I0GGrpbZXKNpcsClgg' 
+  });
 
 
 let mainController = {
@@ -139,6 +148,22 @@ let mainController = {
 	// guardar los datos en json
 	guardarProducto: function (req, res)
 	{
+		// cloudinary config
+
+		const imageBuffer = req.file.buffer;
+		const customFilename = Date.now() + 'imagen';
+
+		const stream = cloudinary.uploader.upload_stream({ resource_type: 'image', public_id: customFilename}, (error, result) => {
+		  if (error) {
+			console.error('Error during upload:', error);
+		  } else {
+			console.log('Upload successful:', result);
+		  }
+		});
+
+		streamifier.createReadStream(imageBuffer).pipe(stream);
+		
+		// ¿como guardo en una variable la imagen que subo?
 	
 		let idNuevoProducto = productos[productos.length - 1].id + 1;
 		let objNuevoProducto = {
@@ -150,7 +175,7 @@ let mainController = {
 			descripcionProductoLarga: req.body.descripcionProductoLarga,
 			categoriaProducto: req.body.categoriaProducto,
 			/* if ternario para preguntar si viene imagen, que la escriba, sino que se quede con la foto por default */
-			fotoDestacada: req.file ? `${req.file.filename}` : "default-photo.jpg",
+			fotoDestacada: req.file ? `${req.file.filename}` : "default-photo.jpg", // ver cloudinary
 			envio: 0,
 			oferta: "no",
 		};
