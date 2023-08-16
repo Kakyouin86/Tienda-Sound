@@ -79,8 +79,8 @@ let mainController = {
 	{
 		res.render('./pages/register');
 	},
-	guardarUser: function (req, res)
-	{
+	guardarUser: async function (req, res){
+	try{
 		const resultValidation = validationResult(req)
 		if (resultValidation.errors.length > 0){
 			return res.render('./pages/register', {
@@ -99,18 +99,45 @@ let mainController = {
 				oldData: req.body
 			});
 		}
+		console.log(req.file.buffer);
+		const imageBufferAvatar = req.file.buffer;
+		console.log(req.file);
+		const customFilenameAvatar = Date.now() + 'imagen';
+		const folderName = 'avatares';
 
-
-
-
+		const uploadPromiseAvatar = new Promise((resolve, reject) => {
+			let streamAvatar = cloudinary.uploader.upload_stream({folder: folderName, resource_type: 'image', public_id: customFilenameAvatar}, (error, result) => {
+			  if (error) {
+				console.error('Error during upload:', error);
+				reject(error);
+			  } else {
+				console.log('Upload successful:', result);
+				resolve(result);
+			  }
+			});
+	
+			streamifier.createReadStream(imageBufferAvatar).pipe(streamAvatar);
+		  });
+	
+		const uploadedImageAvatar = await uploadPromiseAvatar;
 		
 		let userToCreate = {
 			...req.body,
 			password: bcrypt.hashSync(req.body.password, 10),
-			avatar: req.file.filename
+			avatar: customFilenameAvatar 
 		};
-		let userCreated = User.create(userToCreate);
+		console.log(userToCreate);
+
+		await User.create(userToCreate);
+		//await usuarios.push(userToCreate);
+		//fs.writeFileSync(userToCreateFilePath, JSON.stringify(usuarios, null, ' '));
+		
 		return res.redirect("/login")
+		
+		} catch (error) {
+		console.error('Error:', error);
+		
+	  }
 	},
 
 	// metodos de productos
@@ -153,10 +180,12 @@ let mainController = {
 	guardarProducto: async function (req, res) {
 		try {
 		  const imageBuffer = req.file.buffer;
-		  const customFilename = Date.now() + 'imagen';
+		  const customFilename = Date.now() + '-imgProducto';
+		  const folderName = 'productos';
+
 	
 		  const uploadPromise = new Promise((resolve, reject) => {
-			let stream = cloudinary.uploader.upload_stream({ resource_type: 'image', public_id: customFilename}, (error, result) => {
+			let stream = cloudinary.uploader.upload_stream({folder: folderName,resource_type: 'image', public_id: customFilename}, (error, result) => {
 			  if (error) {
 				console.error('Error during upload:', error);
 				reject(error);

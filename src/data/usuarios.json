@@ -69,5 +69,27 @@
   "password": "$2a$10$blUdXMQUm8IKSQVgpj33h.1R5NtI4vS3HA0VjRsWR4GdfT5EW/Bju",
   "checkbox": "",
   "avatar": "1691959316237_img.png"
+ },
+ {
+  "id": 10,
+  "nombreCompleto": "Agustina",
+  "email": "agustinali@gmail.com",
+  "password": "$2a$10$qIR0w6crIq9v/ZUc20C0YucxeCERy1rYGLGGY5wF.YYfE3KyCXfym",
+  "avatar": "1692148759474_img.png"
+ },
+ {
+  "id": 11,
+  "nombreCompleto": "Agustina",
+  "email": "hola@gmail.com",
+  "password": "$2a$10$nQiJhEUxIqMT94G7DErJdeTYFg68UQbwWxX6cA7TFqB.Fh/Px7KNO",
+  "checkbox": "",
+  "avatar": "1692148782722_img.png"
+ },
+ {
+  "id": 12,
+  "nombreCompleto": "Agustina",
+  "email": "agustinalima389@gmail.com",
+  "password": "$2a$10$rLMGMVQL0zhafgDhZCGwPOs/b6CD0DC4VmIPLixf1Dcjo52lGPdvi",
+  "avatar": "1692148823274_img.png"
  }
 ]

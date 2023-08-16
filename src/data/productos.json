@@ -202,5 +202,14 @@
   "descripcionProductoLarga": "fdgdf",
   "categoriaProducto": "bateriasPercusion",
   "fotoDestacada": "1692146704846imagen"
+ },
+ {
+  "nombreProducto": "Prueba foto 2",
+  "descripcionProductoCorta": "sfdf",
+  "precioProducto": "23",
+  "estadoProducto": "Nuevo",
+  "descripcionProductoLarga": "vxv",
+  "categoriaProducto": "bateriasPercusion",
+  "fotoDestacada": "1692201827506-imgProducto"
  }
 ]
