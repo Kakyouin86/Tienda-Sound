@@ -16,11 +16,10 @@ const productosUsados = productos.filter(item => item.estadoProducto === "Usado"
 
 // credenciales Cloudinary 
 cloudinary.config({ 
-	cloud_name: 'drildjjlp', 
-	api_key: '352426147639488', 
-	api_secret: 'jbRxuL50_I0GGrpbZXKNpcsClgg' 
-  });
-
+	cloud_name: 'dlf8flk1o', 
+	api_key: '829857512934227', 
+	api_secret: 'iTQRHKw1LiAeUUeO8jrfx3d_MVg' 
+});
 
 let mainController = {
 	index: function (req, res)
@@ -100,6 +99,11 @@ let mainController = {
 				oldData: req.body
 			});
 		}
+
+
+
+
+		
 		let userToCreate = {
 			...req.body,
 			password: bcrypt.hashSync(req.body.password, 10),
@@ -146,43 +150,45 @@ let mainController = {
 		res.render('./pages/crearProducto');
 	},
 	// guardar los datos en json
-	guardarProducto: function (req, res)
-	{
-		// cloudinary config
-
-		const imageBuffer = req.file.buffer;
-		const customFilename = Date.now() + 'imagen';
-
-		const stream = cloudinary.uploader.upload_stream({ resource_type: 'image', public_id: customFilename}, (error, result) => {
-		  if (error) {
-			console.error('Error during upload:', error);
-		  } else {
-			console.log('Upload successful:', result);
-		  }
-		});
-
-		streamifier.createReadStream(imageBuffer).pipe(stream);
-		
-		// ¿como guardo en una variable la imagen que subo?
+	guardarProducto: async function (req, res) {
+		try {
+		  const imageBuffer = req.file.buffer;
+		  const customFilename = Date.now() + 'imagen';
 	
-		let idNuevoProducto = productos[productos.length - 1].id + 1;
-		let objNuevoProducto = {
-			id: idNuevoProducto,
-			nombreProducto: req.body.nombreProducto,
-			descripcionProductoCorta: req.body.descripcionProductoCorta,
-			precioProducto: parseInt(req.body.precioProducto),
-			estadoProducto: req.body.estadoProducto,
-			descripcionProductoLarga: req.body.descripcionProductoLarga,
-			categoriaProducto: req.body.categoriaProducto,
-			/* if ternario para preguntar si viene imagen, que la escriba, sino que se quede con la foto por default */
-			fotoDestacada: req.file ? `${req.file.filename}` : "default-photo.jpg", // ver cloudinary
-			envio: 0,
-			oferta: "no",
-		};
-		productos.push(objNuevoProducto);
-		fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
-		res.redirect('/productos');
-	},
+		  const uploadPromise = new Promise((resolve, reject) => {
+			let stream = cloudinary.uploader.upload_stream({ resource_type: 'image', public_id: customFilename}, (error, result) => {
+			  if (error) {
+				console.error('Error during upload:', error);
+				reject(error);
+			  } else {
+				console.log('Upload successful:', result);
+				resolve(result);
+			  }
+			});
+	
+			streamifier.createReadStream(imageBuffer).pipe(stream);
+		  });
+	
+		  const uploadedImage = await uploadPromise;
+	
+		  const productToCreate = {
+			...req.body,
+			fotoDestacada: customFilename, 
+		  };
+
+		  await productos.push(productToCreate);
+		  fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '));
+	
+		  //await Producto.crearUsuarioEnBD(productToCreate);  // guarda informacion en json
+	
+			res.render('./pages/productos', { producto: productos });
+		} catch (error) {
+		  console.error('Error:', error);
+		  
+		}
+	  },
+	
+
 	// renderiza el form de editar producto
 	renderEditarProducto: (req, res) =>
 	{

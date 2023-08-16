@@ -166,5 +166,41 @@
   "fotoDestacada": "1689467829861InfantilPearl.png",
   "envio": 2200,
   "oferta": "si"
+ },
+ {
+  "nombreProducto": "Prueba foto",
+  "descripcionProductoCorta": "dfhsdkf",
+  "precioProducto": "24872834",
+  "estadoProducto": "Nuevo",
+  "descripcionProductoLarga": "sdjfsdf",
+  "categoriaProducto": "bateriasPercusion",
+  "fotoDestacada": "1692146521310imagen"
+ },
+ {
+  "nombreProducto": "Prueba foto",
+  "descripcionProductoCorta": "dfhsdkf",
+  "precioProducto": "24872834",
+  "estadoProducto": "Nuevo",
+  "descripcionProductoLarga": "sdjfsdf",
+  "categoriaProducto": "bateriasPercusion",
+  "fotoDestacada": "1692146561210imagen"
+ },
+ {
+  "nombreProducto": "Prueba foto",
+  "descripcionProductoCorta": "dfhsdkf",
+  "precioProducto": "24872834",
+  "estadoProducto": "Nuevo",
+  "descripcionProductoLarga": "sdjfsdf",
+  "categoriaProducto": "bateriasPercusion",
+  "fotoDestacada": "1692146591654imagen"
+ },
+ {
+  "nombreProducto": "Prueba 1",
+  "descripcionProductoCorta": "dfds",
+  "precioProducto": "45435",
+  "estadoProducto": "Nuevo",
+  "descripcionProductoLarga": "fdgdf",
+  "categoriaProducto": "bateriasPercusion",
+  "fotoDestacada": "1692146704846imagen"
  }
 ]
