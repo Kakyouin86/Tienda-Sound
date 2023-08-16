@@ -91,5 +91,12 @@
   "email": "agustinalima389@gmail.com",
   "password": "$2a$10$rLMGMVQL0zhafgDhZCGwPOs/b6CD0DC4VmIPLixf1Dcjo52lGPdvi",
   "avatar": "1692148823274_img.png"
+ },
+ {
+  "id": 13,
+  "nombreCompleto": "Juan",
+  "email": "jjbarrea@gmail.com",
+  "password": "$2a$10$Zd1zlYlHRGVLKOGJPUKfye8Y9mxnspKB7xfvwJ6EO/LYiWBg3z13K",
+  "avatar": "1692212750084imagen"
  }
 ]

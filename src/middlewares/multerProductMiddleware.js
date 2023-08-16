@@ -1,3 +1,4 @@
+/*
 const path = require('path');
 const multer = require('multer');
 
@@ -27,3 +28,5 @@ const fileFilter = (req, file, cb) => {
 const uploadProduct = multer({ storage: storage, fileFilter: fileFilter});
 
 module.exports = uploadProduct;
+
+*/

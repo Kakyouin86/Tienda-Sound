@@ -103,7 +103,7 @@ let mainController = {
 		const imageBufferAvatar = req.file.buffer;
 		console.log(req.file);
 		const customFilenameAvatar = Date.now() + 'imagen';
-		const folderName = 'avatares';
+		const folderName = 'avatars';
 
 		const uploadPromiseAvatar = new Promise((resolve, reject) => {
 			let streamAvatar = cloudinary.uploader.upload_stream({folder: folderName, resource_type: 'image', public_id: customFilenameAvatar}, (error, result) => {
