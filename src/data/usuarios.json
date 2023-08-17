@@ -98,5 +98,26 @@
   "email": "jjbarrea@gmail.com",
   "password": "$2a$10$Zd1zlYlHRGVLKOGJPUKfye8Y9mxnspKB7xfvwJ6EO/LYiWBg3z13K",
   "avatar": "1692212750084imagen"
+ },
+ {
+  "id": 14,
+  "nombreCompleto": "prueba1",
+  "email": "prueba1@g.com",
+  "password": "$2a$10$k6/djG4s6KIjZGUMD8Y9Feq3/GeXgE6AT6K4wWR8bXfTSeFGrPmtW",
+  "avatar": "1692293496018imagen"
+ },
+ {
+  "id": 15,
+  "nombreCompleto": "prueba2",
+  "email": "prueba2@g.com",
+  "password": "$2a$10$CKm9fie2uVHkLxdFOiQIpelDQC.jpUuk9rvu/NO2hm3zBAcJmeUzy",
+  "avatar": "1692293693753imagen"
+ },
+ {
+  "id": 16,
+  "nombreCompleto": "prueba3",
+  "email": "prueba3@g.com",
+  "password": "$2a$10$nld4WS.rodPUuiGERwjKjexZjwtiNuLF4zUNZlb5Kx9xHx4dINUcO",
+  "avatar": "1692293750703imagen"
  }
 ]

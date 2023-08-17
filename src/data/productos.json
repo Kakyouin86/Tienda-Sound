@@ -211,5 +211,32 @@
   "descripcionProductoLarga": "vxv",
   "categoriaProducto": "bateriasPercusion",
   "fotoDestacada": "1692201827506-imgProducto"
+ },
+ {
+  "nombreProducto": "Producto de prueba",
+  "descripcionProductoCorta": "Vamos a probar si está todo bien.",
+  "precioProducto": "12345",
+  "estadoProducto": "Nuevo",
+  "descripcionProductoLarga": "Descripción detalla de la prueba que vamos a hacer.",
+  "categoriaProducto": "bateriasPercusion",
+  "fotoDestacada": "1692293813536-imgProducto"
+ },
+ {
+  "nombreProducto": "Producto de prueba 2",
+  "descripcionProductoCorta": "Parece que todo está funcionando bien.",
+  "precioProducto": "9876",
+  "estadoProducto": "Nuevo",
+  "descripcionProductoLarga": "que alegría que todo esté funcionando bien.",
+  "categoriaProducto": "tecladosSintetizadores",
+  "fotoDestacada": "1692293889789-imgProducto"
+ },
+ {
+  "nombreProducto": "Producto de prueba 3",
+  "descripcionProductoCorta": "Síiiiiii, funciona todo bien",
+  "precioProducto": "1234567890",
+  "estadoProducto": "Nuevo",
+  "descripcionProductoLarga": "¡Vamos!",
+  "categoriaProducto": "vientos",
+  "fotoDestacada": "1692294045304-imgProducto"
  }
 ]
