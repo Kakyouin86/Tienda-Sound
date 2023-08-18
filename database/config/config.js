@@ -1,6 +1,6 @@
 module.exports={
   "development": {
-    "username": "root",
+    "username": "aguslima",
     "password": "edfXe3Da!Ew.f*v",
     "database": "aguslima_tiendasound",
     "host": "mysql-aguslima.alwaysdata.net",

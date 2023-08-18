@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
 
-module.exports = function(sequelize, dataTypes){
+function ProductoData(sequelize, dataTypes){
 
     let alias = "Producto";
     let cols = {
@@ -27,10 +27,6 @@ module.exports = function(sequelize, dataTypes){
         },
         descripcionProductoLarga:{
             type: DataTypes.TEXT,
-            allowNull: false
-        },
-        marca:{
-            type: DataTypes.STRING(255),
             allowNull: false
         },
         stock:{
@@ -77,6 +73,39 @@ module.exports = function(sequelize, dataTypes){
     }
 
     let Producto = sequelize.define(alias, cols, config);
+
+    Producto.associate = function(modelos){
+        
+        Producto.belongsTo(modelos.Usuario,
+            {
+                as: "Usuario",
+                foreignKey: "usuario_id",
+        });
+
+        Producto.belongsTo(modelos.Categoria,
+            {
+                as: "Categoria",
+                foreignKey: "categoria_id",
+        });
+
+        Producto.belongsTo(modelos.Marca,
+            {
+                as: "Marca",
+                foreignKey: "marca_id",
+        });
+
+        Producto.belongsTo(modelos.Puntuacion,
+            {
+                as: "Puntuacion",
+                foreignKey: "puntuacion_id",
+        });
+
+        // FALTA LA RELACION DE TRANSACCION
+
+    }
+
     return Producto;
 
 }
+
+module.exports = ProductoData;

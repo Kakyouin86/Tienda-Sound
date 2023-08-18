@@ -45,31 +45,31 @@
             </div>
           </section>
           <section class="grid">
-            <% for(let i=0; i<producto.length; i++){%>
+            <% for(let i=0; i<productos.length; i++){%>
               <article>
                 <div class="productogrid">
-                  <a href="/producto/<%=producto[i].id%>">
+                  <a href="/producto/<%=productos[i].id%>">
                     <div class="img-cont">
-                      <img src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1692147408/productos/<%=producto[i].fotoDestacada%>" alt="foto">
+                      <img src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1692147408/productos/<%=productos[i].fotoDestacada%>" alt="foto">
                     </div>
                     <div class="text">
-                      <% if (producto[i].estadoProducto=="Nuevo" ) { %>
+                      <% if (productos[i].estadoProducto=="Nuevo" ) { %>
                         <div class="nuevo-usado"><i class="fa-solid fa-star" style="scale:60%"></i>
-                          <%=producto[i].estadoProducto%>
+                          <%=productos[i].estadoProducto%>
                         </div>
                         <%}%>
                           <h3>
-                            <%=producto[i].nombreProducto%>
+                            <%=productos[i].nombreProducto%>
                           </h3>
-                          <%if(producto[i].envio==0) { %>
+                          <%if(productos[i].envio==0) { %>
                             <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
                             <%} else{ %>
                               <div class="envio-prod">Envio <span style="font-weight: 600;">
-                                  $ <%=producto[i].envio%>
+                                  $ <%=productos[i].envio%>
                                 </span>
                               </div>
                               <%} %>
-                                <div class="precio-prod">$ <%=producto[i].precioProducto%>
+                                <div class="precio-prod">$ <%=productos[i].precioProducto%>
                                 </div>
                     </div>
                   </a>

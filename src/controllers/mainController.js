@@ -13,6 +13,7 @@ const usersFilePath = path.join(__dirname, '../data/usuarios.json');
 const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const productosNuevos = productos.filter(item => item.estadoProducto === "Nuevo");
 const productosUsados = productos.filter(item => item.estadoProducto === "Usado");
+const db = require('../../database/models');
 
 // credenciales Cloudinary 
 cloudinary.config({ 
@@ -142,11 +143,17 @@ let mainController = {
 
 	// metodos de productos
 	// renderiza todos los productos en grid
-	productos: function (req, res)
+	productos:function(req, res){
+		db.Producto.findAll()
+			.then (function(productos){
+				return res.render('./pages/productos', { productos: productos });
+			})
+	},
+	/*productos: function (req, res)
 	{
 		const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 		res.render('./pages/productos', { producto: productos });
-	},
+	},*/
 	productosNuevos: function (req, res)
 	{
 		const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
