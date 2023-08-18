@@ -76,25 +76,25 @@ function productoData(sequelize, dataTypes){
 
     Producto.associate = function(modelos){
         
-        Producto.hasMany(modelos.Usuario,
+        Producto.belongsTo(modelos.Usuario,
             {
                 as: "Usuario",
                 foreignKey: "usuario_id",
         });
 
-        Producto.hasMany(modelos.Categoria,
+        Producto.belongsTo(modelos.Categoria,
             {
                 as: "Categoria",
                 foreignKey: "categoria_id",
         });
 
-        Producto.hasMany(modelos.Marca,
+        Producto.belongsTo(modelos.Marca,
             {
                 as: "Marca",
                 foreignKey: "marca_id",
         });
 
-        Producto.hasMany(modelos.Puntuacion,
+        Producto.belongsTo(modelos.Puntuacion,
             {
                 as: "Puntuacion",
                 foreignKey: "puntuacion_id",
