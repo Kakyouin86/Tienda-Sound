@@ -2,6 +2,9 @@
 //npm install express
 //npm i ejs
 const mainRoutes = require('./src/routes/mainRoutes');
+const productsRoutes = require('./src/routes/productsRoutes');
+
+
 const express = require("express");
 const path = require("path");
 const app = express();
@@ -32,6 +35,7 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')))
 app.set('view engine', 'ejs');
 
 app.use('/', mainRoutes);
+app.use('/productos', productsRoutes);
 
 
 app.use((req, res, next) => 

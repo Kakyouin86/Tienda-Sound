@@ -21,6 +21,17 @@ module.exports = function(sequelize, dataTypes){
     }
 
     let Ciudad = sequelize.define(alias, cols, config);
+
+    Ciudad.associate = function(modelos){
+        
+        Ciudad.hasMany(modelos.Transaccion,
+            {
+                as: "Transaccion",
+                foreignKey: "ciudad_id",
+        });
+
+    }
+
     return Ciudad;
 
 }

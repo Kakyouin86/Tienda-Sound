@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
 
-function ProductoData(sequelize, dataTypes){
+function productoData(sequelize, dataTypes){
 
     let alias = "Producto";
     let cols = {
@@ -76,36 +76,32 @@ function ProductoData(sequelize, dataTypes){
 
     Producto.associate = function(modelos){
         
-        Producto.belongsTo(modelos.Usuario,
+        Producto.hasMany(modelos.Usuario,
             {
                 as: "Usuario",
                 foreignKey: "usuario_id",
         });
 
-        Producto.belongsTo(modelos.Categoria,
+        Producto.hasMany(modelos.Categoria,
             {
                 as: "Categoria",
                 foreignKey: "categoria_id",
         });
 
-        Producto.belongsTo(modelos.Marca,
+        Producto.hasMany(modelos.Marca,
             {
                 as: "Marca",
                 foreignKey: "marca_id",
         });
 
-        Producto.belongsTo(modelos.Puntuacion,
+        Producto.hasMany(modelos.Puntuacion,
             {
                 as: "Puntuacion",
                 foreignKey: "puntuacion_id",
         });
-
-        // FALTA LA RELACION DE TRANSACCION
-
     }
-
+    
     return Producto;
-
 }
 
-module.exports = ProductoData;
+module.exports = productoData;

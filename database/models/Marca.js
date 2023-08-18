@@ -25,6 +25,16 @@ module.exports = function(sequelize, dataTypes){
     }
 
     let Marca = sequelize.define(alias, cols, config);
+
+    Marca.associate = function(modelos){
+        
+        Marca.hasMany(modelos.Producto,
+            {
+                as: "Producto",
+                foreignKey: "marca_id",
+        });
+    }
+
     return Marca;
 
 }

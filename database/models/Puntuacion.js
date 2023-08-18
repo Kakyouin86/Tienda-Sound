@@ -21,6 +21,16 @@ module.exports = function(sequelize, dataTypes){
     }
 
     let Puntuacion = sequelize.define(alias, cols, config);
+
+    Puntuacion.associate = function(modelos){
+        
+        Puntuacion.hasMany(modelos.Producto,
+            {
+                as: "Producto",
+                foreignKey: "puntuacion_id",
+        });
+    }
+
     return Puntuacion;
 
 }

@@ -1,6 +1,6 @@
 const { DataTypes } = require("sequelize");
 
-module.exports = function(sequelize, dataTypes){
+function transaccionData (sequelize, dataTypes){
 
     let alias = "Transaccion";
     let cols = {
@@ -57,6 +57,24 @@ module.exports = function(sequelize, dataTypes){
     }
 
     let Transaccion = sequelize.define(alias, cols, config);
+
+    Transaccion.associate = function(modelos){
+        
+        Transaccion.belongsTo(modelos.Producto,
+            {
+                as: "Producto",
+                foreignKey: "producto_id",
+        });
+
+        Transaccion.belongsTo(modelos.Ciudad,
+            {
+                as: "Ciudad",
+                foreignKey: "ciudad_id",
+        });
+    }
+
     return Transaccion;
 
 }
+
+module.exports = transaccionData;
