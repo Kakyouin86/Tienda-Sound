@@ -11,9 +11,12 @@ const uploadProduct = multer();
 
 // Rutas
 
+//lectura de productos
+router.get('/', productsController.productos);
+
 //Crear
 router.get('/crearProducto', productsController.crear);
-router.post('/crearProducto', uploadProduct.single('fotoDestacada'), productsController.guardarProducto);
+router.post('/crearProducto', productsController.guardarProducto);
 
 
 module.exports = router;

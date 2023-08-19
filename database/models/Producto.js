@@ -1,6 +1,4 @@
-const { DataTypes } = require("sequelize");
-
-function productoData(sequelize, dataTypes){
+function productoData(sequelize, DataTypes){
 
     let alias = "Producto";
     let cols = {
@@ -15,19 +13,19 @@ function productoData(sequelize, dataTypes){
         },
         descripcionProductoCorta:{
             type: DataTypes.TEXT,
-            allowNull: false
+            allowNull: true // recordar que es "false" - consultar con profes
         },
         precioProducto:{
             type: DataTypes.FLOAT,
-            allowNull: false
+            allowNull: true // recordar que es "false" - consultar con profes
         },
         estadoProducto:{
             type: DataTypes.BOOLEAN,
-            allowNull: false
+            allowNull: true // recordar que es "false" - consultar con profes
         },
         descripcionProductoLarga:{
             type: DataTypes.TEXT,
-            allowNull: false
+            allowNull: true // recordar que es "false" - consultar con profes
         },
         stock:{
             type: DataTypes.INTEGER,
@@ -47,11 +45,11 @@ function productoData(sequelize, dataTypes){
         },
         imagen:{
             type: DataTypes.STRING(255),
-            allowNull: false
+            allowNull: true // recordar que es "false" - consultar con profes
         },
         categoria_id:{
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true // recordar que es "false" - consultar con profes
         },
         usuario_id:{
             type: DataTypes.INTEGER,
@@ -99,6 +97,7 @@ function productoData(sequelize, dataTypes){
                 as: "Puntuacion",
                 foreignKey: "puntuacion_id",
         });
+        
     }
     
     return Producto;

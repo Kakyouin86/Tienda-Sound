@@ -23,7 +23,7 @@ router.post('/login', mainController.loginProcess);
 router.get('/logout', mainController.logout);
 router.get('/profile', authMiddleware, mainController.profile);
 router.get('/producto/:id?', mainController.producto);
-router.get('/productos', mainController.productos);
+// router.get('/productos', mainController.productos);
 router.get('/productosNuevos', mainController.productosNuevos);
 router.get('/productosUsados', mainController.productosUsados);
 router.get('/carrito', mainController.carrito);

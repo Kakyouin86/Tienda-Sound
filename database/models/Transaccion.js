@@ -1,6 +1,6 @@
-const { DataTypes } = require("sequelize");
 
-function transaccionData (sequelize, dataTypes){
+
+function transaccionData (sequelize, DataTypes){
 
     let alias = "Transaccion";
     let cols = {
