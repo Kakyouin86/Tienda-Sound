@@ -31,19 +31,19 @@ function productoData(sequelize, dataTypes){
         },
         stock:{
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true // recordar que es "false" - consultar con profes
         },
         fecha_alta:{
             type: DataTypes.DATE,
-            allowNull: false
+            allowNull: true // recordar que es "false" - consultar con profes 
         },
         fecha_modificacion:{
             type: DataTypes.DATE,
-            allowNull: false
+            allowNull:  true // recordar que es "false" - consultar con profes
         },
         fecha_baja:{
             type: DataTypes.DATE,
-            allowNull: false
+            allowNull: true // recordar que es "false" - consultar con profes
         },
         imagen:{
             type: DataTypes.STRING(255),
@@ -55,15 +55,15 @@ function productoData(sequelize, dataTypes){
         },
         usuario_id:{
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true // recordar que es "false" - consultar con profes
         },
         marca_id:{
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true // recordar que es "false" - consultar con profes
         },
         puntuacion_id:{
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true // recordar que es "false" - consultar con profes
         }
     };
 
