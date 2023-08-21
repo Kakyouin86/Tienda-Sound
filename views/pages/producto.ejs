@@ -104,7 +104,7 @@
             <div class="producto-detail-btn">
               <a href="/productos/editarProducto/<%= producto.id %>" class="btn-editar">EDITAR PRODUCTO</a>
               
-              <form action="/borrarProducto/<%= producto.id %>?_method=DELETE" method="POST"
+              <form action="/productos/borrarProducto/<%= producto.id %>" method="POST"
                 onsubmit="return confirm('¿Está seguro/a que desea eliminar el producto?');">
                 <button type="submit" class="btn-eliminar">ELIMINAR</button>
               </form>

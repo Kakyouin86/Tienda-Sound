@@ -82,7 +82,13 @@ let productsController = {
       });
       res.redirect('/productos/' + req.params.id);
   },
-  
+  borrarProducto: function (req, res){
+    db.Producto.destroy({
+        where: {
+          id: req.params.id
+        }
+      });
+      res.redirect('/productos');
+  }
 }
-
 module.exports = productsController;

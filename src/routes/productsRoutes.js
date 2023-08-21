@@ -15,16 +15,16 @@ const uploadProduct = multer();
 router.get('/', productsController.productos);
 
 
-
 // Crear producto
 router.get('/crearProducto', productsController.crear);
 router.post('/crearProducto', productsController.guardarProducto);
 
-// Editar/Actualizar un producto
-router.get('/editarProducto/:id?', productsController.editarProducto);
-router.post('/editarProducto/:id?', productsController.actualizarProducto);
+// Editar / Actualizar un producto
+router.get('/editarProducto/:id', productsController.editarProducto);
+router.post('/editarProducto/:id', productsController.actualizarProducto);
 
 // Eliminar un producto
+router.post('/borrarProducto/:id', productsController.borrarProducto);
 
 
 // Detalle del producto
