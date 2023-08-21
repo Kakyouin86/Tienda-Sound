@@ -18,7 +18,16 @@ let productsController = {
   {
 		db.Producto.findAll()
 			.then (function(productos){
-				return res.render('./pages/productos', { productos: productos });
+				res.render('./pages/productos', { productos: productos });
+			})
+	},
+  detalle: function(req, res)
+  {
+		db.Producto.findByPk(req.params.id, {
+      include: [{association: "Categoria"}]  //¿se incluyen todas las asociaciones?
+    })
+			.then (function(producto){
+				res.render('./pages/producto', { producto: producto });
 			})
 	},
 	crear: function (req, res)
@@ -45,6 +54,7 @@ let productsController = {
       //console.log(req.body)
       res.redirect('/productos')    
   },
+  
 }
 
 module.exports = productsController;

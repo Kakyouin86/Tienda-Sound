@@ -12,19 +12,15 @@ module.exports= function(sequelize, DataTypes){
         },
         descripcionProductoCorta:{
             type: DataTypes.TEXT,
-            allowNull: true // recordar que es "false" - consultar con profes
         },
         precioProducto:{
             type: DataTypes.FLOAT,
-            allowNull: true // recordar que es "false" - consultar con profes
         },
         estadoProducto:{
             type: DataTypes.BOOLEAN,
-            allowNull: true // recordar que es "false" - consultar con profes
         },
         descripcionProductoLarga:{
             type: DataTypes.TEXT,
-            allowNull: true // recordar que es "false" - consultar con profes
         },
         stock:{
             type: DataTypes.INTEGER,
@@ -40,11 +36,9 @@ module.exports= function(sequelize, DataTypes){
         },
         imagen:{
             type: DataTypes.STRING(255),
-            allowNull: true // recordar que es "false" - consultar con profes
         },
         categoria_id:{
             type: DataTypes.INTEGER,
-            allowNull: true // recordar que es "false" - consultar con profes
         },
         usuario_id:{
             type: DataTypes.INTEGER,
@@ -95,5 +89,6 @@ module.exports= function(sequelize, DataTypes){
                 foreignKey: "producto_id",
         });  
     }
+    
     return Producto;
 }
