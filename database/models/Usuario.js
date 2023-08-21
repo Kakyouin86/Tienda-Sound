@@ -1,6 +1,4 @@
-const { DataTypes } = require("sequelize");
-
-module.exports = function(sequelize, dataTypes){
+module.exports = function(sequelize, DataTypes){
 
     let alias = "Usuario";
     let cols = {
@@ -51,5 +49,4 @@ module.exports = function(sequelize, dataTypes){
         });
     }
     return Usuario;
-
 }

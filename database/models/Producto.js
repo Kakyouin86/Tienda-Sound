@@ -1,6 +1,4 @@
-const { DataTypes } = require("sequelize");
-
-function productoData(sequelize, dataTypes){
+module.exports= function(sequelize, DataTypes){
 
     let alias = "Producto";
     let cols = {
@@ -11,59 +9,45 @@ function productoData(sequelize, dataTypes){
         },
         nombreProducto:{
             type: DataTypes.STRING(255),
-            allowNull: false
         },
         descripcionProductoCorta:{
             type: DataTypes.TEXT,
-            allowNull: false
         },
         precioProducto:{
             type: DataTypes.FLOAT,
-            allowNull: false
         },
         estadoProducto:{
             type: DataTypes.BOOLEAN,
-            allowNull: false
         },
         descripcionProductoLarga:{
             type: DataTypes.TEXT,
-            allowNull: false
         },
         stock:{
             type: DataTypes.INTEGER,
-            allowNull: true // recordar que es "false" - consultar con profes
         },
         fecha_alta:{
             type: DataTypes.DATE,
-            allowNull: true // recordar que es "false" - consultar con profes 
         },
         fecha_modificacion:{
             type: DataTypes.DATE,
-            allowNull:  true // recordar que es "false" - consultar con profes
         },
         fecha_baja:{
             type: DataTypes.DATE,
-            allowNull: true // recordar que es "false" - consultar con profes
         },
         imagen:{
             type: DataTypes.STRING(255),
-            allowNull: false
         },
         categoria_id:{
             type: DataTypes.INTEGER,
-            allowNull: false
         },
         usuario_id:{
             type: DataTypes.INTEGER,
-            allowNull: true // recordar que es "false" - consultar con profes
         },
         marca_id:{
             type: DataTypes.INTEGER,
-            allowNull: true // recordar que es "false" - consultar con profes
         },
         puntuacion_id:{
             type: DataTypes.INTEGER,
-            allowNull: true // recordar que es "false" - consultar con profes
         }
     };
 
@@ -75,7 +59,7 @@ function productoData(sequelize, dataTypes){
     let Producto = sequelize.define(alias, cols, config);
 
     Producto.associate = function(modelos){
-        
+    
         Producto.belongsTo(modelos.Usuario,
             {
                 as: "Usuario",
@@ -99,9 +83,12 @@ function productoData(sequelize, dataTypes){
                 as: "Puntuacion",
                 foreignKey: "puntuacion_id",
         });
+        Producto.hasMany(modelos.Transaccion,
+            {
+                as: "Transaccion",
+                foreignKey: "producto_id",
+        });  
     }
     
     return Producto;
 }
-
-module.exports = productoData;

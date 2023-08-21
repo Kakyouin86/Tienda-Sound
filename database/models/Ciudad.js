@@ -1,6 +1,4 @@
-const { DataTypes } = require("sequelize");
-
-module.exports = function(sequelize, dataTypes){
+module.exports = function(sequelize, DataTypes){
 
     let alias = "Ciudad";
     let cols = {
@@ -29,9 +27,6 @@ module.exports = function(sequelize, dataTypes){
                 as: "Transaccion",
                 foreignKey: "ciudad_id",
         });
-
     }
-
     return Ciudad;
-
 }

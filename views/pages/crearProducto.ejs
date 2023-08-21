@@ -13,11 +13,12 @@
         </a>
         <section class="form-container container col-lg-5 col-md-8 col-sm-12 mx-auto">
           <h2>Creá un <span class="texto-resaltado">nuevo producto!</span></h2>
-          <form action="/login" method="POST" class="base-form crearProducto-form"
-            enctype="multipart/form-data">
+
+          <form action="/productos/crearProducto" method="POST" class="base-form crearProducto-form">
 
             <label for="">Nombre del Producto</label>
             <input type="text" placeholder="Ej: Guitarra eléctrica G&L" name="nombreProducto">
+            
             <label for="descripcionProductoCorta">Breve descripción</label>
             <textarea placeholder="Color, tamaño, año, etc..." name="descripcionProductoCorta" id="" cols="30"
               rows="3"></textarea>
@@ -36,12 +37,10 @@
               rows="6"></textarea>
 
             <label for="categoriaProducto">Categoría del Producto</label>
-            <select name="categoriaProducto" id="">
-              <option value="guitarrasBajos">Guitatarras y bajos</option>
-              <option value="bateriasPercusion">Baterias y percusión</option>
-              <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
-              <option value="vientos">Vientos</option>
-              <option value="cuerdas">Cuerdas</option>
+            <select name="categoriaProducto">
+              <%for(let i=0; i<categoria.length; i++){%>
+              <option value="<%= categoria[i].id %>"><%= categoria[i].nombre %></option>
+              <% } %>
             </select>
 
             <label for="fotoDestacada">Imagen destacada</label>
