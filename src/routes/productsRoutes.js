@@ -14,8 +14,7 @@ const uploadProduct = multer();
 // Todos los productos
 router.get('/', productsController.productos);
 
-// Detalle del producto
-router.get('/:id?', productsController.detalle);  // sección de Kiara, corregir desde linea 129 (for)
+
 
 // Crear producto
 router.get('/crearProducto', productsController.crear);
@@ -27,5 +26,8 @@ router.get('/editarProducto/:id', productsController.editarProducto);
 
 // Eliminar un producto
 
+
+// Detalle del producto
+router.get('/:id?', productsController.detalle);  // sección de Kiara, corregir desde linea 129 (for)
 
 module.exports = router;
