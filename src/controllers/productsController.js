@@ -1,5 +1,5 @@
-// const fs = require('fs');
-// const path = require('path');
+const fs = require('fs');
+const path = require('path');
 
 const cloudinary = require('cloudinary').v2;
 const streamifier = require('streamifier');
@@ -37,22 +37,46 @@ let productsController = {
         return res.render('./pages/crearProducto', { categoria: categoria });
       })
 	},
-  guardarProducto: function (req, res) 
+  guardarProducto: async function (req, res) 
   {
-    db.Producto.create({
+    	try {
+		  const imageBuffer = req.file.buffer;
+		  const customFilename = Date.now() + '-imgProducto';
+		  const folderName = 'productos';
+
+		  const uploadPromise = new Promise((resolve, reject) => {
+			let stream = cloudinary.uploader.upload_stream({folder: folderName,resource_type: 'image', public_id: customFilename}, (error, result) => {
+			  if (error) {
+				console.error('Error during upload:', error);
+				reject(error);
+			  } else {
+				console.log('Upload successful:', result);
+				resolve(result);
+			  }
+			});
+	
+			streamifier.createReadStream(imageBuffer).pipe(stream);
+		  });
+	
+		  const uploadedImage = await uploadPromise;
+	
+      db.Producto.create({
       nombreProducto: req.body.nombreProducto,
       descripcionProductoCorta: req.body.descripcionProductoCorta,
       precioProducto:req.body.precioProducto,
       estadoProducto: req.body.estadoProducto,
       descripcionProductoLarga: req.body.descripcionProductoLarga,
       // stock: ,
-      // imagen: , 
+      imagen: customFilename, 
       // usuario_id: ,
       // marca_id: ,
       // puntuacion_id:
       });
       //console.log(req.body)
-      res.redirect('/productos')    
+      res.redirect('/productos')
+    } catch (error) {
+      console.error('Error:', error);
+    }   
   },
   editarProducto: function (req, res){
     let pedidoProductos = db.Producto.findByPk(req.params.id);
@@ -63,7 +87,29 @@ let productsController = {
         res.render('./pages/editarProducto', {producto: producto, categoria: categoria})
       })
   },
-  actualizarProducto: function (req, res){
+  actualizarProducto: async function (req, res)
+  {
+    try {
+		  const imageBuffer = req.file.buffer;
+		  const customFilename = Date.now() + '-imgProducto';
+		  const folderName = 'productos';
+
+		  const uploadPromise = new Promise((resolve, reject) => {
+			let stream = cloudinary.uploader.upload_stream({folder: folderName,resource_type: 'image', public_id: customFilename}, (error, result) => {
+			  if (error) {
+				console.error('Error during upload:', error);
+				reject(error);
+			  } else {
+				console.log('Upload successful:', result);
+				resolve(result);
+			  }
+			});
+	
+			streamifier.createReadStream(imageBuffer).pipe(stream);
+		  });
+	
+		  const uploadedImage = await uploadPromise;
+
     db.Producto.update({
       nombreProducto: req.body.nombreProducto,
       descripcionProductoCorta: req.body.descripcionProductoCorta,
@@ -71,7 +117,7 @@ let productsController = {
       estadoProducto: req.body.estadoProducto,
       descripcionProductoLarga: req.body.descripcionProductoLarga,
       // stock: ,
-      // imagen: , 
+      imagen: customFilename, 
       // usuario_id: ,
       // marca_id: ,
       // puntuacion_id:
@@ -81,6 +127,9 @@ let productsController = {
         }
       });
       res.redirect('/productos/' + req.params.id);
+    } catch (error) {
+      console.error('Error:', error);
+    }  
   },
   borrarProducto: function (req, res){
     db.Producto.destroy({

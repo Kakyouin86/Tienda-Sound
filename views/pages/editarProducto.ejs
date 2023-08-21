@@ -14,7 +14,7 @@
         <section class="form-container container col-lg-5 col-md-8 col-sm-12 mx-auto">
           <h1>Editá <span class="texto-resaltado">el producto!</span></h1>
           <form id="productForm" action="/productos/editarProducto/<%= producto.id %>" method="POST"
-            class="base-form crearProducto-form">
+            class="base-form crearProducto-form" enctype="multipart/form-data">
 
             <name for="nombreProducto">Nombre del Producto</name>
             <input type="text" value="<%= producto.nombreProducto %>" name="nombreProducto">
@@ -56,7 +56,7 @@
             
             <name for="fotoDestacada">Imagen destacada</name>
             <div class="img-cont">
-              <img src="/img/productos/<%=producto.fotoDestacada%>" alt="foto">
+              <img src="http://res.cloudinary.com/dlf8flk1o/image/upload/v1692641327/productos/<%=producto.imagen%>" alt="foto">
             </div>
             <input type="file" name="fotoDestacada">
             <div class="dos-col">
