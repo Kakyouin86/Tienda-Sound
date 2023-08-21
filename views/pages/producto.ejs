@@ -102,7 +102,8 @@
             </div>
             <!-- botones EDITAR y BORRAR-->
             <div class="producto-detail-btn">
-              <a href="/editarProducto/<%= producto.id %>" class="btn-editar">EDITAR PRODUCTO</a>
+              <a href="/productos/editarProducto/<%= producto.id %>" class="btn-editar">EDITAR PRODUCTO</a>
+              
               <form action="/borrarProducto/<%= producto.id %>?_method=DELETE" method="POST"
                 onsubmit="return confirm('¿Está seguro/a que desea eliminar el producto?');">
                 <button type="submit" class="btn-eliminar">ELIMINAR</button>
@@ -113,127 +114,7 @@
       </div>
 
     
-      <!----------------------SECCION RECOMENDACION - KIARA----------------------------------------------------->
-
-      <!----------------------SECCION computadoras----------------------------------------------------->
-      <section class="container seccion-recomendado col-12 carruselComp ">
-        <h5 class="titulo-recomendado">También te puede interesar</h5>
-        <div id="carouselExample-rec-1" class="carousel slide carousel-recomendado ">
-          <div class="carousel-inner carousel-inner-recomendado">
-            <div class="carousel-item active container carousel-item-recomendado ">
-              <div class="row justify-content-start row-recomendado">
-                <%for(let i=0; i<6; i++){%>
-                  <div class=" col-2 contenedor-recomendado">
-                    <div class="producto">
-                      <div class="seccionImgProducto">
-                        <div class="contenedorImgProducto">
-                          <img class="imgProducto " src="/img/productos/<%= productos[i].fotoDestacada%>" alt="img-">
-                        </div>
-                      </div>
-                      <div class="informacionProducto">
-                        
-                        <p class="descripcionProducto"><%= productos[i].nombreProducto%></p>
-                        <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
-                        <p class="precioProducto">$ <%= productos[i].precioProducto%>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                <%}%>
-              </div>
-            </div>
-            <div class="carousel-item  container carousel-item-recomendado">
-              <div class="row justify-content-start row-recomendado">
-                <%for(let i=6; i<12; i++){%>
-                  <div class=" col-2 contenedor-recomendado">
-                    <div class="producto">
-                      <div class="seccionImgProducto">
-                        <div class="contenedorImgProducto">
-                          <img class="imgProducto " src="/img/productos/<%= productos[i].fotoDestacada%>" alt="img-">
-                        </div>
-                      </div>
-                      <div class="informacionProducto">
-                        <p class="descripcionProducto"><%= productos[i].nombreProducto%></p>
-                        <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
-                        <p class="precioProducto">$ <%= productos[i].precioProducto%>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                <%}%>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev carousel-control-prev-recomendado" type="button"
-            data-bs-target="#carouselExample-rec-1" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon  span-recom" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next carousel-control-next-recomendado " type="button"
-            data-bs-target="#carouselExample-rec-1" data-bs-slide="next">
-            <span class="carousel-control-next-icon  span-recom" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </section>
-      <!----------------------SECCION tablet-celulares----------------------------------------------------->
-      <section class="container seccion-recomendado col-12 carruselTabCel ">
-        <h5 class="titulo-recomendado">También te puede interesar</h5>
-        <div id="carouselExample-rec-2" class="carousel slide carousel-recomendado ">
-          <div class="carousel-inner carousel-inner-recomendado">
-            <div class="carousel-item active container carousel-item-recomendado ">
-              <div class="row justify-content-start row-recomendado">
-                <%for(let i=0; i<3; i++){%>
-                <div class=" col-4 contenedor-recomendado">
-                  <div class="producto ">
-                    <div class="seccionImgProducto">
-                      <div class="contenedorImgProducto ">
-                        <img class="imgProducto " src="/img/productos/<%= productos[i].fotoDestacada%>" alt="img-">
-                      </div>
-                    </div>
-                    <div class="informacionProducto">
-                      <p class="descripcionProducto"><%= productos[i].nombreProducto%></p>
-                      <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
-                      <p class="precioProducto">$ <%= productos[i].precioProducto%>
-                    </div>
-                  </div>
-                </div>
-                <%}%>
-              </div>
-            </div>
-            <div class="carousel-item  container carousel-item-recomendado">
-              <div class="row justify-content-start row-recomendado">
-                <%for(let i=3; i<6; i++){%>
-                  <div class=" col-4 contenedor-recomendado">
-                    <div class="producto ">
-                      <div class="seccionImgProducto">
-                        <div class="contenedorImgProducto ">
-                          <img class="imgProducto " src="/img/productos/<%= productos[i].fotoDestacada%>" alt="img-">
-                        </div>
-                      </div>
-                      <div class="informacionProducto">
-                        <p class="descripcionProducto"><%= productos[i].nombreProducto%></p>
-                        <div class="envio-prod">Envio <span style="font-weight: 600;">GRATIS</span></div>
-                        <p class="precioProducto">$ <%= productos[i].precioProducto%>
-                      </div>
-                    </div>
-                  </div>
-                  <%}%>
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev carousel-control-prev-recomendado" type="button"
-            data-bs-target="#carouselExample-rec-2" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon span-recom" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next carousel-control-next-recomendado " type="button"
-            data-bs-target="#carouselExample-rec-2" data-bs-slide="next">
-            <span class="carousel-control-next-icon span-recom" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </section>
+    <!-- SECCIÓN DE KIARA -->
 
       
     </main>

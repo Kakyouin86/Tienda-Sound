@@ -62,7 +62,26 @@ let productsController = {
       .then(function ([producto, categoria]){
         res.render('./pages/editarProducto', {producto: producto, categoria: categoria})
       })
-  }
+  },
+  actualizarProducto: function (req, res){
+    db.Producto.update({
+      nombreProducto: req.body.nombreProducto,
+      descripcionProductoCorta: req.body.descripcionProductoCorta,
+      precioProducto:req.body.precioProducto,
+      estadoProducto: req.body.estadoProducto,
+      descripcionProductoLarga: req.body.descripcionProductoLarga,
+      // stock: ,
+      // imagen: , 
+      // usuario_id: ,
+      // marca_id: ,
+      // puntuacion_id:
+      }, {
+        where: {
+          id: req.params.id
+        }
+      });
+      res.redirect('/productos/' + req.params.id);
+  },
   
 }
 

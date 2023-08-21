@@ -21,8 +21,8 @@ router.get('/crearProducto', productsController.crear);
 router.post('/crearProducto', productsController.guardarProducto);
 
 // Editar/Actualizar un producto
-router.get('/editarProducto/:id', productsController.editarProducto);
-
+router.get('/editarProducto/:id?', productsController.editarProducto);
+router.post('/editarProducto/:id?', productsController.actualizarProducto);
 
 // Eliminar un producto
 
