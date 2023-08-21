@@ -54,6 +54,15 @@ let productsController = {
       //console.log(req.body)
       res.redirect('/productos')    
   },
+  editarProducto: function (req, res){
+    let pedidoProductos = db.Producto.findByPk(req.params.id);
+    let pedidoCategoria = db.Categoria.findAll()
+
+    Promise.all([pedidoProductos, pedidoCategoria])
+      .then(function ([producto, categoria]){
+        res.render('./pages/editarProducto', {producto: producto, categoria: categoria})
+      })
+  }
   
 }
 

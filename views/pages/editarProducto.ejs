@@ -18,12 +18,15 @@
 
             <name for="nombreProducto">Nombre del Producto</name>
             <input type="text" value="<%= producto.nombreProducto %>" name="nombreProducto">
+
             <name for="descripcionProductoCorta">Breve descripción</name>
             <textarea name="descripcionProductoCorta" id="" cols="30"
               rows="3"><%= producto.descripcionProductoCorta %></textarea>
+
             <name for="nombreProducto">Precio en ARS</name>
             <input type="number" name="precioProducto" value="<%= producto.precioProducto %>">
             <div class="dos-col">
+
               <name for="estado">Estado</name>
               <%if (producto.estadoProducto==="Nuevo" ) { %>
                 <name><input type="radio" name="estadoProducto" value="Nuevo" checked> Nuevo</name>
@@ -33,43 +36,24 @@
                   <name><input type="radio" name="estadoProducto" value="Usado" checked> Usado</name>
                   <%}%>
             </div>
+
             <name for="descripcionProductoLarga">Descripción detallada</name>
             <textarea name="descripcionProductoLarga" id="" cols="30"
               rows="6"><%= producto.descripcionProductoLarga %></textarea>
+
             <name for="categoriaProducto">Categoría del Producto</name>
-            <select name="categoriaProducto" id="">
-              <% if (producto.categoriaProducto=="guitarrasBajos" ) {%>
-                <option value="guitarrasBajos" selected>Guitarras y bajos</option>
-                <option value="bateriasPercusion">Baterias y percusión</option>
-                <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
-                <option value="vientos">Vientos</option>
-                <option value="cuerdas">Cuerdas</option>
-                <% } else if (producto.categoriaProducto=="bateriasPercusion" ){ %>
-                  <option value="guitarrasBajos">Guitarras y bajos</option>
-                  <option value="bateriasPercusion" selected>Baterias y percusión</option>
-                  <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
-                  <option value="vientos">Vientos</option>
-                  <option value="cuerdas">Cuerdas</option>
-                  <% } else if (producto.categoriaProducto=="tecladosSintetizadores" ){ %>
-                    <option value="guitarrasBajos">Guitarras y bajos</option>
-                    <option value="bateriasPercusion">Baterias y percusión</option>
-                    <option value="tecladosSintetizadores" selected>Teclados y Sintetizadores</option>
-                    <option value="vientos">Vientos</option>
-                    <option value="cuerdas">Cuerdas</option>
-                    <% } else if (producto.categoriaProducto=="vientos" ){ %>
-                      <option value="guitarrasBajos">Guitarras y bajos</option>
-                      <option value="bateriasPercusion">Baterias y percusión</option>
-                      <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
-                      <option value="vientos" selected>Vientos</option>
-                      <option value="cuerdas">Cuerdas</option>
-                      <% } else { %>
-                        <option value="guitarrasBajos">Guitarras y bajos</option>
-                        <option value="bateriasPercusion">Baterias y percusión</option>
-                        <option value="tecladosSintetizadores">Teclados y Sintetizadores</option>
-                        <option value="vientos">Vientos</option>
-                        <option value="cuerdas" selected>Cuerdas</option>
-                        <%}%>
+            <select name="categoriaProducto">
+
+              <% for(let i=0; i<categoria.length; i++) {%>
+                <% if (categoria[i].id == producto.categoria_id ) {%>
+                  <option value="<%= categoria[i].id %>" selected> <%= categoria[i].nombre %> </option>
+                  <% } else { %>
+                  <option value="<%= categoria[i].id %>"> <%= categoria[i].nombre %> </option>
+                <% } %>
+              <% } %>
+
             </select>
+            
             <name for="fotoDestacada">Imagen destacada</name>
             <div class="img-cont">
               <img src="/img/productos/<%=producto.fotoDestacada%>" alt="foto">

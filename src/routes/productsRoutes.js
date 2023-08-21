@@ -9,7 +9,7 @@ const productsController = require("../controllers/productsController");
 const multer = require('multer');
 const uploadProduct = multer();
 
-// Rutas
+// RUTAS
 
 // Todos los productos
 router.get('/', productsController.productos);
@@ -22,6 +22,10 @@ router.get('/crearProducto', productsController.crear);
 router.post('/crearProducto', productsController.guardarProducto);
 
 // Editar/Actualizar un producto
+router.get('/editarProducto/:id', productsController.editarProducto);
+
+
+// Eliminar un producto
 
 
 module.exports = router;
