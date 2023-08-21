@@ -61,19 +61,19 @@
         <ul class="navbar-nav">
           <% if (locals.isLogged) { %>
             <li>
-              <a href="/profile" class="nav-link">Hola, <%= locals.userLogged.nombreCompleto %></a>
+              <a href="/users/profile" class="nav-link">Hola, <%= locals.userLogged.nombreCompleto %></a>
             </li>
           
               <li>
-                  <a href="/logout" class="nav-link">Cerrar sesión <i class="fa-solid fa-right-from-bracket"></i></a>
+                  <a href="/users/logout" class="nav-link">Cerrar sesión <i class="fa-solid fa-right-from-bracket"></i></a>
               </li>
           <% } else { %>
             <li>
-              <a href="/register" class="nav-link">Registro</a>
+              <a href="/users/register" class="nav-link">Registro</a>
             </li>
             <div>
               <li class="nav-item">
-                <a href="/login" class="nav-link register-login-link">Login</a>
+                <a href="/users/login" class="nav-link register-login-link">Login</a>
               </li>
             </div>
           <% } %>
@@ -87,7 +87,7 @@
         </a>
       </div>
       <div>
-        <a href="/profile" class="link-light icon-header">
+        <a href="/users/profile" class="link-light icon-header">
           <i class="fa-solid fa-user" style="color: #ffffff;"></i>
         </a>
       </div>

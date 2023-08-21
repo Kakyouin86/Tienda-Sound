@@ -3,6 +3,8 @@
 //npm i ejs
 const mainRoutes = require('./src/routes/mainRoutes');
 const productsRoutes = require('./src/routes/productsRoutes');
+const usersRoutes = require('./src/routes/usersRoutes');
+
 
 
 const express = require("express");
@@ -36,6 +38,7 @@ app.set('view engine', 'ejs');
 
 app.use('/', mainRoutes);
 app.use('/productos', productsRoutes);
+app.use('/users', usersRoutes);
 
 
 app.use((req, res, next) => 

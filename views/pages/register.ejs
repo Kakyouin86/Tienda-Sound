@@ -14,7 +14,7 @@
         <section class="form-register form-container container col-lg-5 col-md-8 col-sm-12 mx-auto">
           <h1><span class="texto-resaltado">Registrate</span> y creá tu cuenta!</h1>     
     
-          <form action="/register" class="base-form register-form" method="POST" enctype="multipart/form-data">
+          <form action="/users/register" class="base-form register-form" method="POST" enctype="multipart/form-data">
             
             <input type="text" placeholder="Nombre Completo" name="nombreCompleto" value="<%= locals.oldData ? oldData.nombreCompleto : null  %>">
             

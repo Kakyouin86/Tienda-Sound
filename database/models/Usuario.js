@@ -25,11 +25,11 @@ module.exports = function(sequelize, DataTypes){
         },
         historial_compras:{
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true
         },
         historial_ventas:{
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true
         }
     };
 

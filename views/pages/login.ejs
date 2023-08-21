@@ -15,7 +15,7 @@
           <h1>¡Hola!</h1>
           <h1 class="iniciaSesion">Iniciá sesión o <span class="texto-resaltado"><a href="/register">créa tu cuenta</a></span></h1>
           
-          <form action="/login" class="base-form login-form" method="POST">
+          <form action="/users/login" class="base-form login-form" method="POST">
 
             <input type="email" placeholder="Correo electrónico" name="email">
             <% if (locals.errors && errors.email) { %>
