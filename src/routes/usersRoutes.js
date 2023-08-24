@@ -16,11 +16,18 @@ const uploadAvatar = multer();
 // RUTAS
 
 // Perfil
-router.get('/profile', authMiddleware, mainController.profile);
+router.get('/profile', authMiddleware, usersController.profile); // corregir con middleware
 
 // Crear usuario
 router.get('/register', guestMiddleware, usersController.register);
 router.post('/register', uploadAvatar.single('avatar'), validations, usersController.guardarUser);
+
+// Editar usuario
+// HACER
+
+// Eliminar usuario
+// HACER
+
 
 //Ingresar al usuario
 router.get('/login', guestMiddleware, usersController.login);

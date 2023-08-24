@@ -17,7 +17,7 @@ module.exports= function(sequelize, DataTypes){
             type: DataTypes.FLOAT,
         },
         estadoProducto:{
-            type: DataTypes.BOOLEAN,
+            type: DataTypes.ENUM('Nuevo', 'Usado'),
         },
         descripcionProductoLarga:{
             type: DataTypes.TEXT,
