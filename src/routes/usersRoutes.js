@@ -6,6 +6,7 @@ const validations = require("./../middlewares/registerValidation");
 const guestMiddleware = require("./../middlewares/guestMiddleware");
 const authMiddleware = require("./../middlewares/authMiddleware");
 
+
 // Controladores
 const usersController = require("../controllers/usersController");
 

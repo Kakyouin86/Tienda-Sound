@@ -17,7 +17,11 @@ cloudinary.config({
 let usersController = {
   profile: function (req, res) 
   {
-  // función
+    // VERIFICAR SI ESTÁ OK - MIDDLEWARES
+    
+    // res.render('./pages/profile', {
+		// 	user: req.session.userLogged
+		// });
   },
   register: function (req, res) 
   {
@@ -70,7 +74,7 @@ let usersController = {
       password: bcrypt.hashSync(req.body.password, 10),
       imagen: customFilenameAvatar 
       })
-        res.redirect("/login")
+        res.redirect("/users/login")
       } catch (error) {
         console.error('Error:', error);
       }
@@ -79,14 +83,35 @@ let usersController = {
   {
     res.render('./pages/login');
   },
-  loginProcess: function (req, res)
-	{
-  // función
+  loginProcess: async (req, res) => {
+
+    //PREGUNTAR POR: USER LOGGED MIDDLEWARE
+
+    try {
+        const { email, password } = req.body;
+        const user = await db.Usuario.findOne({
+            where: {email}
+        });
+        if (!user) {
+            return res.status(404).json('Email no encontrado');
+        }
+        // Verifica password
+        const passwordValid = await bcrypt.compareSync(password, user.password);
+        if (!passwordValid) {
+            return res.status(404).json('Combinación de email y password incorrecta');
+        }
+      } catch (err) {
+        return res.status(500).send('Error');
+    }
 	},
   logout: function (req, res)
-	{
-  // función
-	}
+	{ 
+    // VERIFICAR SI ESTÁ OK - MIDDLEWARES
+
+		// res.clearCookie('userEmailCookie');
+		// req.session.destroy();
+		// return res.redirect ('/')
+	},
 }
 
 module.exports = usersController;
