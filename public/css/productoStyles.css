@@ -366,9 +366,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 .btn-editar,
 .btn-eliminar {
-    border: none;
     color: white;
-    padding: 20px;
+    border:0;
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;

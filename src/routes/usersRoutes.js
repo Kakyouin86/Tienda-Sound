@@ -24,10 +24,11 @@ router.get('/register', guestMiddleware, usersController.register);
 router.post('/register', uploadAvatar.single('avatar'), validations, usersController.guardarUser);
 
 // Editar usuario
-// HACER
+router.get('/editarUser/:id', usersController.editarUser);
+router.post('/editarUser/:id', uploadAvatar.single('avatar'), usersController.actualizarUser);
 
 // Eliminar usuario
-// HACER
+router.post('/borrarUser/:id', usersController.borrarUser);
 
 
 //Ingresar al usuario

@@ -120,6 +120,43 @@
   font-weight: bold;
 }
 
+.profile-form .profile-detail-btn {
+  max-width: 400px;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.btn-editar,
+.btn-eliminar {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 500ms;
+}
+
+.btn-editar {
+    background-color: #3333FF;
+}
+
+.btn-eliminar {
+    background-color: #E93882;
+}
+
+.btn-editar:hover {
+    background-color: #8c8cf9;
+}
+
+.btn-eliminar:hover {
+    background-color: #eb8eb5;
+}
+
 
 
 

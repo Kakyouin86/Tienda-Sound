@@ -14,7 +14,7 @@
     <main class="profile-grid">
       <section class="profile-menu">
         <article>
-          <img src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1692293497/avatars/<%= user.avatar %>" alt="" />
+          <img src="http://res.cloudinary.com/dlf8flk1o/image/upload/v1692991185/avatars/<%=user.imagen%>" alt="" />
           <h2>Hola <span class="texto-resaltado"><%= user.nombreCompleto %>!</span></h2>
         </article>
         <nav class="profile-nav">
@@ -32,47 +32,7 @@
         </nav>
       </section>
       <section class="profile-form-container">
-        
-        <h1>Editá tu información</h1>
-
-        <form action="/register" class="base-form profile-form" method="POST" enctype="multipart/form-data">
-            
-            <input type="text" placeholder="Nombre Completo" name="nombreCompleto" value="<%= locals.oldData ? oldData.nombreCompleto : null  %>">
-            
-            <% if (locals.errors && errors.nombreCompleto) { %>
-            <div class="text-danger">
-              <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.nombreCompleto.msg %>
-            </div>
-            <% } %>
-
-            <input type="email" placeholder="Correo electrónico" name="email" value="<%= locals.oldData ? oldData.email : null  %>">
-
-            <% if (locals.errors && errors.email) { %>
-              <div class="text-danger">
-              <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.email.msg %>
-              </div>
-             <% } %>
-
-            <input type="password" placeholder="Contraseña" name="password" value="<%= locals.oldData ? oldData.password : null  %>">
-
-            <% if (locals.errors && errors.password) { %>
-              <div class="text-danger">
-              <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.password.msg %>
-              </div>
-             <% } %>
-            
-            <label for="avatar" style="padding-bottom: 5px;"><i class="fa-regular fa-id-card"></i>  Imagen de tu Perfil</label>
-            <input type="file" name="avatar" style="padding-top: 17px;">
-           <% if (locals.errors && errors.avatar) { %>
-             <div class="text-danger">
-              <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.avatar.msg %>
-             </div>
-           <% } %>
-
-        
-            <button type="submit" class="form-btn inicio-btn">Editar</button>
-           
-          </form>
+        <a href="/users/editarUser/<%= user.id %>" class="btn-editar">EDITAR USUARIO</a>
       </section>
     </main>
 
