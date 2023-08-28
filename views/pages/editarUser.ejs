@@ -41,7 +41,10 @@
              <% } %>
             
             <label for="avatar" style="padding-bottom: 5px;"><i class="fa-regular fa-id-card"></i>  Imagen de tu Perfil</label>
-            <input type="file" name="avatar" style="padding-top: 17px;"  value="<%= user.imagen %>">
+            <input type="file" name="avatar" style="padding-top: 17px;"  value="">
+            <div class="img-cont">
+              <img src="http://res.cloudinary.com/dlf8flk1o/image/upload/v1692991185/avatars/<%=user.imagen%>" alt="foto">
+            </div>
            <% if (locals.errors && errors.avatar) { %>
              <div class="text-danger">
               <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.avatar.msg %>
@@ -50,10 +53,7 @@
 
            <div class="profile-detail-btn">
 
-            <form action="/users/borrarUser/<%= user.id %>" method="POST"
-              onsubmit="return confirm('¿Está seguro/a que deseas eliminar tu usuario?');">
-              <button type="submit" class="btn-eliminar">Eliminar usuario</button>
-            </form>
+           
             <button type="submit" class="form-btn inicio-btn">Editar información</button>
           
 

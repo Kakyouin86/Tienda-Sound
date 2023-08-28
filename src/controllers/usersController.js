@@ -124,7 +124,9 @@ let usersController = {
           id: req.params.id
         }
       });
-      res.redirect('/login');
+      res.clearCookie("userEmailCookie");
+      req.session.destroy();
+      res.redirect('/');
   },
   login: function (req, res) {
     res.render("./pages/login");
