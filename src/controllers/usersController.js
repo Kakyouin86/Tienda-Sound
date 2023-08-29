@@ -20,6 +20,41 @@ let usersController = {
       user: req.session.userLogged,
     });
   },
+  login: function (req, res) {
+    res.render("./pages/login");
+  },
+  loginProcess: async (req, res) => {
+    try {
+      const { email, password, recordarUsuario } = req.body;
+      const user = await db.Usuario.findOne({
+        where: { email },
+      });
+
+      if (!user) {
+        return res.status(404).json("Email no encontrado");
+      }
+
+      const passwordValid = await bcrypt.compare(password, user.password);
+
+      if (!passwordValid) {
+        return res
+          .status(401)
+          .json("Combinación de email y contraseña incorrecta");
+      } else {
+        delete user.password; // Elimina la contraseña antes de almacenar en la sesión
+        req.session.userLogged = user; // Almacena el usuario en la sesión
+
+        if (recordarUsuario) {
+          res.cookie("userEmailCookie", email, { maxAge: 6000 });
+        }
+
+        return res.redirect("/users/profile");
+      }
+    } catch (err) {
+      console.error(err);
+      return res.status(500).send("Error en el servidor");
+    }
+  },
   register: function (req, res) {
     res.render("./pages/register");
   },
@@ -100,12 +135,12 @@ let usersController = {
         streamifier.createReadStream(imageBufferAvatar).pipe(streamAvatar);
       });
       const uploadedImageAvatar = await uploadPromiseAvatar;
-
-      db.Usuario.update({
+    
+      await db.Usuario.update({
         nombreCompleto: req.body.nombreCompleto,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
-        imagen: customFilenameAvatar,
+        imagen: req.file ? customFilenameAvatar : user.image,
       },
       {
         where: {
@@ -113,13 +148,18 @@ let usersController = {
         },
       }
       );
-      res.redirect("/users/login");
+      let actualizarUsuario = await db.Usuario.findOne({ 
+        where: { id: req.params.id }
+      })
+      req.session.userLogged = actualizarUsuario
+      res.redirect("/users/profile");
     } catch (error) {
       console.error("Error:", error);
     }
   },
-  borrarUser: function (req, res){
-    db.Usuario.destroy({
+  borrarUser: async function (req, res){
+    try {
+      await db.Usuario.destroy({
         where: {
           id: req.params.id
         }
@@ -127,43 +167,10 @@ let usersController = {
       res.clearCookie("userEmailCookie");
       req.session.destroy();
       res.redirect('/');
-  },
-  login: function (req, res) {
-    res.render("./pages/login");
-  },
-  loginProcess: async (req, res) => {
-    try {
-      const { email, password, recordarUsuario } = req.body;
-      const user = await db.Usuario.findOne({
-        where: { email },
-      });
-
-      if (!user) {
-        return res.status(404).json("Email no encontrado");
-      }
-
-      const passwordValid = await bcrypt.compare(password, user.password);
-
-      if (!passwordValid) {
-        return res
-          .status(401)
-          .json("Combinación de email y contraseña incorrecta");
-      } else {
-        delete user.password; // Elimina la contraseña antes de almacenar en la sesión
-        req.session.userLogged = user; // Almacena el usuario en la sesión
-
-        if (recordarUsuario) {
-          res.cookie("userEmailCookie", email, { maxAge: 6000 });
-        }
-
-        return res.redirect("/users/profile");
-      }
-    } catch (err) {
-      console.error(err);
-      return res.status(500).send("Error en el servidor");
+    } catch (error) {
+      console.error("Error:", error);
     }
   },
-
   logout: function (req, res) {
     res.clearCookie("userEmailCookie");
     req.session.destroy();

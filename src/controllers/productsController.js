@@ -60,7 +60,7 @@ let productsController = {
 	
 		  const uploadedImage = await uploadPromise;
 	
-      db.Producto.create({
+      await db.Producto.create({
       nombreProducto: req.body.nombreProducto,
       descripcionProductoCorta: req.body.descripcionProductoCorta,
       precioProducto:req.body.precioProducto,
@@ -110,17 +110,13 @@ let productsController = {
 	
 		  const uploadedImage = await uploadPromise;
 
-    db.Producto.update({
+      await db.Producto.update({
       nombreProducto: req.body.nombreProducto,
       descripcionProductoCorta: req.body.descripcionProductoCorta,
       precioProducto:req.body.precioProducto,
       estadoProducto: req.body.estadoProducto,
       descripcionProductoLarga: req.body.descripcionProductoLarga,
-      // stock: ,
       imagen: customFilename, 
-      // usuario_id: ,
-      // marca_id: ,
-      // puntuacion_id:
       }, {
         where: {
           id: req.params.id
@@ -131,13 +127,19 @@ let productsController = {
       console.error('Error:', error);
     }  
   },
-  borrarProducto: function (req, res){
-    db.Producto.destroy({
+  borrarProducto: async function (req, res){
+  try {
+    await db.Producto.destroy({
         where: {
           id: req.params.id
         }
       });
       res.redirect('/productos');
+  } catch (error) {
+    console.error("Error:", error);
   }
 }
+
+}
+
 module.exports = productsController;

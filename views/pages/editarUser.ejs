@@ -14,7 +14,7 @@
         <section class="form-register form-container container col-lg-5 col-md-8 col-sm-12 mx-auto">
 
           <h1><span class="texto-resaltado">Editá</span> tu información!</h1>     
-          <form action="/users/editarUser/<%= user.id %>" class="base-form profile-form" method="POST" enctype="multipart/form-data">
+          <form action="/users/editarUser/<%= user.id %>?_method=PATCH" class="base-form profile-form" method="POST" enctype="multipart/form-data">
             
             <input type="text" placeholder="Nombre Completo" name="nombreCompleto" value="<%= user.nombreCompleto %>">
             
@@ -52,11 +52,7 @@
            <% } %>
 
            <div class="profile-detail-btn">
-
-           
             <button type="submit" class="form-btn inicio-btn">Editar información</button>
-          
-
           </div>
 
           </form>
