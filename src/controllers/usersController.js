@@ -20,6 +20,41 @@ let usersController = {
       user: req.session.userLogged,
     });
   },
+  login: function (req, res) {
+    res.render("./pages/login");
+  },
+  loginProcess: async (req, res) => {
+    try {
+      const { email, password, recordarUsuario } = req.body;
+      const user = await db.Usuario.findOne({
+        where: { email },
+      });
+
+      if (!user) {
+        return res.status(404).json("Email no encontrado");
+      }
+
+      const passwordValid = await bcrypt.compare(password, user.password);
+
+      if (!passwordValid) {
+        return res
+          .status(401)
+          .json("Combinación de email y contraseña incorrecta");
+      } else {
+        delete user.password; // Elimina la contraseña antes de almacenar en la sesión
+        req.session.userLogged = user; // Almacena el usuario en la sesión
+
+        if (recordarUsuario) {
+          res.cookie("userEmailCookie", email, { maxAge: 6000 });
+        }
+
+        return res.redirect("/users/profile");
+      }
+    } catch (err) {
+      console.error(err);
+      return res.status(500).send("Error en el servidor");
+    }
+  },
   register: function (req, res) {
     res.render("./pages/register");
   },
@@ -113,7 +148,7 @@ let usersController = {
         },
       }
       );
-      res.redirect("/users/login");
+      res.redirect("/users/profile");
     } catch (error) {
       console.error("Error:", error);
     }
@@ -128,42 +163,6 @@ let usersController = {
       req.session.destroy();
       res.redirect('/');
   },
-  login: function (req, res) {
-    res.render("./pages/login");
-  },
-  loginProcess: async (req, res) => {
-    try {
-      const { email, password, recordarUsuario } = req.body;
-      const user = await db.Usuario.findOne({
-        where: { email },
-      });
-
-      if (!user) {
-        return res.status(404).json("Email no encontrado");
-      }
-
-      const passwordValid = await bcrypt.compare(password, user.password);
-
-      if (!passwordValid) {
-        return res
-          .status(401)
-          .json("Combinación de email y contraseña incorrecta");
-      } else {
-        delete user.password; // Elimina la contraseña antes de almacenar en la sesión
-        req.session.userLogged = user; // Almacena el usuario en la sesión
-
-        if (recordarUsuario) {
-          res.cookie("userEmailCookie", email, { maxAge: 6000 });
-        }
-
-        return res.redirect("/users/profile");
-      }
-    } catch (err) {
-      console.error(err);
-      return res.status(500).send("Error en el servidor");
-    }
-  },
-
   logout: function (req, res) {
     res.clearCookie("userEmailCookie");
     req.session.destroy();

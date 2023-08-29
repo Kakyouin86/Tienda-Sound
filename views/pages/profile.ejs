@@ -31,11 +31,11 @@
         </nav>
       </section>
       <section class="profile-form-container">
+        <a href="/users/editarUser/<%= user.id %>" class="btn-editar">EDITAR USUARIO</a>
         <form action="/users/borrarUser/<%= user.id %>" method="POST"
           onsubmit="return confirm('¿Está seguro/a que deseas eliminar tu usuario?');">
-          <button type="submit" class="btn-eliminar">Eliminar usuario</button>
+          <button type="submit" class="btn-eliminar">ELIMINAR CUENTA</button>
         </form>
-        <a href="/users/editarUser/<%= user.id %>" class="btn-editar">EDITAR USUARIO</a>
       </section>
     </main>
 

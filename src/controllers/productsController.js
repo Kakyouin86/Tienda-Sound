@@ -116,11 +116,7 @@ let productsController = {
       precioProducto:req.body.precioProducto,
       estadoProducto: req.body.estadoProducto,
       descripcionProductoLarga: req.body.descripcionProductoLarga,
-      // stock: ,
       imagen: customFilename, 
-      // usuario_id: ,
-      // marca_id: ,
-      // puntuacion_id:
       }, {
         where: {
           id: req.params.id
