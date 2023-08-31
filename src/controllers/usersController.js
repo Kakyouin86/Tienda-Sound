@@ -5,6 +5,8 @@ const bcrypt = require("bcryptjs");
 const cloudinary = require("cloudinary").v2;
 const streamifier = require("streamifier");
 
+const {validationResult} = require("express-validator");
+
 let db = require("../../database/models");
 
 // credenciales Cloudinary
@@ -25,21 +27,32 @@ let usersController = {
   },
   loginProcess: async (req, res) => {
     try {
+      // Validación Back End - Login
       const { email, password, recordarUsuario } = req.body;
       const user = await db.Usuario.findOne({
         where: { email },
       });
 
       if (!user) {
-        return res.status(404).json("Email no encontrado");
+        return res.render('./pages/login', {
+          errors: {
+            email: {
+              msg: 'Este email no se encuentra en nuestra base de datos.'
+            }
+          },
+        });
       }
-
+      
       const passwordValid = await bcrypt.compare(password, user.password);
 
       if (!passwordValid) {
-        return res
-          .status(401)
-          .json("Combinación de email y contraseña incorrecta");
+        return res.render('./pages/login', {
+          errors: {
+            password: {
+              msg: 'La contaseña es incorrecta.'
+            }
+           }
+        });
       } else {
         delete user.password; // Elimina la contraseña antes de almacenar en la sesión
         req.session.userLogged = user; // Almacena el usuario en la sesión
@@ -60,6 +73,31 @@ let usersController = {
   },
   guardarUser: async function (req, res) {
     try {
+      // Validación Back End - Register
+      const resultValidation = validationResult(req)
+      if (resultValidation.errors.length > 0){
+        return res.render('./pages/register', {
+          errors: resultValidation.mapped(),
+          oldData: req.body
+        })
+      }
+
+      const { email, password, recordarUsuario } = req.body;
+      let userInDB  = await db.Usuario.findOne({
+        where: { email },
+      });
+
+      if (userInDB) {
+        return res.render('./pages/register', {
+          errors: {
+            email: {
+              msg: 'El email que desea ingresar ya está registrado.'
+            }
+          },
+          oldData: req.body
+        });
+      }
+
       const imageBufferAvatar = req.file.buffer;
       const customFilenameAvatar = Date.now() + "imagen";
       const folderName = "avatars";
