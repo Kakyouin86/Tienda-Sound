@@ -127,19 +127,46 @@ let productsController = {
       console.error('Error:', error);
     }  
   },
-  borrarProducto: async function (req, res){
-  try {
-    await db.Producto.destroy({
-        where: {
-          id: req.params.id
-        }
-      });
-      res.redirect('/productos');
-  } catch (error) {
-    console.error("Error:", error);
-  }
-}
+  borrarProducto: async function (req, res)
+  {
+    try {
+      await db.Producto.destroy({
+          where: {
+            id: req.params.id
+          }
+        });
+        res.redirect('/productos');
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  },
 
+  // PAGINACIÓN DE PRODUCTOS
+
+  paginacion: async (req, res) => {
+    let limit = 3; // productos por página
+    let offset = 0;
+    await db.Producto
+      .findAndCountAll()
+      .then(data => {
+        let page = req.params.page; // numero de páginas
+        let pages = Math.ceil(data.count / limit);
+        offset = limit * (page - 1);
+         db.Producto
+          .findAll({
+            attributes: ['id', 'nombreProducto', 'descripcionProductoCorta', 'precioProducto', 'estadoProducto', 'imagen'],
+            limit: limit,
+            offset: offset,
+            $sort: { id: 1 }
+          })
+          .then(productos => {
+            res.render('./pages/productos', { productos: productos, count: data.count, pages: pages, offset: offset });
+          });
+      })
+      .catch(function (error) {
+        res.status(500).send('Internal Server Error');
+      });
+  }
 }
 
 module.exports = productsController;

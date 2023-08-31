@@ -26,6 +26,9 @@ router.patch('/editarProducto/:id', uploadProduct.single('fotoDestacada'), produ
 router.post('/borrarProducto/:id', productsController.borrarProducto);
 
 // Detalle del producto
-router.get('/:id?', productsController.detalle);  // sección de Kiara, corregir desde linea 129 (for)
+router.get('/:id?', productsController.detalle);  // falta carrousel, conflicto findByPK y findAll en una misma función
+
+// Paginacion de productos
+router.get('/page/:page', productsController.paginacion);
 
 module.exports = router;
