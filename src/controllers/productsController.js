@@ -40,7 +40,13 @@ let productsController = {
   guardarProducto: async function (req, res) 
   {
     	try {
-		  const imageBuffer = req.file.buffer;
+      let imageBuffer
+      if (!req.file.buffer) { 
+      
+        imageBuffer =  "-imgProducto"
+
+      } else {
+		  imageBuffer = req.file.buffer;
 		  const customFilename = Date.now() + '-imgProducto';
 		  const folderName = 'productos';
 
@@ -57,8 +63,10 @@ let productsController = {
 	
 			streamifier.createReadStream(imageBuffer).pipe(stream);
 		  });
-	
+
 		  const uploadedImage = await uploadPromise;
+
+      }
 	
       await db.Producto.create({
       nombreProducto: req.body.nombreProducto,
@@ -66,13 +74,11 @@ let productsController = {
       precioProducto:req.body.precioProducto,
       estadoProducto: req.body.estadoProducto,
       descripcionProductoLarga: req.body.descripcionProductoLarga,
-      // stock: ,
       imagen: customFilename, 
-      // usuario_id: ,
-      // marca_id: ,
-      // puntuacion_id:
+      // ver TODO ESTO DE USER ID
+      // usuario_id: req.session.userLogged,
+      // userLogged.id,
       });
-      //console.log(req.body)
       res.redirect('/productos')
     } catch (error) {
       console.error('Error:', error);
@@ -90,8 +96,11 @@ let productsController = {
   actualizarProducto: async function (req, res)
   {
     try {
+		  let  customFilename;
+      
+      if (req.file.buffer) {
 		  const imageBuffer = req.file.buffer;
-		  const customFilename = Date.now() + '-imgProducto';
+		  customFilename = Date.now() + '-imgProducto';
 		  const folderName = 'productos';
 
 		  const uploadPromise = new Promise((resolve, reject) => {
@@ -109,19 +118,23 @@ let productsController = {
 		  });
 	
 		  const uploadedImage = await uploadPromise;
-
-      await db.Producto.update({
-      nombreProducto: req.body.nombreProducto,
-      descripcionProductoCorta: req.body.descripcionProductoCorta,
-      precioProducto:req.body.precioProducto,
-      estadoProducto: req.body.estadoProducto,
-      descripcionProductoLarga: req.body.descripcionProductoLarga,
-      imagen: customFilename, 
-      }, {
-        where: {
-          id: req.params.id
+      }
+      
+      await db.Producto.update(
+        {
+          nombreProducto: req.body.nombreProducto,
+          descripcionProductoCorta: req.body.descripcionProductoCorta,
+          precioProducto: req.body.precioProducto,
+          estadoProducto: req.body.estadoProducto,
+          descripcionProductoLarga: req.body.descripcionProductoLarga,
+          ...(customFilename ? { imagen: customFilename } : {}), 
+        },
+        {
+          where: {
+            id: req.params.id
+          }
         }
-      });
+      );
       res.redirect('/productos/' + req.params.id);
     } catch (error) {
       console.error('Error:', error);
