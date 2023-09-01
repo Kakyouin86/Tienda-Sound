@@ -39,7 +39,11 @@
           </div>
           <div>
             <li class="nav-item">
+              <% if (locals.isLogged) { %>
               <a class="nav-link" href="/productos/crearProducto">Vender</a>
+              <% } else { %>
+                <a class="nav-link" href="/users/login">Vender</a>
+              <% } %>
             </li>
           </div>
           <div>

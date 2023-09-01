@@ -127,19 +127,19 @@ let productsController = {
       console.error('Error:', error);
     }  
   },
-  borrarProducto: async function (req, res){
-  try {
-    await db.Producto.destroy({
-        where: {
-          id: req.params.id
-        }
-      });
-      res.redirect('/productos');
-  } catch (error) {
-    console.error("Error:", error);
+  borrarProducto: async function (req, res)
+  {
+    try {
+      await db.Producto.destroy({
+          where: {
+            id: req.params.id
+          }
+        });
+        res.redirect('/productos');
+    } catch (error) {
+      console.error("Error:", error);
+    }
   }
-}
-
 }
 
 module.exports = productsController;
