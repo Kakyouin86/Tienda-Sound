@@ -43,11 +43,12 @@ let productsController = {
   guardarProducto: async function (req, res) {
     try {
       let imageBuffer;
+      let customFilename = ""; // Declara customFilename aquí
       if (!req.file) {
         imageBuffer = "1693608906899-imgProducto"; // IMAGEN POR DEFECTO cuando no se carga una imagen
       } else {
         imageBuffer = req.file.buffer;
-        const customFilename = Date.now() + '-imgProducto';
+        customFilename = Date.now() + '-imgProducto';
         const folderName = 'productos';
         const uploadPromise = new Promise((resolve, reject) => {
           let stream = cloudinary.uploader.upload_stream({ folder: folderName, resource_type: 'image', public_id: customFilename }, (error, result) => {
