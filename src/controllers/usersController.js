@@ -61,7 +61,7 @@ let usersController = {
         req.session.userLogged = user; // Almacena el usuario en la sesión
 
         if (recordarUsuario) {
-          res.cookie("userEmailCookie", email, { maxAge: 6000 });
+          res.cookie("userEmailCookie", email, { maxAge: 600000 });
         }
 
         return res.redirect("/users/profile");

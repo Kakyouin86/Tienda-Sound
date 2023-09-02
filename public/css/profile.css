@@ -158,8 +158,48 @@
 }
 
 
+/*user dashboard*/
 
 
+.grid-user-data {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap:30px;
+  margin: auto;
+  padding: 40px 50px;
+  max-width: 1580px;
+  height: 20vh;
+}
+
+.user-data{
+  border: 1px solid #00c7ff;
+  background-color: white;
+  border-radius: 10px;
+  transition: 500ms;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.user-data:hover {
+  scale: 103%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.user-data img{
+  width: 50px;
+  height: auto;
+}
+
+.user-data h4{
+  color:#3333FF;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.user-data p{
+  color: #B7B7B7;
+}
 
 
 
