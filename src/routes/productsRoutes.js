@@ -25,8 +25,13 @@ router.patch('/editarProducto/:id', uploadProduct.single('fotoDestacada'), produ
 // Eliminar un producto
 router.post('/borrarProducto/:id', productsController.borrarProducto);
 
+// Para ver productos usados
+router.get('/productosUsados', productsController.productosUsados);
+
+// Para ver productos nuevos
+router.get('/productosNuevos', productsController.productosNuevos);
+
 // Detalle del producto
 router.get('/:id?', productsController.detalle);  // falta carrousel, conflicto findByPK y findAll en una misma función
-
 
 module.exports = router;

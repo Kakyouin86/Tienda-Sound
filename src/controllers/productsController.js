@@ -159,6 +159,32 @@ let productsController = {
     } catch (error) {
       console.error("Error:", error);
     }
+  },
+  productosNuevos: function (req, res) {
+    db.Producto.findAll({
+      where: {
+        estadoProducto: "Nuevo"
+      }
+    }).then(function (productos)
+      {
+     res.render('./pages/productos', { productos: productos });
+      console.log(productosNuevos)
+      }).catch(function (error) {
+      console.error('Error:', error);
+    });
+  },
+  productosUsados: function (req, res) {
+    db.Producto.findAll({
+      where: {
+        estadoProducto: "Usado"
+      }
+    }).then(function (productos)
+      {
+     res.render('./pages/productos', { productos: productos });
+      console.log(productosNuevos)
+      }).catch(function (error) {
+      console.error('Error:', error);
+    });
   }
 }
 
