@@ -8,6 +8,9 @@ const streamifier = require("streamifier");
 const {validationResult} = require("express-validator");
 
 let db = require("../../database/models");
+const { productos } = require("./productsController");
+
+
 
 // credenciales Cloudinary
 cloudinary.config({
@@ -235,6 +238,16 @@ let usersController = {
     res.clearCookie("userEmailCookie");
     req.session.destroy();
     return res.redirect("/");
+  },
+  misProductos: function (req, res) {
+
+    db.Producto.findAll({ where: { usuario_id: req.session.userLogged.id } })
+    .then(function (products) {
+      res.render("./pages/misProductos", {
+        user: req.session.userLogged,
+        productos: products,
+      });
+    });
   },
 };
 

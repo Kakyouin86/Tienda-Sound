@@ -37,4 +37,7 @@ router.delete('/borrarUser/:id', usersController.borrarUser);
 // Cerrar sesión
 router.get('/logout', usersController.logout);
 
+//Ver mis productos
+router.get('/misProductos/:id', usersController.misProductos);
+
 module.exports = router;

@@ -1,5 +1,6 @@
-module.exports= function(sequelize, DataTypes){
+const { DataTypes, Sequelize } = require('sequelize');
 
+module.exports = function (sequelize, DataTypes){
     let alias = "Producto";
     let cols = {
         id:{
@@ -25,8 +26,10 @@ module.exports= function(sequelize, DataTypes){
         stock:{
             type: DataTypes.INTEGER,
         },
-        fecha_alta:{
-            type: DataTypes.DATE,
+        fecha_alta: {
+            type: DataTypes.DATE, // or Sequelize.DATETIME
+            allowNull: false,
+            defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'), // Set a default value to the current timestamp
         },
         fecha_modificacion:{
             type: DataTypes.DATE,

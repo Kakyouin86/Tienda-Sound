@@ -12,24 +12,7 @@
         </div>
       </a>
     <main class="profile-grid">
-      <section class="profile-menu">
-        <article>
-          <img src="http://res.cloudinary.com/dlf8flk1o/image/upload/v1692991185/avatars/<%=user.imagen%>" alt="" />
-          <h2>Hola <span class="texto-resaltado"><%= user.nombreCompleto %>!</span></h2>
-        </article>
-        <nav class="profile-nav">
-          <ul>
-            <li><i class="fa-solid fa-user" style="color: #B7B7B7;"></i>Mi perfil</li>
-            <li><i class="fa-solid fa-money-check-dollar" style="color: #b7b7b7;"></i>Mis ventas</li>
-            <li><i class="fa-solid fa-bag-shopping" style="color: #b7b7b7;"></i>Mis compras</li>
-          </ul>
-          <ul>
-            <li><i class="fa-solid fa-gear" style="color: #b7b7b7;"></i> Preferencias</li>
-            <li><i class="fa-solid fa-headset" style="color: #b7b7b7;"></i> Necesito ayuda</li>
-            <li><i class="fa-solid fa-right-from-bracket" style="color: #b7b7b7;"></i> Cerrar sesión</li>
-          </ul>
-        </nav>
-      </section>
+      <%- include('./../partials/profileMenu') %>
       <section class="profile-form-container">
         <a href="/users/editarUser/<%= user.id %>" class="btn-editar">EDITAR USUARIO</a>
         <form action="/users/borrarUser/<%= user.id %>?_method=DELETE" method="POST"

@@ -5,7 +5,7 @@
 
 <body>
   <%- include('./../partials/header') %>
-    <a href="/">
+    <a href="/productos">
       <div class="producto-volver-flecha-volver">
         <img src="/img/flecha.svg" alt="">
         <p>Volver</p>
@@ -101,7 +101,7 @@
               </div>
             </div>
             <!-- botones EDITAR y BORRAR-->
-            <% if (locals.isLogged) { %>
+            <% if (locals.isLogged && producto.usuario_id == user.id) { %>
 
               <div class="producto-detail-btn">
                 <a href="/productos/editarProducto/<%= producto.id %>" class="btn-editar">EDITAR PRODUCTO</a>
