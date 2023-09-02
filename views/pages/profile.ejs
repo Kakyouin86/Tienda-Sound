@@ -14,6 +14,37 @@
     <main class="profile-grid">
       <%- include('./../partials/profileMenu') %>
       <section class="profile-form-container">
+
+        <article class="grid-user-data">
+          <div class="user-data">
+            <img src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1693694816/totalventas_m5289x.png" alt="">
+            <div>
+            <h4>$300.405</h4>
+            <p>Total vendido</p>
+          </div>
+          </div>
+          <div class="user-data">
+            <img src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1693695319/totalproductos_cdqxoz.png" alt="">
+            <div>
+              <h4>35</h4>
+              <p>Productos</p>
+            </div>
+          </div>
+          <div class="user-data">
+            <img src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1693695319/totalordenes_w7smpy.png" alt="">
+            <div>
+              <h4>12</h4>
+              <p>Ordenes en proceso</p>
+            </div>
+          </div>
+        </article>
+
+
+
+
+
+
+
         <a href="/users/editarUser/<%= user.id %>" class="btn-editar">EDITAR USUARIO</a>
         <form action="/users/borrarUser/<%= user.id %>?_method=DELETE" method="POST"
           onsubmit="return confirm('¿Está seguro/a que deseas eliminar tu usuario?');">
