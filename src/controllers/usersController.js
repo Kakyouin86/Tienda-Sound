@@ -98,7 +98,22 @@ let usersController = {
         });
       }
 
-      const imageBufferAvatar = req.file.buffer;
+      let imageBufferAvatar 
+      if (!req.file) { 
+
+      imageBufferAvatar  =  "1693612817788imagen" // IMAGEN POR DEFECTO cuando no se carga una imagen
+
+      await db.Usuario.create({
+        nombreCompleto: req.body.nombreCompleto,
+        email: req.body.email,
+        password: bcrypt.hashSync(req.body.password, 10),
+        imagen: customFilenameAvatar,
+      });
+      res.redirect("/users/login");
+
+      } else {
+
+      imageBufferAvatar = req.file.buffer;
       const customFilenameAvatar = Date.now() + "imagen";
       const folderName = "avatars";
 
@@ -123,12 +138,13 @@ let usersController = {
       });
       const uploadedImageAvatar = await uploadPromiseAvatar;
 
-      db.Usuario.create({
+      await db.Usuario.create({
         nombreCompleto: req.body.nombreCompleto,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
         imagen: customFilenameAvatar,
       });
+    }
       res.redirect("/users/login");
     } catch (error) {
       console.error("Error:", error);
@@ -145,12 +161,15 @@ let usersController = {
         res.status(500).send('Error al obtener el usuario');
       });
   },
-  actualizarUser: async function (req, res) {
+  actualizarUser: async function (req, res) 
+  {
     try {
+
+      let customFilenameAvatar; // nombre de la imagen definida en la variable, en CREATE
+
+      if (req.file) {
       const imageBufferAvatar = req.file.buffer;
-      console.log(req.file);
-      console.log(imageBufferAvatar);
-      const customFilenameAvatar = Date.now() + "imagen";
+      fileNameUpdateAvatar = Date.now() + "imagen";
       const folderName = "avatars";
 
       const uploadPromiseAvatar = new Promise((resolve, reject) => {
@@ -158,7 +177,7 @@ let usersController = {
           {
             folder: folderName,
             resource_type: "image",
-            public_id: customFilenameAvatar,
+            public_id: fileNameUpdateAvatar,
           },
           (error, result) => {
             if (error) {
@@ -172,13 +191,16 @@ let usersController = {
         );
         streamifier.createReadStream(imageBufferAvatar).pipe(streamAvatar);
       });
+
       const uploadedImageAvatar = await uploadPromiseAvatar;
+
+      }
     
       await db.Usuario.update({
         nombreCompleto: req.body.nombreCompleto,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
-        imagen: req.file ? customFilenameAvatar : user.image,
+        imagen: req.file ? fileNameUpdateAvatar : customFilenameAvatar,  
       },
       {
         where: {
