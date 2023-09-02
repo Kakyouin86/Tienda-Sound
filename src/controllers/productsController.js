@@ -41,7 +41,6 @@ let productsController = {
       })
 	},
   guardarProducto: async function (req, res) {
-    console.log(req.body);
     try {
       let imageBuffer;
       if (!req.file) {

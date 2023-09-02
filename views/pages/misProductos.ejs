@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./../partials/head.ejs', { style: 'XXX.css', title: 'Las ventas de '+ user.nombreCompleto}) %>
+  <%- include('./../partials/head.ejs', { style: 'misProductos.css', title: 'Las ventas de '+ user.nombreCompleto}) %>
   <body>
     <%- include('./../partials/header') %>
     <a href="/">
@@ -11,7 +11,7 @@
       </a>
     <main class="profile-grid">
       <%- include('./../partials/profileMenu') %>
-      <section class="grid">
+      <section class="grid-misProductos">
         <% for(let i=0; i<productos.length; i++){%>
           <article>
             <div class="productogrid">
