@@ -6,6 +6,7 @@ const streamifier = require('streamifier');
 
 let db = require ('../../database/models');
 const { DataTypes } = require('sequelize');
+const { Op } = require('sequelize');
 
 // credenciales Cloudinary 
 cloudinary.config({ 
@@ -220,8 +221,43 @@ let productsController = {
         console.error(error);
         res.status(500).json({ message: 'Error interno del servidor' });
       });
-
-  }
+  },
+  productosConEnvioGratis: function (req, res) {
+    Promise.all([
+      db.Producto.findAll({
+        where: {
+          envio: 0
+        }
+      }),
+      db.Categoria.findAll(),
+    ])
+      .then(function([productos, categorias]) {
+        res.render('./pages/productos', { productos: productos, categorias: categorias });
+      })
+      .catch(function(error) {
+        console.error(error);
+        res.status(500).json({ message: 'Error interno del servidor' });
+      });
+  },
+  productosConEnvioPago: function (req, res) {
+    Promise.all([
+      db.Producto.findAll({
+        where: {
+          envio: {
+            [Op.ne]: 0
+          }
+        }
+      }),
+      db.Categoria.findAll(),
+    ])
+      .then(function([productos, categorias]) {
+        res.render('./pages/productos', { productos: productos, categorias: categorias });
+      })
+      .catch(function(error) {
+        console.error(error);
+        res.status(500).json({ message: 'Error interno del servidor' });
+      });
+  },
 }
 
 module.exports = productsController;

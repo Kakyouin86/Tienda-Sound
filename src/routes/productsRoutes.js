@@ -31,6 +31,13 @@ router.get('/productosUsados', productsController.productosUsados);
 // Para ver productos nuevos
 router.get('/productosNuevos', productsController.productosNuevos);
 
+// Para ver productos con envío gratis
+router.get('/productosConEnvioGratis', productsController.productosConEnvioGratis);
+
+// Para ver productos con envío pago
+router.get('/productosConEnvioPago', productsController.productosConEnvioPago);
+
+
 // Detalle del producto
 router.get('/:id?', productsController.detalle);  // falta carrousel, conflicto findByPK y findAll en una misma función
 
