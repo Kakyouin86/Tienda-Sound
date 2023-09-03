@@ -1,55 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./../partials/head.ejs', { style: 'profile.css', title: 'Perfil'}) %>
+  <%- include('./../partials/head.ejs', { style: 'profile.css', title:
+  'Perfil'}) %>
 
   <body>
     <%- include('./../partials/header') %>
 
     <a href="/">
-        <div class="producto-volver-flecha-volver">
-          <img src="/img/flecha.svg" alt="">
-          <p>Volver</p>
-        </div>
-      </a>
+      <div class="producto-volver-flecha-volver">
+        <img src="/img/flecha.svg" alt="" />
+        <p>Volver</p>
+      </div>
+    </a>
     <main class="profile-grid">
       <%- include('./../partials/profileMenu') %>
       <section class="profile-form-container">
-
-        <article class="grid-user-data">
-          <div class="user-data">
-            <img src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1693694816/totalventas_m5289x.png" alt="">
+        <article class="dashboard-grid grid-user-data">
+          <div class="user-data area1">
+            <img
+              src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1693694816/totalventas_m5289x.png"
+              alt=""
+            />
             <div>
-            <h4>$300.405</h4>
-            <p>Total vendido</p>
-          </div>
-          </div>
-          <div class="user-data">
-            <img src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1693695319/totalproductos_cdqxoz.png" alt="">
-            <div>
-              <h4>35</h4>
-              <p>Productos</p>
+              <h4>$300.405</h4>
+              <p>Total vendido</p>
             </div>
           </div>
-          <div class="user-data">
-            <img src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1693695319/totalordenes_w7smpy.png" alt="">
+          <div class="user-data area2">
+            <img
+              src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1693695319/totalproductos_cdqxoz.png"
+              alt=""
+            />
+            <div>
+              <h4>35</h4>
+              <p>Productos en total</p>
+            </div>
+          </div>
+          <div class="user-data area3">
+            <img
+              src="https://res.cloudinary.com/dlf8flk1o/image/upload/v1693695319/totalordenes_w7smpy.png"
+              alt=""
+            />
             <div>
               <h4>12</h4>
               <p>Ordenes en proceso</p>
             </div>
           </div>
+          <div class="area4">
+            <canvas id="myChart" height="100" width="100"></canvas>
+          </div>
+          <div class="area5">
+            <img
+              class="avatar-pic"
+              src="http://res.cloudinary.com/dlf8flk1o/image/upload/v1692991185/avatars/<%=user.imagen%>"
+              alt=""
+            />
+            <span>Nombre</span>
+            <h5><%= user.nombreCompleto %></h5>
+            <span>Email</span>
+            <p><%= user.email %></p>
+            <a href="/users/editarUser/<%= user.id %>" class="btn-editar"
+              >EDITAR USUARIO</a
+            >
+            <form
+              action="/users/borrarUser/<%= user.id %>?_method=DELETE"
+              method="POST"
+              onsubmit="return confirm('¿Está seguro/a que deseas eliminar tu usuario?');"
+            >
+              <button type="submit" class="btn-eliminar">
+                ELIMINAR CUENTA
+              </button>
+            </form>
+          </div>
         </article>
-
-
-
-
-
-
-
-        <a href="/users/editarUser/<%= user.id %>" class="btn-editar">EDITAR USUARIO</a>
-        <form action="/users/borrarUser/<%= user.id %>?_method=DELETE" method="POST"
-          onsubmit="return confirm('¿Está seguro/a que deseas eliminar tu usuario?');">
-          <button type="submit" class="btn-eliminar">ELIMINAR CUENTA</button>
-        </form>
       </section>
     </main>
 
@@ -63,5 +86,36 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+    <script type="module">
+      const ctx = document.querySelector("#myChart");
+      const names = ["Guitarra Eléctrica", "Bandeja", "Teclado"];
+      const prices = [123, ©56, 95];
+
+      const myChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: names,
+          datasets: [
+            {
+              label: "Precio",
+              data: prices,
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+                "rgba(255, 205, 86, 0.2)",
+              ],
+              borderColor: [
+                "rgb(255, 99, 132)",
+                "rgb(255, 159, 64)",
+                "rgb(255, 205, 86)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+      });
+    </script>
   </body>
 </html>
