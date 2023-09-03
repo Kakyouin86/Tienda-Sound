@@ -3,12 +3,31 @@
   <%- include('./../partials/head.ejs', { style: 'misProductos.css', title: 'Las ventas de '+ user.nombreCompleto}) %>
   <body>
     <%- include('./../partials/header') %>
-    <a href="/">
-        <div class="producto-volver-flecha-volver">
-          <img src="/img/flecha.svg" alt="">
-          <p>Volver</p>
-        </div>
-      </a>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const currentUrl = window.location.href; // Get the current URL
+        const baseUrl = 'http://localhost:3000';
+    
+        // Extract the user ID from the current URL
+        const userId = currentUrl.split('/').pop();
+    
+        const shouldRedirect = currentUrl.includes('/users/misProductos');
+    
+        const anchor = document.getElementById('back-link');
+        if (anchor) {
+          anchor.href = shouldRedirect ? `${baseUrl}/users/misProductos/${userId}` : baseUrl;
+        }
+      });
+    </script>
+    
+    <a id="back-link" href="#">
+      <div class="producto-volver-flecha-volver">
+        <img src="/img/flecha.svg" alt="">
+        <p>Volver</p>
+      </div>
+    </a>
+
     <main class="profile-grid">
       <%- include('./../partials/profileMenu') %>
       <section class="grid-misProductos">
