@@ -47,7 +47,7 @@
             </div>
           </div>
           <div class="area4">
-            <canvas id="myChart" height="100" width="100"></canvas>
+            <canvas id="myChart" height="50" width="50"></canvas>
           </div>
           <div class="area5">
             <img
@@ -89,31 +89,33 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 
     <script type="module">
-      const ctx = document.querySelector("#myChart");
-      const names = ["Guitarra Eléctrica", "Bandeja", "Teclado"];
-      const prices = [123, ©56, 95];
+      var ctx = document.getElementById("myChart").getContext("2d");
+      const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio"];
 
-      const myChart = new Chart(ctx, {
-        type: "bar",
-        data: {
-          labels: names,
-          datasets: [
-            {
-              label: "Precio",
-              data: prices,
-              backgroundColor: [
-                "rgba(255, 99, 132, 0.2)",
-                "rgba(255, 159, 64, 0.2)",
-                "rgba(255, 205, 86, 0.2)",
-              ],
-              borderColor: [
-                "rgb(255, 99, 132)",
-                "rgb(255, 159, 64)",
-                "rgb(255, 205, 86)",
-              ],
-              borderWidth: 1,
-            },
-          ],
+      // Define tus datos y opciones del gráfico
+      
+      const data = {
+        labels: months,
+        datasets: [
+          {
+            label: "Mis ventas",
+            data: [65, 59, 80, 81, 56, 55, 40],
+            fill: false,
+            borderColor: "rgb(216, 74, 144)",
+            borderWidth: 1.5,
+            tension: 0.1,
+          },
+        ],
+      };
+
+      // Crea el gráfico
+      var miGrafico = new Chart(ctx, {
+        type: "line",
+        data: data,
+        options: {
+          responsive: true,
+          maintainAspectRatio: false, // Agrega esta línea para desactivar el ajuste automático
+          aspectRatio: 1, // Define una relación de aspecto para el gráfico (ancho:alto)
         },
       });
     </script>
