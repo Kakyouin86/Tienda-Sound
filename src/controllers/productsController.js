@@ -15,13 +15,19 @@ cloudinary.config({
 });
 
 let productsController = {
-  productos: function(req, res)
-  {
-		db.Producto.findAll()
-			.then (function(productos){
-				res.render('./pages/productos', { productos: productos });
-		  })
-	},
+  productos: function(req, res) {
+    Promise.all([
+      db.Producto.findAll(),
+      db.Categoria.findAll(),
+    ])
+      .then(function([productos, categorias]) {
+        res.render('./pages/productos', { productos: productos, categorias: categorias });
+      })
+      .catch(function(error) {
+        console.error(error);
+        res.status(500).json({ message: 'Error interno del servidor' });
+      });
+  },  
   detalle: function(req, res)
   {
 		db.Producto.findByPk(req.params.id, {
@@ -161,30 +167,56 @@ let productsController = {
     }
   },
   productosNuevos: function (req, res) {
-    db.Producto.findAll({
-      where: {
-        estadoProducto: "Nuevo"
-      }
-    }).then(function (productos)
-      {
-     res.render('./pages/productos', { productos: productos });
-      console.log(productosNuevos)
-      }).catch(function (error) {
-      console.error('Error:', error);
-    });
+    Promise.all([
+      db.Producto.findAll({
+        where: {
+          estadoProducto: "Nuevo"
+        }
+      }),
+      db.Categoria.findAll(),
+    ])
+      .then(function([productos, categorias]) {
+        res.render('./pages/productos', { productos: productos, categorias: categorias });
+      })
+      .catch(function(error) {
+        console.error(error);
+        res.status(500).json({ message: 'Error interno del servidor' });
+      });
   },
   productosUsados: function (req, res) {
-    db.Producto.findAll({
-      where: {
-        estadoProducto: "Usado"
-      }
-    }).then(function (productos)
-      {
-     res.render('./pages/productos', { productos: productos });
-      console.log(productosNuevos)
-      }).catch(function (error) {
-      console.error('Error:', error);
-    });
+    Promise.all([
+      db.Producto.findAll({
+        where: {
+          estadoProducto: "Usado"
+        }
+      }),
+      db.Categoria.findAll(),
+    ])
+      .then(function([productos, categorias]) {
+        res.render('./pages/productos', { productos: productos, categorias: categorias });
+      })
+      .catch(function(error) {
+        console.error(error);
+        res.status(500).json({ message: 'Error interno del servidor' });
+      });
+  },
+  categoria: function(req, res){
+    Promise.all([
+      db.Producto.findAll({
+        where: {
+          categoria_id: req.params.idCategoria
+        }
+      }),
+      db.Categoria.findAll(),
+    ])
+      .then(function([productos, categorias]) {
+        res.render('./pages/productos', { productos: productos, categorias: categorias });
+      })
+      .catch(function(error) {
+        console.error(error);
+        res.status(500).json({ message: 'Error interno del servidor' });
+      });
+
   }
 }
 

@@ -16,12 +16,9 @@
             <h1>Productos</h1>
             <h2>Categorias</h2>
             <ul>
-              <li>Guitarras y Bajos</li>
-              <li>Batería y Percusión</li>
-              <li>Teclados y Sintetizadores</li>
-              <li>Estudio de Grabación, Dj's</li>
-              <li>Vientos</li>
-              <li>Cuerdas</li>
+              <%for(let c=0; c<categorias.length; c++){%>
+                <li><a href="/productos/categoria/<%=categorias[c].id%>"><%=categorias[c].nombre%></a></li>
+              <%}%>
             </ul>
             <h2>Marcas</h2>
             <ul>

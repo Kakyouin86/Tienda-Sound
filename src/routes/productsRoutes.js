@@ -34,4 +34,8 @@ router.get('/productosNuevos', productsController.productosNuevos);
 // Detalle del producto
 router.get('/:id?', productsController.detalle);  // falta carrousel, conflicto findByPK y findAll en una misma función
 
+// Producto por categoria
+router.get('/categoria/:idCategoria?', productsController.categoria);
+
+
 module.exports = router;
