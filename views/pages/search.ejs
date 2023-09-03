@@ -11,37 +11,14 @@
         </div>
       </a>
       <main>
-        <div class="main-grid">
-          <section class="filtros">
-            <h1>Productos</h1>
-            <h2>Categorias</h2>
-            <ul>
-              <%for(let c=0; c<categorias.length; c++){%>
-                <li><a href="/productos/categoria/<%=categorias[c].id%>"><%=categorias[c].nombre%></a></li>
-              <%}%>
-            </ul>
-            <h2>Marcas</h2>
-            <ul>
-              <li>Audio Anatomy</li>
-              <li>Big Dipper</li>
-              <li>Db Technologies</li>
-              <li>Electro Harmonix</li>
-              <li>Ernie Ball</li>
-              <li>Legends</li>
-            </ul>
-            <h2>Estado</h2>
-            <ul>
-              <li><a href="/productos/productosNuevos">Nuevos</a></li>
-              <li><a href="/productos/productosUsados">Usados</a></li>
-            </ul>
-            <h2>Precio</h2>
-            <div>
-              <input type="number" placeholder="Desde">
-              <input type="number" placeholder="Hasta">
-              <button>Ok</button>
-            </div>
-          </section>
+        <div class="main-grid main-grid-search">
+          <h1>Resultados de búsqueda</h1>
+        <% if (formControl) { %>
+        <p>Buscaste: <%= formControl %></p>
+         <% } %>
           <section class="grid">
+
+            <% if (productos.length > 0) { %> 
             <% for(let i=0; i<productos.length; i++){%>
               <article>
                 <div class="productogrid">
@@ -76,6 +53,9 @@
                   </a>
                 </div>
               </article>
+              <% } %>
+              <% } else { %>
+                <p class="noresults">No se encontraron resultados. Por favor, intenta de nuevo.</p>
               <% } %>
           </section>
         </div>

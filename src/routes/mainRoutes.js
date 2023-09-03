@@ -32,15 +32,16 @@ router.get('/', mainController.index);
 
 router.get('/carrito', mainController.carrito);
 
-//router.get('/crearProducto', mainController.renderCrearProducto);
+router.get('/search', mainController.search);
+
+
+/*router.get('/crearProducto', mainController.renderCrearProducto);
 //router.post('/crearProducto', uploadProduct.single('fotoDestacada'), mainController.guardarProducto);
 //router.get('/editarProducto/:id', mainController.renderEditarProducto);
 //router.put('/editarProducto/:id', uploadProduct.single('fotoDestacada'), mainController.editarProducto);
 //router.delete('/borrarProducto/:id', mainController.borrarProducto);
-
-
 // router.get('/register', guestMiddleware, mainController.register);
-// router.post('/register', uploadAvatar.single('avatar'), validations, mainController.guardarUser);
+router.post('/register', uploadAvatar.single('avatar'), validations, mainController.guardarUser);*/
 
 
 module.exports = router;
