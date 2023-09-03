@@ -51,6 +51,9 @@ module.exports = function (sequelize, DataTypes){
         },
         puntuacion_id:{
             type: DataTypes.INTEGER,
+        },
+        envio:{
+            type: DataTypes.INTEGER,
         }
     };
 

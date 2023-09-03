@@ -85,7 +85,8 @@ let productsController = {
         categoria_id: req.body.categoriaProducto,
         usuario_id: req.session.userLogged.id,
         marca_id: null,
-        puntuacion_id: 1
+        puntuacion_id: 1,
+        envio: req.body.precioEnvio
       });
       res.redirect('/productos');
     } catch (error) {
@@ -125,6 +126,8 @@ let productsController = {
 		  const uploadedImage = await uploadPromise;
       }
 
+
+      const currentTimestamp = new Date();
       await db.Producto.update(
         {
           nombreProducto: req.body.nombreProducto,
@@ -140,7 +143,8 @@ let productsController = {
           categoria_id: req.body.categoriaProducto,
           usuario_id: req.session.userLogged.id,
           marca_id: null,
-          puntuacion_id: 1
+          puntuacion_id: 1,
+          envio: req.body.precioEnvio,
         },
         {
           where: {
