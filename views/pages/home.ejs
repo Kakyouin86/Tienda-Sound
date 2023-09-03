@@ -83,30 +83,20 @@
     <section class="categorias-home container text-center">
       <h2>Categorías</h2>
       <div class="row">
-        <article class="col-lg-2 col-md-4 col-4 categoria-producto-home">
-          <img src="/img/categorias/icono_guitarra.svg" alt="">
-          <p>Guitarras<br>Bajos</p>
-        </article>
-        <article class="col-lg-2 col-md-4 col-4 categoria-producto-home">
-          <img src="/img/categorias/icono_bateria.svg" alt="">
-          <p>Batería<br>Percusión</p>
-        </article>
-        <article class="col-lg-2 col-md-4 col-4 categoria-producto-home">
-          <img src="/img/categorias/icono_teclados.svg" alt="">
-          <p>Teclados<br>Sintetizadores</p>
-        </article>
-        <article class="col-lg-2 col-md-4 col-4 categoria-producto-home">
-          <img src="/img/categorias/icono_estudiograbacion.svg" alt="">
-          <p>Estudio de Grabación, Dj's</p>
-        </article>
-        <article class="col-lg-2 col-md-4 col-4 categoria-producto-home">
-          <img src="/img/categorias/icono_vientos.svg" alt="">
-          <p>Vientos</p>
-        </article>
-        <article class="col-lg-2 col-md-4 col-4 categoria-producto-home">
-          <img src="/img/categorias/icono_cuerdas.svg" alt="">
-          <p>Cuerdas</p>
-        </article>
+        <%for(let c=0; c<categorias.length; c++){%>
+
+          <article class="col-lg-2 col-md-4 col-4 categoria-producto-home">
+            <a href="/productos/categoria/<%=categorias[c].id%>">
+            <img src="<%=categorias[c].imagen%>" alt="">
+            <p><%=categorias[c].nombre%></p>
+            </a>
+          </article>
+
+        <%}%>
+
+
+
+
       </div>
     </section>
 
@@ -138,7 +128,7 @@
                           </div>
                           <%}%>
                             <div class="contenedorImgProducto">
-                              <img class="imgProducto " src="/img/productos/<%=producto[i].fotoDestacada%>" alt="img-">
+                              <img class="imgProducto " src="http://res.cloudinary.com/dlf8flk1o/image/upload/v1692641327/productos/<%=producto[i].imagen%>" alt="img-">
                             </div>
                       </div>
                       <div class="informacionProducto">

@@ -318,6 +318,9 @@ header form {
     transition: all .2s ease-in-out;
 }
 
+.categorias-home a {
+    color:#0a0a0a;
+}
 .categorias-home p:hover {
     color: #3333FF;
 }

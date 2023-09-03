@@ -10,7 +10,12 @@ module.exports = function(sequelize, DataTypes){
         nombre:{
             type: DataTypes.STRING(255),
             allowNull: false
-        }
+        },
+        imagen:{
+            type: DataTypes.STRING(300),
+            allowNull: false
+        },
+
     };
 
     let config = {

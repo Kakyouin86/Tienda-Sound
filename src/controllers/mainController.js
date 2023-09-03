@@ -7,13 +7,8 @@ const cloudinary = require('cloudinary').v2;
 const streamifier = require('streamifier');
 
 // Traemos los datos de json y lo convertimos a objeto lit.
-const productsFilePath = path.join(__dirname, '../data/productos.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const usersFilePath = path.join(__dirname, '../data/usuarios.json');
-const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-const productosNuevos = productos.filter(item => item.estadoProducto === "Nuevo");
-const productosUsados = productos.filter(item => item.estadoProducto === "Usado");
-const db = require('../../database/models');
+let db = require ('../../database/models');
+const { DataTypes } = require('sequelize');
 
 // credenciales Cloudinary 
 cloudinary.config({ 
@@ -25,8 +20,17 @@ cloudinary.config({
 let mainController = {
 	index: function (req, res)
 	{
-		const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-		res.render('./pages/home', { producto: productos });
+		Promise.all([
+			db.Producto.findAll(),
+			db.Categoria.findAll(),
+		  ])
+			.then(function([productos, categorias]) {
+			  res.render('./pages/home', { producto: productos, categorias: categorias });
+			})
+			.catch(function(error) {
+			  console.error(error);
+			  res.status(500).json({ message: 'Error interno del servidor' });
+			});
 	},
 
 	carrito: function (req, res)
