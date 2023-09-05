@@ -39,12 +39,16 @@
               <li><a href="/productos/productosConEnvioGratis">Gratis</a></li>
               <li><a href="/productos/productosConEnvioPago">Pago</a></li>
             </ul>
+            <!-- filtro precio -->
             <h2>Precio</h2>
             <div>
-              <input type="number" placeholder="Desde">
-              <input type="number" placeholder="Hasta">
-              <button>Ok</button>
+              <form action="/productos/searchprice" method="GET">
+                <input name="form-priceMenor" type="number" placeholder="Desde">
+                <input name="form-priceMayor" type="number" placeholder="Hasta">
+                <button type="submit">OK</button>
+              </form>
             </div>
+             <!-- filtro precio -->
           </section>
           <section class="grid">
             <% for(let i=0; i<productos.length; i++){%>
