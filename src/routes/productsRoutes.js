@@ -38,7 +38,7 @@ router.get('/productosConEnvioGratis', productsController.productosConEnvioGrati
 router.get('/productosConEnvioPago', productsController.productosConEnvioPago);
 
 // Para ver productos filtrados por precio
-router.get('/searchprice', productsController.filtroPrecio);
+router.get('/buscarPorPrecio', productsController.filtroPrecio);
 
 
 // Detalle del producto

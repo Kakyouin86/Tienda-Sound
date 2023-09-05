@@ -262,37 +262,24 @@ let productsController = {
   filtroPrecio: async function (req, res) {
     const { "form-priceMenor": formControlMenor } = req.query
     const { "form-priceMayor": formControlMayor } = req.query
-
-    let menor = parseFloat(formControlMenor) // parseo para que al imput no lo tome como string
+    let menor = parseFloat(formControlMenor)
     let mayor = parseFloat(formControlMayor)
+    try {
+        const productos = await db.Producto.findAll({
+            where: {
+                precioProducto: {
+                    [Op.gte]: menor, // Corrected the conditions
+                    [Op.lte]: mayor
+                }
+            }
+        });
 
-    console.log(menor) // chequeo que me llega en consola
-    console.log(mayor)
-
-    Promise.all([
-      await db.Producto.findAll({
-        where: {
-          precioProducto: {
-            [Op.and]: {
-              [Op.gte]: mayor,
-              [Op.lte]: menor
-          }
-        }
-        }
-      }),
-      await db.Categoria.findAll(),
-    ])
-      .then(function([productos, categorias]) {
-        res.render('./pages/searchprice', { productos: productos, categorias: categorias, menor, mayor });
-      })
-      .catch(function(error) {
+        const categorias = await db.Categoria.findAll();
+        res.render('./pages/buscarPorPrecio', { productos, categorias, menor, mayor });
+    } catch (error) {
         console.error(error);
         res.status(500).json({ message: 'Error interno del servidor' });
-      });
-
-      console.log(menor) // chequeo que me llega en consola
-      console.log(mayor)
-
+    }
   },
 }
 
