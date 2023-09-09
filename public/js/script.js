@@ -3,11 +3,11 @@ window.addEventListener('load', function() {
     let formulario = document.querySelector('form.register-form');
 
     formulario.addEventListener('submit', function(e) {
+
         let arrayerroresNombre = [];
         let arrayerroresMail = [];
         let arrayerroresPassword = [];
-
-
+        let arrayerroresCheckbox = [];
 
         // Variables IMPUT del Form
         let camponombre = document.querySelector('#nombreCompleto');
@@ -19,16 +19,18 @@ window.addEventListener('load', function() {
         let campoPassword = document.querySelector('#password');
         let erroresPassword = document.querySelector('div.text-danger.pass');
 
+        let campoCheckbox = document.querySelector('input[name="checkbox"]');
+        let erroresCheckbox = document.querySelector('div.text-danger.check');
 
 
         // NOMBRE
         if (camponombre.value.trim() === "") {
-            errores.push("Este campo debe estar completo");
+            arrayerroresNombre.push("Este campo debe estar completo");
         } else {
             // Check if it contains both a first name and a last name separated by a space
             let nameParts = camponombre.value.trim().split(' ');
             if (nameParts.length < 2) {
-                errores.push("El nombre completo debe contener al menos un nombre y un apellido separados por un espacio");
+                arrayerroresNombre.push("El nombre completo debe contener al menos un nombre y un apellido separados por un espacio");
             }
         }
         // errores
@@ -44,11 +46,11 @@ window.addEventListener('load', function() {
 
         // MAIL
         if (campomail.value.trim() === "") {
-            errores.push("El campo de correo electrónico debe estar completo");
+            arrayerroresMail.push("El campo de correo electrónico debe estar completo");
         } else {
             const emailPattern = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
             if (!emailPattern.test(campomail.value.trim())) {
-                errores.push("El correo electrónico ingresado no es válido");
+                arrayerroresMail.push("El correo electrónico ingresado no es válido");
             }
         }
         // errores
@@ -64,11 +66,11 @@ window.addEventListener('load', function() {
 
         // PASSWORD
         if (campoPassword.value === "") {
-            errores.push("El campo de contraseña debe estar completo");
+            arrayerroresPassword.push("El campo de contraseña debe estar completo");
         } else {
-            let regex = /^(?=.\d)(?=.[a-záéíóúüñ]).*[A-ZÁÉÍÓÚÜÑ]/;
+            let regex = /^(?=.[A-Za-z])(?=.[@$!%#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
             if (!regex.test(campoPassword.value)) {
-            errores.push("Tu contraseña debe tener por lo menos un dígito, una letra minúscula y una letra mayúscula");
+            arrayerroresPassword.push("Tu contraseña debe tener por lo menos 8 caracteres, entre ellos un número y un carácter especial");
             }
         }
         // errores
@@ -82,6 +84,24 @@ window.addEventListener('load', function() {
             erroresPassword.innerHTML = ''; // Clear the error message if there are no errors
         }
 
+        // Checkbox
+
+        if (!campoCheckbox.checked) {
+            arrayerroresCheckbox.push("Necesitás aceptar nuestros términos y condiciones");
+        } else {
+            erroresCheckbox.innerHTML = ''; // Clear the error message if there are no errors
+        }
+        // errores
+        if (arrayerroresCheckbox.length > 0) {
+            e.preventDefault();
+            erroresCheckbox.innerHTML = ''; // Clear any previous error messages
+            for (let i = 0; i < arrayerroresPassword.length; i++) {
+                erroresCheckbox.innerHTML += "<p>" + arrayerroresCheckbox[i] + "</p>";
+            }
+        } else {
+            erroresCheckbox.innerHTML = ''; // Clear the error message if there are no errors
+        }
+        
     });
 });
 
