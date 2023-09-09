@@ -23,6 +23,8 @@
               <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.nombreCompleto.msg %>
             </div>
             <% } %>
+            <div class="text-danger"></div>
+
 
 
             <input type="email" placeholder="Correo electrónico" id="email" name="email" value="<%= locals.oldData ? oldData.email : null  %>">
