@@ -23,6 +23,8 @@
               <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.nombreCompleto.msg %>
             </div>
             <% } %>
+            <div class="text-danger nombre"></div>
+
 
 
             <input type="email" placeholder="Correo electrónico" id="email" name="email" value="<%= locals.oldData ? oldData.email : null  %>">
@@ -33,13 +35,16 @@
               </div>
              <% } %>
 
-            <input type="password" placeholder="Contraseña" name="password" value="<%= locals.oldData ? oldData.password : null  %>">
+            <div class="text-danger mail"></div>
+
+            <input type="password" placeholder="Contraseña" id ="password" name="password" value="<%= locals.oldData ? oldData.password : null  %>">
 
             <% if (locals.errors && errors.password) { %>
               <div class="text-danger">
               <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.password.msg %>
               </div>
              <% } %>
+             <div class="text-danger pass"></div>
             
             <label for="avatar" style="padding-bottom: 5px;"><i class="fa-regular fa-id-card"></i>  Imagen de tu Perfil</label>
             <input type="file" name="avatar" style="padding-top: 17px;">
