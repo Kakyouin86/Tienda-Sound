@@ -86,6 +86,7 @@ window.addEventListener('load', function() {
 
         // CHECKBOX
         if (!campoCheckbox.checked) {
+
             arrayerroresCheckbox.push("Necesitás aceptar nuestros términos y condiciones");
         } 
         // errores

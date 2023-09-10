@@ -17,28 +17,21 @@
           <form action="/users/register" class="base-form register-form" method="POST" enctype="multipart/form-data">
             
             <input type="text" placeholder="Nombre Completo" id="nombreCompleto" name="nombreCompleto" value="<%= locals.oldData ? oldData.nombreCompleto : null  %>">
-            
+          
             <% if (locals.errors && errors.nombreCompleto) { %>
             <div class="text-danger">
               <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.nombreCompleto.msg %>
             </div>
             <% } %>
             <div class="text-danger nombre"></div>
-
-
-
             <input type="email" placeholder="Correo electrónico" id="email" name="email" value="<%= locals.oldData ? oldData.email : null  %>">
-
             <% if (locals.errors && errors.email) { %>
               <div class="text-danger">
               <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.email.msg %>
               </div>
              <% } %>
-
             <div class="text-danger mail"></div>
-
             <input type="password" placeholder="Contraseña" id ="password" name="password" value="<%= locals.oldData ? oldData.password : null  %>">
-
             <% if (locals.errors && errors.password) { %>
               <div class="text-danger">
               <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.password.msg %>
@@ -55,7 +48,7 @@
            <% } %>
 
             <div class="terminos-condiciones">
-              <input type="checkbox" value="" id="checkbox" name="checkbox">
+              <input type="checkbox" value="" name="checkbox" id="checkbox" name="checkbox">
               <span>He leído y acepto los terminos y condiciones</span>
             </div>
             <div class="text-danger check"></div>

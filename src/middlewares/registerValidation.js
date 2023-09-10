@@ -26,7 +26,7 @@ const validations = [
     check("checkbox")
 		.custom((value, { req }) => {
 		if (value !== "on") {
-			throw new Error("Tenés que aceptar nuestros términos y condiciones");
+			//throw new Error("Tenés que aceptar nuestros términos y condiciones");
 		}
 		return true;
 		}),
