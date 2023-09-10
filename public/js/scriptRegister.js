@@ -19,7 +19,7 @@ window.addEventListener('load', function() {
         let campoPassword = document.querySelector('#password');
         let erroresPassword = document.querySelector('div.text-danger.pass');
 
-        let campoCheckbox = document.querySelector('input[name="checkbox"]');
+        let campoCheckbox = document.querySelector("#checkbox");
         let erroresCheckbox = document.querySelector('div.text-danger.check');
 
 
@@ -68,9 +68,9 @@ window.addEventListener('load', function() {
         if (campoPassword.value === "") {
             arrayerroresPassword.push("El campo de contraseña debe estar completo");
         } else {
-            let regex = /^(?=.[A-Za-z])(?=.[@$!%#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+            let regex = /^(?=.*[0-9]).{8,}$/;
             if (!regex.test(campoPassword.value)) {
-            arrayerroresPassword.push("Tu contraseña debe tener por lo menos 8 caracteres, entre ellos un número y un carácter especial");
+            arrayerroresPassword.push("Tu contraseña debe tener por lo menos 8 caracteres, entre ellos una mayúscula, número y un carácter especial");
             }
         }
         // errores
@@ -84,18 +84,15 @@ window.addEventListener('load', function() {
             erroresPassword.innerHTML = ''; // Clear the error message if there are no errors
         }
 
-        // Checkbox
-
+        // CHECKBOX
         if (!campoCheckbox.checked) {
             arrayerroresCheckbox.push("Necesitás aceptar nuestros términos y condiciones");
-        } else {
-            erroresCheckbox.innerHTML = ''; // Clear the error message if there are no errors
-        }
+        } 
         // errores
         if (arrayerroresCheckbox.length > 0) {
             e.preventDefault();
             erroresCheckbox.innerHTML = ''; // Clear any previous error messages
-            for (let i = 0; i < arrayerroresPassword.length; i++) {
+            for (let i = 0; i < arrayerroresCheckbox.length; i++) {
                 erroresCheckbox.innerHTML += "<p>" + arrayerroresCheckbox[i] + "</p>";
             }
         } else {

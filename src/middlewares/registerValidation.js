@@ -18,9 +18,9 @@ const validations = [
 		.notEmpty()
 		// .withMessage("Tenés que escribir una contraseña")
 		.bail()
-		.isLength({ min: 8 })
+		.isLength({ min: 8 }),
 		// .withMessage("La contraseña debe tener al menos 8 caracteres")
-		.matches(/^(?=.[!@#$%^&])(?=.[A-Z]).$/),
+		// .matches(/^(?=.[!@#$%^&])(?=.[A-Z]).$/),
 		// .withMessage("La contraseña debe contener al menos un carácter especial y una letra mayúscula"),
 
     check("checkbox")
@@ -31,22 +31,22 @@ const validations = [
 		return true;
 		}),
 
-    check("avatar")
-		.custom((value, { req }) => {
-        let file = req.file;
-		let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+    // check("avatar")
+	// 	.custom((value, { req }) => {
+    //     let file = req.file;
+	// 	let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
 		
-		if (!file) {
-			throw new Error('Tenés que subir una imagen con formato .jpg, .jpeg, .png, .gif');
-		}
-		else {
-			let fileExtension = path.extname(file.originalname);
-			if (!acceptedExtensions.includes(fileExtension)) {
-				throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
-			}
-		}
-		return true;
-	})
+	// 	if (!file) {
+	// 		throw new Error('Tenés que subir una imagen con formato .jpg, .jpeg, .png, .gif');
+	// 	}
+	// 	else {
+	// 		let fileExtension = path.extname(file.originalname);
+	// 		if (!acceptedExtensions.includes(fileExtension)) {
+	// 			throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+	// 		}
+	// 	}
+	// 	return true;
+	// })
 ]
 
 module.exports = validations;
