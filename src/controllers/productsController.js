@@ -3,8 +3,9 @@ const path = require('path');
 
 const cloudinary = require('cloudinary').v2;
 const streamifier = require('streamifier');
+const { validationResult } = require("express-validator");
 
-let db = require ('../../database/models');
+let db = require('../../database/models');
 const { DataTypes } = require('sequelize');
 const { Op } = require('sequelize');
 
@@ -50,6 +51,16 @@ let productsController = {
 	},
   guardarProducto: async function (req, res) {
     try {
+
+      // Validación Back End - guardar producto
+      const resultProductValidation = validationResult(req);
+      if (resultProductValidation.errors.length > 0) {
+        return res.render("./pages/crearProducto", {
+          errors: resultProductValidation.mapped(),
+          oldData: req.body,
+        });
+      }
+
       let imageBuffer;
       let customFilename = ""; // Declara customFilename aquí
       if (!req.file) {

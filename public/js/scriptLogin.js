@@ -40,7 +40,7 @@ window.addEventListener('load', function() {
         if (campoPassword.value === "") {
             arrayerroresPassword.push("El campo de contraseña debe estar completo");
         } else {
-            let regex = /^(?=.[0-9])(?=.[!@#$%^&()_+])[A-Za-z0-9!@#$%^&()_+]{8,}$/;
+            let regex = /^(?=.*[0-9]).{8,}$/;
             if (!regex.test(campoPassword.value)) {
             arrayerroresPassword.push("Tu contraseña debe tener por lo menos 8 caracteres, entre ellos una mayúscula, número y un carácter especial");
             }

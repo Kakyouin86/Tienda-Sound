@@ -2,6 +2,8 @@
 const express = require("express");
 const router = express.Router();
 
+const productValidations = require("./../middlewares/productValidation");
+
 // Controladores
 const productsController = require("../controllers/productsController");
 
@@ -16,7 +18,7 @@ router.get('/', productsController.productos);
 
 // Crear producto
 router.get('/crearProducto', productsController.crear);
-router.post('/crearProducto', uploadProduct.single('fotoDestacada'), productsController.guardarProducto);
+router.post('/crearProducto', uploadProduct.single('fotoDestacada'), productValidations, productsController.guardarProducto);
 
 // Editar / Actualizar un producto
 router.get('/editarProducto/:id', productsController.editarProducto);
