@@ -9,7 +9,7 @@ const { Sequelize } = require('sequelize');
 
 
 // Traemos los datos de json y lo convertimos a objeto lit.
-let db = require("../../database/models");
+let db = require("../database/models");
 const { DataTypes } = require("sequelize");
 
 // credenciales Cloudinary

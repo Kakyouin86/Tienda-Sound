@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const cloudinary = require("cloudinary").v2;
 const streamifier = require("streamifier");
 const { validationResult } = require("express-validator");
-let db = require("../../database/models");
+let db = require("../database/models");
 
 let customFilenameAvatar;
 
