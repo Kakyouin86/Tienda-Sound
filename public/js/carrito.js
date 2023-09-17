@@ -21,17 +21,22 @@ window.addEventListener("load", function () {
       nombre: nombreProductoAgregado,
       descCorta: descripcionCortaAgregado,
       precio: precioProductoAgregado,
-      cantidad: cantidad,
+      cantidad: parseInt(cantidad),
       img: imgProductoAgregado,
     };
 
-    // Agregar el producto
-    productos.push(productoAgregado);
-
+    let productoNuevo = 1;
+    for(let i=0; i<productos.length;i++){
+        if(productos[i].nombre == productoAgregado.nombre){
+            productoNuevo=0;
+            productos[i].cantidad= parseInt(productos[i].cantidad) + parseInt(productoAgregado.cantidad)
+        }
+    }
+    if(productoNuevo==1){
+        productos.push(productoAgregado);
+    }
     // Almacenar el objeto JSON en local storage
     localStorage.setItem("carrito", JSON.stringify(productos));
     
   });
-
-
 });

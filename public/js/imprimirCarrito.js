@@ -5,6 +5,7 @@ window.addEventListener("load", function () {
     let listadoProductos = document.querySelector("#listadoProductos");
 
     for (let i = 0; i < productos.length; i++) {
+
       // Generar el elemento HTML
       let elementoProducto = document.createElement("article");
       elementoProducto.classList.add("compra1");
