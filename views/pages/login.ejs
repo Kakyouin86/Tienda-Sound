@@ -17,23 +17,27 @@
           
           <form action="/users/login" class="base-form login-form" method="POST">
 
+            <div class="imputs">
+
             <input type="email" placeholder="Correo electrónico" id="email" name="email">
-            <div class="text-danger mail"></div>
+            <div class="text-danger mail" style="display: none;">!</div>
             <% if (locals.errors && errors.email) { %>
               <div class="text-danger">
                 <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.email.msg %>
               </div>
             <% } %>
 
-
             <input type="password" placeholder="Contraseña" id ="password" name="password">
+            <i class="bi bi-eye-slash ojito" id="togglePassword"></i>
+
             <div class="text-danger pass"></div>
             <% if (locals.errors && errors.password) { %>
               <div class="text-danger">
                 <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.password.msg %>
               </div>
             <% } %>
-
+            
+          </div>
 
             <div class="recordar-usuario ">
               <input type="checkbox" name="recordarUsuario">

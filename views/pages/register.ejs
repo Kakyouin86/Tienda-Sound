@@ -16,6 +16,7 @@
     
           <form action="/users/register" class="base-form register-form" method="POST" enctype="multipart/form-data">
             
+            <div class="imputs">
             <input type="text" placeholder="Nombre Completo" id="nombreCompleto" name="nombreCompleto" value="<%= locals.oldData ? oldData.nombreCompleto : null  %>">
           
             <% if (locals.errors && errors.nombreCompleto) { %>
@@ -32,6 +33,7 @@
              <% } %>
             <div class="text-danger mail"></div>
             <input type="password" placeholder="Contraseña" id ="password" name="password" value="<%= locals.oldData ? oldData.password : null  %>">
+            <i class="bi bi-eye-slash ojito" id="togglePassword"></i>
             <% if (locals.errors && errors.password) { %>
               <div class="text-danger">
               <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.password.msg %>
@@ -46,6 +48,7 @@
               <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.avatar.msg %>
              </div>
            <% } %>
+          </div>
 
             <div class="terminos-condiciones">
               <input type="checkbox" value="" name="checkbox" id="checkbox" name="checkbox">

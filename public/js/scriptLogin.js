@@ -4,6 +4,8 @@ window.addEventListener('load', function() {
 
     formulario.addEventListener('submit', function(e) {
 
+        e.preventDefault();
+
         let arrayerroresMail = [];
         let arrayerroresPassword = [];
 
@@ -27,10 +29,12 @@ window.addEventListener('load', function() {
         }
         // errores
         if (arrayerroresMail.length > 0) {
-            e.preventDefault();
+           
             erroresMail.innerHTML = ''; // Clear any previous error messages
             for (let i = 0; i < arrayerroresMail.length; i++) {
+                erroresMail.style.display = "block"
                 erroresMail.innerHTML += "<p>" + arrayerroresMail[i] + "</p>";
+                
             }
         } else {
             erroresMail.innerHTML = ''; // Clear the error message if there are no errors
@@ -40,14 +44,14 @@ window.addEventListener('load', function() {
         if (campoPassword.value === "") {
             arrayerroresPassword.push("El campo de contraseña debe estar completo");
         } else {
-            let regex = /^(?=.*[0-9]).{8,}$/;
+            let regex = /^(?=.[0-9])(?=.[!@#$%^&()_+])[A-Za-z0-9!@#$%^&()_+]{8,}$/;
             if (!regex.test(campoPassword.value)) {
             arrayerroresPassword.push("Tu contraseña debe tener por lo menos 8 caracteres, entre ellos una mayúscula, número y un carácter especial");
             }
         }
         // errores
         if (arrayerroresPassword.length > 0) {
-            e.preventDefault();
+    
             erroresPassword.innerHTML = ''; // Clear any previous error messages
             for (let i = 0; i < arrayerroresPassword.length; i++) {
                 erroresPassword.innerHTML += "<p>" + arrayerroresPassword[i] + "</p>";
@@ -57,5 +61,19 @@ window.addEventListener('load', function() {
         }
         
     });
+        // SCRIPT PARA DAR VISIBILIDAD A LA CONTRASEÑA
+
+        const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#password");
+
+        togglePassword.addEventListener("click", function () {
+        // toggle the type attribute
+        const type = password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        
+        // toggle the icon
+        this.classList.toggle("bi-eye");
+    });
+
 });
 

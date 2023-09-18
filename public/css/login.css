@@ -186,6 +186,18 @@
     margin-bottom: 20px;
     text-align: center;
 }
+.imputs {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+form .ojito {
+    position: absolute;
+    margin-left: -34px;
+    margin-top: 17px;
+    scale: 110%;
+    cursor: pointer;
+}
 
 /*Producto form*/
 
