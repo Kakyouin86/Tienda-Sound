@@ -7,7 +7,7 @@
     <main>
       <!-- ACA EMPIEZA CARRITO - JUAN-->
       <section class="carrito_page">
-        <h2 class="tit_carrito">Carrito<p class="cant">(<span style="font-weight: 700; color:#3333ff">2</span>)</p>
+        <h2 class="tit_carrito">Carrito<p class="cant">(<span style="font-weight: 700; color:#3333ff" id="cantidadItems"></span>)</p>
         </h2>
         <section class="compras" id="listadoProductos">
 
@@ -18,9 +18,10 @@
         </section>
         <section class="total_compra">
           <p class="totalconenvio">Total con envío:</p>
-          <p class="precio_total">$756.218</p>
+          <p class="precio_total" id="precio_total"></p>
         </section>
         <section class="botones_compra">
+          <button id="borrarTodo" type="submit" class="btn_borrarTodo">Borrar todo</button>
           <button id="seguircomprando" type="submit" class="btn_seguir">Seguir comprando</button>
           <button id="continuar" type="submit" class="btn_continuar">Continuar</button>
         </section>
@@ -36,3 +37,4 @@
 </body>
 
 </html>
+

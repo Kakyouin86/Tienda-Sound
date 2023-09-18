@@ -1,14 +1,6 @@
-*{
-    font-family: "hoss-round", sans-serif;
-}
+*{font-family: "hoss-round", sans-serif;}
 
-a {
-    text-decoration: none;
-}
-
-* {
-    font-family: "hoss-round", sans-serif;
-}
+a { text-decoration: none;}
 
 body {
     overflow-x: hidden;
@@ -185,11 +177,10 @@ main {
     justify-content: center;
 }
 
-.compra1, .compra2 {
+.compra1{
     width: 58vw;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     margin-bottom: 10px;
@@ -204,6 +195,8 @@ main {
 .foto_p {
     width: 162px;
     scale: 80%;
+    border: 1px solid #00c7ff;
+    border-radius: 10px;
 }
 
 .prod {
@@ -299,15 +292,20 @@ main {
     justify-content: flex-end;
 }
 
-#seguircomprando {
-    background-color: #3333ff;
-    color: white;
+.botones_compra button{
     border-radius: 15px;
     border-style: none;
     font-size: 18px;
     font-weight: 500;
     padding: 10px;
     margin-right: 5px;
+    transition: 500ms;
+
+}
+
+#seguircomprando {
+    background-color: #3333ff;
+    color: white;
 }
 
 #seguircomprando:hover {
@@ -319,17 +317,26 @@ main {
     background-color: #E93882 ;
     color: white;
     border-radius: 15px;
-    border-style: none;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px;
-    margin-left: 5px;
 }
 
 #continuar:hover {
     background-color: #eaa5c2 ;
     color: white;
 }
+
+#borrarTodo {
+    border: solid 1px #3333ff;
+    color: #3333ff;
+    border-radius: 15px;
+    background-color: white;
+}
+
+#borrarTodo:hover {
+    background-color: #3333ff;
+    color: white;
+}
+
+
 
 /* Acá termina el CARRITO - JUAN */
 
