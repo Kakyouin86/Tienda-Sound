@@ -20,7 +20,7 @@
             <div class="imputs">
 
             <input type="email" placeholder="Correo electrónico" id="email" name="email">
-            <div class="text-danger mail" style="display: none;">!</div>
+            <div class="text-danger mail"></div>
             <% if (locals.errors && errors.email) { %>
               <div class="text-danger">
                 <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.email.msg %>
