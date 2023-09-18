@@ -6,7 +6,7 @@ module.exports={
     "password": process.env.DB_PASSWORD,
     "database": process.env.DB_DATABASE,
     "host": process.env.DB_HOST,
-    "dialect": process.env.DB_DIALECT,
+    "dialect": mysql,
     "port": process.env.DB_PORT
   },
   "test": {
@@ -14,7 +14,7 @@ module.exports={
     "password": process.env.DB_PASSWORD,
     "database": process.env.DB_DATABASE,
     "host": process.env.DB_HOST,
-    "dialect": process.env.DB_DIALECT,
+    "dialect": mysql,
     "port": process.env.DB_PORT
   },
   "production": {
@@ -22,7 +22,32 @@ module.exports={
     "password": process.env.DB_PASSWORD,
     "database": process.env.DB_DATABASE,
     "host": process.env.DB_HOST,
-    "dialect": process.env.DB_DIALECT,
+    "dialect": mysql,
     "port": process.env.DB_PORT
   }
 }
+
+/*
+module.exports={
+  "development": {
+    "username": "aguslima",
+    "password": "edfXe3Da!Ew.f*v",
+    "database": "aguslima_tiendasound",
+    "host": "mysql-aguslima.alwaysdata.net",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "aguslima",
+    "password": "edfXe3Da!Ew.f*v",
+    "database": "aguslima_tiendasound",
+    "host": "mysql-aguslima.alwaysdata.net",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "aguslima",
+    "password": "edfXe3Da!Ew.f*v",
+    "database": "aguslima_tiendasound",
+    "host": "mysql-aguslima.alwaysdata.net",
+    "dialect": "mysql"
+  }
+}*/
