@@ -25,21 +25,11 @@ window.addEventListener("load", function () {
       nombre.textContent = productos[i].nombre;
       elementoProducto.appendChild(nombre);
 
-      // Agregar la descripción
-      let descripcion = document.createElement("p");
-      descripcion.classList.add("des_pr");
-      descripcion.textContent = productos[i].descCorta;
-      elementoProducto.appendChild(descripcion);
-
-      // Agregar el precio
-
-      let precioContainer = document.createElement("div");
-      precioContainer.classList.add("precio_pr");
-
-      let precio = document.createElement("p");
-      precio.textContent = `${productos[i].precio}`;
-      precio.classList.add("prpr");
-      elementoProducto.appendChild(precio);
+      // // Agregar la descripción
+      // let descripcion = document.createElement("p");
+      // descripcion.classList.add("des_pr");
+      // descripcion.textContent = productos[i].descCorta;
+      // elementoProducto.appendChild(descripcion);
 
       // Crear el elemento HTML para la cantidad con botones de aumento y disminución
       let cantidadContainer = document.createElement("div");
@@ -67,16 +57,25 @@ window.addEventListener("load", function () {
 
       elementoProducto.appendChild(cantidadContainer);
 
+      // Agregar el precio
+      let precioContainer = document.createElement("div");
+      precioContainer.classList.add("precio_pr");
+      let precio = document.createElement("p");
+      precio.textContent = "$ "+`${productos[i].precio}`;
+      precio.classList.add("prpr");
+      elementoProducto.appendChild(precio);
+
+      // Agregar el botón de eliminar
+      let botonEliminar = document.createElement("button");
+      botonEliminar.textContent = "ELIMINAR";
+      botonEliminar.classList.add("btn-eliminar");
+      botonEliminar.addEventListener("click", () => eliminarProducto(i)); // Pasar el índice del producto a eliminar
+      elementoProducto.appendChild(botonEliminar);
+
       // Agregar el último div con clase "border"
       let borderDiv = document.createElement("div");
       borderDiv.classList.add("border");
       elementoProducto.appendChild(borderDiv);
-
-      // Agregar el botón de eliminar
-      let botonEliminar = document.createElement("a");
-      botonEliminar.textContent = "Eliminar";
-      botonEliminar.addEventListener("click", () => eliminarProducto(i)); // Pasar el índice del producto a eliminar
-      elementoProducto.appendChild(botonEliminar);
 
       // Agregar el elemento HTML al DOM
       listadoProductos.appendChild(elementoProducto);
@@ -173,9 +172,10 @@ window.addEventListener("load", function () {
     let totalPrecio = document.getElementById("precio_total");
 
     cantidadItems.textContent = calcularCantidadItems();
-    totalPrecio.textContent = calcularPrecioTotal().toFixed(2); // Asegúrate de mostrar el precio con dos decimales
+    totalPrecio.textContent = "$ " + calcularPrecioTotal().toFixed(2); // Asegúrate de mostrar el precio con dos decimales
   }
 
   // Llama a esta función para actualizar la cantidad y el precio total inicialmente
   actualizarCantidadYTotal();
+
 });

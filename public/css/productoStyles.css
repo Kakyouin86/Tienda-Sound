@@ -164,13 +164,12 @@ main {
 
 /*---------------boton compra*/
 
-.input-general {
+/* .input-general {
     background-color: #ABEDFF;
     border-radius: 10px;
     width: 148px;
     height: 80px;
-    margin-bottom: 6vh;
-}
+} */
 
 input[type="number"] {
     -webkit-appearance: textfield;
@@ -187,7 +186,7 @@ input[type=number]::-webkit-outer-spin-button {
     border: 2px solid #3333FF;
     display: inline-flex;
     border-radius: 10px;
-    margin-bottom: 6vh;
+    /* margin-bottom: 1.5vh; */
 }
 
 .number-input button {
@@ -253,14 +252,20 @@ input[type=number]::-webkit-outer-spin-button {
 .button-comprarAhora {
     background-color: #3333FF;
     color: white;
-    font-size: 14px;
+    font-size: 17px;
+    font-weight: 500;
     text-align: center;
     border-radius: 10px;
     padding: 10px 5px;
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     margin-top: 20px;
     width: 148px;
+    transition: 500ms;
+}
+.button-comprarAhora:hover {
+    background-color: #6666ff83;
+    color: white;
 }
 
 .button-cantidad input {
@@ -274,14 +279,18 @@ input[type=number]::-webkit-outer-spin-button {
 .button-agregarCarrito {
     background-color: #ABEDFF;
     border: solid 1px white;
-    border-radius: 0 0 10px 10px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #3333FF;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    width: 20vh;
+    color:#3333FF;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 5px;
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    width: 148px;
 }
+
 
 .compra h2 {
     font-weight: 500;
@@ -355,6 +364,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .formas-pago-iconos img {
     margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .producto-detail-btn {

@@ -2,144 +2,6 @@
 
 a { text-decoration: none;}
 
-body {
-    overflow-x: hidden;
-}
-
-header {
-    background-color: #3333ff;
-}
-
-header form {
-    position: relative;
-}
-
-header i.search {
-    position: absolute;
-    right: 0;
-    align-self: center;
-    padding: 10px;
-}
-
-.margin-nav {
-    margin: 0 85px;
-}
-
-.logo {
-    width: 200px;
-}
-
-nav .form {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.nav-1 {
-    height: 75px;
-}
-
-.nav-2 {
-    height: 45px;
-}
-
-.navbar ul .nav-item:not(:first-child) {
-    /*esto significa: seleccioná todos los li menos el primero. Pero que esten dentro de un ul, y ese ul dentro de un tag con clase .navbar*/
-    margin-left: 15px;
-}
-
-header .nav-link {
-    color: #ffffff;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-
-.items-container {
-    display: block;
-}
-
-.items-container span {
-    border-right: 1px solid white;
-    margin-right: 15px;
-    padding-right: 15px;
-    font-size: 14px;
-}
-
-.items-container span:hover {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.navbar-nav>div>.dropdown-menu {
-    /*esto significa: selecciona un elemento con clase .dropdown-menu, pero su parent directo que sea un li, y el parent directo del li que sea un tag con clase .navbar-nav*/
-    background-color: #3333ff;
-}
-
-.dropdown-item {
-    color: #ffffff;
-    font-size: 14px;
-}
-
-.navbar-nav .dropdown-menu a:hover {
-    color: blue !important;
-}
-
-header form {
-    position: relative;
-}
-
-.search {
-    background-color: #ABEDFF;
-    height: 100%;
-    width: 30px;
-    border-style: none;
-    border-radius: 0 5px 5px 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-/* Aquí termina el HEADER */
-@media only screen and (max-width: 992px) {
-
-    /* Aquí empieza el header */
-    .navbar-collapse {
-        background: #3333ff;
-        border-radius: 12px;
-    }
-
-    .nav-1 {
-        height: 45px;
-    }
-
-    .margin-nav {
-        margin: 0 10px;
-    }
-
-    .logo {
-        width: 150px;
-        transition: .5s ease;
-    }
-
-    .items-container span {
-        display: none;
-    }
-
-    .items-container i {
-        margin-right: 10px;
-        font-size: 0.8rem;
-        color: blue !important;
-        background: white;
-        padding: 8px;
-        border-radius: 20px;
-    }
-
-    header form input,
-    header form button {
-        display: none !important;
-    }
-
-    /* Aquí termina el header */
-}
 
 /* Acá comienza el CARRITO - JUAN */
 
@@ -167,7 +29,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 65px;
-    margin-bottom: 130px;
+    margin-bottom: 130px;   
 }
 
 .compras {
@@ -175,64 +37,63 @@ main {
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    gap: 20px
 }
 
 .compra1{
-    width: 58vw;
+    width: 62vw;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    align-content: baseline;
     flex-direction: row;
-    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    gap: 25px;
 }
 
 .border {
-    width: 58vw;
+    width: 100%;
     border-bottom: black 1px solid;
     margin-top: 10px;
+    margin: auto;
 }
 
 .foto_p {
     width: 162px;
-    scale: 80%;
     border: 1px solid #00c7ff;
-    border-radius: 10px;
-}
-
-.prod {
-    width: 25vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 30px 0px;
+    border-radius: 100px;
 }
 
 .tit_prod {
     font-size: 1.3rem;
+    max-width: 250px;
 }
 
-.des_pr {
-    width: 21vw;
-}
+/* .des_pr {
+    width: 250px;
+} */
 
 .cantidad {
+    width: 120px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 11vw;
     text-align: center;
-    font-size: 14px;
+    font-size: 17px;
+    cursor: pointer;
 }
 
 .cantidad img {
-    width: 1.6vw;
+    width: 25px;
 }
 
 .cuantos {
-    width: 4vw;
-    height: 3vh;
+    width: 35px;
+    height: 25px;
     border: #3333ff 1px solid;
     border-radius: 8px;
     margin: auto;
@@ -240,19 +101,31 @@ main {
     margin-right: 2px;
 }
 
-.disponibles {
-    margin-top: 10px;
-    font-size: 0.9rem;
-}
-
 .cantidad img:hover {
     opacity: 0.75;
 }
 
-.precio_pr {
-    width: 9vw;
+.prpr {
     font-size: 2rem;
-    text-align: right;
+    font-weight: 700;
+    color: var(--bs-body-color);
+    text-align: center;
+    width: 180px;
+}
+
+.btn-eliminar {
+    color: white;
+    border:0;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 500ms;
+    background-color: #E93882;
 }
 
 .envio_img {
@@ -260,7 +133,7 @@ main {
 }
 
 .envio_compra {
-    width: 58vw;
+    width: 62vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -277,7 +150,7 @@ main {
 }
 
 .total_compra {
-    width: 58vw;
+    width: 62vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -286,10 +159,11 @@ main {
 }
 
 .botones_compra {
-    width: 58vw;
+    width: 62vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    gap: 5px;
 }
 
 .botones_compra button{
@@ -300,7 +174,6 @@ main {
     padding: 10px;
     margin-right: 5px;
     transition: 500ms;
-
 }
 
 #seguircomprando {
@@ -347,7 +220,7 @@ main {
 @media only screen and (max-width: 480px) {
 
     .compra1, .compra2 {
-        width: 450px;
+
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -355,13 +228,13 @@ main {
         flex-direction: column;
         margin-bottom: 10px;
     }
-    .prod {
+    /* .prod {
         width: 400px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
+    } */
     .tit_prod {
         text-align: center;
     }
@@ -399,7 +272,6 @@ main {
         width: 400px;
         justify-content: center;
         margin-top: 20px;
-        margin-bottom: 40px;
     }
 
 }
@@ -408,20 +280,13 @@ main {
 @media only screen and (max-width: 768px) and (min-width: 481px) {
 
     .compra1, .compra2 {
-        width: 450px;
+        /* width: 450px; */
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
         margin-bottom: 10px;
-    }
-    .prod {
-        width: 400px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     .tit_prod {
@@ -463,7 +328,7 @@ main {
         width: 400px;
         justify-content: center;
         margin-top: 20px;
-        margin-bottom: 40px;
+
     }
 }
 
