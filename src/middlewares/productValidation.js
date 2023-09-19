@@ -3,20 +3,19 @@ const path = require('path');
 
 const productValidations = [
 
-    check("nombreProducto").notEmpty().withMessage('Tenes que poner un nombre'),
+    check("nombreProducto").notEmpty().withMessage('Tenes que poner un nombre.'),
 
-	check("descripcionProductoCorta").notEmpty().withMessage('Tenes que poner un nombre'),
+	check("descripcionProductoCorta").notEmpty().withMessage('Tenes que poner una descripción.'),
 
-    check("precioProducto").notEmpty().bail().isNumeric().withMessage('Tenes que poner un nombre'),
+    check("precioProducto").notEmpty().bail().isNumeric().withMessage('Tenes que poner el precio del producto.'),
 		
-    check("precioEnvio").notEmpty().bail().isNumeric().withMessage('Tenes que poner un nombre'),
+    check("precioEnvio").notEmpty().bail().isNumeric().withMessage('Tenes que poner el precio de envio'),
 
+	// check("estadoProducto").isIn(['Nuevo', 'Usado']).notEmpty().withMessage('Tenes que poner el estado del producto'),
 
-	check("estadoProducto").isIn(['Nuevo', 'Usado']).notEmpty().withMessage('Tenes que poner un nombre'),
+	check("descripcionProductoLarga").notEmpty().withMessage('Tenes que poner una descripción'),
 
-	check("descripcionProductoLarga").notEmpty().withMessage('Tenes que poner un nombre'),
-
-	check("categoriaProducto").isIn(["Guitarras y Bajos", "Batería y Percusión", "Teclados y Sintetizadores", "Estudio de Grabación, Dj's", "Vientos", "Cuerdas"]).notEmpty().withMessage('Tenes que poner un nombre'),
+	// check("categoriaProducto").isIn(["Guitarras y Bajos", "Batería y Percusión", "Teclados y Sintetizadores", "Estudio de Grabación, Dj's", "Vientos", "Cuerdas"]).notEmpty().withMessage('Tenes que poner un nombre'),
 
     check("fotoDestacada")
 		.custom((value, { req }) => {

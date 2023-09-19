@@ -8,6 +8,7 @@ window.addEventListener('load', function() {
         let arrayerroresMail = [];
         let arrayerroresPassword = [];
         let arrayerroresCheckbox = [];
+        let erFotoAvatar = [];
 
         // Variables IMPUT del Form
         let camponombre = document.querySelector('#nombreCompleto');
@@ -18,6 +19,9 @@ window.addEventListener('load', function() {
 
         let campoPassword = document.querySelector('#password');
         let erroresPassword = document.querySelector('div.text-danger.pass');
+
+        let campoFotoAvatar = document.getElementById('imgAvatar');
+        let erroresFotoAvatar = document.querySelector('div.text-danger.imgAvatar');
 
         let campoCheckbox = document.querySelector("#checkbox");
         let erroresCheckbox = document.querySelector('div.text-danger.check');
@@ -82,6 +86,23 @@ window.addEventListener('load', function() {
             }
         } else {
             erroresPassword.innerHTML = ''; // Clear the error message if there are no errors
+        }
+
+        // AVATAR
+        
+        var filePath = campoFotoAvatar.value;
+        var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i; // Extensiones válidas de imágenes.
+
+        if( (!allowedExtensions.exec(filePath)) && (filePath != 0) ) { // Si la imágen no tiene las extenciones válidas y el valor es distinta de  "cero" (si es "cero" sube una imagen por defecto)
+            erFotoAvatar.push('Tenés que subir una imagen con formato .jpg, .jpeg, .png, .gif');
+        }
+        // errores
+        if (erFotoAvatar.length > 0) {
+            e.preventDefault();
+            erroresFotoAvatar.innerHTML = '';
+            erroresFotoAvatar.innerHTML += "<p>" + erFotoAvatar + "</p>"
+        } else {
+            erroresFotoAvatar.innerHTML = '';
         }
 
         // CHECKBOX

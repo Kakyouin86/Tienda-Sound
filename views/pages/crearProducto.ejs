@@ -69,24 +69,24 @@
                 <% } %>
                 <div class="text-danger descripcionLarga"></div>
 
-            <!-- <label for="categoriaProducto">Categoría del Producto</label>
+             <label for="categoriaProducto">Categoría del Producto</label>
             <select name="categoriaProducto">
-              <%//for(let i=0; i<categoria.length; i++){%>
-              <option value="<%=// categoria[i].id %>"><%=// categoria[i].nombre %></option>
-              <%// } %>
-            </select>-->
+              <%for(let i=0; i<categoria.length; i++){%>
+              <option value="<%= categoria[i].id %>"><%= categoria[i].nombre %></option>
+              <% } %>
+            </select>
 
             <label for="fotoDestacada">Imagen destacada</label>
             <input type="file" name="fotoDestacada" id="fotoDestacada">
-            <div class="dos-col">
-              <% if (locals.errors && errors.fotoDestacada) { %>
-                <div class="text-danger">
-                  <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.fotoDestacada.msg %>
-                </div>
-                <% } %>
-                <div class="text-danger fotoDestacada"></div>
 
+            <% if (locals.errors && errors.fotoDestacada) { %>
+              <div class="text-danger">
+                <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.fotoDestacada.msg %>
+              </div>
+              <% } %>
+              <div class="text-danger fotoDestacada"></div>
               
+            <div class="dos-col">
               <button type="reset" class="form-btn inicio-btn">Borrar todo</button>
               <button type="submit" class="form-btn inicio-btn">Agregar producto</button>
             </div>

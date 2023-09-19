@@ -42,13 +42,14 @@
              <div class="text-danger pass"></div>
             
             <label for="avatar" style="padding-bottom: 5px;"><i class="fa-regular fa-id-card"></i>  Imagen de tu Perfil</label>
-            <input type="file" name="avatar" style="padding-top: 17px;">
+            <input type="file" name="avatar" id="imgAvatar" style="padding-top: 17px;">
            <% if (locals.errors && errors.avatar) { %>
              <div class="text-danger">
               <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.avatar.msg %>
              </div>
            <% } %>
           </div>
+          <div class="text-danger imgAvatar"></div>
 
             <div class="terminos-condiciones">
               <input type="checkbox" value="" name="checkbox" id="checkbox" name="checkbox">
