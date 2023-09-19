@@ -1,5 +1,10 @@
+let carritoCargado = false;
+
 window.addEventListener("load", function () {
+
+  if (!carritoCargado){
   let productos = JSON.parse(localStorage.getItem("carrito"));
+  let cantidadCarritoHeader = document.querySelector('#cantidadCarrito');
 
   if (productos && productos.length > 0) {
     let listadoProductos = document.querySelector("#listadoProductos");
@@ -175,10 +180,16 @@ window.addEventListener("load", function () {
     let totalPrecio = document.getElementById("precio_total");
 
     cantidadItems.textContent = calcularCantidadItems();
+    cantidadCarritoHeader.textContent = calcularCantidadItems();
     totalPrecio.textContent = "$ " + calcularPrecioTotal().toFixed(2); // Asegúrate de mostrar el precio con dos decimales
   }
 
   // Llama a esta función para actualizar la cantidad y el precio total inicialmente
   actualizarCantidadYTotal();
+
+  carritoCargado = true; // Marcar que el carrito ha sido cargado
+
+
+}
 
 });
