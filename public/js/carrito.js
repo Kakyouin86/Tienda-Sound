@@ -2,6 +2,16 @@ window.addEventListener("load", function () {
   const btnAgregarProducto = document.querySelector("#agregarProducto");
 
   btnAgregarProducto.addEventListener("click", function () {
+
+    Swal.fire({
+      title: 'Agregado &#9835',
+      text: "¡Seguí comprando en Tienda Sound!",
+      icon: 'success',
+      showCancelButton: false,
+      confirmButtonColor: '#3333FF',
+      confirmButtonText: 'OK'
+    })
+
     const nombreProductoAgregado = document.querySelector("#nombreProductoAgregado").innerText;
     const descripcionCortaAgregado = document.querySelector("#descripcionCortaAgregado").innerText;
     const precioProductoAgregado = document.querySelector("#precioProductoAgregado").innerText;
