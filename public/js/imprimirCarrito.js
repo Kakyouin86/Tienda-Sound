@@ -104,6 +104,8 @@ window.addEventListener("load", function () {
         productos[index].cantidad -= 1;
         localStorage.setItem("carrito", JSON.stringify(productos));
         actualizarCantidadVisual(index, productos[index].cantidad);
+        actualizarCantidadYTotal();
+
       }
     }
   }
@@ -115,6 +117,7 @@ window.addEventListener("load", function () {
       productos[index].cantidad += 1;
       localStorage.setItem("carrito", JSON.stringify(productos));
       actualizarCantidadVisual(index, productos[index].cantidad);
+      actualizarCantidadYTotal();
     }
   }
 
