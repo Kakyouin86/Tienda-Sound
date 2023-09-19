@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-    
+
     let formularioProducto = document.querySelector('form.crearProducto-form');
 
     formularioProducto.addEventListener('submit', function(e) {
@@ -10,7 +10,6 @@ window.addEventListener('load', function() {
         let erPrecioEnvio = [];
         let erDescLarga = [];
         let erFotoDestacada = [];
-
 
         // Variables IMPUT del Form
         let campoNombreProducto = document.querySelector('#nombreProducto');
@@ -28,8 +27,8 @@ window.addEventListener('load', function() {
         let campoDescripcionLarga = document.querySelector('#descripcionProductoLarga');
         let erroresDescripcionLarga = document.querySelector('div.text-danger.descripcionLarga');
 
-        
-
+        let campoFotoDestacada = document.getElementById('fotoDestacada');
+        let erroresFotoDestacada = document.querySelector('div.text-danger.fotoDestacada');
 
 
         // Nombre Producto
@@ -63,6 +62,7 @@ window.addEventListener('load', function() {
             erroresDescripcionCorta.innerHTML = ''; // Clear the error message if there are no errors
         }
 
+
         // Precio producto
 
         if (campoPrecioProducto.value.trim() === "") {
@@ -86,6 +86,7 @@ window.addEventListener('load', function() {
             erroresPrecioProducto.innerHTML = ''; // Clear the error message if there are no errors
         }
 
+
          // Precio envio
 
          if (campoPrecioEnvio.value.trim() === "") {
@@ -107,6 +108,7 @@ window.addEventListener('load', function() {
             erroresPrecioEnvio.innerHTML = ''; // Clear the error message if there are no errors
         }
 
+
         // Descripcion Larga
         
         if (campoDescripcionLarga.value.trim() === "") {
@@ -122,47 +124,23 @@ window.addEventListener('load', function() {
             erroresDescripcionLarga.innerHTML = ''; // Clear the error message if there are no errors
         }
 
-        // Foto Destacada
-
-        let campoFotoDestacada = document.querySelector('#fotoDestacada');
-        let erroresFotoDestacada = document.querySelector('div.text-danger.fotoDestacada');
-
-        function validateImageMimeType(file) {
-            const allowedMimeTypes = ['image/jpeg', 'image/png', 'image/gif'];
-            if (!allowedMimeTypes.includes(file.type)) {
-              return false;
-            }
-            return true;
-        };
-
-        // Limpia los errores anteriores
-        erroresFotoDestacada.innerHTML = '';
-          
-        // Agrega un evento change al campo de imagen
-        campoFotoDestacada.addEventListener('change', function(e) {
-        // Valida el tipo MIME del archivo
-         if (!validateImageMimeType(this.value)) {
-            erFotoDestacada.push("Las extensiones de archivo permitidas son .jpg, .jpeg, .png, .gif");
-        } else {
-        // Elimina el mensaje de error si existe
-            erFotoDestacada.splice(erFotoDestacada.indexOf("Las extensiones de archivo permitidas son .jpg, .jpeg, .png, .gif"), 1);
-        }
-  
-        // Actualiza el mensaje de error
-        erroresFotoDestacada.innerHTML = '';
-        for (const error of erFotoDestacada) {
-             erroresFotoDestacada.innerHTML += "<p>" + error + "</p>";
-        }
-
-        // Verifica si el campo que cambió es el campo de imagen
-         if (e.target !== campoFotoDestacada) {
-            // Si no es el campo de imagen, ignora el evento
-            return;
-            }
-  });
-  
-
         
+        // Foto Destacada
+        
+        var filePath = campoFotoDestacada.value;
+        var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i; // Extensiones válidas de imágenes.
+
+        if( (!allowedExtensions.exec(filePath)) && (filePath != 0) ) { // Si la imágen no tiene las extenciones válidas y el valor es distinta de  "cero" (si es "cero" sube una imagen por defecto)
+            erFotoDestacada.push('Tenés que subir una imagen con formato .jpg, .jpeg, .png, .gif');
+        }
+        // errores
+        if (erFotoDestacada.length > 0) {
+            e.preventDefault();
+            erroresFotoDestacada.innerHTML = '';
+            erroresFotoDestacada.innerHTML += "<p>" + erFotoDestacada + "</p>"
+        } else {
+            erroresFotoDestacada.innerHTML = '';
+        }
     });
 });
 
