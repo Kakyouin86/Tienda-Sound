@@ -107,24 +107,13 @@
               <div class="producto-detail-btn">
                 <a href="/productos/editarProducto/<%= producto.id %>" class="btn-editar">EDITAR PRODUCTO</a>
                 
-                <form action="/productos/borrarProducto/<%= producto.id %>" method="POST"
-                  onsubmit="return confirm('¿Está seguro/a que desea eliminar el producto?');">
+                <form class="eliminarProducto" action="/productos/borrarProducto/<%= producto.id %>" method="POST">
                   <button type="submit" class="btn-eliminar">ELIMINAR</button>
                 </form>
               </div>
 
-              <% } else { %>
-
-            <div class="producto-detail-btn" style="display: none">
-              <a href="/productos/editarProducto/<%= producto.id %>" class="btn-editar">EDITAR PRODUCTO</a>
+              <% }  %>
               
-              <form action="/productos/borrarProducto/<%= producto.id %>" method="POST"
-                onsubmit="return confirm('¿Está seguro/a que desea eliminar el producto?');">
-                <button type="submit" class="btn-eliminar">ELIMINAR</button>
-              </form>
-            </div>
-
-            <% } %>
           </div>
         </div>
       </div>
@@ -137,6 +126,7 @@
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
         <script src= "../js/carrito.js"></script>
+        <script src= "../js/alertEliminar.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
