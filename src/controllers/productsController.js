@@ -60,12 +60,10 @@ let productsController = {
           oldData: req.body,
         });
       }
-
-      let imageBuffer;
-      let customFilename = ""; // Declara customFilename aquí
-      if (!req.file) {
-        imageBuffer = "1693608906899-imgProducto"; // IMAGEN POR DEFECTO cuando no se carga una imagen
-      } else {
+        // Elimino la condición de que suba una imagen por defecto
+        if (!req.file) {
+          customFilename = "u5ennu5n5mdnx0yxjblm"; // IMAGEN POR DEFECTO cuando no se carga una imagen
+        } else {
         imageBuffer = req.file.buffer;
         customFilename = Date.now() + '-imgProducto';
         const folderName = 'productos';
@@ -82,7 +80,7 @@ let productsController = {
           streamifier.createReadStream(imageBuffer).pipe(stream);
         });
         const uploadedImage = await uploadPromise;
-      }
+        }
       const currentTimestamp = new Date();
       await db.Producto.create({
         nombreProducto: req.body.nombreProducto,
@@ -94,7 +92,7 @@ let productsController = {
         fecha_alta: currentTimestamp,
         fecha_modificacion: null,
         fecha_baja: null,
-        imagen: req.file ? customFilename : imageBuffer,
+        imagen: customFilename,
         categoria_id: req.body.categoriaProducto,
         usuario_id: req.session.userLogged.id,
         marca_id: null,
@@ -117,6 +115,15 @@ let productsController = {
   actualizarProducto: async function (req, res)
   {
     try {
+      // Validación Back End - actualizar producto
+      const resultProductValidation = validationResult(req);
+        if (resultProductValidation.errors.length > 0) {
+            return res.render("./pages/editarProducto", {
+              errors: resultProductValidation.mapped(),
+              oldData: req.body,
+            });
+        }
+
 		  let customFilename; // nombre de la imagen definida en la variable en CREATE
       if (req.file) {
 		  const imageBuffer = req.file.buffer;

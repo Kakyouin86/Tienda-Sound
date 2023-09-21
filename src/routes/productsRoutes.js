@@ -22,7 +22,7 @@ router.post('/crearProducto', uploadProduct.single('fotoDestacada'), productVali
 
 // Editar / Actualizar un producto
 router.get('/editarProducto/:id', productsController.editarProducto);
-router.patch('/editarProducto/:id', uploadProduct.single('fotoDestacada'), productsController.actualizarProducto);
+router.patch('/editarProducto/:id', uploadProduct.single('fotoDestacada'), productValidations, productsController.actualizarProducto);
 
 // Eliminar un producto
 router.post('/borrarProducto/:id', productsController.borrarProducto);

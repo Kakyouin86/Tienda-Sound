@@ -22,18 +22,18 @@
               <div class="text-danger">
                 <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.nombreProducto.msg %>
               </div>
-              <% } %>
+             <% } %>
             <div class="text-danger nombreProducto"></div>
             
             <label for="descripcionProductoCorta">Breve descripción</label>
             <textarea placeholder="Color, tamaño, año, etc..." name="descripcionProductoCorta" id="descripcionProductoCorta" cols="30"
               rows="3"></textarea>
-              <% if (locals.errors && errors.descripcionProductoCorta) { %>
-                <div class="text-danger">
-                  <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.descripcionProductoCorta.msg %>
-                </div>
-                <% } %>
-                <div class="text-danger descripcionCorta"></div>
+            <% if (locals.errors && errors.descripcionProductoCorta) { %>
+              <div class="text-danger">
+                <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.descripcionProductoCorta.msg %>
+              </div>
+            <% } %>
+            <div class="text-danger descripcionCorta"></div>
 
             <label for="">Precio en ARS</label>
             <input type="number" name="precioProducto" placeholder="Precio del producto" id="precioProducto">
@@ -41,8 +41,8 @@
               <div class="text-danger">
                 <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.precioProducto.msg %>
               </div>
-              <% } %>
-              <div class="text-danger precioProducto"></div>
+            <% } %>
+            <div class="text-danger precioProducto"></div>
 
             <label for="">Precio de Envío</label>
             <input type="number" name="precioEnvio" id="precioEnvio" placeholder="Precio del envio, si es gratis, poné $0">
@@ -50,8 +50,8 @@
               <div class="text-danger">
                 <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.precioEnvio.msg %>
               </div>
-              <% } %>
-              <div class="text-danger precioEnvio"></div>
+            <% } %>
+            <div class="text-danger precioEnvio"></div>
 
             <div class="dos-col">
               <label for="estado">Estado</label>
@@ -62,12 +62,12 @@
             <label for="descripcionProductoLarga">Descripción detallada</label>
             <textarea placeholder="Descripción detallada del producto" name="descripcionProductoLarga" id="descripcionProductoLarga" cols="30"
               rows="6"></textarea>
-              <% if (locals.errors && errors.descripcionProductoLarga) { %>
-                <div class="text-danger">
-                  <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.descripcionProductoLarga.msg %>
-                </div>
-                <% } %>
-                <div class="text-danger descripcionLarga"></div>
+            <% if (locals.errors && errors.descripcionProductoLarga) { %>
+              <div class="text-danger">
+                <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.descripcionProductoLarga.msg %>
+              </div>
+            <% } %>
+            <div class="text-danger descripcionLarga"></div>
 
              <label for="categoriaProducto">Categoría del Producto</label>
             <select name="categoriaProducto">
@@ -83,8 +83,8 @@
               <div class="text-danger">
                 <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.fotoDestacada.msg %>
               </div>
-              <% } %>
-              <div class="text-danger fotoDestacada"></div>
+            <% } %>
+            <div class="text-danger fotoDestacada"></div>
               
             <div class="dos-col">
               <button type="reset" class="form-btn inicio-btn">Borrar todo</button>
@@ -99,7 +99,7 @@
           integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
           crossorigin="anonymous"></script>
 
-          <script src= "../js/ValFrontProducto.js"></script>
+        <script src= "../js/ValFrontProducto.js"></script>
   </body>
 
 </html>

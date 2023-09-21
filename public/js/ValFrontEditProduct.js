@@ -1,8 +1,8 @@
 window.addEventListener('load', function() {
 
-    let formularioProducto = document.querySelector('form.crearProducto-form');
+    let formularioEditarProducto = document.querySelector('form.crearProducto-form');
 
-    formularioProducto.addEventListener('submit', function(e) {
+    formularioEditarProducto.addEventListener('submit', function(e) {
 
         let erNombreProducto = [];
         let erDescCorta = [];
@@ -33,7 +33,7 @@ window.addEventListener('load', function() {
 
         // Nombre Producto
 
-        if (campoNombreProducto.value.trim() === "") {
+        if (campoNombreProducto.value.length == 0 ) {
             erNombreProducto.push("Este campo debe estar completo");
         }
         // errores
@@ -49,7 +49,7 @@ window.addEventListener('load', function() {
 
         // Descripcion Corta
         
-        if (campoDescripcionCorta.value.trim() === "") {
+        if (campoDescripcionCorta.value.length == 0) {
             erDescCorta.push("Este campo debe estar completo");
         }
         // errores
@@ -65,7 +65,7 @@ window.addEventListener('load', function() {
 
         // Precio producto
 
-        if (campoPrecioProducto.value.trim() === "") {
+        if (campoPrecioProducto.value.trim.length == 0) {
             erPrecioProducto.push("Este campo debe estar completo");
         }else if(campoPrecioProducto.value<=0){
             erPrecioProducto.push("El precio debe ser mayor a 0");
@@ -89,9 +89,9 @@ window.addEventListener('load', function() {
 
          // Precio envio
 
-         if (campoPrecioEnvio.value.trim() === "") {
-            erPrecioEnvio.push("Este campo debe estar completo");
-        }
+        //  if (campoPrecioEnvio.value.trim() === "") {
+        //     erPrecioEnvio.push("Este campo debe estar completo");
+        // }
         const precioEnvio = Number(campoPrecioEnvio.value);    
         if (isNaN(precioEnvio)) {
           erPrecioEnvio.push("El precio de envío debe ser un número");
@@ -111,7 +111,7 @@ window.addEventListener('load', function() {
 
         // Descripcion Larga
         
-        if (campoDescripcionLarga.value.trim() === "") {
+        if (campoDescripcionLarga.value.length == 0) {
             erDescLarga.push("Este campo debe estar completo");
         }
         // errores
