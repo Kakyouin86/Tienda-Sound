@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 const productValidations = require("./../middlewares/productValidation");
+const productEditValidations = require("./../middlewares/productEditValidation");
 
 // Controladores
 const productsController = require("../controllers/productsController");
@@ -22,7 +23,7 @@ router.post('/crearProducto', uploadProduct.single('fotoDestacada'), productVali
 
 // Editar / Actualizar un producto
 router.get('/editarProducto/:id', productsController.editarProducto);
-router.patch('/editarProducto/:id', uploadProduct.single('fotoDestacada'), productValidations, productsController.actualizarProducto);
+router.patch('/editarProducto/:id', uploadProduct.single('fotoDestacada'), productEditValidations, productsController.actualizarProducto);
 
 // Eliminar un producto
 router.post('/borrarProducto/:id', productsController.borrarProducto);
