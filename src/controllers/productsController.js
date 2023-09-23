@@ -123,7 +123,7 @@ let productsController = {
         let pedidoCategoria = db.Categoria.findAll();
         Promise.all([pedidoProductos, pedidoCategoria])
           .then(function ([producto, categoria]) {
-            return res.render("./pages/editarProducto", { producto: producto, categoria: categoria });
+            return res.render("./pages/editarProducto", { errors: resultProductValidation.mapped(), producto: producto, categoria: categoria });
           });
       } else {
         let customFilename; // nombre de la imagen definida en la variable en CREATE

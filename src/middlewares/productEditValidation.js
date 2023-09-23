@@ -7,9 +7,15 @@ const productEditValidations = [
 
 	check("descripcionProductoCorta").notEmpty().withMessage('Tenes que poner una descripción.'),
 
-    check("precioProducto").notEmpty().bail().isNumeric().withMessage('Tenes que poner el precio del producto.'),
+    check("precioProducto")
+	.notEmpty().withMessage('El precio de envio no puede estar vacío')
+	.bail()
+	.isNumeric().withMessage('El precio de envio debe ser un número'),
 		
-    check("precioEnvio").notEmpty().bail().isNumeric().withMessage('Tenes que poner el precio de envio'),
+	check("precioEnvio")
+	.notEmpty().withMessage('El precio de envio no puede estar vacío')
+	.bail()
+	.isNumeric().withMessage('El precio de envio debe ser un número'),
 
 	// check("estadoProducto").isIn(['Nuevo', 'Usado']).notEmpty().withMessage('Tenes que poner el estado del producto'),
 
