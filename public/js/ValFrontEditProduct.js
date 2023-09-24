@@ -33,7 +33,7 @@ window.addEventListener('load', function() {
 
         // Nombre Producto
 
-        if (campoNombreProducto.value.length == 0 ) {
+        if (campoNombreProducto.value.trim() === "") {
             erNombreProducto.push("Este campo debe estar completo");
         }
         // errores
@@ -65,7 +65,7 @@ window.addEventListener('load', function() {
 
         // Precio producto
 
-        if (campoPrecioProducto.value.trim.length == 0) {
+        if (campoPrecioProducto.value == 0) {
             erPrecioProducto.push("Este campo debe estar completo");
         }else if(campoPrecioProducto.value<=0){
             erPrecioProducto.push("El precio debe ser mayor a 0");
