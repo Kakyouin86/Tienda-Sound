@@ -63,9 +63,9 @@
               >EDITAR USUARIO</a
             >
             <form
+              class="eliminarUsuario"
               action="/users/borrarUser/<%= user.id %>?_method=DELETE"
               method="POST"
-              onsubmit="return confirm('¿Está seguro/a que deseas eliminar tu usuario?');"
             >
               <button type="submit" class="btn-eliminar">
                 ELIMINAR CUENTA
@@ -87,7 +87,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-
     <script type="module">
       var ctx = document.getElementById("myChart").getContext("2d");
       const months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio"];
@@ -119,5 +118,7 @@
         },
       });
     </script>
+    <script src= "../js/alertEliminarUsuario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
