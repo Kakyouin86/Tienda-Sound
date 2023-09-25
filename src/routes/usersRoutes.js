@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 const validations = require("./../middlewares/registerValidation");
+const validationsEditUser = require("./../middlewares/editUserValidation");
 const guestMiddleware = require("./../middlewares/guestMiddleware");
 const authMiddleware = require("./../middlewares/authMiddleware");
 
@@ -29,7 +30,7 @@ router.post('/login', usersController.loginProcess);
 
 // Editar usuario
 router.get('/editarUser/:id', usersController.editarUser);
-router.patch('/editarUser/:id', uploadAvatar.single('avatar'), usersController.actualizarUser);
+router.patch('/editarUser/:id', uploadAvatar.single('avatar'), validationsEditUser, usersController.actualizarUser);
 
 // Eliminar usuario
 router.delete('/borrarUser/:id', usersController.borrarUser);

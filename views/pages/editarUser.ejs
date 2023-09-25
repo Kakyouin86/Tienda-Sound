@@ -44,19 +44,19 @@
             
             <label for="avatar" style="padding-bottom: 5px;"><i class="fa-regular fa-id-card"></i>  Imagen de tu Perfil</label>
             <input type="file" name="avatar" style="padding-top: 17px;"  value="" id="imgAvatar">
+            <div class="text-danger imgAvatar"></div>
+            <% if (locals.errors && errors.avatar) { %>
+              <div class="text-danger">
+               <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.avatar.msg %>
+              </div>
+            <% } %>
             <div class="img-cont">
               <img src="http://res.cloudinary.com/dlf8flk1o/image/upload/v1692991185/avatars/<%=user.imagen%>" alt="foto">
             </div>
-            <div class="text-danger imgAvatar"></div>
-           <% if (locals.errors && errors.avatar) { %>
-             <div class="text-danger">
-              <i class="fa-solid fa-triangle-exclamation"></i> <%= errors.avatar.msg %>
-             </div>
-           <% } %>
           </div>
 
            <div class="profile-detail-btn">
-            <button type="submit" class="form-btn inicio-btn">Editar información</button>
+            <button type="submit" class="form-btn inicio-btn" style="width: 210%;">Editar</button>
           </div>
 
           </form>

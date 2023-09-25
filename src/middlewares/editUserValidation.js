@@ -1,7 +1,7 @@
 const {check} = require("express-validator");
 const path = require('path');
 
-const validations = [
+const validationsEditUser = [
 
     check("nombreCompleto")
 		.notEmpty()
@@ -23,30 +23,33 @@ const validations = [
 		.matches(/^(?=.*[A-Z])(?=.*\d).{8,}$/)
 		.withMessage("Tu contraseña debe tener por lo menos 8 caracteres, una letra mayúscula y un número"),
 
-    check("checkbox")
-		.custom((value, { req }) => {
-		if (value != false) {
-			throw new Error("Tenés que aceptar nuestros términos y condiciones");
-		}
-		return true;
-		}),
-
     check("avatar")
 		.custom((value, { req }) => {
         let file = req.file;
 		let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
 		
-		if (file) {
+		// if (!file) {
 		// 	throw new Error('Tenés que subir una imagen con formato .jpg, .jpeg, .png, .gif');
 		// }
 		// else {
-			let fileExtension = path.extname(file.originalname);
-			if (!acceptedExtensions.includes(fileExtension)) {
-				throw new Error(`Tenés que subir una imagen con formato ${acceptedExtensions.join(', ')}`);
-			}
-		}
-		return true;
+		// 	let fileExtension = path.extname(file.originalname);
+		// 	if (!acceptedExtensions.includes(fileExtension)) {
+		// 		throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+		// 	}
+		// }
+		// return true;
+
+        if (file) {
+            // 	throw new Error('Tenés que subir una imagen con formato .jpg, .jpeg, .png, .gif');
+            // }
+            // else {
+                let fileExtension = path.extname(file.originalname);
+                if (!acceptedExtensions.includes(fileExtension)) {
+                    throw new Error(`Tenés que subir una imagen con formato ${acceptedExtensions.join(', ')}`);
+                }
+            }
+            return true;
 	})
 ]
 
-module.exports = validations;
+module.exports = validationsEditUser;

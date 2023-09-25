@@ -152,11 +152,21 @@ let usersController = {
   },
   actualizarUser: async function (req, res) {
     try {
+      // Validación Back End - Editar Usuario
+      const resultValidation = validationResult(req);
+      if (resultValidation.errors.length > 0) {
+        let pedidoUsuario = db.Usuario.findByPk(req.params.id);
+        pedidoUsuario
+        .then(function (user){
+        return res.render("./pages/editarUser", {errors: resultValidation.mapped(), user: user}) })
+        
+      } else {
+      
       let customFilenameAvatar; // nombre de la imagen definida en la variable, en CREATE
-
+    
       if (req.file) {
         const imageBufferAvatar = req.file.buffer;
-        const fileNameUpdateAvatar = Date.now() + "imagen";
+        fileNameUpdateAvatar = Date.now() + "imagen";
         const folderName = "avatars";
 
         const uploadPromiseAvatar = new Promise((resolve, reject) => {
@@ -181,7 +191,6 @@ let usersController = {
 
         const uploadedImageAvatar = await uploadPromiseAvatar;
       }
-
       await db.Usuario.update(
         {
           nombreCompleto: req.body.nombreCompleto,
@@ -202,6 +211,8 @@ let usersController = {
 
       req.session.userLogged = actualizarUsuario;
       res.redirect("/users/profile");
+    }
+    
     } catch (error) {
       console.error("Error:", error);
     }
