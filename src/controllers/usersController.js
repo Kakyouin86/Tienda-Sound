@@ -217,19 +217,31 @@ let usersController = {
       console.error("Error:", error);
     }
   },
-  borrarUser: async function (req, res) {
-    try {
-      await db.Usuario.destroy({
-        where: {
-          id: req.params.id,
-        },
-      });
-      res.clearCookie("userEmailCookie");
-      req.session.destroy();
-      res.redirect("/");
-    } catch (error) {
-      console.error("Error:", error);
+borrarUser: async function (req, res) {
+  try {
+    // Step 1: Fetch all products associated with the user
+    const userProducts = await db.Producto.findAll({
+      where: {
+        usuario_id: req.params.id, // Assuming 'usuario_id' is the foreign key in the 'Producto' table
+      },
+    });
+    // Step 2: Delete all associated products
+    for (const product of userProducts) {
+      await product.destroy();
     }
+    // Step 3: After all products are deleted, delete the user
+    await db.Usuario.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+    // Additional cleanup
+    res.clearCookie("userEmailCookie");
+    req.session.destroy();
+    res.redirect("/");
+  } catch (error) {
+    console.error("Error:", error);
+  }
   },
   logout: function (req, res) {
     res.clearCookie("userEmailCookie");

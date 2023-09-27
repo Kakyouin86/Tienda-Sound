@@ -23,21 +23,21 @@ const productEditValidations = [
 
 	// check("categoriaProducto").isIn(["Guitarras y Bajos", "Batería y Percusión", "Teclados y Sintetizadores", "Estudio de Grabación, Dj's", "Vientos", "Cuerdas"]).notEmpty().withMessage('Tenes que poner un nombre'),
 	
-	check("fotoDestacada")
-	.custom((value, { req }) => {
-	  let file = req.file;
-	  let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
-  
-	  // Check if a file was uploaded
-	  if (file) {
-		let fileExtension = path.extname(file.originalname);
-		if (!acceptedExtensions.includes(fileExtension)) {
-		  throw new Error(`Las extensiones de archivo permitidas son ${acceptedExtensions.join(', ')}`);
+    check("fotoDestacada")
+		.custom((value, { req }) => {
+        let file = req.file;
+		let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
+		
+		if (file) {
+		// 	throw new Error('Tenés que subir una imagen con formato .jpg, .jpeg, .png, .gif');
+		// }
+		// else {
+			let fileExtension = path.extname(file.originalname);
+			if (!acceptedExtensions.includes(fileExtension)) {
+				throw new Error(`Tenés que subir una imagen con formato ${acceptedExtensions.join(', ')}`);
+			}
 		}
-	  } else {
-		// No new file uploaded, skip the validation
 		return true;
-	  }
 	})
 ]
 

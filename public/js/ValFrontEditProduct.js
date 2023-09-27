@@ -124,22 +124,21 @@ window.addEventListener('load', function() {
             erroresDescripcionLarga.innerHTML = ''; // Clear the error message if there are no errors
         }
 
-        // Foto Destacada
-        const campoFotoDestacadaValue = campoFotoDestacada.value.trim();
-        if (campoFotoDestacadaValue.length > 0) {
-        const allowedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
-        const fileExtension = campoFotoDestacadaValue.split('.').pop().toLowerCase();
-        if (!allowedExtensions.includes(fileExtension)) {
+        // Validación imagen
+
+        var filePath = campoFotoDestacada.value;
+        var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i; // Extensiones válidas de imágenes.
+
+        if( (!allowedExtensions.exec(filePath)) && (filePath != 0) ) { // Si la imágen no tiene las extenciones válidas y el valor es distinta de  "cero" (si es "cero" sube una imagen por defecto)
             erFotoDestacada.push('Tenés que subir una imagen con formato .jpg, .jpeg, .png, .gif');
-        }
         }
         // errores
         if (erFotoDestacada.length > 0) {
-        e.preventDefault();
-        erroresFotoDestacada.innerHTML = '';
-        erroresFotoDestacada.innerHTML += "<p>" + erFotoDestacada[0] + '</p>';
+            e.preventDefault();
+            erroresCampoFotoAvatar.innerHTML = '';
+            erroresCampoFotoAvatar.innerHTML += "<p>" + erFotoDestacada + "</p>"
         } else {
-        erroresFotoDestacada.innerHTML = '';
+            erroresFotoDestacada.innerHTML = '';
         }
     });
 });
