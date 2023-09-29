@@ -135,8 +135,8 @@ window.addEventListener('load', function() {
         // errores
         if (erFotoDestacada.length > 0) {
             e.preventDefault();
-            erroresCampoFotoAvatar.innerHTML = '';
-            erroresCampoFotoAvatar.innerHTML += "<p>" + erFotoDestacada + "</p>"
+            erroresFotoDestacada.innerHTML = '';
+            erroresFotoDestacada.innerHTML += "<p>" + erFotoDestacada + "</p>"
         } else {
             erroresFotoDestacada.innerHTML = '';
         }
