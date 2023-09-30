@@ -257,6 +257,38 @@ borrarUser: async function (req, res) {
         });
       });
   },
+
+  // APIs //
+
+  unUsuario: (req, res) => {
+    db.Usuario.findByPk(req.params.id)
+      .then((usuario) => {
+        return res.json({ 
+          nombre: usuario.nombreCompleto,
+          email: usuario.email,
+          avatar: usuario.imagen,
+          status: 200
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+        res.status(500).json({ message: 'Error interno del servidor' });
+      });
+  },
+  todosLosUsuarios: (req, res) => {
+    db.Usuario.findAll()
+      .then((usuarios) => {
+        return res.json({ 
+          total: usuarios.length,
+          data: usuarios,
+          status: 200
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+        res.status(500).json({ message: 'Error interno del servidor' });
+      });
+  }
 };
 
 module.exports = usersController;

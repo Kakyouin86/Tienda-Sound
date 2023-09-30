@@ -1,5 +1,5 @@
 window.addEventListener('load', function() {
-    // Campo NOMBRE COMPLETO
+
     let formulario = document.querySelector('form.register-form');
 
     formulario.addEventListener('submit', function(e) {
@@ -120,6 +120,20 @@ window.addEventListener('load', function() {
         } else {
             erroresCheckbox.innerHTML = ''; // Clear the error message if there are no errors
         }
+
+        if (arrayerroresNombre.length === 0 && arrayerroresMail.length === 0 && 
+            arrayerroresPassword.length === 0 && arrayerroresCheckbox.length === 0 && erFotoAvatar.length === 0) {
+        
+            Swal.fire({
+                title: 'Usuario Registrado',
+                text: "¡Tu cuenta fue creada con éxito!",
+                icon: 'success',
+                showCancelButton: false,
+                confirmButtonColor: '#3333FF',
+                confirmButtonText: 'OK'
+            });
+        }
+        
     });
         // SCRIPT PARA DAR VISIBILIDAD A LA CONTRASEÑA
 
@@ -134,5 +148,7 @@ window.addEventListener('load', function() {
         // toggle the icon
         this.classList.toggle("bi-eye");
     });
+
+
 });
 

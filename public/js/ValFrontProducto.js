@@ -141,6 +141,19 @@ window.addEventListener('load', function() {
         } else {
             erroresFotoDestacada.innerHTML = '';
         }
+
+        if (erNombreProducto.length === 0 && erDescCorta.length === 0 && erFotoDestacada.length === 0 &&
+            erPrecioProducto.length === 0 && erPrecioEnvio.length === 0 && erDescLarga.length === 0) {
+        
+            Swal.fire({
+                title: 'Producto Creado',
+                text: "¡Tu producto ha sido creado con éxito!",
+                icon: 'success',
+                showCancelButton: false,
+                confirmButtonColor: '#3333FF',
+                confirmButtonText: 'OK'
+            });
+        }
     });
 });
 

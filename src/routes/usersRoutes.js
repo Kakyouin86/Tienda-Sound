@@ -41,4 +41,14 @@ router.get('/logout', usersController.logout);
 //Ver mis productos
 router.get('/misProductos/:id', usersController.misProductos);
 
+
+// APIs
+
+// Un usuario
+router.get('/api/:id', usersController.unUsuario);
+
+// Todos los usuarios
+router.get('/api/todoslosusuarios', usersController.todosLosUsuarios);
+
+
 module.exports = router;
