@@ -44,11 +44,11 @@ router.get('/misProductos/:id', usersController.misProductos);
 
 // APIs
 
-// Un usuario
-router.get('/api/:id', usersController.unUsuario);
-
 // Todos los usuarios
 router.get('/api/todoslosusuarios', usersController.todosLosUsuarios);
+
+// Un usuario
+router.get('/api/:id', usersController.unUsuario);
 
 
 module.exports = router;
