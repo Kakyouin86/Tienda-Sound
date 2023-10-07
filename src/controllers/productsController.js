@@ -350,6 +350,20 @@ let productsController = {
         res.status(500).json({ message: 'Error interno del servidor' });
       });
   },
+  todasLasCategorias: (req, res) => {
+    db.Categoria.findAll()
+      .then((categorias) => {
+        return res.json({ 
+          total: categorias.length,
+          data: categorias,
+          status: 200
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+        res.status(500).json({ message: 'Error interno del servidor' });
+      });
+  },
   guitarrasYbajos: (req, res) => {
     db.Producto.findAll({
       where: { categoria_id: 1 }

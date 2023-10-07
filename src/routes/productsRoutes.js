@@ -62,6 +62,9 @@ router.get('/api/usados', productsController.usados);
 // Todos los productos NUEVOS
 router.get('/api/nuevos', productsController.nuevos);
 
+// Todas las categorias
+router.get('/api/todaslascategorias', productsController.todasLasCategorias);
+
 // Todos los productos: CATEGORIA 1: guitarras y bajos
 router.get('/api/categoria1', productsController.guitarrasYbajos);
 
