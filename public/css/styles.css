@@ -622,6 +622,8 @@ header form {
     flex-direction: column;
     justify-content: space-evenly;
     margin-bottom: 65px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 
 .comofunciona h2 {
