@@ -86,5 +86,8 @@ router.get('/api/categoria6', productsController.cuerdas);
 // Todos los productos: ENVIO GRATIS
 router.get('/api/enviogratis', productsController.envioGratis);
 
+// Todos los productos: ENVIO PAGO
+router.get('/api/enviopago', productsController.envioPago);
+
 
 module.exports = router;

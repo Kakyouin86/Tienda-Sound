@@ -468,6 +468,25 @@ let productsController = {
         console.error(error);
         res.status(500).json({ message: 'Error interno del servidor' });
       });
+  },
+  envioPago: (req, res) => {
+    db.Producto.findAll({
+      where: {
+        envio: {
+          [db.Sequelize.Op.not]: 0 // Usamos el operador not para obtener valores diferentes de cero
+        }
+      }
+    })
+      .then((productos) => {
+        return res.json({
+          total: productos.length,
+          data: productos
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+        res.status(500).json({ message: 'Error interno del servidor' });
+      });
   }
 }
 
