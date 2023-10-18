@@ -1,23 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-
-const cloudinary = require('cloudinary').v2;
-const streamifier = require('streamifier');
-const { validationResult } = require("express-validator");
-
-let db = require("../database/models");
-const { DataTypes } = require('sequelize');
-const { Op } = require('sequelize');
-
-
-// credenciales Cloudinary 
-cloudinary.config({ 
-	cloud_name: 'dlf8flk1o', 
-	api_key: '829857512934227', 
-	api_secret: 'iTQRHKw1LiAeUUeO8jrfx3d_MVg' 
-});
-
-const { getProductos, getDetalle, getCrear, getGuardardo } = require('../services/productService');
+const { getProductos,getDetalle,getCrear,getGuardarProducto,getEditarProducto,getActualizarProducto,
+getBorrarProducto, getProductosNuevos, getProductosUsados, getCategoria, getProductosConEnvioGratis, getProductoConEnvioPago, getFiltroPrecio,
+} = require('../services/productService');
 
 let productsController = {
   productos: function(req, res) {
@@ -30,205 +13,38 @@ let productsController = {
     getCrear(req,res);
 	},
   guardarProducto: async function (req, res) {
-    getGuardardo(req,res);
+    getGuardarProducto(req,res);
   },
   editarProducto: function (req, res){
-    let pedidoProductos = db.Producto.findByPk(req.params.id);
-    let pedidoCategoria = db.Categoria.findAll()
-    Promise.all([pedidoProductos, pedidoCategoria])
-      .then(function ([producto, categoria]){
-        res.render('./pages/editarProducto', {producto: producto, categoria: categoria})
-      })
+    getEditarProducto(req,res);
   },
   actualizarProducto: async function (req, res) {
-    try {
-      // Validación Back End - actualizar producto
-      const resultProductValidation = validationResult(req);
-      console.log(resultProductValidation.errors.length + " cantidad de errores");
-      if (resultProductValidation.errors.length > 0) {
-        let pedidoProductos = db.Producto.findByPk(req.params.id);
-        let pedidoCategoria = db.Categoria.findAll();
-        Promise.all([pedidoProductos, pedidoCategoria])
-          .then(function ([producto, categoria]) {
-            return res.render("./pages/editarProducto", { errors: resultProductValidation.mapped(), producto: producto, categoria: categoria });
-          });
-      } else {
-        let customFilename; // nombre de la imagen definida en la variable en CREATE
-  
-        if (req.file) {
-          const imageBuffer = req.file.buffer;
-          filenameUpdate = Date.now() + '-imgProducto'; // a la nueva imagen la redefino con otro nombre
-          const folderName = 'productos';
-          const uploadPromise = new Promise((resolve, reject) => {
-            let stream = cloudinary.uploader.upload_stream({ folder: folderName, resource_type: 'image', public_id: filenameUpdate }, (error, result) => {
-              if (error) {
-                console.error('Error during upload:', error);
-                reject(error);
-              } else {
-                console.log('Upload successful:', result);
-                resolve(result);
-              }
-            });
-  
-            streamifier.createReadStream(imageBuffer).pipe(stream);
-          });
-  
-          const uploadedImage = await uploadPromise;
-        }
-  
-        const currentTimestamp = new Date();
-        await db.Producto.update(
-          {
-            nombreProducto: req.body.nombreProducto,
-            descripcionProductoCorta: req.body.descripcionProductoCorta,
-            precioProducto: req.body.precioProducto,
-            estadoProducto: req.body.estadoProducto,
-            descripcionProductoLarga: req.body.descripcionProductoLarga,
-            stock: 3,
-            fecha_alta: currentTimestamp,
-            fecha_modificacion: null,
-            fecha_baja: null,
-            imagen: req.file ? filenameUpdate : customFilename,
-            categoria_id: req.body.categoriaProducto,
-            usuario_id: req.session.userLogged.id,
-            marca_id: null,
-            puntuacion_id: 1,
-            envio: req.body.precioEnvio,
-          },
-          {
-            where: {
-              id: req.params.id
-            }
-          }
-        );
-        res.redirect('/productos/' + req.params.id);
-      }
-    } catch (error) {
-      console.error('Error:', error);
-    }
+    getActualizarProducto(req,res);
   },
-  
-  borrarProducto: async function (req, res)
-  {
-    try {
-      await db.Producto.destroy({
-          where: {
-            id: req.params.id
-          }
-        });
-        res.redirect('/productos');
-    } catch (error) {
-      console.error("Error:", error);
-    }
+  borrarProducto: async function (req, res){
+    getBorrarProducto(req,res);
   },
+
   productosNuevos: function (req, res) {
-    Promise.all([
-      db.Producto.findAll({
-        where: {
-          estadoProducto: "Nuevo"
-        }
-      }),
-      db.Categoria.findAll(),
-    ])
-      .then(function([productos, categorias]) {
-        res.render('./pages/productos', { productos: productos, categorias: categorias });
-      })
-      .catch(function(error) {
-        console.error(error);
-        res.status(500).json({ message: 'Error interno del servidor' });
-      });
+    getProductosNuevos(req,res);
+    
   },
   productosUsados: function (req, res) {
-    Promise.all([
-      db.Producto.findAll({
-        where: {
-          estadoProducto: "Usado"
-        }
-      }),
-      db.Categoria.findAll(),
-    ])
-      .then(function([productos, categorias]) {
-        res.render('./pages/productos', { productos: productos, categorias: categorias });
-      })
-      .catch(function(error) {
-        console.error(error);
-        res.status(500).json({ message: 'Error interno del servidor' });
-      });
+    getProductosUsados(req,res);
   },
   categoria: function(req, res){
-    Promise.all([
-      db.Producto.findAll({
-        where: {
-          categoria_id: req.params.idCategoria
-        }
-      }),
-      db.Categoria.findAll(),
-    ])
-      .then(function([productos, categorias]) {
-        res.render('./pages/productos', { productos: productos, categorias: categorias });
-      })
-      .catch(function(error) {
-        console.error(error);
-        res.status(500).json({ message: 'Error interno del servidor' });
-      });
+    getCategoria();
   },
   productosConEnvioGratis: function (req, res) {
-    Promise.all([
-      db.Producto.findAll({
-        where: {
-          envio: 0
-        }
-      }),
-      db.Categoria.findAll(),
-    ])
-      .then(function([productos, categorias]) {
-        res.render('./pages/productos', { productos: productos, categorias: categorias });
-      })
-      .catch(function(error) {
-        console.error(error);
-        res.status(500).json({ message: 'Error interno del servidor' });
-      });
+    getProductosConEnvioGratis(req,res);
   },
-  productosConEnvioPago: function (req, res) {
-    Promise.all([
-      db.Producto.findAll({
-        where: {
-          envio: {
-            [Op.ne]: 0
-          }
-        }
-      }),
-      db.Categoria.findAll(),
-    ])
-      .then(function([productos, categorias]) {
-        res.render('./pages/productos', { productos: productos, categorias: categorias });
-      })
-      .catch(function(error) {
-        console.error(error);
-        res.status(500).json({ message: 'Error interno del servidor' });
-      });
-  },
-  filtroPrecio: async function (req, res) {
-    const { "form-priceMenor": formControlMenor } = req.query
-    const { "form-priceMayor": formControlMayor } = req.query
-    let menor = parseFloat(formControlMenor)
-    let mayor = parseFloat(formControlMayor)
-    try {
-        const productos = await db.Producto.findAll({
-            where: {
-                precioProducto: {
-                    [Op.gte]: menor, // Corrected the conditions
-                    [Op.lte]: mayor
-                }
-            }
-        });
 
-        const categorias = await db.Categoria.findAll();
-        res.render('./pages/buscarPorPrecio', { productos, categorias, menor, mayor });
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ message: 'Error interno del servidor' });
-    }
+  productosConEnvioPago: function (req, res) {
+    getProductoConEnvioPago(req,res);
+  },
+
+  filtroPrecio: async function (req, res) {
+    getFiltroPrecio(req,res);
   },
 
   // APIs //
