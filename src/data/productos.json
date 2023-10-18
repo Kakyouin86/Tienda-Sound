@@ -1,242 +1,124 @@
 [
- {
-  "id": 1,
-  "nombreProducto": "Guitarra Electrica Ibanez T0d10 Tim Henson",
-  "descripcionProductoCorta": "La Ibanez Tim Henson TOD10 combina un aspecto especialmente limpio y elegante",
-  "precioProducto": 3000,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Con características de interpretación optimizadas hasta el más mínimo detalle y sonidos polifacéticos. Basada en el popular diseño AZ, la guitarra eléctrica lacada Classic Silver presenta un cuerpo de tilo americano de diseño ergonómico y un mástil de arce tostado con el ágil perfil AZ Oval C, cuyo diapasón de ébano luce un sombrío Tree or Death Inlay. Las pastillas activas Fishman Fluence Tim Henson Signature con voicings distintos y conmutables ofrecen el tono característico de Polyphia en el amplificador de guitarra, desde limpios de sonido casi acústico hasta un elegante Distortion. Una respuesta suave Gotoh T1502 2-Point Tremolo y afinadores Gotoh MG-T Locking completan el equipamiento de la guitarra eléctrica Tim Henson TOD10 Signature de Ibanez.",
-  "categoriaProducto": "guitarrasBajos",
-  "fotoDestacada": "productos_1.jpg",
-  "envio": 10,
-  "oferta": "si"
- },
- {
-  "id": 2,
-  "nombreProducto": "Batería Legend Traveler H101 Black",
-  "descripcionProductoCorta": "6 capas de Birch en todos los cascos. Recubrimiento laminado y moldeado a altas temperaturas.",
-  "precioProducto": 23940,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Las 7 capas de los cascos son moldeados mediante un proceso denominado WTCS, (Wood Thermosetting Cover System). Alta relación peso resistencia. Soporte de doble brazo con robusto caño de 25,6mm con memory locks.",
-  "categoriaProducto": "bateriasPercusion",
-  "fotoDestacada": "productos_2.jpg",
-  "envio": 1000,
-  "oferta": "si"
- },
- {
-  "id": 4,
-  "nombreProducto": "Batería Mapex Storm Fusion Iron Grey",
-  "descripcionProductoCorta": "Herrajes de doble perfil de la serie 400 Madera de 100% de álamo. Forro de celuloide de alta resistencia. ",
-  "precioProducto": 103453,
-  "estadoProducto": "Usado",
-  "descripcionProductoLarga": "Lorem ipsum4",
-  "categoriaProducto": "guitarrasBajos",
-  "fotoDestacada": "productos_4.jpg",
-  "envio": 2000,
-  "oferta": "no"
- },
- {
-  "id": 5,
-  "nombreProducto": "Guitarra Electrica Epiphone Sg Muse",
-  "descripcionProductoCorta": "El Epiphone SG ™ Muse de la nueva colección Inspired by Gibson ™ presenta un perfil SG clásico",
-  "precioProducto": 34455,
-  "estadoProducto": "Usado",
-  "descripcionProductoLarga": "El Epiphone SG ™ Muse de la nueva colección Inspired by Gibson ™ presenta un perfil SG clásico con un cuerpo de caoba impulsado por humbuckers ™ Alnico Classic PRO ™ de alto rendimiento con controles de fase y división de bobina, además de un circuito de sangrado de agudos para mantener la claridad a volúmenes más bajos .",
-  "categoriaProducto": "guitarrasBajos",
-  "fotoDestacada": "productos_5.jpg",
-  "envio": 0,
-  "oferta": "no"
- },
- {
-  "id": 6,
-  "nombreProducto": "Piano Digital Casio Ap470 Negro",
-  "descripcionProductoCorta": "El nuevo CELVIANO AP-470 convence no solo por su diseño elegante sino también por la extraordinaria producción de sonido AiR con 22 tonos auténticos.",
-  "precioProducto": 45322,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Nuevo diseño más compacto. Sistema de contapeso Tri-Sensor II\r\n256 notas de polifonía. 22 sonidos con nueva muestra de piano de cola estéreo. Apertura de tapa superior con diseño Sound Projection. Nuevas funciones volume Sync EQ & Headphone Mode. Grabación/reproducción de audio vía pentdrive USB. Simulación de resonancia cuerdas. Función Concert Play. Control remoto a través de la App Chordana Play for Piano. Mueble con 3 pedales y tapa. Color negro",
-  "categoriaProducto": "tecladosSintetizadores",
-  "fotoDestacada": "1689467254160pianodigital.png",
-  "envio": 1000,
-  "oferta": "si"
- },
- {
-  "id": 7,
-  "nombreProducto": "Guitarra Eléctrica Gibson Les Paul Tribute",
-  "descripcionProductoCorta": "Les Paul Tribute captura el ambiente, la sensación y la tonalidad de un Les Paul tradicional",
-  "precioProducto": 34567,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Material: Caoba - Tapa: Arce - Aligeramiento de peso: Ultra-Moderno - Acabado: Laca de nitrocelulosa satinada",
-  "categoriaProducto": "guitarrasBajos",
-  "fotoDestacada": "1689467456672GibsonLesPaul.png",
-  "envio": 0,
-  "oferta": "no"
- },
- {
-  "id": 8,
-  "nombreProducto": "Guitarra Eléctrica Epiphone Les Paul Sl Celeste",
-  "descripcionProductoCorta": "Epiphone presenta el Les Paul SL, el modelo mas en cuenta que se haya fabricado con un cuerpo delgado y ligero de álamo con potentes pastillas de cerámica Epiphone.",
-  "precioProducto": 45322,
-  "estadoProducto": "Usado",
-  "descripcionProductoLarga": "Sólidos afinadores Epiphone Premium garantizan una estabilidad de afinación fiable y una afinación sencilla.\r\nLa guitarra eléctrica perfecta para principiantes, aficionados o como segunda guitarra económica.",
-  "categoriaProducto": "guitarrasBajos",
-  "fotoDestacada": "1689467493872EpiphoneLesPaul.png",
-  "envio": 0,
-  "oferta": "si"
- },
- {
-  "id": 9,
-  "nombreProducto": "Cabinet Guitarra Marshall Sv112",
-  "descripcionProductoCorta": "La SV112 le trae el tono británico instantáneamente reconocible de todas las válvulas del 1959SLP directamente. ",
-  "precioProducto": 230450,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Esta pantalla es ideal para capturar el sonido del rock clásico de los años 60, la SV112 se mepareja perfectamente con el cabezal SV20H o se puede utilizar como pantalla extensible para un combo SV20C. Fabricada a mano en Gran Bretaña y equipada con un altavoz Celestion V-Type, esta pantalla recrea con precisión el sonido definitivo del rockn roll en un formato ligero y compacto.",
-  "categoriaProducto": "tecladosSintetizadores",
-  "fotoDestacada": "1689467553937CabinetGuitarraMarshall.png",
-  "envio": 2000,
-  "oferta": "no"
- },
- {
-  "id": 10,
-  "nombreProducto": "Amplificador Guitarra Marshall Code25",
-  "descripcionProductoCorta": "Precargado con 100 ajustes preestablecidos, el CODE tiene todo lo que necesita para encontrar su sonido en casa.",
-  "precioProducto": 230900,
-  "estadoProducto": "Usado",
-  "descripcionProductoLarga": "Sus 25 watts significa que es incluso lo suficientemente potente como para comenzar a tocar. Totalmente programable a través de su teléfono y en línea, CODE es el amplificador para el camino\r\n\r\nEl CODE25 tiene 14 preamplificadores MST, 4 amplificadores de potencia MST y 8 gabinetes de parlantes MST para que pueda tocar y crear los sonidos que más le convengan\r\nConéctese a través de Bluetooth para controlar el CÓDIGO y transmitir música desde su dispositivo iOS o Android utilizando la aplicación Gateway",
-  "categoriaProducto": "tecladosSintetizadores",
-  "fotoDestacada": "1689467634650MarshallCode25.png",
-  "envio": 0,
-  "oferta": "si"
- },
- {
-  "id": 11,
-  "nombreProducto": "Guitarra Clasica Valencia Vc102 Niño 1/2 Rosa",
-  "descripcionProductoCorta": "La serie 102 está pensada para niños de 1.10m a 1.30m de altura para poder iniciarse en el mundo de la guitarra clásica.",
-  "precioProducto": 120000,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Con una tapa de Linden, los aros y el fondo de Linden, el mástil de Nato, el diapasón y el puente de arce ebonizado proporciona un tono claro y resonante.",
-  "categoriaProducto": "guitarrasBajos",
-  "fotoDestacada": "1689467671816ValenciaVc102.png",
-  "envio": 0,
-  "oferta": "no"
- },
- {
-  "id": 12,
-  "nombreProducto": "Controlador Midi Novation Launchkey Mini Mk3",
-  "descripcionProductoCorta": "Launchkey Mini es: un controlador MIDI de 25 mini teclas, compacto y portátil. Te brinda todo lo que necesitas para comenzar a crear en música en Ableton Live, y cabe en tu bolso.",
-  "precioProducto": 300923,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Crea pistas en cualquier lugar con el control intuitivo Ableton de Launchkey Mini, el arpegiador creativo, el modo de acordes fijos, la salida MIDI y toneladas de sonidos en la caja.\r\nObtén nuevas melodías, ritmos y sonidos que vuelan desde la punta de tus dedos con el arpegiador fácil pero poderoso de Launchkey Mini. El modo Fixed Chord lleva sus ideas más allá, agregando una forma de acorde fijo personalizable que lo sigue por el teclado. Agregue ritmos dinámicos y expresivos con 16 pads súper sensibles para tocar la batería y lanzar clips.",
-  "categoriaProducto": "tecladosSintetizadores",
-  "fotoDestacada": "1689467712314ControladorMidiNovationLaunchke.png",
-  "envio": 0,
-  "oferta": "no"
- },
- {
-  "id": 13,
-  "nombreProducto": "Controlador Midi Novation Launchpad Pro Mk3",
-  "descripcionProductoCorta": "LAUNCHPAD PRO MK3 es: un secuenciador independiente polifónico de ocho notas, 32 pasos y cuatro pistas.",
-  "precioProducto": 250600,
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Launchpad Pro está hecho para producir. Tiene la integración más profunda de Novation con el Ableton Live hasta ahora. Activa clips y escenas, accede a los controles de la consola de mezcla, el aparato y el transporte, y ajusta el ritmo, duplica y dobletea, todo sin tocar tu ratón. El acceso de un solo clic a la función Capturar MIDI del Ableton Live asegura que nunca perderás una idea.\r\n",
-  "categoriaProducto": "tecladosSintetizadores",
-  "fotoDestacada": "1689467743162MidiNovationLaunchpad.png",
-  "envio": 1000,
-  "oferta": "si"
- },
- {
-  "id": 14,
-  "nombreProducto": "Bandeja De Vinilo Numark Pt01 - Usb",
-  "descripcionProductoCorta": "Ultra liviana y portátil, la PT01 puede tocar discos de 7 y 12 pulgadas.",
-  "precioProducto": 45000,
-  "estadoProducto": "Usado",
-  "descripcionProductoLarga": "33, 45 y 78 RPM\r\nPosee un rango de pitch de 10%\r\nControles de volumen\r\nControl de tono\r\nAmplificador con altavoz interno pequeño.\r\nPosee puerto USB.\r\nSoftware para conversión de vinilos a MP3 en la PC.",
-  "categoriaProducto": "tecladosSintetizadores",
-  "fotoDestacada": "1689467783598NumarkPt01.png",
-  "envio": 2000,
-  "oferta": "si"
- },
- {
-  "id": 15,
-  "nombreProducto": "Batería Infantil Pearl Roadshow Junio Blk",
-  "descripcionProductoCorta": "Batería Infantil. Modelo Roadshow. Con 5 Cuerpos.",
-  "precioProducto": 340000,
-  "estadoProducto": "Usado",
-  "descripcionProductoLarga": "Batería Infantil\r\nModelo Roadshow\r\nMedidas 8\"10\"13\r\nRedoblante 12\"\r\nBombo 16\"",
-  "categoriaProducto": "bateriasPercusion",
-  "fotoDestacada": "1689467829861InfantilPearl.png",
-  "envio": 2200,
-  "oferta": "si"
- },
- {
-  "nombreProducto": "Prueba foto",
-  "descripcionProductoCorta": "dfhsdkf",
-  "precioProducto": "24872834",
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "sdjfsdf",
-  "categoriaProducto": "bateriasPercusion",
-  "fotoDestacada": "1692146521310imagen"
- },
- {
-  "nombreProducto": "Prueba foto",
-  "descripcionProductoCorta": "dfhsdkf",
-  "precioProducto": "24872834",
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "sdjfsdf",
-  "categoriaProducto": "bateriasPercusion",
-  "fotoDestacada": "1692146561210imagen"
- },
- {
-  "nombreProducto": "Prueba foto",
-  "descripcionProductoCorta": "dfhsdkf",
-  "precioProducto": "24872834",
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "sdjfsdf",
-  "categoriaProducto": "bateriasPercusion",
-  "fotoDestacada": "1692146591654imagen"
- },
- {
-  "nombreProducto": "Prueba 1",
-  "descripcionProductoCorta": "dfds",
-  "precioProducto": "45435",
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "fdgdf",
-  "categoriaProducto": "bateriasPercusion",
-  "fotoDestacada": "1692146704846imagen"
- },
- {
-  "nombreProducto": "Prueba foto 2",
-  "descripcionProductoCorta": "sfdf",
-  "precioProducto": "23",
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "vxv",
-  "categoriaProducto": "bateriasPercusion",
-  "fotoDestacada": "1692201827506-imgProducto"
- },
- {
-  "nombreProducto": "Producto de prueba",
-  "descripcionProductoCorta": "Vamos a probar si está todo bien.",
-  "precioProducto": "12345",
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "Descripción detalla de la prueba que vamos a hacer.",
-  "categoriaProducto": "bateriasPercusion",
-  "fotoDestacada": "1692293813536-imgProducto"
- },
- {
-  "nombreProducto": "Producto de prueba 2",
-  "descripcionProductoCorta": "Parece que todo está funcionando bien.",
-  "precioProducto": "9876",
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "que alegría que todo esté funcionando bien.",
-  "categoriaProducto": "tecladosSintetizadores",
-  "fotoDestacada": "1692293889789-imgProducto"
- },
- {
-  "nombreProducto": "Producto de prueba 3",
-  "descripcionProductoCorta": "Síiiiiii, funciona todo bien",
-  "precioProducto": "1234567890",
-  "estadoProducto": "Nuevo",
-  "descripcionProductoLarga": "¡Vamos!",
-  "categoriaProducto": "vientos",
-  "fotoDestacada": "1692294045304-imgProducto"
- }
-]
+    {
+     "id": 1,
+     "nombreCompleto": "Jose",
+     "email": "j@j.com",
+     "password": "$2a$10$yiCgzs7cyNzsPRD4voB4H.ILlRWFpjh.BFACI3rTCvNZ1L6IKztIO",
+     "checkbox": "",
+     "avatar": "1691351575040pexels-valdemaras-d-1683724.jpg"
+    },
+    {
+     "id": 2,
+     "nombreCompleto": "Leo",
+     "email": "Leo@gmail.com",
+     "password": "$2a$10$Q9BoW4y57kNpFYI0dhRh2.r0i6dWsGWImBvgMQGHlzRLO463wDOia",
+     "avatar": "1691365856505_img.jpeg"
+    },
+    {
+     "id": 3,
+     "nombreCompleto": "Santi",
+     "email": "santi@gmail.com",
+     "password": "$2a$10$TULUknN9ThFoeftRkpdIjOVqaQZlHgS/xi7hV51pLxwAEZlEbyMJq",
+     "checkbox": "",
+     "avatar": "1691366329926_img.jpeg"
+    },
+    {
+     "id": 4,
+     "nombreCompleto": "Nico",
+     "email": "nico@gmail.com",
+     "password": "$2a$10$ZvMvuFyg4iWmAZDG.naOkuvuWpSFgDyQEKUP4eur2beeR83NCki5O",
+     "checkbox": "",
+     "avatar": "1691366348249_img.jpeg"
+    },
+    {
+     "id": 5,
+     "nombreCompleto": "Kiara",
+     "email": "kiara@gmail.com",
+     "password": "$2a$10$uEOYf3mx7y0tDVll8lkgZuKsSduwIxJZeXYTKTbn8zXo3Ds.azSvK",
+     "checkbox": "",
+     "avatar": "1691366367215_img.png"
+    },
+    {
+     "id": 6,
+     "nombreCompleto": "Victor",
+     "email": "victor@gmail.com",
+     "password": "$2a$10$w4gSiTDaRcGGiz2dYlG27OQxmIcfikWi0VGoJPWHj9XSOeWon6VY6",
+     "checkbox": "",
+     "avatar": "1691366391958_img.png"
+    },
+    {
+     "id": 7,
+     "nombreCompleto": "Marco",
+     "email": "marco@gmail.com",
+     "password": "$2a$10$V.8ZghxWEvw1OPhi2RX5tuyHyvhhJpDRaVgjI8/.z04kL90ANc9Gy",
+     "checkbox": "",
+     "avatar": "1691366408513_img.png"
+    },
+    {
+     "id": 8,
+     "nombreCompleto": "Agus",
+     "email": "agus@gmail.com",
+     "password": "$2a$10$5J2qIJgTLruB0Ol/MIm6mO2N30fTZ6.PiEhCJLChtThZKWpyxqQr.",
+     "checkbox": "",
+     "avatar": "1691366433499_img.jpeg"
+    },
+    {
+     "id": 9,
+     "nombreCompleto": "Agustina",
+     "email": "agustinalima3089@gmail.com",
+     "password": "$2a$10$blUdXMQUm8IKSQVgpj33h.1R5NtI4vS3HA0VjRsWR4GdfT5EW/Bju",
+     "checkbox": "",
+     "avatar": "1691959316237_img.png"
+    },
+    {
+     "id": 10,
+     "nombreCompleto": "Agustina",
+     "email": "agustinali@gmail.com",
+     "password": "$2a$10$qIR0w6crIq9v/ZUc20C0YucxeCERy1rYGLGGY5wF.YYfE3KyCXfym",
+     "avatar": "1692148759474_img.png"
+    },
+    {
+     "id": 11,
+     "nombreCompleto": "Agustina",
+     "email": "hola@gmail.com",
+     "password": "$2a$10$nQiJhEUxIqMT94G7DErJdeTYFg68UQbwWxX6cA7TFqB.Fh/Px7KNO",
+     "checkbox": "",
+     "avatar": "1692148782722_img.png"
+    },
+    {
+     "id": 12,
+     "nombreCompleto": "Agustina",
+     "email": "agustinalima389@gmail.com",
+     "password": "$2a$10$rLMGMVQL0zhafgDhZCGwPOs/b6CD0DC4VmIPLixf1Dcjo52lGPdvi",
+     "avatar": "1692148823274_img.png"
+    },
+    {
+     "id": 13,
+     "nombreCompleto": "Juan",
+     "email": "jjbarrea@gmail.com",
+     "password": "$2a$10$Zd1zlYlHRGVLKOGJPUKfye8Y9mxnspKB7xfvwJ6EO/LYiWBg3z13K",
+     "avatar": "1692212750084imagen"
+    },
+    {
+     "id": 14,
+     "nombreCompleto": "prueba1",
+     "email": "prueba1@g.com",
+     "password": "$2a$10$k6/djG4s6KIjZGUMD8Y9Feq3/GeXgE6AT6K4wWR8bXfTSeFGrPmtW",
+     "avatar": "1692293496018imagen"
+    },
+    {
+     "id": 15,
+     "nombreCompleto": "prueba2",
+     "email": "prueba2@g.com",
+     "password": "$2a$10$CKm9fie2uVHkLxdFOiQIpelDQC.jpUuk9rvu/NO2hm3zBAcJmeUzy",
+     "avatar": "1692293693753imagen"
+    },
+    {
+     "id": 16,
+     "nombreCompleto": "prueba3",
+     "email": "prueba3@g.com",
+     "password": "$2a$10$nld4WS.rodPUuiGERwjKjexZjwtiNuLF4zUNZlb5Kx9xHx4dINUcO",
+     "avatar": "1692293750703imagen"
+    }
+   ]
+   
