@@ -1,3 +1,5 @@
+let db = require("../database/models");
+
 const {getLoginProcess, getGuardarUser, getEditarUser, getActualizarUser,
 getBorrarUser,getLogout, getMisProductos} = require('../services/userService');
 const { get } = require("http");

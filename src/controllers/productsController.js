@@ -1,3 +1,6 @@
+let db = require("../database/models");
+
+
 const { getProductos,getDetalle,getCrear,getGuardarProducto,getEditarProducto,getActualizarProducto,
 getBorrarProducto, getProductosNuevos, getProductosUsados, getCategoria, getProductosConEnvioGratis, getProductoConEnvioPago, getFiltroPrecio,
 } = require('../services/productService');
