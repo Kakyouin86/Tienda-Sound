@@ -33,7 +33,7 @@ let productsController = {
     getProductosUsados(req,res);
   },
   categoria: function(req, res){
-    getCategoria();
+    getCategoria(req,res);
   },
   productosConEnvioGratis: function (req, res) {
     getProductosConEnvioGratis(req,res);
